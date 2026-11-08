@@ -1,0 +1,14 @@
+{
+  "checkpoint": "C:\\Users\\mckim\\OneDrive\\문서\\ChatGPT\\캡스톤디자인 II\\adaptive_joint\\artifacts\\runs\\adaptive_v6_20261030\\checkpoints\\s0000192.pt",
+  "checkpoint_sha256": "b4a049233a12844c7eff192d52a76d254c3ddf3ae3a251eb6c0ab2dca494f8bf",
+  "step": 192,
+  "format": "adaptive-joint-next-event-v6",
+  "protocol_sha256": "0d3b96fd8aee87a2d24f8251e04602086e5207142c0f27e8aef13cb1ac191bfd",
+  "bound_at": "2026-10-31T16:21:59+09:00",
+  "source_validation": "C:\\Users\\mckim\\OneDrive\\문서\\ChatGPT\\캡스톤디자인 II\\adaptive_joint\\artifacts\\runs\\adaptive_v6_20261030\\validation\\u0000192\\summary.json",
+  "source_validation_sha256": "3754ac0c2daee3870b348579bc4616a92cdd0c0a1a44b07181ef23a7a7a17aa1",
+  "selection_rule": "Highest next-5s AP among mission-feasible parent selection evaluations; predictive transfer initialization, not an independent performance claim",
+  "selected_development_ap": 0.5919678398283735,
+  "fresh_optimizer_for_new_dataset": true,
+  "parent_communication_best_step": 96
+}

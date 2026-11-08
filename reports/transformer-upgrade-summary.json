@@ -1,0 +1,169 @@
+{
+  "completed_at": "2026-11-08T11:06:09+09:00",
+  "development": {
+    "train": {
+      "flights": 180,
+      "complete": 179,
+      "hours": 97.51166666666667,
+      "link_rows": 3708113,
+      "link_early": 71512,
+      "network_rows": 111558,
+      "network_early": 1300
+    },
+    "calibration": {
+      "flights": 24,
+      "complete": 24,
+      "hours": 12.2925,
+      "link_rows": 470586,
+      "link_early": 8630,
+      "network_rows": 14122,
+      "network_early": 162
+    }
+  },
+  "training": {
+    "timing": {
+      "selected_epoch": 12,
+      "train_rows": 3708113,
+      "device": "cuda"
+    },
+    "network": {
+      "selected_epoch": 12,
+      "train_rows": 111558,
+      "device": "cuda"
+    }
+  },
+  "link_forecast": {
+    "before": {
+      "rows": 732746,
+      "early_cases": 8369,
+      "early_ap": 0.16907486255291887,
+      "five_ap": 0.4042909011809635,
+      "early_brier": 0.010246405377984047,
+      "timing_nll": 0.12895289063453674
+    },
+    "after": {
+      "rows": 732746,
+      "early_cases": 8369,
+      "early_ap": 0.1705233710530273,
+      "five_ap": 0.40577567349693516,
+      "early_brier": 0.010432654991745949,
+      "timing_nll": 0.1301030069589615
+    }
+  },
+  "forecast": {
+    "modes": {
+      "v21": {
+        "events": 134,
+        "hits": 70,
+        "alerts": 99,
+        "false_or_late": 29,
+        "hours": 18.535,
+        "recall": 0.5223880597014925,
+        "precision": 0.7070707070707071,
+        "false_per_h": 1.5646074993256003,
+        "median_lead_s": 5.0,
+        "average_precision": 0.7654073326702453,
+        "ranking_rows": 21634,
+        "ranking_positives": 125
+      },
+      "fleet": {
+        "events": 134,
+        "hits": 74,
+        "alerts": 97,
+        "false_or_late": 23,
+        "hours": 18.535,
+        "recall": 0.5522388059701493,
+        "precision": 0.7628865979381443,
+        "false_per_h": 1.240895602913407,
+        "median_lead_s": 5.0,
+        "average_precision": 0.8106096721184561,
+        "ranking_rows": 21634,
+        "ranking_positives": 125
+      }
+    },
+    "standalone_network": {
+      "events": 134,
+      "hits": 73,
+      "alerts": 97,
+      "false_or_late": 24,
+      "hours": 18.535,
+      "recall": 0.5447761194029851,
+      "precision": 0.7525773195876289,
+      "false_per_h": 1.2948475856487727,
+      "median_lead_s": 5.0,
+      "average_precision": 0.7962061755010251,
+      "ranking_rows": 21634,
+      "ranking_positives": 125
+    },
+    "groups": 12,
+    "recall_delta_pp": 2.9850746268656803,
+    "recall_delta_ci95_pp": [
+      -4.800481927710843,
+      9.137124065280279
+    ]
+  },
+  "missions": {
+    "v21": {
+      "flights": 36,
+      "hours": 18.516666666666666,
+      "starts": 115,
+      "starts_per_h": 6.210621062106211,
+      "cut_s_per_h": 41.28712871287129,
+      "timely_pdr": 0.9824222422242225,
+      "completed": 36,
+      "safety": 0,
+      "mean_relay_m": 31416.549103485693,
+      "step_p95_median_ms": 77.53351996652782,
+      "cut_seconds": 764.5
+    },
+    "v21_timing": {
+      "flights": 36,
+      "hours": 18.55666666666667,
+      "starts": 67,
+      "starts_per_h": 3.610562241781929,
+      "cut_s_per_h": 25.13921322076522,
+      "timely_pdr": 0.9887127517314332,
+      "completed": 36,
+      "safety": 0,
+      "mean_relay_m": 31588.555676719265,
+      "step_p95_median_ms": 75.58794739888978,
+      "cut_seconds": 466.5
+    },
+    "v21_transformer": {
+      "flights": 36,
+      "hours": 18.525833333333335,
+      "starts": 61,
+      "starts_per_h": 3.2926993837434213,
+      "cut_s_per_h": 24.39836264675453,
+      "timely_pdr": 0.9888823914553752,
+      "completed": 36,
+      "safety": 0,
+      "mean_relay_m": 31511.540445053724,
+      "step_p95_median_ms": 76.14217493101016,
+      "cut_seconds": 452.0
+    }
+  },
+  "promotion": {
+    "passed": true,
+    "checks": {
+      "no_safety_violations": true,
+      "completed_every_mission": true,
+      "pdr_ok": true,
+      "duration_ok": true,
+      "cut_time_ok": true,
+      "fewer_new_cuts_with_confidence": true,
+      "higher_early_recall": true,
+      "alert_budget_ok": true
+    }
+  },
+  "fleet_triggers": {
+    "total": 46,
+    "connected": 46,
+    "executed": 46,
+    "enabled_below_native_threshold": 0
+  },
+  "outages_per_hour_delta_95": [
+    -6.048571850132618,
+    -0.4318500670772853
+  ]
+}

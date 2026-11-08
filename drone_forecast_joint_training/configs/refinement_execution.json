@@ -1,0 +1,26 @@
+{
+  "training_modes": [
+    "risk",
+    "no_risk"
+  ],
+  "training_seeds": [
+    27101,
+    27102,
+    27103
+  ],
+  "episodes_per_run": 64,
+  "seed_diagnostic_scenarios_per_policy": 14,
+  "selection_scenarios_per_method": 28,
+  "deployable_learned_candidates": [
+    "risk_ensemble",
+    "risk_ensemble_guarded",
+    "no_risk_ensemble",
+    "no_risk_ensemble_guarded"
+  ],
+  "independent_seed_policies_are_diagnostics_not_best_seed_selection": true,
+  "test_scenarios_per_method": 32,
+  "test_strata": "8 regions x 2 directions x 2 jammer kinds",
+  "test_subset_rule": "first predeclared seed in every region/direction/jammer stratum",
+  "test_subset_fixed_before_v2_validation": true,
+  "formal_test_methods": 9
+}

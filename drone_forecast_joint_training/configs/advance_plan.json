@@ -1,0 +1,30 @@
+{
+  "feature_version": "causal_goal_centered_float64_v3",
+  "training_original_windows": 327680,
+  "extra_training_windows": 184320,
+  "validation_select_windows": 57344,
+  "validation_calibration_windows": 114688,
+  "representative_seed": 51,
+  "replication_seeds": [
+    62,
+    73
+  ],
+  "candidate_families": [
+    "LightGBM31",
+    "LightGBM63",
+    "ResidualTransformer"
+  ],
+  "selection": "within 0.005 absolute AP of highest validation-select 5s AP, maximize NEW onset3to4 AP, then 5s AP",
+  "main_ap_tolerance": 0.005,
+  "no_test_model_selection": true,
+  "no_prediction_averaging": true,
+  "new_resume_run": "different static-extra normalization after interrupted work; former validation-only values are not final test results",
+  "primary_label": "same original currently-available cohort and >=1s unavailable inside next5s",
+  "fixed_scenario": "45 maps; N8,search3,relay5,V40m,altitude50m",
+  "learned_repositioning_implemented": false,
+  "learning": "offline supervised learning; no emergency-time training",
+  "beacon_goal_extension_bytes": 20,
+  "beacon_total_bytes": 128,
+  "goal_contents": "CURRENT issued xy float64 (16B) + uint32 issue time (4B), peer updated only after received beacon",
+  "abstract_serialization_budget_only": true
+}

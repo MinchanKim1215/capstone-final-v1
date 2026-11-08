@@ -1,0 +1,1205 @@
+{
+  "format": "cooperative-extra-maps-v1",
+  "maps": [
+    {
+      "key": "gyeonggi_20261025_01",
+      "name": "경기 용인시 기흥구 보정동·행원마을동아솔레시티아파트·신촌마을 포스홈타운1단지 일대",
+      "path": "maps/additional/gyeonggi_20261025_01/scene.local.json",
+      "sha256": "95399f76d4833774fbcf0b4bea80029fbf15332efe55f4798d294fc3ff2bacac"
+    },
+    {
+      "key": "gyeonggi_20261025_02",
+      "name": "경기 수원시 영통구 매탄동·주공그린빌·매탄 위브 하늘채 일대",
+      "path": "maps/additional/gyeonggi_20261025_02/scene.local.json",
+      "sha256": "2e9a80c8e4ed4eb018365c49ea1348becf2cabe354f0c36afc78aefb59368e73"
+    },
+    {
+      "key": "gyeonggi_20261025_03",
+      "name": "경기 고양시 일산동구 풍동·숲속마을·숲속마을 벨라시온 일대",
+      "path": "maps/additional/gyeonggi_20261025_03/scene.local.json",
+      "sha256": "70de392cfd4b0d7a801a85fd376a66c01e6abeccfc016d6da9f0e5b69779d973"
+    },
+    {
+      "key": "gyeonggi_20261025_04",
+      "name": "경기 성남시 분당구 구미동·무지개마을·새터마을죽전힐스테이트 일대",
+      "path": "maps/additional/gyeonggi_20261025_04/scene.local.json",
+      "sha256": "c1885341727fe2bc909f0690f21eba1a0dbdc1eb3752025d38d8b2cfa3cfba01"
+    },
+    {
+      "key": "gyeonggi_20261025_05",
+      "name": "경기 남양주시 와부읍 덕소리·남양주덕소 동부센트레빌·덕소아이파크 일대",
+      "path": "maps/additional/gyeonggi_20261025_05/scene.local.json",
+      "sha256": "d82c501294e7d83adac405ad58879926a354e1b006687174ebc6d2ca3e97b049"
+    },
+    {
+      "key": "gyeonggi_20261025_06",
+      "name": "경기 화성시 동탄구 반송동·동탄시범다은마을 센트럴파크뷰·동탄시범다은마을 월드메르디앙 반도유보라 일대",
+      "path": "maps/additional/gyeonggi_20261025_06/scene.local.json",
+      "sha256": "6a0431ae79035d44e27eefd20a8fd19088fb1c5dc502a82f41c12473e5cbfbe9"
+    },
+    {
+      "key": "gyeonggi_20261025_07",
+      "name": "경기 부천시 원미구 중동·그린타운·그린타운아파트 일대",
+      "path": "maps/additional/gyeonggi_20261025_07/scene.local.json",
+      "sha256": "4c6c4dc6a942882945e527731a149429b9407d0658e41dcf77b76bb5aeb243a1"
+    },
+    {
+      "key": "gyeonggi_20261025_08",
+      "name": "경기 안양시 동안구 비산동·비산 삼성 래미안 일대",
+      "path": "maps/additional/gyeonggi_20261025_08/scene.local.json",
+      "sha256": "03fc66a6557171ae10a63846d8a2a961f57a9ce850da6995e9884a682f21ae07"
+    },
+    {
+      "key": "gyeonggi_20261025_09",
+      "name": "경기 광명시 소하동·광명역세권 루미엘·광명역세권 휴먼시아 일대",
+      "path": "maps/additional/gyeonggi_20261025_09/scene.local.json",
+      "sha256": "e8ad8ad75dc99bc47ab52ab45bf6f3a5d8977fbceb5b5071f5ee8fe8434042e7"
+    },
+    {
+      "key": "gyeonggi_20261025_10",
+      "name": "경기 용인시 수지구 죽전동·도담마을7단지 뜨리에체아파트·죽전역 월드메르디앙 일대",
+      "path": "maps/additional/gyeonggi_20261025_10/scene.local.json",
+      "sha256": "81eb9fbba21cd65a3ee4b60d021a9f4751ad782f92bc9c5a63b4e2e8a9f2995c"
+    },
+    {
+      "key": "gyeonggi_20261025_11",
+      "name": "경기 파주시 와동동·가람마을8단지 동문굿모닝힐·가람마을 10단지 동양엔파트 월드메르디앙 일대",
+      "path": "maps/additional/gyeonggi_20261025_11/scene.local.json",
+      "sha256": "595d7577927538891a10b6e6d98f9c6c5bf46a6b2545a4ad8544e1777d6edbb3"
+    },
+    {
+      "key": "gyeonggi_20261025_12",
+      "name": "경기 파주시 동패동·아모리움 에듀파크·한울마을 3단지 운정 더 클래스 일대",
+      "path": "maps/additional/gyeonggi_20261025_12/scene.local.json",
+      "sha256": "4c5f62ed4877c723fbc64d17add5194afe6a23f624001fc3608147bb763bc625"
+    },
+    {
+      "key": "gyeonggi_20261025_13",
+      "name": "경기 파주시 야당동·한빛마을6단지·한빛마을7단지 일대",
+      "path": "maps/additional/gyeonggi_20261025_13/scene.local.json",
+      "sha256": "06f8a99c6885f9d84caa97a3cb8169bfb67f1be1ad6a20df1b9577b831f354f9"
+    },
+    {
+      "key": "gyeonggi_20261025_14",
+      "name": "경기 성남시 분당구 분당동·샛별마을 일대",
+      "path": "maps/additional/gyeonggi_20261025_14/scene.local.json",
+      "sha256": "d5dde1de9226161a7d91c91c012d696a494f5d2ff6957a56bee69e8f63e0b339"
+    },
+    {
+      "key": "gyeonggi_20261025_15",
+      "name": "경기 용인시 기흥구 동백동·해든마을 동문굿모닝힐·쥬네브 일대",
+      "path": "maps/additional/gyeonggi_20261025_15/scene.local.json",
+      "sha256": "db824dffd03fff0550da1095b920211f98052cc680e166f53c7954ac701fc0fb"
+    },
+    {
+      "key": "gyeonggi_20261025_16",
+      "name": "경기 김포시 장기동·한강신도시중흥S-클래스파크애비뉴·청송마을 일대",
+      "path": "maps/additional/gyeonggi_20261025_16/scene.local.json",
+      "sha256": "48d4eb8cff836452aa542b81f84c1bee5fb97c6a78fc3dfd0125e3d34b511226"
+    },
+    {
+      "key": "gyeonggi_20261025_17",
+      "name": "경기 수원시 권선구 금곡동·호매실역 서희 스타힐스·금곡엘지아파트 일대",
+      "path": "maps/additional/gyeonggi_20261025_17/scene.local.json",
+      "sha256": "c837e751f3eaf83f582a693ff3b7b957b4ce7f2d7a5c9a68b5ad6be8bf19d44a"
+    },
+    {
+      "key": "gyeonggi_20261025_18",
+      "name": "경기 고양시 일산동구 중산동·하늘마을 일대",
+      "path": "maps/additional/gyeonggi_20261025_18/scene.local.json",
+      "sha256": "4b34139c92eb231b11547949473474e8bfff91336a3535d602d2aaba8f92fb29"
+    },
+    {
+      "key": "gyeonggi_extra_20261025_01",
+      "name": "경기 의정부시 신곡동·상록아이파크·주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_01/scene.local.json",
+      "sha256": "6fb42011485f567be6cc02e131ec311b7c45613205468df36d34a3fa30ad7eb3"
+    },
+    {
+      "key": "gyeonggi_extra_20261025_02",
+      "name": "경기 군포시 산본동·개나리아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_02/scene.local.json",
+      "sha256": "ef09a7097babf172fb3834129ed6db668310edfcea229d60a94f546646e47948"
+    },
+    {
+      "key": "gyeonggi_extra_20261025_03",
+      "name": "경기 오산시 세교동·세마역 트루엘 더퍼스트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_03/scene.local.json",
+      "sha256": "33acc21d0914de5388910ece20982c4b4c63996fe13e1f3654457207fa9db5cf"
+    },
+    {
+      "key": "gyeonggi_extra_20261025_04",
+      "name": "경기 시흥시 장곡동·숲속마을 아파트·매꼴마을 삼성아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_04/scene.local.json",
+      "sha256": "9ac229423e325172e470b61020e975878bfa846d17f720e7c587de115e8013ec"
+    },
+    {
+      "key": "gyeonggi_extra_20261025_05",
+      "name": "경기 의왕시 내손동·인덕원 센트럴 자이·포일자이 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_05/scene.local.json",
+      "sha256": "6e27dad29951118ed5e0c75da2e285ae958856e0b1b9a2e2dd239a0093fc0a31"
+    },
+    {
+      "key": "gyeonggi_extra_20261025_06",
+      "name": "경기 평택시 안중읍 현화리·주공아파트·동신 사랑마을 아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_06/scene.local.json",
+      "sha256": "6e5ed45dfa3256e506e261a29ff30fa31a43149a26f7b1d20c9145b8cb7e88b7"
+    },
+    {
+      "key": "gyeonggi_extra_20261025_07",
+      "name": "경기 안성시 공도읍 만정리·금호어울림·안성공도 금호어울림 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_07/scene.local.json",
+      "sha256": "734adf75c21ba41ee9d0bf360b1e00c48c2f6b9c3ccb6cc1fb9d3ee1797a9b36"
+    },
+    {
+      "key": "seoul_20261025_01",
+      "name": "서울 강남구 역삼동·역삼아르누보씨티·한국기술센터 일대",
+      "path": "maps/additional/seoul_20261025_01/scene.local.json",
+      "sha256": "cce32f6d413cd56892f14ccea64e017b9310ba578ea0f8dd880b0ef615d441c9"
+    },
+    {
+      "key": "seoul_20261025_02",
+      "name": "서울 강동구 성내동·성내삼성아파트 104동·성내삼성아파트 103동 일대",
+      "path": "maps/additional/seoul_20261025_02/scene.local.json",
+      "sha256": "2519b6d2b00a13fb91a919b80410d7065731d34d2fa5ff6a45327a0e210c21db"
+    },
+    {
+      "key": "seoul_20261025_03",
+      "name": "서울 강북구 번동·삼성아파트·건영캐스빌아파트 일대",
+      "path": "maps/additional/seoul_20261025_03/scene.local.json",
+      "sha256": "17b61892519325206670d04690b5ba0b68be5b18c12ca7c4bcf8f8669d90704d"
+    },
+    {
+      "key": "seoul_20261025_05",
+      "name": "서울 금천구 시흥동·벽산아파트 일대",
+      "path": "maps/additional/seoul_20261025_05/scene.local.json",
+      "sha256": "11cd028b4de1fa525af0bdb78bfc470b31f4a71bbf4761e7d9cad3783907228d"
+    },
+    {
+      "key": "seoul_20261025_06",
+      "name": "서울 노원구 공릉동·풍림아파트·공릉동 신도1차아파트 일대",
+      "path": "maps/additional/seoul_20261025_06/scene.local.json",
+      "sha256": "b8df2c18952df06c99aa05fc6c57efce5b52123f4cbf5f073b5ef667fca08f55"
+    },
+    {
+      "key": "seoul_20261025_07",
+      "name": "서울 동대문구 이문동·현대아파트·이문동 대우아파트 일대",
+      "path": "maps/additional/seoul_20261025_07/scene.local.json",
+      "sha256": "1fc9392609d626fb2654f0e6c2ab910a074865577b513d3f68bcc6b6de875f3b"
+    },
+    {
+      "key": "seoul_20261025_08",
+      "name": "서울 마포구 서교동·메세나폴리스·명지한강빌드웰 일대",
+      "path": "maps/additional/seoul_20261025_08/scene.local.json",
+      "sha256": "ba1c96cdfa6a9e6948a597283ffabfdbd99357f327421620299847da2b3708b6"
+    },
+    {
+      "key": "seoul_20261025_09",
+      "name": "서울 서초구 잠원동·HY빌딩·이투데이빌딩 일대",
+      "path": "maps/additional/seoul_20261025_09/scene.local.json",
+      "sha256": "937747e12cd74922e7890dd3404a159779087576832211f65861e0d2d14f4500"
+    },
+    {
+      "key": "seoul_20261025_10",
+      "name": "서울 송파구 방이동·잠실리시온·신동아타워 일대",
+      "path": "maps/additional/seoul_20261025_10/scene.local.json",
+      "sha256": "97bd912592b5897d4e03497a15b740852842eebe967874ca2a95bc9a4119dbd0"
+    },
+    {
+      "key": "seoul_20261025_11",
+      "name": "서울 중랑구 신내동·성원아파트·신아타운 일대",
+      "path": "maps/additional/seoul_20261025_11/scene.local.json",
+      "sha256": "23b12692e83faf434837a1fd684728b0e0ecec3a6f2dab4f50e102a99d28d5bd"
+    },
+    {
+      "key": "seoul_20261025_12",
+      "name": "서울 강남구 대치동·개나리 푸르지오·역삼 e-편한세상 일대",
+      "path": "maps/additional/seoul_20261025_12/scene.local.json",
+      "sha256": "602ba7fc47eaa99bdd961003960ecea3ea2422ea4a4028e2c85ffa58c07ade8d"
+    },
+    {
+      "key": "seoul_20261025_13",
+      "name": "서울 강동구 암사동·선사현대아파트·대원아파트 일대",
+      "path": "maps/additional/seoul_20261025_13/scene.local.json",
+      "sha256": "f16cccd8b75ee2d31f726ee059858fb77d639a71c611a36f5322084ade81cca8"
+    },
+    {
+      "key": "seoul_20261025_14",
+      "name": "서울 강북구 번동·경남아너스빌·삼성화재수유사옥 일대",
+      "path": "maps/additional/seoul_20261025_14/scene.local.json",
+      "sha256": "28e3362f66c4b9f6a93b96040d63227c46e11db69584980510a4f4f6d91d9f80"
+    },
+    {
+      "key": "seoul_20261025_15",
+      "name": "서울 구로구 구로동·마리오 타워·제이앤케이디지털타워 일대",
+      "path": "maps/additional/seoul_20261025_15/scene.local.json",
+      "sha256": "8e6adb403b3fd80ba765d080ee301b0f40ccf76f11fd874e3f0f7b276a5ccf3c"
+    },
+    {
+      "key": "seoul_20261025_16",
+      "name": "서울 서초구 반포동·신논현타워·HM타워 일대",
+      "path": "maps/additional/seoul_20261025_16/scene.local.json",
+      "sha256": "958b2a96af45fb7d3d00e6276120ab2a2094e52c107f554064426bb075305428"
+    },
+    {
+      "key": "seoul_20261025_17",
+      "name": "서울 송파구 잠실동·리센츠·잠실엘스 일대",
+      "path": "maps/additional/seoul_20261025_17/scene.local.json",
+      "sha256": "81858b15dc4b91702570725258591681be76a913a32612fb318c225ab41f565f"
+    },
+    {
+      "key": "seoul_20261025_18",
+      "name": "서울 강남구 청담동·한섬빌딩·상지리츠빌 카일룸3차 일대",
+      "path": "maps/additional/seoul_20261025_18/scene.local.json",
+      "sha256": "dafb63d3e1f752a2afdcbcc4dbc299d2d13c6af3b7be91aae42af6ee22c42541"
+    },
+    {
+      "key": "seoul_20261025_19",
+      "name": "서울 강동구 명일동·프라이어 팰리스·강동 롯데캐슬퍼스트아파트 일대",
+      "path": "maps/additional/seoul_20261025_19/scene.local.json",
+      "sha256": "dec85b452501ba089ac6410fd63328d258e39df56c22a0e4efe36902a74b917a"
+    },
+    {
+      "key": "seoul_20261025_20",
+      "name": "서울 강남구 삼성동·브라운스톤 레전드·현대아파트 일대",
+      "path": "maps/additional/seoul_20261025_20/scene.local.json",
+      "sha256": "b1f6d56944dc98f679a0f3ecde7b3cc5a4b8a94e5591ab5bac025e57dd762ae2"
+    },
+    {
+      "key": "seoul_20261025_21",
+      "name": "서울 강동구 천호동·강동역두산위브센티움·천호삼성아파트 104동 일대",
+      "path": "maps/additional/seoul_20261025_21/scene.local.json",
+      "sha256": "c84d95b2f36a56c5c655d8846a0447ba48a411456abf1127843c3c9cd39e9c6e"
+    },
+    {
+      "key": "seoul_20261025_22",
+      "name": "서울 강남구 대치동·현대백화점·한국섬유산업연합회 일대",
+      "path": "maps/additional/seoul_20261025_22/scene.local.json",
+      "sha256": "2ef2f329c9fbef3b50af85d391cc21558898bb91d5f13377b7164754ada43f4c"
+    },
+    {
+      "key": "seoul_20261025_23",
+      "name": "서울 강동구 암사동·강동 현대홈타운·한강 포스파크 아파트 일대",
+      "path": "maps/additional/seoul_20261025_23/scene.local.json",
+      "sha256": "aa252b6d1499b558b390b7c12fdeba30549bef735ce83746f10c9e9d6dae5dd0"
+    },
+    {
+      "key": "seoul_20261025_24",
+      "name": "서울 강남구 청담동·청담동 삼성1차 아파트 101동·석탑아파트101동 일대",
+      "path": "maps/additional/seoul_20261025_24/scene.local.json",
+      "sha256": "b5eb1f0599fcc29acaed208c9aee6aba87e3dcfd5c2ae1238d2bebabada163c6"
+    },
+    {
+      "key": "seoul_20261025_25",
+      "name": "서울 강남구 역삼동·스타플렉스·한국자산관리공사 일대",
+      "path": "maps/additional/seoul_20261025_25/scene.local.json",
+      "sha256": "41ff406704675a11f60a4617c1c8e51180f64f91c98759d7dc6949ce712ec399"
+    },
+    {
+      "key": "seoul_20261025_27",
+      "name": "서울 강서구 화곡동·우장산 아이파크 이편한세상 일대",
+      "path": "maps/additional/seoul_20261025_27/scene.local.json",
+      "sha256": "818708a4330f36abfae8b68cdd1b7d42095784a6f53754f0cbf8946dff496def"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_01",
+      "name": "경기 용인시 수지구 죽전동·도담마을죽전파크빌·도담마을 롯데캐슬 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_01/scene.local.json",
+      "sha256": "8702540beaddd4357d3f9f6851ebb7e9fa4c5c07c3a430cc3f2d87932b5c785f"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_02",
+      "name": "경기 용인시 수지구 죽전동·죽전 아이뷰 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_02/scene.local.json",
+      "sha256": "7ce81bf6bcd706ad8b5f5e50511721c614f5afa8d61ba66228949f1214657721"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_03",
+      "name": "경기 용인시 수지구 죽전동·도담마을 휴먼빌 아파트·새터마을죽전힐스테이트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_03/scene.local.json",
+      "sha256": "4be6d08cad2e8158268675d4e39ea6dc87ed479fc3510b2e240a79ea2d693b54"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_04",
+      "name": "경기 수원시 영통구 영통동·청명마을삼성아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_04/scene.local.json",
+      "sha256": "f9c55cdb0aacaf29bff872cc821ddfa6ea5698f457e5ee6c5829d8eeb8c6cee9"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_05",
+      "name": "경기 수원시 영통구 영통동·벽산아파트·영통하우스토리 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_05/scene.local.json",
+      "sha256": "3a03cf4d1b5bbabd03a20c28c4cd57951a3c92bd9b417b700aee66fdec7e102e"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_06",
+      "name": "경기 수원시 팔달구 인계동·홈즈스테이수원·씨네파크 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_06/scene.local.json",
+      "sha256": "b13042d6e19731c041bad7ca56acff1daa10fd85b5fc6a8a74e6837b0d5570f1"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_07",
+      "name": "경기 고양시 덕양구 화정동·옥빛마을·우경싸이트빌 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_07/scene.local.json",
+      "sha256": "a8fec2857ab9efb410c54bde8bd1efc3c280badb8cb9b1d5768d967a597b094f"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_08",
+      "name": "경기 고양시 일산동구 중산동·산들마을·일산쌍용아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_08/scene.local.json",
+      "sha256": "e0b68efc8a0cff1392e222bcf126d25d82453adbcc6995adec36bb47617131b2"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_09",
+      "name": "경기 고양시 일산동구 중산동·센트럴 더 포레·하늘마을 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_09/scene.local.json",
+      "sha256": "199497c689e855dacf9e1a45857cc21dca0d18cb300daf9914ffebb42bbb338a"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_10",
+      "name": "경기 파주시 목동동·해솔마을 5단지 삼부르네상스 아파트·해솔마을6단지 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_10/scene.local.json",
+      "sha256": "471c5d6c8d463d5bda56567dd0d95014f30caaf83eb1abc40f388e97689c9cd3"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_11",
+      "name": "경기 파주시 야당동·한빛마을 1단지 한라비발디 센트럴파크·한빛마을2단지 휴먼빌 레이크팰리스 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_11/scene.local.json",
+      "sha256": "bd3be25b4b95e9887ba8fb0e00f9f0a3830338713106e9cde6988c536024e479"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_12",
+      "name": "경기 성남시 분당구 야탑동·장미마을·시그마 3 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_12/scene.local.json",
+      "sha256": "b7c842eb4e477b36afdc8f3afffcfbd86986b2fb4ce24556330a3b89ecae0bd2"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_13",
+      "name": "경기 성남시 분당구 판교동·판교원마을 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_13/scene.local.json",
+      "sha256": "89e30a6a919919c210e3972f2789da31f861a5d6c10065505673989bb858d174"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_14",
+      "name": "경기 성남시 분당구 삼평동·판교역 KCC웰츠타워·주식회사안랩 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_14/scene.local.json",
+      "sha256": "091e0f41d5dd2e1fbd48024647b3ba59a837107fd17315b5fef5c05ade457f4a"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_15",
+      "name": "경기 부천시 소사구 소사본동·해송파크뷰·더원스테이트 2차 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_15/scene.local.json",
+      "sha256": "351eeb0297e758071174b2dd5687e8e9308e41dbae5530e405a27e73c05cc528"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_18",
+      "name": "경기 안산시 상록구 이동·보네르빌리지·푸르지오2차아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_18/scene.local.json",
+      "sha256": "1beaa4c41fb992159b90523d04721cb40c1b3670480314d5bc13e2899f8a4768"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_21",
+      "name": "경기 화성시 동탄구 능동·동탄 능동마을 상록 예가·동탄능동마을 주공아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_21/scene.local.json",
+      "sha256": "6891597ffed42f306441f126af5171329224b37ad27d43c7816c7b2be7d82eb4"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_24",
+      "name": "경기 광명시 철산동·두산위브아파트·광복현대아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_24/scene.local.json",
+      "sha256": "21bd084883672775b46943a22c1b6d45608745c7487d679b2d2728b655090c25"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_26",
+      "name": "경기 김포시 장기동·고창마을 제일풍경채아파트·고창마을 한양수자인 리버팰리스 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_26/scene.local.json",
+      "sha256": "dcd8273c8091c1f86bc6080107c9423fabbee9f7c79214407dfa81ca615069b2"
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_27",
+      "name": "경기 안양시 동안구 평촌동·귀인마을현대홈타운·꿈마을아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_27/scene.local.json",
+      "sha256": "17625b2dc68e5db73e51c48ab64dcb60a64ef407a53fa07699d280294f8d765d"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_01",
+      "name": "경기 광주시 장지동·현대아파트 106동·현대아파트 103동 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_01/scene.local.json",
+      "sha256": "67b5afabba3c351cb8ede1d81e482fd90f06c0f606277b013bd393c15c720eed"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_02",
+      "name": "경기 포천시 소흘읍 송우리·태봉마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_02/scene.local.json",
+      "sha256": "3597d161577231ad59fc7779613b7f64e0c909ceae6370a820d6c9db2e072587"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_03",
+      "name": "경기 평택시 장안동·평택장안마을코오롱하늘채 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_03/scene.local.json",
+      "sha256": "06ea357580936b46991938af4731bec905be81a147b8dd126f81d33532e767ae"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_04",
+      "name": "경기 안성시 공도읍 만정리·안성공도 금호어울림·경기도시공사참아름 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_04/scene.local.json",
+      "sha256": "f0550758237c4eb983c9e42ec1cddeb0119d14a23c51de1f0b1046e1c8f0730e"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_05",
+      "name": "경기 동두천시 지행동·대방노블랜드아파트·지행 현대아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_05/scene.local.json",
+      "sha256": "2ab3e20f43e180ee463f37d331cb711283e1ac30a32c448d6e72fc55df6d4985"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_06",
+      "name": "경기 의정부시 민락동·민락1차 청구아파트·민락e-편한세상 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_06/scene.local.json",
+      "sha256": "2aa065cb4c2b1c83d3a5e732299a4349e108bef7fe762babe8fa984caeb52f01"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_07",
+      "name": "경기 의정부시 신곡동·현대아파트·동신아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_07/scene.local.json",
+      "sha256": "421e3c477d5a37eae2d8f14c83b56a421ff9d971b2f5b70fa45849ba7debfe6b"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_08",
+      "name": "경기 의정부시 신곡동·드림밸리아파트·풍림아이원아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_08/scene.local.json",
+      "sha256": "c02fdf52c4d0e98250cc483873e1562f4794ba244d14b879083b0ede48da0683"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_09",
+      "name": "경기 의정부시 의정부동·구성타워·신한헤스티아 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_09/scene.local.json",
+      "sha256": "939b8c1d5f177d57788ca63a3de5e606d02b70682a4270cd7645f2eafbe76246"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_10",
+      "name": "경기 의정부시 민락동·산들마을 현대 아파트·산들마을 길훈아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_10/scene.local.json",
+      "sha256": "b9d0aca8d250af9b05990923fa4ff5020ef558053b93c9912f4990603bba8dfa"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_11",
+      "name": "경기 의정부시 민락동·산들마을청구아파트·산들마을서광아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_11/scene.local.json",
+      "sha256": "3b808f7d8bfce7f34884dee56481077712b47aa865459ff1617f3b3019169194"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_12",
+      "name": "경기 의정부시 금오동·주공그린빌·대송프라자 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_12/scene.local.json",
+      "sha256": "73e2b77c47005d7f66bb030842f69f8d1b5d0487eb6db1eea5176c9777751cd0"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_13",
+      "name": "경기 오산시 양산동·세마이편한세상 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_13/scene.local.json",
+      "sha256": "a5b889ec9e2c41125270e62c8e904577c49eb22fc9110ca8f567ce67b927bfd4"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_14",
+      "name": "경기 오산시 금암동·세교 서희스타힐스·죽미마을 휴튼9단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_14/scene.local.json",
+      "sha256": "5a82097c9141b3365f37f05d5ad9997f16dbc6f2756d685ee9fca43625ed7a81"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_15",
+      "name": "경기 오산시 금암동·금암마을휴먼시아·세교 데시앙 포레 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_15/scene.local.json",
+      "sha256": "6e5102da17ae9192a62a41afd3bb79d1001bc9a4b14bb6490760e281335a849e"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_16",
+      "name": "경기 시흥시 하중동·참이슬아파트·샛말대우아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_16/scene.local.json",
+      "sha256": "a30101d4338d88446e41a4e2ebdafb02ed123c8d41a800812c548388891956f9"
+    },
+    {
+      "key": "seoul_20261026_batch2_01",
+      "name": "서울 강남구 역삼동·래미안 그레이튼·역삼푸르지오 일대",
+      "path": "maps/additional/seoul_20261026_batch2_01/scene.local.json",
+      "sha256": "a91d804deef830cf8bdaadeef839cbf0a5b49f420811354bc037a439dd9d17c2"
+    },
+    {
+      "key": "seoul_20261026_batch2_02",
+      "name": "서울 송파구 가락동·가락쌍용아파트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_02/scene.local.json",
+      "sha256": "da0fa954ebb3b740740fa34f4bddf52b95861d8d4fb82a534b447c95842d6d00"
+    },
+    {
+      "key": "seoul_20261026_batch2_03",
+      "name": "서울 중랑구 상봉동·동부아파트·태영아파트상봉동데시앙 일대",
+      "path": "maps/additional/seoul_20261026_batch2_03/scene.local.json",
+      "sha256": "90a37dcd6077115dc217c029e38ee62bab9ab1577fe43e22997f0eb0d341d790"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_01",
+      "name": "서울 강동구 상일동·강동타워·세스코 아카데미 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_01/scene.local.json",
+      "sha256": "e72475d18f9fcfd4ebebd6647fff3d647543ce474c7f1390f02bc6346a8611ac"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_02",
+      "name": "서울 관악구 봉천동·고층 주거·업무 구역 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_02/scene.local.json",
+      "sha256": "f5d7c6d43a2e036eeef372231c88171a4dda97683b9b4383a13c866ade7057f6"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_04",
+      "name": "서울 도봉구 도봉동·도봉구종합청사·방학동삼성래미안 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_04/scene.local.json",
+      "sha256": "426c9600056fc08f538c2201ef0252761cba4da8aaf4c56a1b4327efeb50d871"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_05",
+      "name": "서울 마포구 현석동·강변 힐스테이트·서강GS아파트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_05/scene.local.json",
+      "sha256": "618409c1e1efbacf801ba90e474bd49584dc981fcf3c63eea47f87b294882edc"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_06",
+      "name": "서울 서초구 양재동·양재동스포타임·한솔로이젠트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_06/scene.local.json",
+      "sha256": "144afb6bc2502319cd0d9924445b3f1aff146dfd586d4d2f0098ca0b1a097db9"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_07",
+      "name": "서울 성북구 하월곡동·월곡두산위브아파트·래미안월곡아파트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_07/scene.local.json",
+      "sha256": "d427742d39a4f9935736f72d3d9c64b366859dfcc49b1d80acd4862cd12f4bd1"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_08",
+      "name": "서울 영등포구 여의도동·서울 국제금융 센터·ONE CENTINEL 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_08/scene.local.json",
+      "sha256": "997a6071e83b8a107c400301941efd8c60af2d0db9cd565f6f22205d383dc744"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_09",
+      "name": "서울 은평구 진관동·아이파크 포레스트 게이트·웅신 미켈란의 아침 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_09/scene.local.json",
+      "sha256": "bfb0b69cdc1c020f6a2d2e6f0cca72940d0415f5bda0f5c578323d6619039fe8"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_10",
+      "name": "서울 구로구 개봉동·한마을아파트·벽산블루밍 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_10/scene.local.json",
+      "sha256": "0390ff379f6f673eea11ff69094d0d12d274ae98494cdf5be7d94503c3a5d4e3"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_11",
+      "name": "서울 서초구 서초동·현대이에스에이2아파트·오퓨런스 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_11/scene.local.json",
+      "sha256": "ed9c4e835c9e5237804fda33eca16da1e7a73f622939613abd3038fd3b5b22a1"
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_12",
+      "name": "서울 서초구 서초동·서울검찰청사 신관·아크로비스타 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_12/scene.local.json",
+      "sha256": "0fe75dc1aca1ea26fc42f2fb384c83cf425efbc15436113220a478703e8f3c15"
+    },
+    {
+      "key": "gyeonggi_20261026_01",
+      "name": "경기 용인시 기흥구 보정동·죽현마을 동원로얄듀크·죽전누리에뜰 일대",
+      "path": "maps/additional/gyeonggi_20261026_01/scene.local.json",
+      "sha256": "a07b8f4e5b7a42a2629385d522c5412cbd7e97e3fba725280f5aac52facb9154"
+    },
+    {
+      "key": "gyeonggi_20261026_02",
+      "name": "경기 용인시 기흥구 보정동·죽현마을 아이파크·죽현마을 엘지자이 일대",
+      "path": "maps/additional/gyeonggi_20261026_02/scene.local.json",
+      "sha256": "25095bfa5e234b0900980b01304d89bffe0521fce6d9adbcffe2a13a7968e3b9"
+    },
+    {
+      "key": "gyeonggi_20261026_03",
+      "name": "경기 용인시 수지구 상현동·상현마을 현대성우아파트·상현마을 동일스위트 일대",
+      "path": "maps/additional/gyeonggi_20261026_03/scene.local.json",
+      "sha256": "aa19ed26ef8d760b30ddefe94b360ce93a99a82d66465de537cae6dc46586266"
+    },
+    {
+      "key": "gyeonggi_20261026_04",
+      "name": "경기 수원시 권선구 권선동·권선3지구 주공3단지·권선3단지 상록아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_04/scene.local.json",
+      "sha256": "19779fc2987eee89af1d375f219fb51905262c492ed0e6f487ed87a3e0dda856"
+    },
+    {
+      "key": "gyeonggi_20261026_05",
+      "name": "경기 고양시 덕양구 화정동·은빛마을 일대 (1구역)",
+      "path": "maps/additional/gyeonggi_20261026_05/scene.local.json",
+      "sha256": "81b9fc869425bc47efea05c82d93f7d06188b78f537ac3afb05c5b3371e693f7"
+    },
+    {
+      "key": "gyeonggi_20261026_06",
+      "name": "경기 고양시 덕양구 화정동·은빛마을 일대 (2구역)",
+      "path": "maps/additional/gyeonggi_20261026_06/scene.local.json",
+      "sha256": "d62d18641dc19e68da5fdf89fabd6105f43cbe74e3a9e0c08665c4f8a909c020"
+    },
+    {
+      "key": "gyeonggi_20261026_07",
+      "name": "경기 고양시 덕양구 행신동·샘터마을·행신1차에스케이뷰아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_07/scene.local.json",
+      "sha256": "88c6294b1326e0a7a1dd748c0c5ff2f5ccaf9b26309076c50049f2dcfa3e2dbd"
+    },
+    {
+      "key": "gyeonggi_20261026_08",
+      "name": "경기 성남시 분당구 수내동·푸른마을·파크타운 일대",
+      "path": "maps/additional/gyeonggi_20261026_08/scene.local.json",
+      "sha256": "6ac08c2060dd2fc5c851c385be9c3f9a998936713462889e0d51320fae149695"
+    },
+    {
+      "key": "gyeonggi_20261026_09",
+      "name": "경기 성남시 분당구 이매동·아름마을 일대",
+      "path": "maps/additional/gyeonggi_20261026_09/scene.local.json",
+      "sha256": "f8890bef456ed29a870c4faf2c34b16ace8f44fa9ff336f58e9c834ddfc82aac"
+    },
+    {
+      "key": "gyeonggi_20261026_10",
+      "name": "경기 성남시 분당구 분당동·71건영아파트·66건영아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_10/scene.local.json",
+      "sha256": "676dac0f2159064261982b3d4bbc13ce018cb6df61ca0e1ad20cc0d995840612"
+    },
+    {
+      "key": "gyeonggi_20261026_11",
+      "name": "경기 남양주시 와부읍 도곡리·덕소두산위브아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_11/scene.local.json",
+      "sha256": "ebac26e328cb1af45fc8df42e3f1a4d304a564d71582eaa7e51b59782a2a8c69"
+    },
+    {
+      "key": "gyeonggi_20261026_12",
+      "name": "경기 부천시 소사구 송내동·현대아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_12/scene.local.json",
+      "sha256": "50b0072deaf5dd5450c9a125f5aa4e0dba97355e23f4f9fd06e0ae33c2fbfc24"
+    },
+    {
+      "key": "gyeonggi_20261026_13",
+      "name": "경기 부천시 원미구 중동·매트로펠리스Ⅱ-B·매트로팰리스 Ⅱ-A 일대",
+      "path": "maps/additional/gyeonggi_20261026_13/scene.local.json",
+      "sha256": "4bfd83747f8b1da374c42401cc73e9717d24cd58791151974d630dcce971d419"
+    },
+    {
+      "key": "gyeonggi_20261026_14",
+      "name": "경기 부천시 소사구 심곡본동·코모도타워·부천라비앙로제 일대",
+      "path": "maps/additional/gyeonggi_20261026_14/scene.local.json",
+      "sha256": "6c0abbe48a36566dc1af507a75362861a5bc1cab493b6389fc19eb52d619acd2"
+    },
+    {
+      "key": "gyeonggi_20261026_15",
+      "name": "경기 화성시 병점구 진안동·안화동마을주공아파트·병점역 센트럴 뷰 일대",
+      "path": "maps/additional/gyeonggi_20261026_15/scene.local.json",
+      "sha256": "1abd42f319bcb14daca8a61f1d4a9f81673600de062a0cab67aa1c2d0374ea14"
+    },
+    {
+      "key": "gyeonggi_20261026_17",
+      "name": "경기 광명시 광명동·현진에버빌아파트·광명월드메르디앙 일대",
+      "path": "maps/additional/gyeonggi_20261026_17/scene.local.json",
+      "sha256": "5e0c1d9c59ab167c16df773ee465c9ca10adf39940656a6750058b0bf2fa33e5"
+    },
+    {
+      "key": "gyeonggi_20261026_19",
+      "name": "경기 파주시 금촌동·후곡마을뜨란채·후곡마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_19/scene.local.json",
+      "sha256": "66a02f5506105b34f31d829895f0d564e3539b7db4337d855dced878fd7eaecd"
+    },
+    {
+      "key": "gyeonggi_20261026_22",
+      "name": "경기 김포시 장기동·수정마을 쌍용예가아파트·김포한강 수정마을2단지 일대",
+      "path": "maps/additional/gyeonggi_20261026_22/scene.local.json",
+      "sha256": "9049ddfff3073b072f545ab81b6cdc482e4fa7fa7ed5f97ce7a0f6ae39e1e07e"
+    },
+    {
+      "key": "gyeonggi_20261026_23",
+      "name": "경기 안양시 만안구 안양동·삼성래미안아파트·주공뜨란채 일대",
+      "path": "maps/additional/gyeonggi_20261026_23/scene.local.json",
+      "sha256": "1a3848403fbd1911fc42e39f0bdfab6fc797a4caf878e2c0f5acc7220cfa9cfb"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_01",
+      "name": "경기 의정부시 호원동·성호아파트·신도아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_01/scene.local.json",
+      "sha256": "9fa89fc532cc61e67a40f2e0e68efb7deabbe0227dae15ed676cec4355de6ced"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_02",
+      "name": "경기 군포시 산본동·한양목련아파트·한국공영목련아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_02/scene.local.json",
+      "sha256": "4766b2d71ef64f38642d1ead399021c89a83e879f99e20b52c525fdacfa65c51"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_03",
+      "name": "경기 오산시 궐동·제일하이빌아파트·세교우남퍼스트빌 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_03/scene.local.json",
+      "sha256": "756e37acbc8132c3b137222f7021c71d9aa757131aeeaab669708b984166870a"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_04",
+      "name": "경기 시흥시 대야동·청구아파트·시흥 은행4차 푸르지오 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_04/scene.local.json",
+      "sha256": "8b352c7cadc07e32233dbaec2c41e0b2207803772252059275ee9197933189bf"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_05",
+      "name": "경기 양주시 고암동·청담마을·봉우마을 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_05/scene.local.json",
+      "sha256": "1b6c5194b4cc134996839c396cdb14919ef23fb77f128d456502c624b8c98065"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_06",
+      "name": "경기 광주시 탄벌동·벽산블루밍1단지·벽산블루밍2단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_06/scene.local.json",
+      "sha256": "e826a99869a3f4c91a02e3c9857f7ac785902e4d63c90a46c9c908ce5c7ffa54"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_07",
+      "name": "경기 이천시 부발읍 아미리·현대성우오스타3단지·현대성우오스타2단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_07/scene.local.json",
+      "sha256": "50467b4d7fddb9aae041cce7d93b1c56242a314aa0c01fb375636c7ee906182d"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_08",
+      "name": "경기 포천시 소흘읍 송우리·우정아파트·고운마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_08/scene.local.json",
+      "sha256": "84ce8e5496e3ed565078397e8d5adc6779342387b0d35a0e6c348e431c42948d"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_09",
+      "name": "경기 의왕시 내손동·샘마을아파트·샘마을 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_09/scene.local.json",
+      "sha256": "82b7de610f4910adc92f53592299523aa533025b4f5580c8d9e1c7b02a35e602"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_10",
+      "name": "경기 평택시 이충동·정암마을뜨란채·반지마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_10/scene.local.json",
+      "sha256": "c4bfbf793800178229e103d6ea8814adc32bae57fe2c97579b1059d3a214c69f"
+    },
+    {
+      "key": "gyeonggi_extra_20261026_11",
+      "name": "경기 안성시 공도읍 진사리·안성공도우림루미아트·쌍용스윗닷홈 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_11/scene.local.json",
+      "sha256": "bf920de64a264c78196e8432de4a64e87de5b033127b370a8a7b8519f6bcf68d"
+    },
+    {
+      "key": "seoul_20261026_01",
+      "name": "서울 강남구 역삼동·클래시스·디오빌역삼 일대",
+      "path": "maps/additional/seoul_20261026_01/scene.local.json",
+      "sha256": "86a7682f66647280e76213d556e1ac4cb597947f55fbc4750ab41ec24468cb19"
+    },
+    {
+      "key": "seoul_20261026_02",
+      "name": "서울 강동구 둔촌동·둔촌 푸르지오 아파트·동아아파트 일대",
+      "path": "maps/additional/seoul_20261026_02/scene.local.json",
+      "sha256": "e568c8be86bc553fbff63ef4b16eb4cc0fcd397d81d6f6eab23afa0ce1c67269"
+    },
+    {
+      "key": "seoul_20261026_03",
+      "name": "서울 강서구 염창동·염창힐스테이트·강변힐스테이트아파트 일대",
+      "path": "maps/additional/seoul_20261026_03/scene.local.json",
+      "sha256": "893de10ce43f02024949087d35a49cd0a581a359590a5637dec40e2b346be8b9"
+    },
+    {
+      "key": "seoul_20261026_04",
+      "name": "서울 관악구 봉천동·봉천 우성아파트·관악 우성아파트 일대",
+      "path": "maps/additional/seoul_20261026_04/scene.local.json",
+      "sha256": "2fbfa21cadfe72e2bed53c6d4237ef62fe762ef1b197131df5676c5cef14606a"
+    },
+    {
+      "key": "seoul_20261026_05",
+      "name": "서울 광진구 구의동·구의동삼성쉐르빌101동·현대13차폴라트리움 일대",
+      "path": "maps/additional/seoul_20261026_05/scene.local.json",
+      "sha256": "dd9c20c9f7ab6317e6941eba02b7be7fb9f0aae9d7475bcd90c45bc974533473"
+    },
+    {
+      "key": "seoul_20261026_06",
+      "name": "서울 금천구 독산동·대륭테크노타운 20차·우림라이온스밸리 2차 일대",
+      "path": "maps/additional/seoul_20261026_06/scene.local.json",
+      "sha256": "63ad3b476261b902dad7a878f745ccb39fe90ca56125d4e77a9f94ef058de8c7"
+    },
+    {
+      "key": "seoul_20261026_07",
+      "name": "서울 동대문구 전농동·전농 SK아파트·답십리청솔우성아파트 일대",
+      "path": "maps/additional/seoul_20261026_07/scene.local.json",
+      "sha256": "7808cf1821fbd976ec38cd39b7652e4ab693e430b140b95b4134b7e7092fae41"
+    },
+    {
+      "key": "seoul_20261026_08",
+      "name": "서울 마포구 상수동·신구강변연가 아파트·한강밤섬자이 일대",
+      "path": "maps/additional/seoul_20261026_08/scene.local.json",
+      "sha256": "ca5d82750303790f724c1618556fbba5dbe7fd630f6b0006166faf82cc5408a4"
+    },
+    {
+      "key": "seoul_20261026_09",
+      "name": "서울 서대문구 북가좌동·DMC요진아파트·DMC 래미안 e편한세상 일대",
+      "path": "maps/additional/seoul_20261026_09/scene.local.json",
+      "sha256": "e74f6720549d1ac4fc48de63192d83545160a97842cccdf44e95f7e098e1c694"
+    },
+    {
+      "key": "seoul_20261026_10",
+      "name": "서울 서초구 방배동·국제방송교류재단·래미안방배아트힐 일대",
+      "path": "maps/additional/seoul_20261026_10/scene.local.json",
+      "sha256": "f1135ac1808fdd44eba44b1172ea66f50527afc5437f81cf68993929a332412b"
+    },
+    {
+      "key": "seoul_20261026_11",
+      "name": "서울 성북구 길음동·길음뉴타운·래미안길음1차 일대",
+      "path": "maps/additional/seoul_20261026_11/scene.local.json",
+      "sha256": "8e7cac110072fd9d7c77b6ac3868b9afe9fa1f788a77d87f8f8d295b372ed137"
+    },
+    {
+      "key": "seoul_20261026_12",
+      "name": "서울 송파구 가락동·에스케이허브파크·래미안파크팰리스 일대",
+      "path": "maps/additional/seoul_20261026_12/scene.local.json",
+      "sha256": "222db8b8fab81c2dba5510018b96d57d03b4024e7b7b2b2435d3266cc7e26789"
+    },
+    {
+      "key": "seoul_20261026_13",
+      "name": "서울 영등포구 당산동5가·당산 삼성 래미안·당산동1차 효성아파트 일대",
+      "path": "maps/additional/seoul_20261026_13/scene.local.json",
+      "sha256": "ecf2daab7da2311ead6db032cd0c4cfab388e2d5678376c03a0561b01f2ce9db"
+    },
+    {
+      "key": "seoul_20261026_14",
+      "name": "서울 중랑구 신내동·동성타워프라자·동성아파트 일대",
+      "path": "maps/additional/seoul_20261026_14/scene.local.json",
+      "sha256": "6529f327f9da1d21e2a235fdbf74044c43f6c9f2bd59744ac011a002e73f04ba"
+    },
+    {
+      "key": "seoul_20261026_15",
+      "name": "서울 강남구 대치동·삼환 SO GOOD·대치삼성아파트 일대",
+      "path": "maps/additional/seoul_20261026_15/scene.local.json",
+      "sha256": "9314c794d4f192a968fc0535fd9abbf0886e66fa8d3ec3432670561e84a6f8fc"
+    },
+    {
+      "key": "seoul_20261026_16",
+      "name": "서울 강동구 둔촌동·둔촌하이츠아파트·둔촌 신동아아파트 일대",
+      "path": "maps/additional/seoul_20261026_16/scene.local.json",
+      "sha256": "8b60a02a8398f7750ab81a7e0f4dcb77c158535e2aaa6db66910ba6b12b41596"
+    },
+    {
+      "key": "seoul_20261026_17",
+      "name": "서울 광진구 화양동·성수1차대우아파트·화양동현대아파트 일대",
+      "path": "maps/additional/seoul_20261026_17/scene.local.json",
+      "sha256": "26904f86321e8d0037eb888aa05028675271ae9fa293fbf99b7b97674ef0106c"
+    },
+    {
+      "key": "seoul_20261026_18",
+      "name": "서울 마포구 상암동·DMC 이안상암2단지·상암월드컵파크2단지 일대",
+      "path": "maps/additional/seoul_20261026_18/scene.local.json",
+      "sha256": "ceb3bcbac69e4735de92e1316c5fd2f1391b67548984048dc2d0a775c7f5a30f"
+    },
+    {
+      "key": "seoul_20261026_19",
+      "name": "서울 서초구 양재동·종합무역정보연구센타·한국도로교통공단 서울특별시지부 일대",
+      "path": "maps/additional/seoul_20261026_19/scene.local.json",
+      "sha256": "056fb49d2779f89609046774b5927ef302a15c3e0a8f2b24d6c48bfcc1f24d7e"
+    },
+    {
+      "key": "seoul_20261026_20",
+      "name": "서울 송파구 문정동·문정래미안아파트 일대",
+      "path": "maps/additional/seoul_20261026_20/scene.local.json",
+      "sha256": "17355a47c02643f1a7ff287645c96c7ea6642ab22b6965424b32ca44eb2be52d"
+    },
+    {
+      "key": "gyeonggi_20261027_01",
+      "name": "경기 용인시 수지구 풍덕천동·신정마을·이스턴팰리스 Eastern Palace 일대",
+      "path": "maps/additional/gyeonggi_20261027_01/scene.local.json",
+      "sha256": "292bb94adad3c584943ac540d3b6f8202b3223c9f3347db813c805399e35c170"
+    },
+    {
+      "key": "gyeonggi_20261027_02",
+      "name": "경기 용인시 수지구 죽전동·내대지마을건영캐스빌·내대지마을푸르지오 일대",
+      "path": "maps/additional/gyeonggi_20261027_02/scene.local.json",
+      "sha256": "cc18e30bea240236f3eb45d18e06cd54c33d7fa99c6c89f3952a3f62f7222a18"
+    },
+    {
+      "key": "gyeonggi_20261027_03",
+      "name": "경기 용인시 수지구 죽전동·성현마을반도유보라·꽃메마을아이파크 일대",
+      "path": "maps/additional/gyeonggi_20261027_03/scene.local.json",
+      "sha256": "de1df5a85615e5846c943901b44cac4213d40dffca794a7fc394c3b892e47461"
+    },
+    {
+      "key": "gyeonggi_20261027_04",
+      "name": "경기 수원시 영통구 영통동·영통3차 풍림아이원아파트·벽적골9단지 주공아파트 일대",
+      "path": "maps/additional/gyeonggi_20261027_04/scene.local.json",
+      "sha256": "93b4d212c61fccd44c2d65b1506a84a9abc6d8f1817ff9df82dc1d63623790a8"
+    },
+    {
+      "key": "gyeonggi_20261027_05",
+      "name": "경기 수원시 영통구 망포동·늘푸른 벽산아파트·센트럴하이츠아파트 일대",
+      "path": "maps/additional/gyeonggi_20261027_05/scene.local.json",
+      "sha256": "3db5c204e90948d37dd010285a8f15edf475a6d91d767b6029ffbf25f46773b1"
+    },
+    {
+      "key": "gyeonggi_20261027_06",
+      "name": "경기 수원시 권선구 금곡동·수원호매실휴먼시아7단지아파트·금곡엘지아파트 일대",
+      "path": "maps/additional/gyeonggi_20261027_06/scene.local.json",
+      "sha256": "1e27991a40c9bd81bb2db8de7218fc33ee4eb71f3c59c1a8bd9df924e8f2589f"
+    },
+    {
+      "key": "gyeonggi_20261027_07",
+      "name": "경기 고양시 일산서구 대화동·후곡마을 일대",
+      "path": "maps/additional/gyeonggi_20261027_07/scene.local.json",
+      "sha256": "4ada818d36b6152f34c3d7cdaebc96626870d4c8dc02887e3368823670837cc3"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_01",
+      "name": "경기 시흥시 월곶동·월곶2차풍림아이원아파트·진주마을 풍림1차 아이원 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_01/scene.local.json",
+      "sha256": "fe7796e088f0dec7ed13ea63e9491eca84d66abcf30e6d3a3d2f1ea6106d99b2"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_02",
+      "name": "경기 시흥시 장현동·새재마을 청구아파트·새재마을 대동아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_02/scene.local.json",
+      "sha256": "c68de9c986fb32ed72145bcca2d38d44675d7276ef21f756e5141a024f3c23a1"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_03",
+      "name": "경기 시흥시 월곶동·월곶4차풍림아이원아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_03/scene.local.json",
+      "sha256": "f48e612963bbe7cb16f4487beb99c307df180021aca81137726b11c248e9bdea"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_04",
+      "name": "경기 시흥시 하상동·연꽃마을 대우.삼호아파트·연꽃마을 금호타운 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_04/scene.local.json",
+      "sha256": "f52e1ce0a3caa32606396d9a98536e04a65fe0ab6aee5a2adf1a33c03f4d47fa"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_05",
+      "name": "경기 시흥시 하중동·관곡마을동아아파트·관곡마을 성원아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_05/scene.local.json",
+      "sha256": "5ac1cb997e480ba72ebe7268f63644a495352c625c1b6346d9492f43407665d1"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_06",
+      "name": "경기 시흥시 하상동·연꽃마을 태평아파트 2단지·연꽃마을 태평아파트 1단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_06/scene.local.json",
+      "sha256": "d2243da3de86229f988c9d3334b83d64f7e4fff87656a0f12ea150c2506e4b1b"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_07",
+      "name": "경기 시흥시 장곡동·진말 삼환.한진아파트·진말 대우 아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_07/scene.local.json",
+      "sha256": "ba7e1dd029a05499f35debd2463d24677f35f937f96a940d5210af608b5461fe"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_08",
+      "name": "경기 시흥시 월곶동·진주마을 풍림1차 아이원·월곶Ⅱ 유호N플러스빌 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_08/scene.local.json",
+      "sha256": "92cc3e66f3ce761a321a5eeb46226c05074e611b49a9608e30b75014a08c2825"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_09",
+      "name": "경기 이천시 부발읍 아미리·아미리7차현대아파트·현대성우오스타1단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_09/scene.local.json",
+      "sha256": "73cbd9afa72266d697d7c348f5bb8289af2c25cf0db9a9a5a91c23d3a3224297"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_10",
+      "name": "경기 광주시 곤지암읍 삼리·곤지암현진에버빌·곤지암킴스빌리지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_10/scene.local.json",
+      "sha256": "104f7ff70407cd7a6aa8b25a7bcc1de60834931a7a9f6d3fcdc3d0d72728ee45"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_11",
+      "name": "경기 광주시 탄벌동·동보아파트·탄벌리 현대아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_11/scene.local.json",
+      "sha256": "ae475e52d58fad6550276133f310f9ba29481ee7acaee643bfd2eab76cc17564"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_12",
+      "name": "경기 광주시 태전동·성원아파트·미진아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_12/scene.local.json",
+      "sha256": "1c20250d90914e7e49a1596c232fc64990bcac1ae46c2ec4c9766cb5d005ca76"
+    },
+    {
+      "key": "gyeonggi_extra_20261027_13",
+      "name": "경기 포천시 소흘읍 송우리·송천마을뜨란채·석향마을대방노블랜드아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_13/scene.local.json",
+      "sha256": "77fdba9e30002f7ebeee879223f2f583099d9fbd29cc0763b10084c582ecdf16"
+    },
+    {
+      "key": "gyeonggi_extra_fine_20261027_01",
+      "name": "경기 의정부시 호원동·신일 유토빌 플러스 아파트·월드한아름아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_fine_20261027_01/scene.local.json",
+      "sha256": "3d68f188dc7cddaae84c919bb46775bca84f2801e76d3dc5fb1f316d8f41fbcd"
+    },
+    {
+      "key": "gyeonggi_extra_fine_20261027_02",
+      "name": "경기 군포시 산본동·솔거(대림)아파트·주공7단지우륵아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_fine_20261027_02/scene.local.json",
+      "sha256": "ebb93cb7563dedda83870800f5854cd2c7d571c181b6d13cc643f5a6730672e7"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_01",
+      "name": "경기 용인시 기흥구 보정동·연원마을 성원아파트·더샵 보정애비뉴 2단지 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_01/scene.local.json",
+      "sha256": "7a3a74dc8e5193d7732e31c7c8d3db2cfb2b89148e0fe7cd5e7af3f025e1cb6e"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_02",
+      "name": "경기 용인시 기흥구 마북동·블루밍 구성 더센트럴·삼거마을삼성래미안1차아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_02/scene.local.json",
+      "sha256": "35f6d0a2c42c8848947ab749879aa67756e03b5fe5c43fd95d6d952a778a1eee"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_03",
+      "name": "경기 용인시 수지구 상현동·만현마을1단지 롯데캐슬아파트·진산마을성원상떼빌아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_03/scene.local.json",
+      "sha256": "c0729932241ac0a0150f753e96d5d47a91bab1c50e7c7e37eca0c004be3a9d33"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_04",
+      "name": "경기 용인시 수지구 죽전동·꽃메마을현대홈타운·꽃메마을한라신영프로방스 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_04/scene.local.json",
+      "sha256": "e9948ad1e7ab1d0768867a4efdc019a5c7e34d1f74f3f3964ab6e0ee0e0cebea"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_05",
+      "name": "경기 용인시 기흥구 마북동·교동마을 현대홈타운·교동마을 현대필그린아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_05/scene.local.json",
+      "sha256": "f7c117ce7ef1d8b32f2442c58f89410ae0e207d2de01284e3065eb726c50c787"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_06",
+      "name": "경기 용인시 기흥구 영덕동·흥덕마을 13단지 경남아너스빌 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_06/scene.local.json",
+      "sha256": "1569742f075d8f4eb9bdec5497e10d3c5d7fbed2dde7076bae0c9946195d37fd"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_07",
+      "name": "경기 용인시 기흥구 공세동·한보라마을휴먼시아·한보라마을 경남아너스빌 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_07/scene.local.json",
+      "sha256": "e9f0784aaddf9ff71fb607972ab450462226d3a2ce1581d435b8493444e1ae89"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_08",
+      "name": "경기 용인시 기흥구 영덕동·용인영덕신일아파트·청현마을 기흥데시앙 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_08/scene.local.json",
+      "sha256": "1c01bfd8c26c418ce42bfc95d7a847bab2dd886dfcb372fbaabe2fd9d5c4fb41"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_09",
+      "name": "경기 용인시 기흥구 영덕동·흥덕우미린 레이크포레·흥덕마을 힐스테이트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_09/scene.local.json",
+      "sha256": "a3535d4993b3eecab040da781e888ca3afd725c7847c94872413142085a26fe4"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_10",
+      "name": "경기 용인시 기흥구 영덕동·흥덕마을14단지 호반베르디움·신동아파밀리에아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_10/scene.local.json",
+      "sha256": "1eba2b58aa633717f76f0cfb62b0d92e90f0616044a5f3d183f584e40a8efeef"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_12",
+      "name": "경기 성남시 분당구 백현동·백현마을·하나님의교회 세계복음선교협회 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_12/scene.local.json",
+      "sha256": "ec2d7df846e772eaff281281fc0ccf3b960df0af5d7d64f719f5542fd549eec7"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_13",
+      "name": "경기 성남시 분당구 서현동·효자촌 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_13/scene.local.json",
+      "sha256": "a8e42586696d477d1bc547e678377dd046f278f99e1ccdd762570e7f620159b8"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_14",
+      "name": "경기 성남시 분당구 수내동·파크타운·양지마을 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_14/scene.local.json",
+      "sha256": "9843d475c1414d09f5b110fd421f01f57048cb26c5d8836907e0949780c758d5"
+    },
+    {
+      "key": "gyeonggi_fast_20261027_19",
+      "name": "경기 광명시 소하동·동양아파트·휴먼시아 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_19/scene.local.json",
+      "sha256": "dd6ab10be4fb33dbb33c2f8cf9284dc9aded5cb397331340d383a537bdf25f27"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_01",
+      "name": "경기 부천시 소사구 심곡본동·이테크 에비뉴스타·HB엘림캐슬 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_01/scene.local.json",
+      "sha256": "112c0e6900463e44589124dad5936cd3201696eb985e13f43b8431247a2e9e30"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_02",
+      "name": "경기 부천시 소사구 송내동·부천 중동역 2차 푸르지오 B단지·부천 우방 유쉘아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_02/scene.local.json",
+      "sha256": "3c4c8c39bc08d5f9946562b2b420f235ab993350640c5b910709c079f8b40c0f"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_03",
+      "name": "경기 안산시 상록구 사동·상록수현대2차아파트·선경아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_03/scene.local.json",
+      "sha256": "9ee7328586debd6a07dd1343565660436334dbe473b7faec4e6e45645802e604"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_04",
+      "name": "경기 안산시 상록구 사동·안산고잔9차푸르지오·안산고잔7차푸르지오 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_04/scene.local.json",
+      "sha256": "fcc81462c2cf73ab52332cdf3c25e8fe87ec751f2e242b9d6bd59452aa6df78a"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_05",
+      "name": "경기 화성시 만세구 향남읍 행정리·향남시범 넓은들마을 우미린아파트·향남시범넓은들마을신명스카이뷰 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_05/scene.local.json",
+      "sha256": "060bb68aa9c5d5326135bebadbae11d71cf9952c3110f9f3c98a2177837b44ce"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_06",
+      "name": "경기 화성시 만세구 향남읍 행정리·향남시범 살구꽃마을 신영지웰아파트·향남시범 살구꽃마을 한일베라체아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_06/scene.local.json",
+      "sha256": "989fb89fe9d06c566f39e884209de0dc3c53e928759c12f69531922c16c90681"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_07",
+      "name": "경기 파주시 금촌동·대영장미아파트·장미아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_07/scene.local.json",
+      "sha256": "8eecb10c66c04b7fee961440ab00f2500dbc7e7f7a3258399dca392b38bed133"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_08",
+      "name": "경기 안양시 동안구 비산동·관악아파트·한마음2차아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_08/scene.local.json",
+      "sha256": "64fab7e1ed9323c1ac42868e7f25706e77c8a074309642b7e60b63b4fa23663d"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_09",
+      "name": "경기 안양시 동안구 호계동·목련아파트·향촌아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_09/scene.local.json",
+      "sha256": "c4d7cc43997293ebdc0bd04a0e8cab2ca01ece17320d80d4dab60ad5d2eb970b"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_11",
+      "name": "경기 성남시 분당구 정자동·아이파크분당1·동양정자파라곤 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_11/scene.local.json",
+      "sha256": "56237825e93651630c02725f2565db810ed4bbf13ea161baa9244c7b6f8ee162"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_12",
+      "name": "경기 성남시 분당구 구미동·까치마을·하얀마을 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_12/scene.local.json",
+      "sha256": "8f92181b20bf917df4cd0edbb75d0c0a1c8c30534b3f76dafeddee540a108177"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_13",
+      "name": "경기 성남시 분당구 구미동·새터마을죽전힐스테이트·무지개마을건영아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_13/scene.local.json",
+      "sha256": "fa4069fc5f2c76b487096a8c1af5a6da81f967e84ac2a7358e9c40698a946cb3"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_14",
+      "name": "경기 부천시 원미구 약대동·부천두산위브트레지움·덕유마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_14/scene.local.json",
+      "sha256": "a1e1489aa20479e368037a6950df3ad542bae609a16104ceb1ff45b07e9d3876"
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_15",
+      "name": "경기 부천시 원미구 중동·그린타운아파트·아이엔유 포비스타 오피스텔 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_15/scene.local.json",
+      "sha256": "0c2f7d56fcb46320118c698f745c958408fe7b524e520361b20dcf6599b8e707"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+<div id="capstone-learning-history">
+  <style>
+    #capstone-learning-history { color:var(--foreground); position:relative; }
+    #capstone-learning-history .cl-heading { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; padding-right:90px; }
+    #capstone-learning-history .cl-meta { margin:4px 0 20px; }
+    #capstone-learning-history .cl-stage-label { display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 12px; margin-bottom:8px; }
+    #capstone-learning-history .cl-stage-note { margin-top:6px; }
+    #capstone-learning-history .cl-stage-group { margin:12px 0 24px; gap:18px; }
+    #capstone-learning-history .cl-stage { min-width:0; }
+    #capstone-learning-history .cl-selector { margin:20px 0 8px; }
+    #capstone-learning-history .cl-range-label { display:flex; flex-wrap:wrap; gap:8px 16px; justify-content:space-between; }
+    #capstone-learning-history .cl-details { display:flex; flex-wrap:wrap; gap:4px 18px; min-height:44px; align-items:center; margin:8px 0 12px; }
+    #capstone-learning-history .cl-plots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 28px; }
+    #capstone-learning-history figure { margin:0; min-width:0; }
+    #capstone-learning-history figcaption { font-weight:500; margin-bottom:4px; }
+    #capstone-learning-history .cl-chart-note { margin-bottom:6px; }
+    #capstone-learning-history .cl-chart { width:100%; min-width:0; }
+    #capstone-learning-history .cl-chart svg { display:block; max-width:100%; overflow:visible; }
+    #capstone-learning-history .cl-chart svg text { fill:var(--foreground); font-size:12px; font-weight:400; }
+    #capstone-learning-history .cl-chart svg .domain { stroke:var(--border); }
+    #capstone-learning-history .cl-chart svg .tick line { stroke:var(--border); }
+    #capstone-learning-history .cl-legend { display:flex; flex-wrap:wrap; gap:4px 16px; min-height:24px; align-items:center; margin:2px 0 4px; }
+    #capstone-learning-history .cl-legend button { border:0; background:transparent; padding:0; color:var(--foreground); font:inherit; display:inline-flex; gap:6px; align-items:center; }
+    #capstone-learning-history .cl-legend button[aria-pressed="false"] { opacity:.45; }
+    #capstone-learning-history .cl-swatch { width:16px; height:3px; display:inline-block; flex-shrink:0; }
+    #capstone-learning-history .cl-footer { margin-top:18px; display:flex; flex-wrap:wrap; gap:6px 18px; }
+    #capstone-learning-history .cl-tooltip { position:absolute; pointer-events:none; z-index:5; padding:9px 12px; background:var(--popover); color:var(--popover-foreground); border:1px solid var(--border); border-radius:6px; max-width:calc(100% - 16px); }
+    #capstone-learning-history .cl-tooltip[hidden] { display:none; }
+    #capstone-learning-history .cl-tooltip-row { display:flex; justify-content:space-between; gap:16px; }
+    #capstone-learning-history .cl-tooltip-title { font-weight:500; margin-bottom:4px; }
+    @media(max-width:780px) { #capstone-learning-history .cl-plots { grid-template-columns:minmax(0,1fr); } }
+    @media(pointer:coarse) { #capstone-learning-history .cl-legend button { min-height:44px; } }
+  </style>
+  <div class="cl-heading"><h2>학습 기록</h2><span id="cl-run-state" class="viz-badge"></span></div>
+  <div class="cl-meta text-small text-muted"><span id="cl-as-of"></span> · 저장된 전체 이력 · 자동 갱신 없음</div>
+  <div class="viz-grid cl-stage-group" aria-label="학습 단계별 진행">
+    <div class="cl-stage">
+      <div class="cl-stage-label"><span>① 비행 데이터 수집</span><span id="cl-collect-value" class="tabular-nums"></span></div>
+      <div id="cl-collect-progress" class="progress" role="progressbar" aria-label="비행 데이터 수집" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar"></div></div>
+      <div class="cl-stage-note text-small text-muted">완료 · 훈련 지역에서 수집</div>
+    </div>
+    <div class="cl-stage">
+      <div class="cl-stage-label"><span>② Transformer 사전학습</span><span id="cl-pretrain-value" class="tabular-nums"></span></div>
+      <div id="cl-pretrain-progress" class="progress" role="progressbar" aria-label="Transformer 사전학습" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar"></div></div>
+      <div class="cl-stage-note text-small text-muted">제공 1–1,200 + 이번 실행 1,201–3,000</div>
+    </div>
+    <div class="cl-stage">
+      <div class="cl-stage-label"><span>③ 공동 PPO 강화학습</span><span id="cl-ppo-value" class="tabular-nums"></span></div>
+      <div id="cl-ppo-progress" class="progress" role="progressbar" aria-label="공동 PPO 강화학습" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar"></div></div>
+      <div id="cl-ppo-note" class="cl-stage-note text-small text-muted"></div>
+    </div>
+  </div>
+  <div class="cl-selector">
+    <div class="cl-range-label"><label for="cl-update-range" class="form-label">강화학습 기록 살펴보기</label><output id="cl-selected-update" for="cl-update-range" class="tabular-nums"></output></div>
+    <input id="cl-update-range" class="form-range" type="range" min="1" step="1" aria-label="확인할 PPO update">
+    <div id="cl-selected-details" class="cl-details text-small tabular-nums" aria-live="polite"></div>
+  </div>
+  <div class="cl-plots">
+    <figure>
+      <figcaption>고정 맵 검증 성능</figcaption>
+      <div class="cl-chart-note text-small text-muted">같은 8개 맵 · 16 update마다 평가 · 높을수록 좋음</div>
+      <div id="cl-validation-legend" class="cl-legend"></div>
+      <div id="cl-validation-chart" class="cl-chart"></div>
+    </figure>
+    <figure>
+      <figcaption>훈련 비행 성능</figcaption>
+      <div class="cl-chart-note text-small text-muted">매 update 다른 비행 8회 · 검증 성능과 구분</div>
+      <div id="cl-training-legend" class="cl-legend"></div>
+      <div id="cl-training-chart" class="cl-chart"></div>
+    </figure>
+    <figure>
+      <figcaption>사전학습 중 단절 예측 성능</figcaption>
+      <div class="cl-chart-note text-small text-muted">고정 검증 관측의 AP · 높을수록 좋음 · PPO 이전</div>
+      <div id="cl-ap-legend" class="cl-legend"></div>
+      <div id="cl-ap-chart" class="cl-chart"></div>
+    </figure>
+    <figure>
+      <figcaption>사전학습 중 예측 오차</figcaption>
+      <div class="cl-chart-note text-small text-muted">훈련 loss · 25 step 평균 · 낮을수록 좋음</div>
+      <div id="cl-loss-legend" class="cl-legend"></div>
+      <div id="cl-loss-chart" class="cl-chart"></div>
+    </figure>
+  </div>
+  <div class="cl-footer text-small text-muted"><span id="cl-safety"></span><span id="cl-best"></span><span>전체 96조건 검증은 PPO 종료 후 진행</span></div>
+  <div id="cl-tooltip" class="tooltip cl-tooltip tabular-nums text-small" role="tooltip" hidden></div>
+  <div id="cl-error" class="text-destructive" role="alert" hidden></div>
+  <script id="cl-snapshot" type="application/json">__TRAINING_SNAPSHOT__</script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script>
+    (() => {
+      const root = document.getElementById('capstone-learning-history');
+      const select = id => root.querySelector('#' + id);
+      const data = JSON.parse(select('cl-snapshot').textContent);
+      const n = data.ppo.length;
+      const last = data.ppo[n - 1].update;
+      const fmt = new Intl.NumberFormat('ko-KR');
+      const colors = ['var(--viz-series-1)', 'var(--viz-series-2)'];
+      const saved = window.openai?.widgetState?.privateContent;
+      let selected = Math.max(1, Math.min(last, Number(saved?.selectedUpdate) || last));
+      const tooltip = select('cl-tooltip');
+      const charts = [];
+      let pinned = false;
+      select('cl-as-of').textContent = data.as_of;
+      select('cl-run-state').textContent = data.recorded_state === 'running' ? '실행 중 기록' : data.recorded_state === 'completed' ? '실행 종료' : '상태 확인 필요';
+      function progress(prefix, value, target, unit) {
+        select(prefix + '-value').textContent = fmt.format(value) + ' / ' + fmt.format(target) + unit;
+        const element = select(prefix + '-progress');
+        const pct = Math.min(100, value / target * 100);
+        element.setAttribute('aria-valuenow', pct.toFixed(1));
+        element.firstElementChild.style.width = pct + '%';
+      }
+      progress('cl-collect', data.collected, data.target.episodes, '회');
+      progress('cl-pretrain', data.pretrain_step, data.target.pretrain_steps, ' step');
+      progress('cl-ppo', last, data.target.updates, '회');
+      select('cl-ppo-note').textContent = '정책 + 예측기 동시 갱신 · 훈련 비행 ' + fmt.format(data.training_episodes) + '회';
+      select('cl-safety').textContent = data.all_safety_passed ? '저장된 모든 PPO update 안전 감사 통과' : '안전 감사 실패 기록 확인 필요';
+      select('cl-best').textContent = '검증 선택 best: ' + data.best_update + ' update';
+      const slider = select('cl-update-range');
+      slider.max = String(last); slider.value = String(selected);
+      function updateSelection(persist = false) {
+        const row = data.ppo.find(r => r.update === selected);
+        if (!row) return;
+        slider.value = String(selected);
+        select('cl-selected-update').textContent = selected + ' / ' + last + ' update';
+        const labels = [
+          '훈련 연결 ' + (row.CTR * 100).toFixed(2) + '%',
+          '훈련 전달 ' + (row.PDR * 100).toFixed(2) + '%',
+          '최장 단절 ' + row.longest_outage_s.toFixed(1) + '초',
+          '안전 ' + (row.safety_passed ? '통과' : '미통과'),
+          '예측기 갱신 ' + (row.encoder_change_l2 > 0 && row.predictor_change_l2 > 0 ? '확인' : '없음')
+        ];
+        select('cl-selected-details').replaceChildren(...labels.map(t => {
+          const span = document.createElement('span'); span.textContent = t; return span;
+        }));
+        for (const chart of charts) chart.selection();
+        if (persist && window.openai?.setWidgetState) {
+          window.openai.setWidgetState({ modelContent:{selectedUpdate:selected,recordedThrough:last,asOf:data.as_of}, privateContent:{selectedUpdate:selected} }).catch(() => {});
+        }
+      }
+      slider.addEventListener('input', () => { selected = Number(slider.value); updateSelection(); });
+      slider.addEventListener('change', () => updateSelection(true));
+      window.addEventListener('openai:set_globals', event => {
+        const next = event.detail?.globals?.widgetState?.privateContent?.selectedUpdate;
+        if (Number.isInteger(next)) { selected = Math.max(1, Math.min(last, next)); updateSelection(); }
+      });
+      updateSelection();
+      if (typeof d3 === 'undefined') {
+        select('cl-error').hidden = false;
+        select('cl-error').textContent = '그래프 표시를 위한 리소스를 불러오지 못했습니다.';
+        return;
+      }
+      function chart(spec) {
+        const host = select(spec.id + '-chart');
+        const legend = select(spec.id + '-legend');
+        const series = spec.series.map((s, i) => ({...s, color:colors[i], visible:true}));
+        const svg = d3.select(host).append('svg').attr('role','img').attr('aria-label', spec.label);
+        svg.append('title').text(spec.label);
+        svg.append('desc').text(spec.description);
+        const clipId = spec.id + '-clip';
+        const clip = svg.append('defs').append('clipPath').attr('id',clipId).append('rect');
+        const frame = svg.append('rect').attr('data-chart-frame','').attr('fill','none').attr('stroke','var(--border)').attr('stroke-width',1);
+        const gx = svg.append('g');
+        const gy = svg.append('g');
+        const xLabel = svg.append('text').attr('class','axis-title').attr('data-axis','x').attr('text-anchor','middle').text(spec.xTitle);
+        const yLabel = svg.append('text').attr('class','axis-title').attr('data-axis','y').attr('text-anchor','start').text(spec.yTitle);
+        const marks = svg.append('g').attr('clip-path','url(#' + clipId + ')');
+        const selectedGuide = marks.append('line').attr('data-selected-update','').attr('stroke','var(--foreground)').attr('stroke-width',1).attr('opacity',.45);
+        const guide = marks.append('line').attr('data-chart-hover-guide','').attr('stroke','var(--foreground)').attr('stroke-width',1).attr('opacity',.55).style('display','none');
+        const groups = series.map(s => {
+          const group = marks.append('g');
+          const path = group.append('path').attr('fill','none').attr('stroke',s.color).attr('stroke-width',1.7);
+          const points = spec.dots ? group.selectAll('circle.observation').data(s.values).join('circle').attr('class','observation').attr('r',3).attr('fill',s.color) : null;
+          const hover = group.append('circle').attr('data-chart-hover-marker','').attr('r',4).attr('fill',s.color).style('display','none');
+          return {group,path,points,hover};
+        });
+        const overlay = svg.append('rect').attr('data-chart-hit','').attr('data-chart-hover-overlay','cross-series').attr('fill','transparent').attr('class','cursor-interaction');
+        let x, y, width, height, margin, plot;
+        const xDomain = spec.ppo ? d3.extent(data.ppo, r => r.update) : d3.extent(series.flatMap(s => s.values), r => r.x);
+        const yExtent = d3.extent(series.flatMap(s => s.values), r => r.y);
+        const yPad = Math.max((yExtent[1] - yExtent[0]) * .13, Math.abs(yExtent[1]) * .001, 0.001);
+        const yDomain = [yExtent[0] - yPad, yExtent[1] + yPad];
+        function positionSelection() {
+          if (!x || !spec.ppo) { selectedGuide.style('display','none'); return; }
+          selectedGuide.style('display',null).attr('x1',x(selected)).attr('x2',x(selected)).attr('y1',plot.top).attr('y2',plot.bottom);
+        }
+        function draw() {
+          width = Math.max(280, host.getBoundingClientRect().width);
+          height = 228;
+          margin = {left:66,right:14,top:25,bottom:52};
+          plot = {left:margin.left,right:width-margin.right,top:margin.top,bottom:height-margin.bottom};
+          svg.attr('viewBox',`0 0 ${width} ${height}`).attr('width',width).attr('height',height);
+          x = d3.scaleLinear().domain(xDomain[0] === xDomain[1] ? [xDomain[0]-.5,xDomain[1]+.5] : xDomain).range([plot.left+5,plot.right-5]);
+          y = d3.scaleLinear().domain(yDomain).range([plot.bottom-5,plot.top+5]);
+          frame.attr('x',plot.left).attr('y',plot.top).attr('width',plot.right-plot.left).attr('height',plot.bottom-plot.top);
+          clip.attr('x',plot.left).attr('y',plot.top).attr('width',plot.right-plot.left).attr('height',plot.bottom-plot.top);
+          const ticks = width < 400 ? 3 : 4;
+          gx.attr('transform',`translate(0,${plot.bottom})`).call(d3.axisBottom(x).ticks(ticks).tickSizeOuter(0).tickFormat(d3.format('~s')));
+          gy.attr('transform',`translate(${plot.left},0)`).call(d3.axisLeft(y).ticks(4).tickSizeOuter(0).tickFormat(spec.axisFormat));
+          xLabel.attr('x',(plot.left+plot.right)/2).attr('y',height-8);
+          yLabel.attr('x',plot.left).attr('y',13);
+          const line = d3.line().x(d => x(d.x)).y(d => y(d.y));
+          series.forEach((s, i) => {
+            groups[i].path.attr('d',line(s.values));
+            if (groups[i].points) groups[i].points.attr('cx',d=>x(d.x)).attr('cy',d=>y(d.y));
+          });
+          overlay.attr('x',plot.left).attr('y',plot.top).attr('width',plot.right-plot.left).attr('height',plot.bottom-plot.top);
+          positionSelection();
+          requestAnimationFrame(() => {
+            // Cull secondary ticks if a narrow container produces label collisions.
+            [gx, gy].forEach(axis => {
+              let previous = null;
+              axis.selectAll('.tick text').each(function() {
+                const box = this.getBoundingClientRect();
+                const horizontal = axis === gx;
+                const hit = previous && (horizontal ? box.left < previous.right + 4 : box.top < previous.bottom + 4 && box.bottom > previous.top - 4);
+                if (hit) this.style.visibility = 'hidden'; else { this.style.visibility = ''; previous = box; }
+              });
+            });
+          });
+        }
+        function interpolated(values, rawX) {
+          if (rawX < values[0].x || rawX > values[values.length-1].x) return null;
+          const near = d3.bisector(d => d.x).center(values,rawX);
+          const same = values[near];
+          if (Math.abs(same.x-rawX) < 1e-8) return same.y;
+          let a,b;
+          if (same.x < rawX) {a=same;b=values[near+1];} else {a=values[near-1];b=same;}
+          if (!a || !b) return same.y;
+          return a.y+(b.y-a.y)*(rawX-a.x)/(b.x-a.x);
+        }
+        function hover(event) {
+          if (!x) return;
+          const [mouseX,mouseY] = d3.pointer(event,svg.node());
+          const px = Math.max(plot.left,Math.min(plot.right,mouseX));
+          const valueX = x.invert(px);
+          guide.style('display',null).attr('x1',px).attr('x2',px).attr('y1',plot.top).attr('y2',plot.bottom);
+          const rows = [];
+          series.forEach((s,i) => {
+            const value = s.visible ? interpolated(s.values,valueX) : null;
+            groups[i].hover.style('display',value === null ? 'none' : null);
+            if (value !== null) {
+              groups[i].hover.attr('cx',px).attr('cy',y(value));
+              rows.push({name:s.name,value:spec.valueFormat(value)});
+            }
+          });
+          tooltip.replaceChildren();
+          const title = document.createElement('div');title.className='cl-tooltip-title';title.textContent=spec.xTitle+' '+valueX.toFixed(1);tooltip.appendChild(title);
+          rows.forEach(row => {
+            const element = document.createElement('div');element.className='cl-tooltip-row';
+            const name = document.createElement('span');name.textContent=row.name;
+            const value = document.createElement('span');value.textContent=row.value;
+            element.append(name,value);tooltip.appendChild(element);
+          });
+          const note=document.createElement('div');note.className='text-muted';note.textContent='선 사이 값은 선형 보간';tooltip.appendChild(note);
+          tooltip.hidden=false;
+          const rootBox=root.getBoundingClientRect(), svgBox=svg.node().getBoundingClientRect();
+          const left=svgBox.left-rootBox.left+px+12, top=svgBox.top-rootBox.top+mouseY+12;
+          tooltip.style.left=Math.max(8,Math.min(rootBox.width-tooltip.offsetWidth-8,left))+'px';
+          tooltip.style.top=Math.max(0,Math.min(rootBox.height-tooltip.offsetHeight,top))+'px';
+        }
+        function clear() {
+          tooltip.hidden=true;guide.style('display','none');groups.forEach(g=>g.hover.style('display','none'));
+        }
+        overlay.on('pointermove',event=>{if(!pinned)hover(event);}).on('pointerleave',()=>{if(!pinned)clear();}).on('click',event=>{pinned=!pinned;if(pinned)hover(event);else clear();});
+        series.forEach((s,i) => {
+          const button=document.createElement('button');button.type='button';button.setAttribute('aria-pressed','true');button.className='cursor-interaction';
+          const swatch=document.createElement('span');swatch.className='cl-swatch';swatch.style.background=s.color;swatch.setAttribute('aria-hidden','true');
+          const text=document.createElement('span');text.textContent=s.name;button.append(swatch,text);legend.appendChild(button);
+          button.addEventListener('click',()=>{s.visible=!s.visible;button.setAttribute('aria-pressed',String(s.visible));groups[i].group.style('display',s.visible?null:'none');pinned=false;clear();});
+        });
+        new ResizeObserver(draw).observe(host);
+        const controller={selection:positionSelection};charts.push(controller);draw();return controller;
+      }
+      const pct = value => value.toFixed(2)+'%';
+      const commSeries = rows => [
+        {name:'연결 유지율',values:rows.map(r=>({x:r.update,y:r.CTR*100}))},
+        {name:'패킷 전달률',values:rows.map(r=>({x:r.update,y:r.PDR*100}))}
+      ];
+      chart({id:'cl-validation',label:'고정 맵 검증의 연결 유지율과 패킷 전달률',description:'동일한 8개 검증 맵을 16 update마다 평가한 결과입니다. 최종 미사용 테스트 결과가 아닙니다.',xTitle:'PPO update (회)',yTitle:'검증 비율 (%)',series:commSeries(data.validation),ppo:true,dots:true,axisFormat:d3.format('.1f'),valueFormat:pct});
+      chart({id:'cl-training',label:'전체 PPO 훈련 비행의 연결 유지율과 패킷 전달률',description:'각 update의 훈련 비행 8회 평균입니다. 매 update 지도와 시나리오가 달라 검증 수치와 구분합니다.',xTitle:'PPO update (회)',yTitle:'훈련 비율 (%)',series:commSeries(data.ppo),ppo:true,dots:false,axisFormat:d3.format('.1f'),valueFormat:pct});
+      chart({id:'cl-ap',label:'사전학습 중 Transformer의 검증 AP',description:'사전학습 검증의 5초 단절 위험과 3~7초 단절 시작 AP입니다. PPO 학습 이후 예측 성능을 나타내지 않습니다.',xTitle:'사전학습 step',yTitle:'AP',series:[{name:'5초 단절 위험',values:data.pretrain.map(r=>({x:r.step,y:r.risk5}))},{name:'3~7초 단절 시작',values:data.pretrain.map(r=>({x:r.step,y:r.onset37}))}],dots:true,axisFormat:d3.format('.2f'),valueFormat:v=>v.toFixed(4)});
+      chart({id:'cl-loss',label:'전체 Transformer 사전학습 loss의 25 step 평균',description:'제공된 1~1200 step과 이 PC에서 이어 학습한 1201~3000 step의 전체 loss 기록을 포함합니다. loss 감소만으로 실제 통신 성능을 판단하지 않습니다.',xTitle:'사전학습 step',yTitle:'훈련 loss',series:[{name:'예측 loss · 25 step 평균',values:data.loss.map(r=>({x:r.step,y:r.loss}))}],dots:false,axisFormat:d3.format('.2f'),valueFormat:v=>v.toFixed(4)});
+      updateSelection();
+    })();
+  </script>
+</div>

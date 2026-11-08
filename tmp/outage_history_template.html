@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Final V1 · 단절 30초 전 이력</title>
+<style>
+:root{color-scheme:light;--ink:#142e40;--muted:#556c7b;--line:#d6e0e5;--green:#147a6e;--paper:#f1f5f6}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 "Malgun Gothic",-apple-system,BlinkMacSystemFont,system-ui,sans-serif}
+main{max-width:1200px;margin:auto;padding:24px}header{background:#142f42;color:#f8fbfc;padding:30px 34px;border-radius:18px}header small{color:#80d3c5;font-weight:700;letter-spacing:.1em}h1{font-size:clamp(26px,4.5vw,39px);line-height:1.3;margin:8px 0 12px}header p{color:#cee0e9;max-width:850px;margin:0}a{color:#1166a3;text-underline-offset:4px}header a{color:#a8e5d9;display:inline-block;margin-top:17px}h2{font-size:21px;margin:0 0 8px}h3{font-size:16px;margin:0 0 6px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:23px;margin-top:16px}.muted,.note{color:var(--muted)}.note{font-size:13px;margin:8px 0 0}.lead{font-size:17px;font-weight:700}.hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}.stat{padding:16px 18px;background:white;border:1px solid var(--line);border-radius:12px}.stat strong{display:block;font-size:26px;line-height:1.35}.stat span{font-size:12px;color:var(--muted)}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:15px 0}label{display:grid;gap:4px;font-size:12px;font-weight:700;color:var(--muted)}select,button{border:1px solid #c9d7df;background:white;color:var(--ink);border-radius:8px;min-height:40px;padding:6px 10px;font:inherit;max-width:100%}button{cursor:pointer}.type-control{flex:0 1 150px}.map-control{flex:1 1 230px}.event-control{flex:2 1 350px;min-width:0}select{width:100%}.windows{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.windows button[aria-pressed=true]{background:var(--green);color:white;border-color:var(--green)}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #388eaa;outline-offset:2px}.canvas-shell{position:relative;background:#f9fbfc;border-radius:10px;border:1px solid #e3e9ed;overflow:hidden}canvas{display:block;width:100%;height:350px;touch-action:pan-y}.readout{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;min-height:29px;margin:10px 0 2px}.seek{display:block;width:100%;accent-color:var(--green);margin:10px 0}.values{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin-top:14px}.value{padding:9px;background:#f3f6f7;border-radius:8px;text-align:center}.value small{display:block;color:var(--muted);font-size:11px}.value strong{font-size:16px}.tag{display:inline-block;font-size:12px;padding:3px 9px;border-radius:20px;background:#edf3f4;color:#3e596c;margin:3px 5px 0 0}.tag.warn{background:#faede8;color:#9c4e38}.figure{width:100%;height:auto;display:block;border:1px solid #e3e9ed;border-radius:10px;margin-top:12px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px;margin-top:14px;white-space:nowrap}th,td{padding:10px;border-bottom:1px solid #e0e7eb;text-align:right}th:first-child,td:first-child{text-align:left}thead{background:#f2f6f7}p{margin:9px 0}.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.two-col .card{margin-top:0}.timing-table td,.timing-table th{white-space:normal}.callout{background:#eaf5f1;border-left:4px solid var(--green);padding:13px 17px;border-radius:5px;margin:13px 0}.downloads{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}.no-data{color:#9c4e38}footer{font-size:12px;color:var(--muted);padding:24px 4px 5px}details{margin-top:14px}summary{cursor:pointer;font-weight:700}.empty{padding:20px}code{font-size:12px}
+@media(max-width:650px){main{padding:12px}header{padding:23px 21px}.card{padding:17px}.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat{padding:12px}.stat strong{font-size:23px}canvas{height:285px}.two-col{grid-template-columns:1fr}.values{grid-template-columns:repeat(4,minmax(0,1fr))}.controls{gap:8px}.type-control,.map-control{flex:1 1 130px}.event-control{flex:1 1 100%}h2{font-size:19px}.lead{font-size:15px}}
+</style>
+</head>
+<body><main>
+<header><small>FINAL V1 · 단절 원인 분석</small><h1>단절 30초 전부터 다시 보기</h1>
+<p>짧은 구간에서 낮아 보였던 통신 여유가, 더 오래전부터 낮았는지 확인합니다. 기존 비행을 바꾸지 않고 같은 전파 계산으로 이력을 확장했습니다.</p>
+<a href="./">← Final V1 비행·재배치 재생</a></header>
+<div class="hero-stats"><div class="stat"><strong>345개</strong><span>원본 V7 비행 지도</span></div><div class="stat"><strong>2,572건</strong><span>새 지속 단절 전체</span></div><div class="stat"><strong>2,555건</strong><span>30초 이력 확보</span></div><div class="stat"><strong>0.5초</strong><span>원본 전파 계산 간격</span></div></div>
+<section class="card"><h2>6초만 보면 놓치는 차이</h2><p class="lead">점진형 대표 사건은 30초 전 34.2dB → 6초 전 9.3dB였습니다.</p><p>오래전부터 약했던 경우와, 충분하던 여유가 줄어든 경우를 구분해야 합니다. 기타형 대표 사건은 30초 전에도 2.5dB였고, 앞선 단절이 반복됐습니다.</p>
+<p class="note">0dB는 신호 전력이 0이라는 뜻이 아닙니다. 통신 기준까지 남은 여유가 0이라는 뜻입니다. 이 수치는 전체망의 전파 정답으로 복원한 진단값이며, 실제 수신 관측이나 예측 확률과 구분합니다.</p>
+<img class="figure" src="01_30초_실제사건.png" alt="같은 네 대표 사건의 단절 30초 전부터 0초까지 통신 여유 그래프" loading="lazy"></section>
+<section class="card" id="explore"><h2>모든 사건의 이력 직접 확인</h2><p class="note">지도·유형·사건을 고르고 6·10·20·30초 구간을 바꿀 수 있습니다. 유형 이름은 기존 마지막 6초의 분류를 유지했습니다.</p>
+<div class="controls"><label class="type-control">유형<select id="type" aria-label="단절 유형"></select></label><label class="map-control">지도<select id="region" aria-label="지도"></select></label><label class="event-control">사건<select id="event" aria-label="단절 사건"></select></label></div>
+<div class="windows" role="group" aria-label="분석 시간 구간"><button data-window="6" aria-pressed="false">6초 전</button><button data-window="10" aria-pressed="false">10초 전</button><button data-window="20" aria-pressed="false">20초 전</button><button data-window="30" aria-pressed="true">30초 전</button></div>
+<p id="event-note" class="note"></p><div class="canvas-shell"><canvas id="history-chart" role="img" aria-label="선택 사건의 통신 여유 이력"></canvas></div>
+<div id="readout" class="readout" aria-live="polite"></div><label>시점 이동<input class="seek" id="seek" type="range" min="0" max="60" value="59" step="1" aria-label="기록 시점 이동"></label>
+<p class="note">점 = 0.5초 간격의 계산값 · 연결선 = 보기용 · 푸른 음영 = 마지막 6초 · 붉은 음영 = 앞서 발생한 별도 지속 단절. 그래프를 누르거나 시점 이동 막대를 움직이면 정확한 값을 표시합니다.</p>
+<div id="values" class="values"></div><div class="downloads"><button id="download">선택 사건 수치 내려받기</button><a href="history-data.json" download>전체 진단 자료 JSON</a><a href="30초_이력확장_분석.md" download>분석 설명 내려받기</a></div></section>
+<section class="card"><h2>유형 전체에서도 같은가</h2><p>표는 30초 이력이 모두 있는 같은 사건 집합의 시각별 중앙값입니다. 대표 사건 하나의 모양을 유형 전체의 특성으로 일반화하지 않습니다.</p>
+<div class="table-wrap"><table><thead><tr><th>유형</th><th>사건 수</th><th>30초 전</th><th>20초 전</th><th>10초 전</th><th>6초 전</th><th>3초 전</th><th>0.5초 전</th></tr></thead><tbody id="summary"></tbody></table></div>
+<img class="figure" src="02_30초_유형별중앙값.png" alt="전체 사건과 앞선 단절이 없던 사건을 나눈 유형별 통신 여유 중앙값" loading="lazy"><p class="note">짧은 간격으로 단절이 반복된 사건은 더 오래전에도 끊겨 있었을 수 있습니다. 오른쪽 그래프는 앞선 30초에 별도 지속 단절이 없었던 사건만 남겼습니다. 정상 구간 대조 전이므로 이 그래프로 탐지율이나 오경보를 판단할 수는 없습니다.</p></section>
+<div class="two-col" style="margin-top:16px"><section class="card"><h2>0.1초로 보면 바로 피할 수 있나</h2><p>0.1초 감시는 검증할 가치가 있습니다. 다만 급락이 보인 뒤 이동할 수 있는 거리가 매우 짧습니다.</p><table class="timing-table"><thead><tr><th>남은 시간</th><th>5m/s에서 이동 상한</th></tr></thead><tbody><tr><td>0.1초</td><td>0.5m</td></tr><tr><td>0.4초</td><td>2m</td></tr><tr><td>0.5초</td><td>2.5m</td></tr><tr><td>2초</td><td>10m</td></tr></tbody></table><p class="note">즉시 반응·가감속 없음·안전한 직선 이동을 가정한 이상적 상한입니다. 현재 채택 제어는 3초마다 재배치 명령을 바꿉니다.</p><div class="callout">필요한 선행 시간은 관측·계산·전송·명령 대기·실제 이동 시간을 모두 합쳐 정해야 합니다.</div><p class="note">PX4 공식 문서도 센서 지연과 속도 명령 추종 지연을 따로 보정하도록 설명합니다. <a href="https://docs.px4.io/v1.16/en/computer_vision/collision_prevention#cp_delay-delay-tuning" target="_blank" rel="noopener">근거 문서</a></p></section>
+<section class="card"><h2>다음 검증에서 구분할 것</h2><p><b>점진형</b>은 10·20·30초의 여유 수준, 감소 추세, 경계까지 남은 시간을 비교합니다.</p><p><b>기타형</b>은 낮은 여유의 지속 시간, 반복 단절, 대체 중계 경로의 여유를 함께 봅니다.</p><p><b>급락형·혼합형</b>은 예정 경로가 차폐 경계에 닿는 시간과, 그 전에 중계기가 도달할 수 있는 위치를 비교합니다.</p><div class="callout">0.1초 감시는 급락을 더 빨리 확인하는 보조로 검증하고, 사전 위치 선정은 이동에 필요한 수초의 여유를 확보하도록 평가합니다.</div><p class="note">현재 자료에 0.1초 기록은 없습니다. 기존 두 점을 직선으로 나눈 값을 관측으로 사용하지 않았습니다. 새 해상도는 전파와 실제 수신·명령 주기를 함께 구성해야 합니다.</p></section></div>
+<details class="card"><summary>자료와 해석 범위</summary><p>345개 지도에서 생성된 V7 원본 비행의 새 지속 단절 2,572건을 조사했습니다. 처음부터 끊긴 14구간은 제외했습니다. 지속 단절은 전체 수색망이 직접·중계 경로로 1초 이상 연결되지 않는 구간입니다. 통신 여유는 대칭 SINR 경계로 근사한 최선 중계 경로의 병목 값입니다.</p><p>전파 프레임 106,460개의 링크 판정이 원본과 일치했습니다. 기존 6초 그래프의 모든 점도 소수 둘째 자리까지 일치했습니다. 10초 이력은 2,565건, 20초는 2,559건, 30초는 2,555건이며 부족한 이력을 채우지 않았습니다.</p><p>이번 확장은 진단용이며 학습·제어를 바꾸지 않았습니다. 실제 기체 검증, 0.1초 측정, 새 모델의 성능 향상은 이 자료의 범위 밖입니다. 건물 교차와 지붕 회절의 기존 근사가 경계에서 급변할 수 있으므로 시간 해상도만 높이면 전조가 생긴다고 가정하지 않습니다.</p></details>
+<footer>Final V1 · 2026-11-05 · 원본 비행과 기존 모델 보존 · 본인 계정 전용 분석 자료</footer>
+</main><script id="history-data" type="application/json">__HISTORY_DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.querySelector('#history-data').textContent);
+const names={abrupt:'급락형',gradual:'점진형',mixed:'혼합형',other:'기타형',insufficient_history:'이력 부족'};
+const colors={abrupt:'#b65337',gradual:'#168472',mixed:'#b08021',other:'#62788d',insufficient_history:'#89999f'};
+const kinds={clear:'무간섭',intermittent:'간헐 간섭',continuous:'지속 간섭'};
+const type=document.querySelector('#type'), region=document.querySelector('#region'), events=document.querySelector('#event'), canvas=document.querySelector('#history-chart'),seek=document.querySelector('#seek');
+let horizon=30, current=null, sample=0, displayed=[], plot=null;
+const option=(parent,value,text)=>{const o=document.createElement('option');o.value=value;o.textContent=text;parent.append(o);};
+for(const [k,n] of Object.entries(names))option(type,k,`${n} · ${data.statistics[k].n.toLocaleString()}건`);
+option(region,'','전체 지도');for(const r of [...new Set(data.events.map(e=>e.region))].sort())option(region,r,r);
+type.value='gradual';
+function number(v){return v==null?'기록 없음':`${v.toFixed(2)} dB`;}
+function at(e,t){return e.available_history_s>=t?e.margin_db[e.margin_db.length-1-Math.round(t*2)]:null;}
+function list(prefer=true){
+ events.innerHTML='';displayed=data.events.map((e,i)=>({e,i})).filter(({e})=>e.pattern===type.value&&(!region.value||e.region===region.value));
+ for(const {e,i} of displayed)option(events,String(i),`${e.region} · 시작 ${e.onset_s}초 · ${kinds[e.kind]} · 지속 ${e.duration_s}초`);
+ const ref=data.examples[type.value];if(prefer&&ref){const row=displayed.find(({e})=>e.region===ref.region&&e.onset_s===ref.onset_s);if(row)events.value=String(row.i);}
+ select();
+}
+function select(){
+ current=events.value===''?null:data.events[Number(events.value)];
+ events.disabled=!displayed.length;seek.disabled=!current;document.querySelector('#download').disabled=!current;
+ if(!current){document.querySelector('#event-note').textContent='이 지도·유형에 해당하는 사건이 없습니다.';document.querySelector('#values').innerHTML='';document.querySelector('#readout').textContent='';draw();return;}
+ const count=current.previous_persistent_outages_relative_s.length;
+ document.querySelector('#event-note').innerHTML='';
+ for(const text of [`${names[current.pattern]} · ${kinds[current.kind]}`,`실제 이력 ${current.available_history_s}초`,count?`앞선 30초의 별도 지속 단절 ${count}구간`:'앞선 이력에 별도 지속 단절 없음']){const span=document.createElement('span');span.className='tag'+(text.includes('단절 ')&&count?' warn':'');span.textContent=text;document.querySelector('#event-note').append(span);}
+ seek.min=Math.max(0,current.margin_db.length-1-horizon*2);seek.max=current.margin_db.length-1;sample=Math.max(Number(seek.min),current.margin_db.length-2);seek.value=sample;
+ const values=document.querySelector('#values');values.innerHTML='';for(const t of [30,20,10,6,3,.5,0]){const d=document.createElement('div');d.className='value';const s=document.createElement('small');s.textContent=t?`${t}초 전`:'단절 시작';const b=document.createElement('strong');b.textContent=at(current,t)==null?'—':at(current,t).toFixed(2);d.append(s,b);values.append(d);}
+ draw();
+}
+function draw(){
+ const rect=canvas.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1),w=rect.width,h=rect.height;
+ canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);const c=canvas.getContext('2d');c.scale(dpr,dpr);c.clearRect(0,0,w,h);
+ const left=53,right=18,top=24,bottom=47;plot={left,right,top,bottom,w,h};
+ if(!current){c.fillStyle='#556c7b';c.font='14px sans-serif';c.fillText('해당 사건 없음',left,top+50);return;}
+ const idx=Math.max(0,current.margin_db.length-1-horizon*2), vals=current.margin_db.slice(idx),low=Math.floor(Math.min(-2,...vals)/10)*10-3,high=Math.ceil(Math.max(4,...vals)/10)*10+3;
+ const X=t=>left+(t+horizon)/horizon*(w-left-right),Y=v=>top+(high-v)/(high-low)*(h-top-bottom);
+ plot.X=X;plot.Y=Y;plot.idx=idx;
+ c.fillStyle='#6c9caa14';c.fillRect(X(-Math.min(horizon,6)),top,X(0)-X(-Math.min(horizon,6)),h-top-bottom);
+ c.fillStyle='#c96f5524';for(const [a,b] of current.previous_persistent_outages_relative_s){const x1=X(Math.max(-horizon,a)),x2=X(Math.max(-horizon,b));if(x2>x1)c.fillRect(x1,top,x2-x1,h-top-bottom);}
+ c.font='12px sans-serif';c.textAlign='right';c.textBaseline='middle';
+ const step=(high-low)>60?20:10;for(let v=Math.ceil(low/step)*step;v<=high;v+=step){c.strokeStyle='#dfe7eb';c.lineWidth=1;c.beginPath();c.moveTo(left,Y(v));c.lineTo(w-right,Y(v));c.stroke();c.fillStyle='#657b88';c.fillText(v.toFixed(0),left-8,Y(v));}
+ c.strokeStyle='#74828b';c.setLineDash([4,4]);c.beginPath();c.moveTo(left,Y(0));c.lineTo(w-right,Y(0));c.stroke();c.setLineDash([]);
+ const tick=horizon<=10?2:5;c.textAlign='center';c.textBaseline='top';for(let t=-horizon;t<=0;t+=tick){c.fillStyle='#657b88';c.fillText(String(t),X(t),h-bottom+10);}
+ c.fillText('단절 시작 기준 시간(초)',(left+w-right)/2,h-19);c.textAlign='left';c.fillText('dB',11,7);
+ c.strokeStyle=colors[current.pattern];c.lineWidth=2.4;c.beginPath();for(let j=idx;j<current.margin_db.length;j++){const t=(j-current.margin_db.length+1)*.5,x=X(t),y=Y(current.margin_db[j]);j===idx?c.moveTo(x,y):c.lineTo(x,y);}c.stroke();c.fillStyle=colors[current.pattern];for(let j=idx;j<current.margin_db.length;j++){c.beginPath();c.arc(X((j-current.margin_db.length+1)*.5),Y(current.margin_db[j]),horizon>10?2.1:3,0,2*Math.PI);c.fill();}
+ sample=Math.max(idx,Math.min(sample,current.margin_db.length-1));const t=(sample-current.margin_db.length+1)*.5,v=current.margin_db[sample];c.strokeStyle='#1b3b4e66';c.setLineDash([3,4]);c.beginPath();c.moveTo(X(t),top);c.lineTo(X(t),h-bottom);c.stroke();c.setLineDash([]);c.fillStyle=colors[current.pattern];c.beginPath();c.arc(X(t),Y(v),5,0,2*Math.PI);c.fill();c.strokeStyle='white';c.lineWidth=1.6;c.stroke();
+ document.querySelector('#readout').textContent=`${t===0?'단절 시작':`단절 ${(-t).toFixed(1)}초 전`} · ${number(v)} · 비행 ${(current.onset_s+t).toFixed(1)}초`;
+ canvas.setAttribute('aria-label',`${current.region} ${names[current.pattern]}, ${horizon}초 이력. 선택 시점 ${t}초, 여유 ${v.toFixed(2)}dB`);
+}
+function chooseAt(clientX){if(!current||!plot)return;const r=canvas.getBoundingClientRect();const fraction=Math.max(0,Math.min(1,(clientX-r.left-plot.left)/(plot.w-plot.left-plot.right)));const time=-horizon+fraction*horizon;sample=Math.max(plot.idx,Math.min(current.margin_db.length-1,current.margin_db.length-1+Math.round(time*2)));seek.value=sample;draw();}
+canvas.addEventListener('pointerdown',e=>chooseAt(e.clientX));canvas.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'||e.buttons)chooseAt(e.clientX);});
+seek.addEventListener('input',()=>{sample=Number(seek.value);draw();});
+type.addEventListener('change',()=>list());region.addEventListener('change',()=>list());events.addEventListener('change',select);
+for(const b of document.querySelectorAll('[data-window]'))b.addEventListener('click',()=>{horizon=Number(b.dataset.window);for(const x of document.querySelectorAll('[data-window]'))x.setAttribute('aria-pressed',String(x===b));if(current){seek.min=Math.max(0,current.margin_db.length-1-horizon*2);sample=Math.max(sample,Number(seek.min));seek.value=sample;}draw();});
+document.querySelector('#download').addEventListener('click',()=>{if(!current)return;const rows=['relative_time_s,mission_time_s,network_margin_db'];for(let j=0;j<current.margin_db.length;j++){const t=(j-current.margin_db.length+1)*.5;rows.push(`${t},${current.onset_s+t},${current.margin_db[j]}`);}const blob=new Blob(['\ufeff'+rows.join('\r\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`${current.region}_${current.onset_s}s_history.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+for(const k of ['abrupt','gradual','mixed','other']){const s=data.statistics[k],tr=document.createElement('tr');for(const text of [names[k],s.complete30_n.toLocaleString(),...[30,20,10,6,3,.5].map(t=>number(s.complete30_medians[String(t)]))]){const td=document.createElement('td');td.textContent=text;tr.append(td);}document.querySelector('#summary').append(tr);}
+new ResizeObserver(draw).observe(canvas.parentElement);list();
+</script></body></html>

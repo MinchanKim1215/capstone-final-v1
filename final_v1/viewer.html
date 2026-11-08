@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Final V1 | 단절 예방과 재배치</title>
+<style>
+:root { color-scheme: light; --ink:#122738; --muted:#526677; --line:#cfdae3; --green:#168072; --blue:#1464a7; --orange:#bd631b; --red:#ae3b38; }
+* { box-sizing:border-box; }
+body { margin:0; background:#edf2f5; color:var(--ink); font:15px/1.5 "Malgun Gothic",system-ui,sans-serif; }
+main { max-width:1250px; margin:auto; padding:24px; }
+header { padding:27px 32px; border-radius:18px; background:#142f42; color:#f7fafc; }
+header p { margin:6px 0 0; color:#cfe1ed; }
+header small { color:#83d5c7; letter-spacing:.12em; font-weight:700; }
+h1 { font-size:clamp(25px,4vw,36px); line-height:1.2; margin:9px 0 0; }
+h2 { font-size:18px; margin:0; }
+.controls,.panel { background:white; border:1px solid var(--line); border-radius:14px; }
+.controls { padding:16px; margin:16px 0; }
+.row { display:flex; flex-wrap:wrap; align-items:end; gap:9px; margin-bottom:10px; }
+label { display:grid; gap:3px; color:var(--muted); font-size:12px; font-weight:700; }
+select,button { min-height:38px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); padding:5px 10px; font:inherit; }
+button { cursor:pointer; }
+button:focus-visible,select:focus-visible,input:focus-visible { outline:3px solid #409da0; outline-offset:2px; }
+#play { min-width:76px; background:#196a62; color:white; font-weight:700; }
+#case { max-width:min(470px,calc(100vw - 90px)); }
+#seek { width:100%; accent-color:var(--green); display:block; }
+#clock { color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums; margin-right:4px; min-width:114px; }
+.grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.panel { min-width:0; overflow:hidden; }
+.panel-head { padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:7px; border-bottom:1px solid var(--line); }
+.panel-head label { max-width:70%; }
+.panel-head select { width:100%; }
+.badge { white-space:nowrap; border-radius:14px; padding:3px 9px; background:#e6f2ed; color:#146354; font-size:12px; font-weight:700; }
+.badge.down { background:#f8e6e1; color:var(--red); }
+.badge.end { background:#e8eef2; color:var(--muted); }
+.map { width:100%; aspect-ratio:1; display:block; background:#f7f9fa; }
+.track { display:block; width:100%; height:38px; background:#f4f7f9; border-top:1px solid var(--line); cursor:pointer; }
+.info { padding:12px 16px; min-height:176px; font-size:13px; }
+.info p { margin:0 0 5px; }
+.info .main { font-weight:700; }
+.info .muted,.note { color:var(--muted); }
+.spark { display:block; width:min(260px,100%); height:48px; margin:4px 0; }
+.note { margin:14px 3px; font-size:13px; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 17px; margin:12px 2px; font-size:13px; }
+.dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; }
+@media(max-width:740px) { main { padding:12px; } header { padding:20px; } .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <small>CAPSTONE DESIGN II · FINAL V1</small>
+  <h1>단절 예방과 재배치 재생</h1>
+  <p>같은 지도와 통신 조건에서 경로, 링크, 개입 시점과 명령 수신을 비교합니다.</p>
+</header>
+<section class="controls" aria-label="재생 조작">
+  <div class="row">
+    <label>실험 조건<select id="case"></select></label>
+    <label>재생 속도<select id="speed"><option value="1">1배</option><option value="4" selected>4배</option><option value="16">16배</option><option value="32">32배</option></select></label>
+    <button type="button" id="play">재생</button>
+    <button type="button" id="start">처음</button>
+    <button type="button" id="previous">이전 사건</button>
+    <button type="button" id="next">다음 사건</button>
+    <button type="button" id="featured" hidden>단절 예방 사례</button>
+  </div>
+  <div class="row"><output id="clock" for="seek"></output><span id="map-name"></span></div>
+  <label>비행 시각<input id="seek" type="range" min="0" max="1" step=".5" value="0"></label>
+</section>
+<div class="legend">
+  <span><i class="dot" style="background:#1464a7"></i>수색기</span>
+  <span><i class="dot" style="background:#bd631b"></i>중계기</span>
+  <span><i class="dot" style="background:#168072"></i>현재 연결</span>
+  <span><i class="dot" style="background:#566673"></i>50m 이상 건물</span>
+  <span><i class="dot" style="background:#ae3b38"></i>지속 단절</span>
+</div>
+<section class="grid" aria-label="비행 비교">
+  <article class="panel" id="left">
+    <div class="panel-head"><label>왼쪽 비행<select aria-label="왼쪽 비행"></select></label><span class="badge"></span></div>
+    <canvas class="map" width="640" height="640" aria-label="왼쪽 비행의 지도와 드론 이동"></canvas>
+    <canvas class="track" width="640" height="44" aria-label="왼쪽 단절과 재배치 시각"></canvas>
+    <div class="info"></div>
+  </article>
+  <article class="panel" id="right">
+    <div class="panel-head"><label>오른쪽 비행<select aria-label="오른쪽 비행"></select></label><span class="badge"></span></div>
+    <canvas class="map" width="640" height="640" aria-label="오른쪽 비행의 지도와 드론 이동"></canvas>
+    <canvas class="track" width="640" height="44" aria-label="오른쪽 단절과 재배치 시각"></canvas>
+    <div class="info"></div>
+  </article>
+</section>
+<p class="note">최근 12초의 이동 자취를 표시합니다. 하단 시각 띠에서 빨간 구간은 1초 이상 지속된 수색망 단절, 주황 표시는 중계 명령 개입입니다. 지도 좌표는 미터 단위입니다.</p>
+<p class="note">시뮬레이션 기록입니다. 예측 점수는 실제 발생 확률로 보정된 값과 구분합니다. 명령 채널 실험은 실제 장비의 지연과 채널 점유를 검증한 결과와 구분합니다.</p>
+</main>
+<script type="application/json" id="flight-data"><!-- FLIGHT_DATA --></script>
+<script>
+"use strict";
+const {cases,maps} = JSON.parse(document.querySelector("#flight-data").textContent);
+const $ = (selector, root=document) => root.querySelector(selector);
+const speed = $("#speed"), seek = $("#seek"), casesSelect = $("#case"), play = $("#play");
+const panels = ["#left","#right"].map(id => {
+  const root = $(id);
+  return {select:$("select",root), map:$(".map",root), track:$(".track",root), info:$(".info",root), badge:$(".badge",root)};
+});
+const kinds = {clear:"무간섭",intermittent:"간헐 간섭",continuous:"지속 간섭"};
+const fallback = {received:"수신",nominal:"기본 대형",hold_one_cycle:"직전 명령 1주기 유지",local_radio:"로컬 관측으로 보정"};
+const caches = new WeakMap();
+let activeCase = cases[0], time = 0, running = false, last = 0, nextFrame = 0, shown = -1;
+
+function appendOption(select, label, value) {
+  const option = new Option(label, value);
+  select.add(option);
+}
+for (const [i, c] of cases.entries()) {
+  const name=maps[c.region].name;
+  appendOption(casesSelect, `${c.featured?"예방 사례":c.phase} · ${kinds[c.kind]} · ${name.length>30?name.slice(0,29)+"…":name}`, i);
+}
+function bytes(base64) {
+  return Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+}
+function bit(data, index) {
+  return (data[index >> 3] >> (7-(index&7))) & 1;
+}
+function cache(run) {
+  if (!caches.has(run)) {
+    const pairs = [];
+    for (let i=0; i<run.n; i++) for (let j=i+1; j<run.n; j++) pairs.push([i,j]);
+    caches.set(run, {edges:bytes(run.edges), connected:bytes(run.connected), pairs});
+  }
+  return caches.get(run);
+}
+const pixel = (x,y) => [320+x*1.49,320-y*1.49];
+const selected = () => panels.map(p => activeCase.runs[Number(p.select.value)]);
+const maximum = () => Math.max(...selected().map(r => r.duration));
+function points(run, t) {
+  const index = Math.min(run.positions.length-1,Math.floor(t/3));
+  const row = run.positions[index];
+  const next = run.positions[Math.min(index+1,run.positions.length-1)];
+  const mix = Math.max(0,Math.min(1,t/3-index));
+  return Array.from({length:run.n},(_,i) => pixel(row[2*i]+mix*(next[2*i]-row[2*i]),
+                                                  row[2*i+1]+mix*(next[2*i+1]-row[2*i+1])));
+}
+function line(ctx,a,b) {
+  ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]);
+}
+function background(ctx) {
+  ctx.fillStyle="#f7f9fa"; ctx.fillRect(0,0,640,640);
+  ctx.strokeStyle="#e3ebf0"; ctx.lineWidth=1; ctx.beginPath();
+  for (let x=-200;x<=200;x+=50) {
+    line(ctx,pixel(x,-200),pixel(x,200)); line(ctx,pixel(-200,x),pixel(200,x));
+  }
+  ctx.stroke();
+  for (const [high,polygon] of maps[activeCase.region].shapes) {
+    ctx.fillStyle=high?"#566673":"#c2cdd4";
+    ctx.beginPath();
+    for (const ring of polygon) {
+      ring.forEach(([x,y],i) => i ? ctx.lineTo(...pixel(x,y)) : ctx.moveTo(...pixel(x,y)));
+      ctx.closePath();
+    }
+    ctx.fill("evenodd");
+  }
+}
+function section(parent, content, style="") {
+  const node = document.createElement("p");
+  node.className=style; node.textContent=content; parent.append(node);
+}
+function drawMargin(parent, series) {
+  const curves=Array.isArray(series[0])?series:[series];
+  const all=curves.flat();
+  const low=Math.min(...all), min=Math.min(-1,low), max=Math.max(1,...all);
+  const y=value=>42-36*(value-min)/(max-min);
+  const ns="http://www.w3.org/2000/svg";
+  const svg=document.createElementNS(ns,"svg");
+  svg.setAttribute("viewBox","0 0 260 48");
+  svg.setAttribute("role","img");
+  svg.setAttribute("aria-label","기본 이동의 반초 간격 예상 통신 여유");
+  svg.classList.add("spark");
+  const threshold=document.createElementNS(ns,"path");
+  threshold.setAttribute("d",`M 5 ${y(0)} H 255`);
+  threshold.setAttribute("stroke","#ae3b38");
+  threshold.setAttribute("stroke-dasharray","4 3");
+  svg.append(threshold);
+  for (const [i,curve] of curves.entries()) {
+    const path=document.createElementNS(ns,"polyline");
+    path.setAttribute("points",curve.map((v,k)=>`${5+k*250/(curve.length-1)},${y(v)}`).join(" "));
+    path.setAttribute("fill","none");
+    path.setAttribute("stroke",i?"#1464a7":"#168072");
+    path.setAttribute("stroke-width","2");
+    svg.append(path);
+  }
+  parent.append(svg);
+  section(parent,`기본 이동의 예상 최저 여유 ${low.toFixed(1)} dB · 빨간 점선 0 dB`,"muted");
+  if (curves.length>1) section(parent,"녹색은 목표 보정 유지, 파란색은 기본 대형 복귀","muted");
+}
+function drawPanel(panel, run) {
+  const ctx=panel.map.getContext("2d"), graph=cache(run);
+  const displayTime=Math.min(time,run.duration), f=Math.min(run.duration*2-1,Math.floor(displayTime*2));
+  const current=points(run,displayTime);
+  background(ctx);
+  for (let i=0;i<run.n;i++) {
+    ctx.beginPath(); ctx.strokeStyle=i<run.ns?"#1464a7a0":"#bd631baa"; ctx.lineWidth=2.5;
+    for (let t=Math.max(0,displayTime-12);t<displayTime;t+=3) line(ctx,points(run,t)[i],points(run,Math.min(t+3,displayTime))[i]);
+    ctx.stroke();
+  }
+  ctx.strokeStyle="#1680729a"; ctx.lineWidth=1.4; ctx.beginPath();
+  graph.pairs.forEach(([i,j],p) => {
+    if (bit(graph.edges,f*run.edges_stride*8+p)) line(ctx,current[i],current[j]);
+  });
+  ctx.stroke();
+  const recent=run.interventions.findLast(e=>e.time_s<=displayTime && e.time_s>displayTime-6.5);
+  for (let i=0;i<run.n;i++) {
+    const [x,y]=current[i];
+    ctx.fillStyle=i<run.ns?"#1464a7":"#bd631b"; ctx.strokeStyle="#fff"; ctx.lineWidth=2;
+    ctx.beginPath(); ctx.arc(x,y,9,0,2*Math.PI); ctx.fill(); ctx.stroke();
+    if (recent?.changed_relay===i) {
+      ctx.strokeStyle="#952f24"; ctx.lineWidth=3; ctx.beginPath(); ctx.arc(x,y,14,0,2*Math.PI); ctx.stroke();
+    }
+    ctx.fillStyle="#142f42"; ctx.font="bold 13px system-ui";
+    ctx.fillText(i<run.ns?`S${i+1}`:`R${i-run.ns+1}`,x+10,y-8);
+  }
+  const done=time>=run.duration, up=bit(graph.connected,f);
+  panel.badge.className=`badge ${done?"end":up?"":"down"}`;
+  panel.badge.textContent=done?"임무 종료":up?"수색망 연결":"수색망 단절";
+  const track=panel.track.getContext("2d");
+  const width=panel.track.width, height=panel.track.height, max=maximum();
+  track.clearRect(0,0,width,height);
+  track.fillStyle="#ae3b38";
+  for (const [a,b] of run.cuts) track.fillRect(a/max*width,8,Math.max(1,(b-a)/max*width),23);
+  track.fillStyle="#bd631b";
+  for (const event of run.interventions) track.fillRect(event.time_s/max*width,2,2,38);
+  track.fillStyle="#183248"; track.fillRect(time/max*width-1,0,2,height);
+  panel.info.replaceChildren();
+  section(panel.info,`기한 내 전달 ${run.pdr.toFixed(2)}% · 새 단절 ${run.cuts.filter(c=>c[0]>0).length}건`,"main");
+  const tick=Math.min(run.positions.length-2,Math.floor(displayTime/3));
+  if (recent) {
+    const verb=recent.reason==="recovery"?"복구":"선제 이동";
+    section(panel.info,`${recent.time_s.toFixed(1)}초 · 중계 ${recent.changed_relay-run.ns+1}번 ${verb} · 이동 종점 (${recent.realized_endpoint.join(", ")})m`);
+    if (recent.expected_cut!=null) section(panel.info,`기본 이동의 예상 단절 ${recent.expected_cut.toFixed(1)}초`);
+    if (recent.risk!=null) section(panel.info,`위험 점수 ${recent.risk.toFixed(3)} · 발동 문턱 ${recent.threshold.toFixed(3)}`,"muted");
+    if (recent.gain!=null) section(panel.info,`예상 통신 부족량 감소 ${recent.gain.toFixed(2)} dB·초`,"muted");
+    if (recent.margin?.length) drawMargin(panel.info,recent.margin);
+    if (recent.command_received===false) section(panel.info,"개입 명령 미수신");
+  }
+  const o=run.observed?.[tick];
+  if (o) section(panel.info,`최근 RF ${o[0]?"수신":"부족"} · 수색 비컨 누락 ${o[1]}대 · 추정 잡음 ${o[2]} dBm`,"muted");
+  const risk=run.risk?.v21[tick];
+  if (risk!=null) section(panel.info,`V21 선행 점수 ${risk.toFixed(3)} · 공동학습 점수 ${run.risk.joint_early[tick].toFixed(3)}`,"muted");
+  const changed=run.ppo_changes?.[tick];
+  if (changed?.length) {
+    section(panel.info,"V7 제안에서 바뀐 목표 보정량 · "+changed.map(([i,x,y])=>`중계 ${i+1}번 (${x}, ${y})m`).join(" / "));
+  }
+  const lost=run.lost?.[tick];
+  if (lost?.length) section(panel.info,lost.map(i=>`중계 ${i+1}번 미수신 · ${fallback[run.fallback[tick][i]]}`).join(" / "));
+}
+function render() {
+  seek.value=time;
+  $("#clock").value=`${time.toFixed(1)} / ${maximum().toFixed(1)}초`;
+  selected().forEach((run,i)=>drawPanel(panels[i],run));
+}
+function seekTo(value) {
+  time=Math.min(maximum(),Math.max(0,Math.round(value*2)/2)); render();
+}
+function loadCase(index) {
+  stop(); activeCase=cases[index];
+  $("#map-name").textContent=`${maps[activeCase.region].name} · ${kinds[activeCase.kind]}`;
+  $("#featured").hidden=!activeCase.featured;
+  panels.forEach((p,i)=>{
+    p.select.replaceChildren();
+    activeCase.runs.forEach((r,k)=>appendOption(p.select,r.label,k));
+    p.select.value=activeCase.phase==="비교"?(i===0?1:(activeCase.preferred ?? 2)):i;
+  });
+  seek.max=maximum();
+  seekTo(0);
+}
+function stop() {
+  running=false; cancelAnimationFrame(nextFrame); play.textContent="재생";
+}
+function advance(stamp) {
+  if (!running) return;
+  if (last) time=Math.min(maximum(),time+(stamp-last)*Number(speed.value)/1000);
+  last=stamp;
+  if (Math.floor(time*2)!==shown || time>=maximum()) {
+    shown=Math.floor(time*2); render();
+  }
+  if (time>=maximum()) stop();
+  else nextFrame=requestAnimationFrame(advance);
+}
+function jump(direction) {
+  const marks=selected().flatMap(r=>[...r.cuts.map(c=>c[0]),...r.interventions.map(e=>e.time_s),
+                                    ...(r.stress || []).map(e=>e[0])]);
+  const next=marks.filter(t=>direction>0?t>time+.1:t<time-.1);
+  seekTo(next.length?(direction>0?Math.min(...next):Math.max(...next)):(direction>0?maximum():0));
+}
+play.addEventListener("click",()=>{
+  if (running) { stop(); return; }
+  if (time>=maximum()) seekTo(0);
+  running=true; last=0; shown=-1; play.textContent="일시정지"; nextFrame=requestAnimationFrame(advance);
+});
+casesSelect.addEventListener("change",()=>loadCase(Number(casesSelect.value)));
+seek.addEventListener("input",()=>seekTo(Number(seek.value)));
+$("#start").addEventListener("click",()=>{stop();seekTo(0);});
+$("#previous").addEventListener("click",()=>jump(-1));
+$("#next").addEventListener("click",()=>jump(1));
+$("#featured").addEventListener("click",()=>{
+  stop();
+  const e=activeCase.featured;
+  seekTo(e.time);
+  $("#map-name").textContent=`${e.pattern} · ${e.time.toFixed(1)}초에 명령 분기 · 기존 단절 ${e.onset.toFixed(1)}초`;
+});
+for (const p of panels) {
+  p.select.addEventListener("change",()=>{seek.max=maximum(); seekTo(time);});
+  p.track.addEventListener("click",event=>{
+    const box=p.track.getBoundingClientRect();
+    seekTo((event.clientX-box.left)/box.width*maximum());
+  });
+}
+loadCase(0);
+</script>
+</body>
+</html>

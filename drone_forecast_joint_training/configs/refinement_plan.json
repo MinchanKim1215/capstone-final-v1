@@ -1,0 +1,601 @@
+{
+  "format": "closed-loop-refinement-v2",
+  "training_seeds": [
+    27101,
+    27102,
+    27103
+  ],
+  "training_iterations": 8,
+  "episodes_per_iteration": 8,
+  "training_modes": [
+    "risk",
+    "no_risk"
+  ],
+  "forecast": "frozen LightGBM; no predictor backpropagation",
+  "no_risk_definition": "remove learned risk and onset from actor AND critic; disable forecaster; same beacon cost and geometric motion extrapolation",
+  "guard_regret": 0.35,
+  "validation": [
+    {
+      "region": "gwangju_taejeon",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 263663864
+    },
+    {
+      "region": "gwangju_taejeon",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2067482364
+    },
+    {
+      "region": "gwangju_taejeon",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1971976634
+    },
+    {
+      "region": "gwangju_taejeon",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 177179917
+    },
+    {
+      "region": "ilsan_madu",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1088777195
+    },
+    {
+      "region": "ilsan_madu",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1279105341
+    },
+    {
+      "region": "ilsan_madu",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 100798896
+    },
+    {
+      "region": "ilsan_madu",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 698348177
+    },
+    {
+      "region": "mangpo",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 724337309
+    },
+    {
+      "region": "mangpo",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1124072899
+    },
+    {
+      "region": "mangpo",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1193552957
+    },
+    {
+      "region": "mangpo",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 903667229
+    },
+    {
+      "region": "migeum",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1009594676
+    },
+    {
+      "region": "migeum",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 607781604
+    },
+    {
+      "region": "migeum",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1614152079
+    },
+    {
+      "region": "migeum",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1833443768
+    },
+    {
+      "region": "seoul_20261023_09",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 593636131
+    },
+    {
+      "region": "seoul_20261023_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1990528041
+    },
+    {
+      "region": "seoul_20261023_09",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 2026171664
+    },
+    {
+      "region": "seoul_20261023_09",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 279458926
+    },
+    {
+      "region": "seoul_20261023_b2_12",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1997070729
+    },
+    {
+      "region": "seoul_20261023_b2_12",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1273445059
+    },
+    {
+      "region": "seoul_20261023_b2_12",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 2010202489
+    },
+    {
+      "region": "seoul_20261023_b2_12",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1079143397
+    },
+    {
+      "region": "sosabon",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 952907922
+    },
+    {
+      "region": "sosabon",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 203502657
+    },
+    {
+      "region": "sosabon",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 330392509
+    },
+    {
+      "region": "sosabon",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 234234263
+    }
+  ],
+  "test": [
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1244241874
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 52463572
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1192735925
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 512359451
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 824661231
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1448266452
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 78230570
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 129065880
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1969438824
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 580820315
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 847023384
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1238472080
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 514411602
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1111143616
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 708163441
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1707465775
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1938683875
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1778692369
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1026343816
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 929442150
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1669338964
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1436087767
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 187613399
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 148113776
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1120083173
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 742384652
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1564353968
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 879420841
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 746583832
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 751619905
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 127026249
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 941458273
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1296097070
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 252037128
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2092396675
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1135057255
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1839384676
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1211013481
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 453087160
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1380605129
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1368880836
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 430883898
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1106341600
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1686068849
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1760622409
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1123477210
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1629744950
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1666478411
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 922098041
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 582574451
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1912820486
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1903742058
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 291866891
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 633905570
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 852662625
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1271294353
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 941087359
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1594706084
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2020050903
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 487866860
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1153600845
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1253886133
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 564514497
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 59855294
+    }
+  ],
+  "selection_constraints": {
+    "all_missions_completed": true,
+    "actual_safety_violations": 0,
+    "macro_pdr_difference_vs_nominal_min": -0.005,
+    "max_duration_ratio": 1.15
+  },
+  "selection_order": [
+    "lowest macro outage fraction",
+    "highest macro timely PDR",
+    "lowest macro relay travel"
+  ],
+  "test_regions_previously_evaluated_in_v1": true,
+  "test_conditions": "new deterministic seeds on the existing eight held-out regions; not eight newly collected cities",
+  "test_used_for_v2_selection": false,
+  "baseline_results_must_be_fresh_or_explicitly_labeled_historical": true,
+  "source_sha256": {
+    "cooperative/train.py": "e6b6f6507218a62a74ca820244c38d3510bd6a0dfc04b9660c8b8c5024cb0a65",
+    "cooperative/policy.py": "cb3af281667da8a13d6764c1cf6645e59a597b017afe2d63025d7184e9a3497f",
+    "cooperative/run.py": "586f3a95f8c2963409e70639d4a2f92b76239058732da77040daef3bb9a7d301",
+    "cooperative/refine.py": "261ac0fc61c73c21374929e336719535459f58f4dd20a83aea9d0fa128b97202",
+    "cooperative/candidates.py": "610c25c1fdbb5c1949fdcb46c6b91e01e7e78fd4bcb5215a551f86d1b4cdea28",
+    "cooperative/world.py": "2000ae17b422739099cb45e54427a22c875819bda714f47d96761c6aaeabe0b8",
+    "cooperative/prediction.py": "be421bd18aaa79e5a5155e67c291c800ad33b082fdc0b9e30cdfcea32907b2d5",
+    "cooperative/motion.py": "4ca37af37ba3478b97019ff4afe409dc08ee0fa337d930a663c382d4adc52a3f",
+    "cooperative/packets.py": "0b2f3f10afb63eb59f2f608c286c2b31a8f09bc7d6205540e296b12e10df9332",
+    "swarm_sim/radio.py": "023bacb177f6edf4716c6ed1d5173c44ea06283d08f1fb167a7cebab4494dcc4"
+  },
+  "forecaster_sha256": "8d916c91ddded88c9286a24df4175b947e3b8886055eec18abe5eb69943dc588"
+}

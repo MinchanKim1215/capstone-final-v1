@@ -1,0 +1,45 @@
+{
+  "format": "cooperative-demos-v1",
+  "selection_by_test_outcomes": false,
+  "cases": [
+    {
+      "region": "teheran",
+      "seed": 2026102601,
+      "kind": "intermittent",
+      "direction": "east_west",
+      "name": "테헤란 · 학습 지역",
+      "map": "maps/teheran.scene.local.json",
+      "info": "400m×400m · 고도 50m · 전체 임무 · 두 방식 공통 간섭 시드",
+      "runs": [
+        "results/cooperative/demos/teheran_nominal",
+        "results/cooperative/demos/teheran_selected"
+      ]
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 40180101,
+      "name": "부천 중동 · 시험 지역",
+      "map": "maps/additional/bucheon_jungdong_east/scene.local.json",
+      "info": "400m×400m · 고도 50m · 전체 임무 · 두 방식 공통 간섭 시드",
+      "runs": [
+        "results/cooperative/demos/bucheon_jungdong_east_nominal",
+        "results/cooperative/demos/bucheon_jungdong_east_selected"
+      ]
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 960772376,
+      "name": "서울 03 · 시험 지역",
+      "map": "maps/additional/seoul_20261023_03/scene.local.json",
+      "info": "400m×400m · 고도 50m · 전체 임무 · 두 방식 공통 간섭 시드",
+      "runs": [
+        "results/cooperative/demos/seoul_20261023_03_nominal",
+        "results/cooperative/demos/seoul_20261023_03_selected"
+      ]
+    }
+  ]
+}

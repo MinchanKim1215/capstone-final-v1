@@ -1,0 +1,103 @@
+{
+  "format": "cooperative-risk-ablation-v1",
+  "test_outcomes_used_for_subset": false,
+  "specifications": [
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 495314363
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 869457947
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1720233568
+    },
+    {
+      "region": "bucheon_simgokbon",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1030580051
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 816377327
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 157821410
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 964663106
+    },
+    {
+      "region": "seoul_20261023_07",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1704274553
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1318069671
+    },
+    {
+      "region": "seoul_20261023_08",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2136262626
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 383788298
+    },
+    {
+      "region": "seoul_20261023_b2_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 394054367
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1551127897
+    },
+    {
+      "region": "seoul_20261023_b2_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1889178340
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 27307428
+    },
+    {
+      "region": "seoul_20261023_b2_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1175402492
+    }
+  ],
+  "fixed_weight_diagnostic": true
+}

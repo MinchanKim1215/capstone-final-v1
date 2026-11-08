@@ -1,0 +1,29 @@
+{
+  "nominal": {
+    "folder": "results/cooperative/validation/base/nominal",
+    "controller": "nominal"
+  },
+  "reactive": {
+    "folder": "results/cooperative/validation/base/reactive",
+    "controller": "reactive"
+  },
+  "mpc": {
+    "folder": "results/cooperative/validation/mpc/mpc",
+    "controller": "mpc"
+  },
+  "ppo3": {
+    "folder": "results/cooperative/validation/ppo3/ppo",
+    "controller": "ppo",
+    "checkpoint": "model/cooperative/iteration_03.pt"
+  },
+  "ppo6": {
+    "folder": "results/cooperative/validation/ppo6/ppo",
+    "controller": "ppo",
+    "checkpoint": "model/cooperative/iteration_06.pt"
+  },
+  "ppo8": {
+    "folder": "results/cooperative/validation/ppo8/ppo",
+    "controller": "ppo",
+    "checkpoint": "model/cooperative/iteration_08.pt"
+  }
+}

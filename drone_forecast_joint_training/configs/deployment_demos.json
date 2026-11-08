@@ -1,0 +1,47 @@
+{
+  "format": "deployment-demos-v3.1",
+  "validation_selected": true,
+  "cases": [
+    {
+      "region": "teheran",
+      "seed": 2026102801,
+      "kind": "intermittent",
+      "direction": "east_west",
+      "name": "테헤란 · 학습 지역",
+      "map": "maps/teheran.scene.local.json",
+      "info": "400m×400m · 전체 임무 · 사전 선정과 확인 승격 기준 적용 · v3.1",
+      "runs": [
+        "results/deployment/demos/teheran_nominal",
+        "results/deployment/demos/teheran_selected"
+      ]
+    },
+    {
+      "region": "bucheon_jungdong_east",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 595258846,
+      "name": "부천 중동 · 최종 확인 지역",
+      "map": "maps/additional/bucheon_jungdong_east/scene.local.json",
+      "info": "400m×400m · 전체 임무 · 사전 선정과 확인 승격 기준 적용 · v3.1",
+      "runs": [
+        "results/deployment/demos/bucheon_jungdong_east_nominal",
+        "results/deployment/demos/bucheon_jungdong_east_selected"
+      ]
+    },
+    {
+      "region": "seoul_20261023_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 29623275,
+      "name": "서울03 · 최종 확인 지역",
+      "map": "maps/additional/seoul_20261023_03/scene.local.json",
+      "info": "400m×400m · 전체 임무 · 사전 선정과 확인 승격 기준 적용 · v3.1",
+      "runs": [
+        "results/deployment/demos/seoul_20261023_03_nominal",
+        "results/deployment/demos/seoul_20261023_03_selected"
+      ]
+    }
+  ],
+  "selection_by_confirmation_outcomes": false,
+  "case_rule": "same three prior demo regions/direction/jammer strata; first prespecified new confirmation seed"
+}

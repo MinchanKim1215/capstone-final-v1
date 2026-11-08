@@ -1,0 +1,39 @@
+{
+  "selected": "ppo8",
+  "selected_checkpoint_sha256": "ffe4a1b55dff1e170a8e5bcf2bb088bf5df4878294a12b19377a56f2e77981ec",
+  "best_learned": {
+    "label": "ppo8",
+    "source_checkpoint": "model/cooperative/iteration_08.pt",
+    "checkpoint": "model/cooperative/best_learned.pt",
+    "checkpoint_sha256": "ffe4a1b55dff1e170a8e5bcf2bb088bf5df4878294a12b19377a56f2e77981ec"
+  },
+  "test_scenarios": 64,
+  "selection_sha256": "e5510755d58f3edc3f0f1a1863e827ef33fc66a9897eaa51599cf614358c355a",
+  "sources": {
+    "cooperative/packets.py": "0b2f3f10afb63eb59f2f608c286c2b31a8f09bc7d6205540e296b12e10df9332",
+    "cooperative/locking.py": "76870c3457d9f464095815a40341481610b1e175dc94a5f72e6c231bd53cb730",
+    "cooperative/io.py": "d6687e8585519c70eef838ccc1591692cebafdb8bd9da02f94ae23438bc4f81f",
+    "cooperative/regions.py": "056ebfb348f3cc4105af78237a39d57138fa2ec5e5e8c2707803c615841d4586",
+    "cooperative/world.py": "713617c26978ebc1dce4fd20578a45a437ed5dc9340b3e9687364f02727fab67",
+    "cooperative/demos.py": "297ecc856d2635d63199eb2b80c26b0127165ba2120b8115616578922d04577c",
+    "cooperative/train.py": "99ef30eb817ce7a847aa220767d1c3fedb255a08f38c06766df064e7ef4e9f2b",
+    "cooperative/candidates.py": "610c25c1fdbb5c1949fdcb46c6b91e01e7e78fd4bcb5215a551f86d1b4cdea28",
+    "cooperative/run.py": "4e829cc1c50c797e4bd23b62dd6aa7f48faf10067565d2fdc064f68c32c919f8",
+    "cooperative/telemetry.py": "8aff3ff21d020f836c882e812c34cf17a0f076fb40ea009ac3cf26c8e95f2fa0",
+    "cooperative/check_motion.py": "23a2a17d6870b431e1049215b5b5909431d0532f1895d472dcace62e0d03b85a",
+    "cooperative/report.py": "cbf9668baa88bfbdcee69944dc8d837373381747f885a9bbb44cd63cfda158a9",
+    "cooperative/selection.py": "4de6208c993fad7186e9720c4d6d7ab1672987c29cda03ca9a742d90452f7bc5",
+    "cooperative/evaluate.py": "7b5d9610ca5f62f9a0eb7fe8a300eccc3a2c7ae001934d829775d1c41d6260e3",
+    "cooperative/replay.py": "2c24c5f2b66505d92ad99f87ed5124b4d0d0e65304c337ddbec5762c4e8caa9d",
+    "cooperative/__init__.py": "532bfda7156bf481970c15ebc0524f9d2715cf6021ab0f20c3697cea2f34be2e",
+    "cooperative/analyze.py": "0900f013f94254b4f7d0d888b987fafb2ae3dc87cd45b804c79248e6f2066e53",
+    "cooperative/policy.py": "73ceb30caf811e44a1bff349e878e8a8a4d29570a9470f4ee0b0c1a24cedf20b",
+    "cooperative/fast_features.py": "05015f86fd30f2b814f3b74af69a3d80694f712e51052eaebe512d098e5262a5",
+    "cooperative/prediction.py": "be421bd18aaa79e5a5155e67c291c800ad33b082fdc0b9e30cdfcea32907b2d5",
+    "cooperative/verify.py": "b8be63ebe47cb24ac7958290969a2551dafd6a6863af629bfdd64756446cbb2e",
+    "cooperative/beacon_frame.py": "35956a741e9bdc77ae4847dc5ecafc3b0fba90b48122fa407d13ecdfe40160eb",
+    "cooperative/motion.py": "4ca37af37ba3478b97019ff4afe409dc08ee0fa337d930a663c382d4adc52a3f"
+  },
+  "test_used_for_selection": false,
+  "training_finished_before_test": true
+}

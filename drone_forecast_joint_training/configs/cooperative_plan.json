@@ -1,0 +1,58 @@
+{
+  "format": "closed-loop-plan-v1",
+  "fixed_design": {
+    "total": 8,
+    "search": 3,
+    "relay": 5,
+    "formation": "v",
+    "spacing_m": 40,
+    "altitude_m": 50
+  },
+  "radio_dt_s": 0.5,
+  "control_dt_s": 3,
+  "beacon_slots_per_second": 8,
+  "primary_forecaster": "frozen gbdt63_s51",
+  "inputs": "successful receptions and own state; no true channel in actors",
+  "algorithm_candidates": [
+    "nominal",
+    "measured-reactive",
+    "predictive-local-MPC",
+    "masked-parameter-sharing-PPO-with-central-critic"
+  ],
+  "joint_predictor_backpropagation": false,
+  "reward_version": "communication_task_cost_v2",
+  "selection": "mission/safety feasibility then lowest macro outage fraction; PDR/time constraints; no combined reported performance score",
+  "source_base_sha256": "66b329600a9f382232668bbf4da0620e8625d106315edf6acc35ae5345af610e",
+  "test_used_for_tuning": false,
+  "training": {
+    "seed": 2026102607,
+    "iterations": 8,
+    "episodes_per_iteration": 12,
+    "workers": 4,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "ppo_clip": 0.15,
+    "epochs_max": 6,
+    "minibatch_steps": 256,
+    "entropy_coef": 0.003,
+    "teacher_kl_coef": 0.003,
+    "max_grad_norm": 0.5,
+    "warmup_lr": 0.0003,
+    "later_lr": 0.001,
+    "warmup_residual_scale": 0.1,
+    "later_residual_scale_min": 1.0,
+    "optimizer": "Adam",
+    "optimizer_eps": 1e-05,
+    "value_loss": "squared error divided by rollout return std squared",
+    "critic_inputs": "true current state only during learning; no future ground truth",
+    "train_map_count": 30,
+    "episode_budget": 96,
+    "curriculum": "first 36 episodes base schedule, later rounds rotate jamming kind and flight direction"
+  },
+  "forecaster_observers": "only 5 controlled relay drones; remaining source probabilities unsupported; same full beacon airtime",
+  "validation_policy_iterations": [
+    3,
+    6,
+    8
+  ]
+}

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>캡스톤 디자인 II · Final V1 통합보고서</title>
+<style>
+:root{--ink:#142a3d;--muted:#5e6d79;--teal:#087f7b;--teal-soft:#e6f4f0;--line:#dce4e9;--navy:#142a3d;--amber:#8c5d0a;--amber-soft:#fff5df;--red:#b8443f;--blue:#356cbe;--paper:#fff;--bg:#eef2f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:15px;line-height:1.75}button,select{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #e2b946;outline-offset:3px}a{color:var(--teal)}header{background:var(--navy);color:white;padding:40px max(24px,calc((100% - 1200px)/2)) 34px}.eyebrow{font-size:13px;letter-spacing:.1em;color:#a2d9d3;margin:0 0 8px}h1{font-size:clamp(27px,4.3vw,44px);line-height:1.25;margin:0 0 14px;font-weight:750;letter-spacing:-.04em}.subtitle{max-width:900px;color:#d4dfe5;margin:0}.stamp{color:#9db3bf;font-size:12px;margin-top:18px}.nav-wrap{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.nav{max-width:1250px;margin:auto;display:flex;gap:5px;padding:10px 20px;overflow-x:auto}.nav button{flex-shrink:0;background:transparent;border:0;border-radius:7px;color:var(--muted);padding:10px 14px;font-weight:650}.nav button[aria-selected="true"]{background:var(--teal);color:#fff}main{max-width:1240px;margin:24px auto;padding:0 20px 45px}.panel[hidden]{display:none}.grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(4,1fr)}.card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:22px;min-width:0}.card h2,.card h3{margin-top:0}h2{font-size:23px;line-height:1.4;letter-spacing:-.025em;margin:0 0 14px}h3{font-size:17px;margin:20px 0 9px}p{margin:8px 0 14px}.kpi-label{color:var(--muted);font-size:12px}.kpi-number{font-size:32px;font-weight:780;line-height:1.5;letter-spacing:-.04em}.kpi-caption{font-size:12px;color:var(--muted)}.accent{color:var(--teal)}.tag{display:inline-block;background:var(--teal-soft);color:#08615f;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-right:6px}.tag.research{background:var(--amber-soft);color:var(--amber)}.tag.old{background:#eaf0f8;color:#355e8b}.section-gap{margin-top:22px}.two-col{grid-template-columns:1fr 1fr}.notice{background:var(--amber-soft);border-left:4px solid #bf8a24;padding:14px 17px;border-radius:4px;color:#62491d}.note{color:var(--muted);font-size:13px}.method{background:#f2f6f8;border-radius:8px;padding:15px;font-size:13px}.source{font-size:11px;color:#637885;word-break:break-word}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6}th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}thead{background:#edf4f6}th{font-weight:700}tbody tr:last-child td{border-bottom:0}tr.selected{background:#e9f6f1}td.positive{color:#086c66;font-weight:700}td.negative{color:var(--red);font-weight:700}td.wrap{white-space:normal;min-width:210px}.controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:14px 0}.controls label{font-size:13px;color:var(--muted)}select{border:1px solid #bdccd5;background:#fff;border-radius:7px;padding:8px 10px;color:var(--ink);max-width:100%}.btn{border:1px solid #bdccd5;background:white;border-radius:7px;padding:8px 13px;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;font-size:13px}.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}.btn:hover{filter:brightness(.96)}.chart{height:240px;border-radius:8px;background:#f5f8fa;width:100%}.chart svg{width:100%;height:100%}.figure{display:block;width:100%;height:auto;border:1px solid #e1e8ec;border-radius:8px;margin:12px 0}details{border-top:1px solid var(--line);padding:13px 0}summary{cursor:pointer;font-weight:650}ul,ol{padding-left:22px}li{margin:5px 0}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:17px 0}.flow>div{background:#eef6f5;border:1px solid #cbdfdd;border-radius:8px;padding:14px 11px;font-size:12px}.flow strong{display:block;font-size:14px;margin-bottom:4px}.flow small{color:#526c72;display:block;margin-top:7px}.stage{border-top:4px solid var(--teal)}.stage.research-stage{border-top-color:#b98524}.compact{font-size:13px}code{font-family:Consolas,Menlo,monospace;font-size:.9em;background:#edf2f5;padding:2px 5px;border-radius:4px}pre{background:#132c3b;color:#e2eeee;padding:17px;border-radius:8px;overflow:auto;font-size:12px;line-height:1.8}.frame-top{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:14px}.frame-top p{margin:0}.frame-shell{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}.frame-shell iframe{display:block;width:100%;height:940px;max-height:none;border:0}.frame-shell:fullscreen iframe{height:100vh}.loading{padding:25px;color:var(--muted)}.rule-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.rule-list>div{background:#f3f7f8;padding:15px;border-radius:8px}.rule-list strong{font-size:14px}.rule-list p{font-size:13px;margin:5px 0}.glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.glossary>div{border:1px solid var(--line);border-radius:7px;padding:12px}.glossary strong{font-size:13px}.glossary p{font-size:12px;color:var(--muted);margin:4px 0}footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;margin-top:28px}.toc-count{color:var(--teal);font-weight:750}.screen-only{display:block}.status-dot{width:7px;height:7px;border-radius:50%;background:#159088;display:inline-block;margin-right:5px}
+@media(max-width:850px){.kpis{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.flow>div:last-child{grid-column:1/-1}.glossary{grid-template-columns:1fr 1fr}.nav{padding:8px 12px}.nav button{padding:9px 11px;font-size:13px}.frame-shell iframe{height:1100px}}
+@media(max-width:480px){header{padding:28px 18px}main{padding:0 12px;margin-top:16px}.card{padding:16px}.kpi-number{font-size:27px}.kpi-label{font-size:11px}.rule-list,.glossary{grid-template-columns:1fr}.frame-top{align-items:flex-start;flex-direction:column}h2{font-size:21px}.frame-shell iframe{height:1250px}}
+@media print{header{padding:18px;background:white;color:#142a3d}.subtitle,.stamp,.eyebrow{color:#4b6570}.nav-wrap,.controls,.screen-only{display:none}main{max-width:none;margin:0;padding:0}.panel[hidden]{display:none}.card{break-inside:avoid;border-radius:0}.chart{height:200px}.kpis{grid-template-columns:repeat(4,1fr)}body{background:white;font-size:11px}}
+.frame-top .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+<header>
+<p class="eyebrow">캡스톤 디자인 II · 팀 공유본</p>
+<h1>Final V1 통합보고서</h1>
+<p class="subtitle">V21 선제 제어를 대표 설정으로 채택한 Final V1 통합 검증본이다. 예측 성능 변화, 단절 유형과 원인, 예방 재배치와 동일 조건 비행 재생을 수록하였다.</p>
+<div class="stamp">공유본 작성 2026.11.07 · 평가 기록 기준 2026.11.05 · 모든 수치는 시뮬레이션 연구 결과</div>
+</header>
+<div class="nav-wrap"><nav class="nav" role="tablist" aria-label="보고서 항목">
+<button id="tab-performance" role="tab" data-panel="performance" aria-controls="performance" aria-selected="true">성능 비교</button>
+<button id="tab-patterns" role="tab" data-panel="patterns" aria-controls="patterns" aria-selected="false">단절 유형·원인</button>
+<button id="tab-history" role="tab" data-panel="history" aria-controls="history" aria-selected="false">30초 사건 조회</button>
+<button id="tab-precursor" role="tab" data-panel="precursor" aria-controls="precursor" aria-selected="false">연결 유지 급락</button>
+<button id="tab-replay" role="tab" data-panel="replay" aria-controls="replay" aria-selected="false">예방 재배치 재생</button>
+<button id="tab-fast" role="tab" data-panel="fast" aria-controls="fast" aria-selected="false">빠른 주기 실험</button>
+<button id="tab-handoff" role="tab" data-panel="handoff" aria-controls="handoff" aria-selected="false">알고리즘·코드 인계</button>
+</nav></div>
+<main>
+<section id="performance" class="panel" role="tabpanel" aria-labelledby="tab-performance">
+<div class="grid kpis">
+<div class="card"><div class="kpi-label">3초 이상 7초 미만 선행 탐지율</div><div class="kpi-number" id="kpi-recall"></div><div class="kpi-caption">V20과 동일 · 127 / 246건</div></div>
+<div class="card"><div class="kpi-label">선행 경보 정밀도</div><div class="kpi-number accent" id="kpi-precision"></div><div class="kpi-caption">V20 대비 <span id="kpi-precision-delta"></span></div></div>
+<div class="card"><div class="kpi-label">예측 점수의 AP</div><div class="kpi-number accent" id="kpi-ap"></div><div class="kpi-caption">V20 대비 <span id="kpi-ap-delta"></span></div></div>
+<div class="card"><div class="kpi-label">실제 비행의 시간당 새 단절</div><div class="kpi-number accent" id="kpi-outage"></div><div class="kpi-caption">V7 PPO 대비 · 11.57 → 7.80회/h</div></div>
+</div>
+<div class="card section-gap">
+<span class="tag">동일 관측 비교</span><h2>이전 V20과 Final V1의 예측 성능</h2>
+<p>14개 지도·세 간섭 조건의 동일한 V7 비행 42회를 사용하였다. 실제 단절 246건 중 단절 3초 이상 7초 미만 전에 시작한 경보를 사건별로 한 번씩 매칭하였다. Final V1에 채택된 V21 혼합 점수의 탐지 건수는 V20과 같았다. 정밀도가 상승하고 오경보·늦은 경보 부담이 감소하였다.</p>
+<div class="table-scroll"><table id="primary-prediction"><thead><tr><th>평가 지표</th><th>V20 물리 점수</th><th>Final V1 · V21 혼합 점수</th><th>변화</th></tr></thead><tbody></tbody></table></div>
+<div class="controls"><label for="prediction-metric">그래프 지표</label><select id="prediction-metric"><option value="recall">선행 탐지율</option><option value="precision">정밀도</option><option value="average_precision" selected>AP</option><option value="false_or_late_per_fleet_h">오경보·늦은 경보 / 편대·시간</option></select><button class="btn" id="download-metrics">성능 표 CSV 저장</button><button class="btn" id="download-json">집계 JSON 저장</button></div>
+<div id="prediction-chart" class="chart" role="img" aria-label="V20과 Final V1 예측 지표 비교"></div>
+<p class="note">AP 계산은 평가 가능한 제어 시점 25,079개 중 해당 시간 구간에 속하는 양성 211개를 대상으로 하였다. 사건 탐지율은 전체 246건을 분모로 계산하였다. AP는 위험 순위의 품질을 나타낸다. 경보 정밀도와 선행 탐지율은 선택한 문턱에서의 결과이다.</p>
+<details><summary>경보 문턱과 실제 재배치 발동 설정</summary><p class="compact">위 예측 비교의 문턱은 별도 보정 비행에서 오경보·늦은 경보 4회/편대·시간 이내로 선정하였다. V20 문턱은 <span id="threshold-v20"></span>, V21 문턱은 <span id="threshold-v21"></span>이다. 실제 제어 비교에서는 고정된 V21 예방 발동 문턱 <span id="threshold-operation"></span>을 사용하였다. 제어는 현재 연결, 미래 경로, 후보 이동의 통신 여유 개선 여부를 추가 확인한다.</p></details>
+<p class="source">근거 파일 · final_v1/artifacts/comparison.json의 alerts · comparison_freeze.json의 thresholds · forecast_learning/artifacts/freeze.json</p>
+</div>
+<div class="grid two-col section-gap">
+<div class="card"><span class="tag old">별도 이전 실험</span><h2>V18에서 V20으로 바뀐 단계</h2><p class="compact">다른 새 난수 42비행·251사건에서 같은 V7 궤적을 고정하여 비교하였다. 공유 계획 경로와 차폐 예측을 반영하면서 선행 탐지율이 증가하였다.</p><div class="table-scroll"><table id="earlier-prediction"><thead><tr><th>지표</th><th>V18</th><th>V20</th></tr></thead><tbody></tbody></table></div><p class="note">선행 탐지율 차이 +21.91%p, 공간 그룹 95% 구간 +7.29~+28.16%p. 확인 비행의 경보 부담은 3.39→3.86회/h였다. 위 Final V1 표와는 난수·사건 수·문턱이 다른 실험이다.</p><p class="source">근거 파일 · forecast_shield/artifacts/final_results.json · RESULTS.md</p></div>
+<div class="card"><span class="tag old">초기 176 update 기록</span><h2>초기 Transformer 기록</h2><p class="compact">8개 중간 검증 지도에서 선택한 176번 모델의 기록이다. 유향 링크와 시점, 개별 링크 단절 사건을 평가 단위로 사용하였다.</p><div class="table-scroll"><table><thead><tr><th>초기 평가 항목</th><th>기록값</th></tr></thead><tbody><tr><td>5초 위험 AUROC</td><td>94.15%</td></tr><tr><td>3~7초 시작 AP</td><td>24.85%</td></tr><tr><td>8초 경보의 3초 이상 선행 탐지</td><td>17 / 4,087건 · 0.416%</td></tr><tr><td>해당 경보의 정밀도</td><td>80.95%</td></tr><tr><td>오경보 / 드론·시간</td><td>0.20회</td></tr></tbody></table></div><p class="note">Final V1은 수색망 전체의 지속 단절과 편대 단위 경보를 사용한다. 초기 수치의 평가 단위와 표본 구성을 함께 보존하였으며, 버전 간 변화량은 동일 조건 표에서 계산하였다.</p><p class="source">근거 파일 · code/training_ops/reports/best176_metrics.md</p></div>
+</div>
+<div class="card section-gap">
+<span class="tag">명령과 이동 적용</span><h2>기존 V7 PPO와 Final V1의 단절 예방 결과</h2>
+<p>같은 지도·방향·난수의 42조건에서 각 제어기가 자신의 명령으로 임무를 처음부터 끝까지 수행하였다. 새 단절은 수색망 연결이 1초 이상 끊긴 구간의 시작이다. 임무 시작부터 끊긴 구간은 새 시작 건수와 별도로 처리하였다.</p>
+<div class="table-scroll"><table id="control-comparison"><thead><tr><th>지표</th><th>기존 V7 PPO</th><th>Final V1 · V21 선제 제어</th><th>변화</th></tr></thead><tbody></tbody></table></div>
+<p class="note" id="control-ci"></p>
+<div class="controls"><button class="btn primary" data-go="replay">같은 조건의 두 비행 재생</button><label for="control-metric">비행 지표</label><select id="control-metric"><option value="starts_per_h">새 단절 / 시간</option><option value="cut_s_per_h">단절 초 / 시간</option><option value="timely_pdr">기한 내 전달률</option></select></div>
+<div id="control-chart" class="chart" role="img" aria-label="기존 V7 PPO와 Final V1 비행 지표 비교"></div>
+<details><summary>전체 제어 방식 9개의 결과</summary><div class="table-scroll"><table id="all-controls"><thead><tr><th>방식</th><th>새 단절</th><th>회/h</th><th>단절 초/h</th><th>기한 내 전달</th><th>완주</th><th>안전 위반</th></tr></thead><tbody></tbody></table></div></details>
+<p class="source">근거 파일 · final_v1/artifacts/comparison.json의 stats 및 vs_v21 · 고정 확인 378비행</p>
+</div>
+<div class="card section-gap">
+<span class="tag research">공동학습 후보</span><h2>시간 구간별 예측기를 PPO와 함께 갱신한 결과</h2>
+<p>245개 훈련 지도·154,312개 입력에서 예측기를 사전 학습하였다. 새 연속 예측 입력을 쓰는 PPO와 같은 구조에서 입력을 제외한 PPO를 각각 24비행·4회 갱신하였다. 아래 예측 지표는 위와 동일한 V7 확인 궤적에서 계산하였다.</p>
+<div class="table-scroll"><table id="joint-table"><thead><tr><th>예측 시간 구간</th><th>탐지</th><th>탐지율</th><th>정밀도</th><th>오경보·늦은 경보/h</th><th>AP</th></tr></thead><tbody></tbody></table></div>
+<p class="notice">0.5~3초 구간의 탐지율 66.67%는 단절에 더 가까운 시간대의 결과이다. 3~7초 후보의 탐지율은 53.25%, 경보 부담은 4.37회/편대·시간이었다. 새 연속 입력 PPO의 실제 새 단절은 271건, 입력 제외 PPO는 279건이었다. Final V1 대표 제어는 166건을 기록한 V21 선제 제어로 결정하였다.</p>
+<p class="note">연속 입력 PPO와 입력 제외 PPO의 시간당 단절 차이 −0.37회/h, 공간 그룹 95% 구간 −1.49~+0.88회/h. 학습 갱신은 소규모이며 일반화와 실기체 성능은 후속 검증 범위이다.</p>
+<p class="source">근거 파일 · final_v1/artifacts/training.json · comparison.json의 alerts 및 continuous_vs_matched_ppo · release.json</p>
+</div>
+<div class="card section-gap"><h2>현재 남아 있는 예측 문제</h2><div class="rule-list"><div><strong>전체 선행 탐지 127 / 246건</strong><p>3~7초 구간에서 119건을 놓쳤다. 전체 사건 분모를 유지하여 어려운 사건도 평가에 포함하였다.</p></div><div><strong>점진형·기타형의 낮은 탐지</strong><p>확인 비행에서 점진형 0/7건, 기타형 1/21건을 선행 탐지하였다. 두 집단의 표본 수를 함께 보고한다.</p></div><div><strong>관측 전달과 항법 공유 가정</strong><p>현재 항법 상태를 공동 계획기가 공유한다. 실제 RF·비컨의 수신 시각과 관측 신선도가 예측 입력을 제한한다.</p></div><div><strong>재배치에 필요한 이동 시간</strong><p>Final V1 이동 명령은 3초 주기이다. 별도 빠른 주기 실험에서 1초·0.5초 후보를 검토하였다.</p></div></div></div>
+</section>
+
+<section id="patterns" class="panel" role="tabpanel" aria-labelledby="tab-patterns" hidden>
+<div class="card"><span class="tag">345개 지도 · 새 단절 2,572건</span><h2>급락형·점진형·혼합형·기타형</h2><p>각 단절의 시작을 0초로 맞추고 −6초부터 0초까지 0.5초 간격의 13개 통신 여유를 사용하였다. 통신 여유는 수색기 쌍 사이의 최선 중계 경로 중 가장 취약한 경로가 갖는 대칭 SINR 기준 여유이다. 0dB는 설정된 연결 기준의 경계이다.</p>
+<div class="method"><strong>J</strong>는 −0.5초 여유에서 0초 여유를 뺀 마지막 급락량이다. <strong>D</strong>는 −6~−4.5초 네 값의 중앙값에서 −2~−0.5초 네 값의 중앙값을 뺀 앞선 감소량이다. 분류 문턱은 J=6dB, D=3dB이다.</div>
+<div class="table-scroll"><table id="pattern-table"><thead><tr><th>유형</th><th>기준</th><th>건수</th><th>비율</th><th>건물 손실 제거 후 첫 1초 회복</th></tr></thead><tbody></tbody></table></div>
+<img class="figure" src="@@DISTRIBUTION@@" alt="2,572개 새 단절의 유형별 건수와 비율">
+<p class="note">급락형과 혼합형의 합계는 2,185건·84.95%이다. 분류에는 실제 단절 시작 시점의 값이 포함된다. 단절 이전에 이용 가능한 정보는 수신 기록과 발행한 경로를 기준으로 별도 검증한다.</p>
+<p class="source">근거 파일 · final_v1/artifacts/causes.json · output/outage_patterns_20261105/evidence.json</p></div>
+<div class="card section-gap"><h2>실제 대표 사건의 변화</h2><p>유형별 중앙 곡선에 가장 가까운 실제 사건을 선택하였다. 점진형과 기타형은 시작부터 작은 여유로 진행하는 경우가 있으며, 최근 30초 이력에서는 앞선 급락·회복·별도 단절을 구분하여 볼 수 있다.</p><img class="figure" src="@@CURVES@@" alt="급락형 점진형 혼합형 기타형의 실제 반초 단위 통신 여유 변화"><div class="controls"><button class="btn primary" data-go="history">2,572개 사건의 6·10·20·30초 이력 조회</button><button class="btn" data-go="precursor">연결 유지 급락의 추가 분석</button></div></div>
+<div class="card section-gap"><h2>전파 원인 항을 제거한 대조</h2><p>같은 위치와 외생 상태에서 건물 추가 손실·간섭·섀도잉 항을 각각 제거하여 첫 1초의 연결이 회복되는지 확인하였다. 하나의 사건이 여러 항 제거에서 각각 회복될 수 있다.</p><div class="table-scroll"><table><thead><tr><th>유형</th><th>전체 사건</th><th>건물 손실 제거</th><th>간섭 제거</th><th>섀도잉 제거</th></tr></thead><tbody><tr><td>급락형</td><td>1,676</td><td>1,670</td><td>72</td><td>4</td></tr><tr><td>혼합형</td><td>509</td><td>509</td><td>31</td><td>1</td></tr><tr><td>점진형</td><td>101</td><td>71</td><td>63</td><td>34</td></tr><tr><td>기타형</td><td>282</td><td>139</td><td>235</td><td>128</td></tr><tr><td>이력 부족</td><td>4</td><td>4</td><td>0</td><td>0</td></tr></tbody></table></div><img class="figure" src="@@CAUSES@@" alt="유형별 원인 항 제거 결과와 분류 문턱 민감도"><p class="note">진단에는 이미 이전 최종 평가 지도로 사용한 지역도 포함되었다. 새 모델의 평가에서는 지리별 역할과 자료 공개 이력을 다시 확인해야 한다. 실제 기체·주파수별 전파 보정과 장비 검증은 후속 과제이다.</p></div>
+<div class="card section-gap"><h2>확인 비행에서 유형별 선행 탐지</h2><div class="table-scroll"><table id="pattern-recall"><thead><tr><th>유형</th><th>같은 V7 단절</th><th>V20 선행 탐지</th><th>Final V1 점수 선행 탐지</th><th>Final V1 별도 제어 비행의 단절</th></tr></thead><tbody></tbody></table></div><p class="note">앞의 탐지 두 열은 같은 V7 사건에 매칭하였다. 마지막 열은 각자 비행한 Final V1의 사건 수이다. 정책이 이동을 바꾸면 사건의 시각과 원인도 달라진다.</p></div>
+</section>
+
+<section id="history" class="panel" role="tabpanel" aria-labelledby="tab-history" hidden><div class="frame-top"><div><h2>단절 전 6·10·20·30초 이력</h2><p class="note">유형·지도·사건을 선택하고 반초 시점을 이동하여 확인한다. 총 2,572건 중 2,555건에 완전한 30초 이력이 있다.</p></div><button class="btn" data-fullscreen="history">크게 보기</button></div><div class="frame-shell"><div class="loading">조회 화면을 준비하는 중</div><iframe title="단절 전 30초 사건 조회" data-frame="history"></iframe></div></section>
+<section id="precursor" class="panel" role="tabpanel" aria-labelledby="tab-precursor" hidden><div class="frame-top"><div><h2>연결이 유지된 급락과 이후 위험</h2><p class="note">345비행·182.9시간의 정상 구간을 포함한 기록 분석이다. 최근 급락의 위험 연관성과 실제 사례를 수록하였다.</p></div><button class="btn" data-fullscreen="precursor">크게 보기</button></div><div class="frame-shell"><div class="loading">분석 화면을 준비하는 중</div><iframe title="연결 유지 급락의 선행 가치 분석" data-frame="precursor"></iframe></div></section>
+<section id="replay" class="panel" role="tabpanel" aria-labelledby="tab-replay" hidden><div class="frame-top"><div><h2>단절 예방 재배치의 실제 비행 재생</h2><p class="note">42개 동일 조건 비교와 14개 명령 손실 조건을 수록하였다. 처음에는 왼쪽 ‘기존 V7 PPO’, 오른쪽 ‘V21 선제 제어’를 선택하고 ‘다음 사건’으로 이동한다. 링크·이동·개입 이유를 같은 비행 시각에서 확인한다.</p></div><button class="btn primary" data-fullscreen="replay">재생 화면 크게 보기</button></div><div class="frame-shell"><div class="loading">56개 조건의 비행 기록을 준비하는 중</div><iframe title="Final V1 단절 예방 재배치 동시 재생" data-frame="replay"></iframe></div><p class="note">재생 데이터의 위치 기록은 3초 이동 종점, 무선 연결 기록은 0.5초 간격이다. 그림 사이의 이동은 화면 표시를 위한 보간이다. 명령 미수신 시 기본 대형으로 향하는 대응이 Final V1의 채택 설정이다.</p></section>
+<section id="fast" class="panel" role="tabpanel" aria-labelledby="tab-fast" hidden><div class="frame-top"><div><span class="tag research">Final V1 이후 분리 실험</span><h2>빠른 명령 주기와 통신 비용</h2><p class="note">113개 출발 조건의 24초 분기 비교와 14개 지연 조건을 합쳐 1,016회 실행하였다. 전체 임무 성능 표와 실험 범위를 함께 확인한다.</p></div><button class="btn" data-fullscreen="fast">크게 보기</button></div><div class="frame-shell"><div class="loading">빠른 주기 실험 화면을 준비하는 중</div><iframe title="1초 0.5초 0.1초 제어 주기 실험" data-frame="fast"></iframe></div></section>
+
+<section id="handoff" class="panel" role="tabpanel" aria-labelledby="tab-handoff" hidden>
+<div class="card"><h2>Final V1에서 사용하는 알고리즘</h2><div class="flow"><div><strong>① 대형 선택</strong>지도 건물·비행 제한·기체 예산으로 네 대형 중 하나를 선택<small>V7 학습 선택기</small></div><div><strong>② 기본 이동 제안</strong>Transformer의 과거 통신·경로 표현을 이용해 중계별 후보 행동 점수 산출<small>고정 V7 PPO</small></div><div><strong>③ 선행 위험 계산</strong>발행 경로와 지도 차폐로 미래 연결을 계산하고 학습 점수와 혼합<small>물리 경로 예측 + LightGBM</small></div><div><strong>④ 후보 재배치 검토</strong>연결 부족량·가까운 시간의 위험·우회 경로·이동량으로 후보 비교<small>두 미래 경로 가정</small></div><div><strong>⑤ 명령과 이동 적용</strong>조건을 만족하는 중계 한 대의 행동을 변경하고 비행·패킷 결과 갱신<small>3초 제어 + 이동 보호 규칙</small></div></div>
+<p>학습된 선행 점수와 물리 점수의 가중은 각각 0.7과 0.3이다. 214개 특징은 현재 보정을 유지하는 경로와 기본 대형으로 돌아가는 경로를 비교해 구성한다. 후보 이동이 가까운 시간의 통신을 악화시키는지, 두 경로의 최악 연결 부족량을 줄이는지 확인한다. 수색망이 연결된 상태에서 위험한 경로를 미리 바꾸는 것이 예방 개입의 목적이다.</p>
+<div class="grid two-col"><div class="method"><strong>예측에서 재배치로 전달하는 정보</strong><ul><li>선행 위험 점수와 발동 문턱</li><li>예상 단절까지 남은 시간</li><li>0.5초 간격의 미래 경로별 통신 여유</li><li>후보별 연결 부족량과 우회 경로 여유</li><li>관측 가능 여부·관측 시각·현재 대형</li></ul></div><div class="method"><strong>후보를 채택하는 조건</strong><ul><li>현재 RF 관측과 실행 가능한 대안 존재</li><li>현재 연결과 초기 3초의 통신 여유 점검</li><li>두 경로 가정에서 단절 시작 수 증가 억제</li><li>최악 연결 부족량의 기준 이상 감소</li><li>임박 위험·우회·이동량을 포함한 후보 점수</li></ul></div></div><p class="source">구현 근거 · final_v1/control.py · forecast_learning/control.py · forecast_learning/features.py · forecast_avoidance/controller.py</p></div>
+<div class="grid two-col section-gap"><div class="card stage"><span class="tag">Final V1 채택</span><h2>V21 선제 제어</h2><p>V7의 학습된 대형 선택·Transformer·PPO가 기본 제안을 만든다. 공유 경로의 물리 예측과 학습 점수가 예방 후보를 평가한다. 확인 비행에서 새 단절 166건, 기한 내 전달 97.89%를 기록하였다.</p></div><div class="card stage research-stage"><span class="tag research">추가 검증한 후보</span><h2>연속 입력 PPO와 빠른 주기</h2><p>공동학습 후보는 24차원 예측 표현과 네 점수를 PPO에 전달한다. 네 점수는 0.5~3초·3~5초·5~7초 단절과 구간 내 단절 없음에 해당한다. 0.5초 판단 환경도 별도로 구성하여 단절·전달·경보 비용을 평가하였다.</p></div></div>
+<div class="card section-gap"><h2>팀원이 받는 파일과 실행 순서</h2><div class="table-scroll"><table><thead><tr><th>위치</th><th>내용</th></tr></thead><tbody><tr><td>Final_V1_통합보고서.html</td><td class="wrap">이 문서와 모든 내장 그래프·사건 조회·56조건 재생</td></tr><tr><td>code/final_v1</td><td class="wrap">최종 제어·공동학습·평가·명령 전달·재생 생성 코드와 기록</td></tr><tr><td>code/forecast_* · adaptive_joint*</td><td class="wrap">이전 연구 버전의 전체 Python 소스와 최종 버전에 필요한 의존 코드</td></tr><tr><td>code/drone_forecast_joint_training</td><td class="wrap">비행·전파·패킷 엔진, 원형 모델 코드와 선택 모델</td></tr><tr><td>code/additional_maps_20261030</td><td class="wrap">확장 지도 등록과 추가 지도 원본 장면</td></tr><tr><td>evidence</td><td class="wrap">성능 CSV, 집계 JSON, 원본 평가 근거, 파일 지문과 지도 목록</td></tr><tr><td>README.md · FILE_MANIFEST.json</td><td class="wrap">설치·실행·검증 범위와 파일별 SHA256</td></tr></tbody></table></div>
+<ol><li>ZIP을 새 폴더에 압축 해제한다.</li><li>보고서 HTML을 브라우저로 연다. 표·그래프·재생 데이터가 파일에 내장되어 있다.</li><li>코드는 README의 Python 3.12 환경 설치 순서에 따라 준비한다.</li><li>아래 명령으로 파일 검증 후 짧은 비행을 실행한다.</li></ol><pre>cd code
+python run_final_v1.py --verify
+python run_final_v1.py --steps 24
+python run_final_v1.py --check-training-data
+python run_final_v1.py --check-forecast</pre><p class="note">팀 실행 진입점이 원래 PC의 기록 경로를 압축 해제 위치로 해석한다. 모델·지도·평가 근거의 원본 바이트와 연구 소스를 보존하였다. 원래 경로 문자열은 연구 근거 파일에 출처 정보로 남아 있다. 설치된 가상환경과 재생성 가능한 캐시, 초기 버전의 대용량 중간 텐서는 제외하였다. 코드·포함 자료·검증 범위는 README와 파일 목록에서 확인한다.</p></div>
+<div class="card section-gap"><h2>용어와 평가 단위</h2><div class="glossary"><div><strong>선행 탐지율</strong><p>전체 실제 단절 중 정한 시간대에 경보를 받은 사건의 비율.</p></div><div><strong>경보 정밀도</strong><p>시작한 경보 중 정한 시간대의 실제 사건과 매칭된 비율.</p></div><div><strong>오경보·늦은 경보</strong><p>적합한 시간대의 사건에 매칭하지 못한 경보. 편대 전체 비행 시간으로 나눈다.</p></div><div><strong>AP</strong><p>문턱을 바꿔 얻는 정밀도·재현율 관계를 요약하는 위험 순위 지표.</p></div><div><strong>AUROC</strong><p>양성의 위험 점수가 음성보다 높게 정렬되는 정도. 단절 탐지율과 함께 평가한다.</p></div><div><strong>통신 여유 dB</strong><p>연결 임계값까지 남은 SINR 여유. 0dB에 가까울수록 연결 경계에 가깝다.</p></div><div><strong>기한 내 전달률</strong><p>생성한 패킷 중 정해진 마감 안에 도착한 비율. 단절 횟수와 평가 단위가 다르다.</p></div><div><strong>%와 %p</strong><p>50%→60%는 +10%p이며 상대 증가율은 20%이다.</p></div><div><strong>공간 그룹 95% 구간</strong><p>가까운 지도들의 상관을 반영해 공간 그룹 전체를 재표집한 변화량 구간.</p></div></div></div>
+<div class="card section-gap"><h2>팀 공유본 전달 검증</h2><div class="rule-list"><div><strong>620개 기존 Python 소스 보존</strong><p>원본과 바이트 지문을 대조하고 전달한 Python 파일의 문법을 확인하였다. 지도 345개의 내용 지문도 등록값과 일치하였다.</p></div><div><strong>30분 임무 재현</strong><p>전달용 코드로 1,803초 임무를 완주하였다. 7회 예방 명령을 포함해 위치·명령·링크·패킷 결과 등 12개 배열이 저장된 원본 비행과 정확히 일치하였다.</p></div><div><strong>예측 지표와 학습 입력 확인</strong><p>42비행의 V20·V21·공동학습 두 시간대 점수를 재계산하였다. 탐지·경보 수·AP 등이 원본 평가와 일치했고, 245지도의 154,312행 학습 입력을 읽었다.</p></div><div><strong>브라우저와 기존 검사</strong><p>데스크톱·390px 휴대전화 화면, 일곱 탭, CSV 저장, 2,572건 사건 조회와 56조건 재생을 확인하였다. 기존 계약 검사 16개를 통과하였다.</p></div></div><p class="note">코드 검증 환경은 기존 Windows·Python 3.12.14 패키지 환경의 CPU 실행이다. 새 PC에서 의존 패키지를 설치하는 절차는 README에 수록하였다. 브라우저 검증은 Chromium에서 수행하였다.</p><p class="source">검증 기록 · evidence/qa/runtime_checks.json · browser_checks.json · existing_contract_tests.txt</p></div>
+<div class="card section-gap"><h2>해석 범위와 다음 검증</h2><p>확인 비행은 알려진 14개 지도의 새 난수를 사용하였다. 같은 지리의 다른 날씨·주파수·실기체를 검증하려면 별도 자료가 필요하다. 원인 진단 345지도에는 이미 공개된 이전 최종 지도도 포함되어 있다.</p><p>현재의 30초 급락 분석은 조건부 위험 연관성을 확인한 단계이다. 이후 단절이 없는 급락도 학습 대조에 포함하고, 실제 수신 정보로 만든 30초 이력이 선행 탐지를 높이는지 검증할 예정이다. 새 입력의 예측 성과와 이동 개입 뒤의 단절 예방 성과를 각각 측정한다.</p></div>
+</section>
+<footer>캡스톤 디자인 II · Final V1 팀 공유본 · 작성 2026.11.07 · 평가 자료 2026.11.05<br><span class="status-dot"></span>표·그래프·사건 조회·비행 재생 데이터가 내장된 HTML</footer>
+</main>
+<script type="application/json" id="report-data">@@METRICS@@</script>
+<script type="application/octet-stream" id="payload-replay">@@REPLAY@@</script>
+<script type="application/octet-stream" id="payload-history">@@HISTORY@@</script>
+<script type="application/octet-stream" id="payload-precursor">@@PRECURSOR@@</script>
+<script type="application/octet-stream" id="payload-fast">@@FAST@@</script>
+<script>
+'use strict';
+const M = JSON.parse(document.querySelector('#report-data').textContent);
+const percent = value => (value * 100).toFixed(2) + '%';
+const signed = (value, digits=2) => (value > 0 ? '+' : value < 0 ? '−' : '') + Math.abs(value).toFixed(digits);
+const fixed = value => Number(value).toFixed(2);
+const labels = {nominal:'기본 대형',reactive:'단절 후 복구',v7:'기존 V7 PPO',v21:'Final V1 · V21 선제 제어',physics_trigger:'물리 위험으로 발동',no_short:'임박 위험 검사 제외',no_backup:'우회 가점 제외',ppo_base:'새 입력 없는 PPO',ppo_continuous:'연속 입력 PPO'};
+const patterns = {abrupt:'급락형',mixed:'혼합형',gradual:'점진형',other:'기타형',insufficient_history:'이력 부족'};
+function rows(id, content) {
+  document.querySelector('#' + id + ' tbody').innerHTML = content.map(row => '<tr>' + row.map(value => '<td>' + value + '</td>').join('') + '</tr>').join('');
+}
+function text(id, value) { document.getElementById(id).textContent = value; }
+const old = M.prediction.v20;
+const current = M.prediction.v21;
+text('kpi-recall',percent(current.recall)); text('kpi-precision',percent(current.precision));
+text('kpi-precision-delta',signed(M.prediction_change.precision_pp) + '%p');
+text('kpi-ap',percent(current.average_precision));text('kpi-ap-delta',signed(M.prediction_change.ap_pp) + '%p');
+text('kpi-outage','−' + fixed(M.control_change.starts_reduction_pct) + '%');
+rows('primary-prediction',[
+  ['선행 탐지율',percent(old.recall),percent(current.recall),signed(M.prediction_change.recall_pp) + '%p'],
+  ['제때 탐지 / 전체 단절',old.hits + ' / ' + old.events,current.hits + ' / ' + current.events,'동일'],
+  ['경보 정밀도',percent(old.precision),percent(current.precision),signed(M.prediction_change.precision_pp) + '%p'],
+  ['오경보·늦은 경보 / 편대·시간',fixed(old.false_or_late_per_fleet_h),fixed(current.false_or_late_per_fleet_h),signed(M.prediction_change.false_or_late_delta) + '회/h'],
+  ['매칭하지 못한 경보 수',old.false_or_late,current.false_or_late,'−' + (old.false_or_late-current.false_or_late) + '건'],
+  ['AP',percent(old.average_precision),percent(current.average_precision),signed(M.prediction_change.ap_pp) + '%p'],
+  ['탐지한 사건의 선행시간 중앙값',old.median_lead_s.toFixed(1)+'초',current.median_lead_s.toFixed(1)+'초','동일']
+]);
+text('threshold-v20',fixed(M.thresholds.v20.threshold));text('threshold-v21',M.thresholds.v21.threshold.toFixed(4));text('threshold-operation',M.operational_score.threshold.toFixed(4));
+const a = M.earlier_same_cohort.v18; const b = M.earlier_same_cohort.v20;
+rows('earlier-prediction',[
+  ['선행 탐지',a.hits+'/'+a.events,b.hits+'/'+b.events],['탐지율',percent(a.recall),percent(b.recall)],
+  ['정밀도',percent(a.precision),percent(b.precision)],['오경보·늦은 경보/h',fixed(a.false_per_hour),fixed(b.false_per_hour)]
+]);
+const v7=M.control.v7, v21=M.control.v21;
+rows('control-comparison',[
+  ['새 지속 단절 수',v7.starts+'건',v21.starts+'건','−'+(v7.starts-v21.starts)+'건'],
+  ['시간당 새 단절',fixed(v7.starts_per_h)+'회',fixed(v21.starts_per_h)+'회','−'+fixed(M.control_change.starts_reduction_pct)+'%'],
+  ['비행 시간당 단절 시간',fixed(v7.cut_s_per_h)+'초',fixed(v21.cut_s_per_h)+'초','−'+fixed(M.control_change.cut_time_reduction_pct)+'%'],
+  ['기한 내 전달률',percent(v7.timely_pdr),percent(v21.timely_pdr),signed(M.control_change.timely_pdr_pp)+'%p'],
+  ['평균 중계 합산 이동',(v7.mean_relay_m/1000).toFixed(2)+'km',(v21.mean_relay_m/1000).toFixed(2)+'km',signed(M.control_change.relay_m_delta,1)+'m'],
+  ['임무 완주',v7.completed+'/42',v21.completed+'/42','동일'],['안전 위반',v7.safety,v21.safety,'동일']
+]);
+text('control-ci','시간당 새 단절 차이 ' + signed(v21.starts_per_h-v7.starts_per_h) + '회/h. 12개 공간 그룹의 95% 구간 ' + M.control_change.rate_difference_ci95.map(value=>signed(value)).join('~') + '회/h.');
+rows('all-controls',Object.entries(M.control).map(([key,row])=>[labels[key],row.starts,fixed(row.starts_per_h),fixed(row.cut_s_per_h),percent(row.timely_pdr),row.completed+'/42',row.safety]));
+rows('joint-table',[['joint_short','0.5초 이상 3초 미만'],['joint_3to5','3초 이상 5초 미만'],['joint_5to7','5초 이상 7초 미만'],['joint_early','3초 이상 7초 미만']].map(([key,label])=>{const r=M.prediction[key];return[label,r.hits+'/'+r.events,percent(r.recall),percent(r.precision),fixed(r.false_or_late_per_fleet_h),percent(r.average_precision)];}));
+const conditions={abrupt:'J ≥ 6 · D < 3',mixed:'J ≥ 6 · D ≥ 3',gradual:'J < 6 · D ≥ 3',other:'J < 6 · D < 3',insufficient_history:'6초 자료 부족'};
+rows('pattern-table',['abrupt','mixed','gradual','other','insufficient_history'].map(key=>{const r=M.causes.by_pattern[key];return[patterns[key],conditions[key],r.events.toLocaleString(),percent(r.events/2572),r.building_alone_repairs_first_second+'/'+r.events];}));
+rows('pattern-recall',['abrupt','mixed','gradual','other'].map(key=>{const v=M.prediction.v21.by_pattern[key];return[patterns[key],v.events,M.prediction.v20.by_pattern[key].hits+'/'+v.events,v.hits+'/'+v.events+' · '+percent(v.hits/v.events),M.patterns_in_confirmation.v21[key]];}));
+function barChart(id, pairs, suffix, decimals=2, floor=0) {
+  const width=900, height=240, left=200, right=95, top=40, rowHeight=75;
+  const maximum=Math.max(...pairs.map(item=>item[1]),1)*1.1;
+  const plotWidth=width-left-right;
+  const bars=pairs.map(([label,value,color],i)=>{
+    const y=top+i*rowHeight;
+    const length=(value-floor)/(maximum-floor)*plotWidth;
+    return '<text x="185" y="'+(y+25)+'" text-anchor="end" font-size="17" fill="#142a3d">'+label+'</text><rect x="'+left+'" y="'+y+'" width="'+Math.max(1,length)+'" height="40" rx="5" fill="'+color+'"/><text x="'+(left+length+10)+'" y="'+(y+26)+'" font-size="18" font-weight="700" fill="#142a3d">'+value.toFixed(decimals)+suffix+'</text>';
+  }).join('');
+  document.getElementById(id).innerHTML='<svg viewBox="0 0 '+width+' '+height+'" role="presentation">'+bars+'<text x="200" y="218" font-size="13" fill="#657682">축 시작 0 · 수치는 위 표에서 확인</text></svg>';
+}
+function updatePredictionChart(){const key=document.getElementById('prediction-metric').value;const rate=key==='false_or_late_per_fleet_h';const factor=rate?1:100;barChart('prediction-chart',[['V20',old[key]*factor,'#91a7ba'],['Final V1',current[key]*factor,'#087f7b']],rate?'회/h':'%');}
+function updateControlChart(){const key=document.getElementById('control-metric').value;const ratio=key==='timely_pdr';const suffix=ratio?'%':key==='starts_per_h'?'회/h':'초/h';barChart('control-chart',[['V7 PPO',v7[key]*(ratio?100:1),'#91a7ba'],['Final V1',v21[key]*(ratio?100:1),'#087f7b']],suffix);}
+document.getElementById('prediction-metric').addEventListener('change',updatePredictionChart);document.getElementById('control-metric').addEventListener('change',updateControlChart);updatePredictionChart();updateControlChart();
+const loaded=new Set();
+function showPanel(name, focus=false){
+  if(!document.getElementById(name)?.classList.contains('panel')) return;
+  document.querySelectorAll('.panel').forEach(panel=>panel.hidden=panel.id!==name);
+  document.querySelectorAll('[role="tab"]').forEach(button=>{const active=button.dataset.panel===name;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
+  const frame=document.querySelector('iframe[data-frame="'+name+'"]');
+  if(frame&&!loaded.has(name)){
+    const bytes=Uint8Array.from(atob(document.getElementById('payload-'+name).textContent.trim()),character=>character.charCodeAt(0));
+    frame.addEventListener('load',()=>{frame.previousElementSibling.hidden=true;},{once:true});
+    frame.srcdoc=new TextDecoder().decode(bytes);loaded.add(name);
+  }
+  history.replaceState(null,'','#'+name);
+  if(focus) document.getElementById('tab-'+name).focus({preventScroll:true});
+}
+document.querySelectorAll('[data-panel]').forEach(button=>button.addEventListener('click',()=>showPanel(button.dataset.panel)));
+document.querySelectorAll('[data-go]').forEach(button=>button.addEventListener('click',()=>{showPanel(button.dataset.go);document.querySelector('.nav-wrap').scrollIntoView({block:'start'});}));
+document.querySelectorAll('[data-fullscreen]').forEach(button=>button.addEventListener('click',async()=>{const frame=document.querySelector('iframe[data-frame="'+button.dataset.fullscreen+'"]');await frame.parentElement.requestFullscreen?.();}));
+document.querySelector('[role="tablist"]').addEventListener('keydown',event=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;const buttons=[...document.querySelectorAll('[role="tab"]')];const index=buttons.indexOf(document.activeElement);if(index<0)return;event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(index+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;showPanel(buttons[next].dataset.panel,true);});
+window.addEventListener('message',event=>{if(event.data?.type!=='capstone-section')return;const source=[...document.querySelectorAll('iframe')].some(frame=>frame.contentWindow===event.source);if(source)showPanel(event.data.panel);});
+function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type}));const anchor=document.createElement('a');anchor.href=url;anchor.download=name;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),2000);}
+document.getElementById('download-json').addEventListener('click',()=>download('Final_V1_평가집계.json',JSON.stringify(M,null,2),'application/json;charset=utf-8'));
+document.getElementById('download-metrics').addEventListener('click',()=>{const lines=[['방식','선행 구간','사건','탐지','탐지율%','정밀도%','오경보 및 늦은 경보/편대시간','AP%']];for(const key of ['v20','v21','joint_short','joint_3to5','joint_5to7','joint_early']){const r=M.prediction[key];const window=M.thresholds[key].window;lines.push([key,window.join('~')+'초',r.events,r.hits,100*r.recall,100*r.precision,r.false_or_late_per_fleet_h,100*r.average_precision]);}download('Final_V1_예측성능.csv','\ufeff'+lines.map(row=>row.join(',')).join('\r\n'),'text/csv;charset=utf-8');});
+if(location.hash) showPanel(location.hash.slice(1));
+</script>
+</body>
+</html>

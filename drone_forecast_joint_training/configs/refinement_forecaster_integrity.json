@@ -1,0 +1,11 @@
+{
+  "format": "frozen-forecaster-files-v2",
+  "origin": "Recovered integrated v1 archive version2; hashes verified against its original PACKAGE_CONTENTS.json",
+  "recovered_archive_sha256": "2a142642187c37f677b4dacf87a3b9dd1cd5264cf11b54da394d5401cf599b7a",
+  "files": {
+    "model/advance/selected/alarm_policy.json": "ad18b7dd7f67e3a7dcf315d140668190ac5247b70b169eedb0644b2bf296945b",
+    "model/advance/selected/best.pt": "8d916c91ddded88c9286a24df4175b947e3b8886055eec18abe5eb69943dc588",
+    "model/advance/selected/calibration.json": "53c2d89d5b859d7d7bce202dc76ac117306a431567969aa723d4c704bafe29e2",
+    "model/advance/selected/selection.json": "ce860cf1c3df7d0368b13870315fc628596adae31d62f3b59f5071a9f3e773ec"
+  }
+}

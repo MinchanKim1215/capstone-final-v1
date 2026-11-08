@@ -1,0 +1,9 @@
+**/__pycache__/
+**/.venv/
+**/artifacts/
+**/cache/
+**/rollouts/
+*.log
+*.pt
+*.npz
+.env

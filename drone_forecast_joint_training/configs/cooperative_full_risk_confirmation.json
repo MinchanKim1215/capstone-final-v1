@@ -1,0 +1,14 @@
+{
+  "format": "cooperative-full-risk-confirmation-v1",
+  "comparison": "same fixed policies, risk input present/removed",
+  "specifications_source": "configs/cooperative_evaluation.json:test",
+  "scenario_count": 64,
+  "additional_controllers": [
+    "mpc_no_risk",
+    "ppo_no_risk"
+  ],
+  "post_selection_diagnostic": true,
+  "used_to_change_selection": false,
+  "preplanned_subset_retained": "configs/cooperative_ablation.json",
+  "reason": "all fixed test scenarios included, no outcome-dependent subset selection"
+}

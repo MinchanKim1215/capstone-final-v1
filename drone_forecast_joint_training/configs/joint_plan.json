@@ -1,0 +1,5869 @@
+{
+  "format": "joint-training-plan-v1",
+  "schema": "causal-control-history-v1",
+  "maps": [
+    {
+      "key": "ansan_bono",
+      "name": "경기 안산시 상록구 본오동·신안아파트 일대",
+      "path": "maps/additional/ansan_bono/scene.local.json",
+      "sha256": "a465c39deaa0cf0ba2dda8a507e848647452e5d257029b3228688227d2537cbe",
+      "geometry_sha256": "68854cb8e7f059b0159fa69f43e6385dfca226b889a462d041ae8397ba5176e1",
+      "bounds_epsg5179_m": [
+        943499.9999999991,
+        1921799.9999999998,
+        943899.9999999991,
+        1922199.9999999998
+      ],
+      "center_lonlat": [
+        126.86478456607374,
+        37.2952471541104
+      ],
+      "buildings": 129,
+      "known_heights": 94,
+      "imputed_heights": 35,
+      "high_buildings_ge50": 13,
+      "no_fly_area_fraction": 0.16249474883470832,
+      "split": "train",
+      "spatial_group": 0,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 0
+    },
+    {
+      "key": "bucheon_jungdong_east",
+      "name": "경기 부천시 원미구 중동·꿈마을·연화마을 일대",
+      "path": "maps/additional/bucheon_jungdong_east/scene.local.json",
+      "sha256": "d08ff54915064a0ba2b1e20869ec126940e984f2e3df87634ec8b205ed663dc0",
+      "geometry_sha256": "76bf3898fe75b08c3cb62a5531e623e7cffa8ad9f07422bc81de3ed8f52ffb05",
+      "bounds_epsg5179_m": [
+        936212.6983697035,
+        1944522.529643147,
+        936612.6983697035,
+        1944922.529643147
+      ],
+      "center_lonlat": [
+        126.78061484572983,
+        37.49957808489227
+      ],
+      "buildings": 150,
+      "known_heights": 109,
+      "imputed_heights": 41,
+      "high_buildings_ge50": 12,
+      "no_fly_area_fraction": 0.07347885614406659,
+      "split": "test",
+      "spatial_group": 1,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 45
+    },
+    {
+      "key": "bucheon_simgokbon",
+      "name": "경기 부천시 원미구 심곡동·에이스타워·더 프라임 일대",
+      "path": "maps/additional/bucheon_simgokbon/scene.local.json",
+      "sha256": "eaec1401e6f4c0fec49a5584cae503e88a77484b07f2412c35e5da5909627f09",
+      "geometry_sha256": "1fcfe893a569d76044991c90e2bc2329169e194ac50bfd0fe211eb3e6b54fc3e",
+      "bounds_epsg5179_m": [
+        936699.9999999994,
+        1942900.0000000012,
+        937099.9999999994,
+        1943300.0000000012
+      ],
+      "center_lonlat": [
+        126.78626663914574,
+        37.48498770511435
+      ],
+      "buildings": 375,
+      "known_heights": 265,
+      "imputed_heights": 110,
+      "high_buildings_ge50": 19,
+      "no_fly_area_fraction": 0.12008941957133616,
+      "split": "test",
+      "spatial_group": 2,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 132
+    },
+    {
+      "key": "cheolsan",
+      "name": "경기 광명시 철산동·철산푸르지오하늘채 일대",
+      "path": "maps/additional/cheolsan/scene.local.json",
+      "sha256": "829c58ef4725e0f032e0286ee94bf465f8638b68cd3df69f8594f1200654e60e",
+      "geometry_sha256": "6f1bffe7993183b53c2ab6f17661f4432f13e5484b5db7265cd68b29079b1d61",
+      "bounds_epsg5179_m": [
+        944000.0000000007,
+        1941700.0000000002,
+        944400.0000000007,
+        1942100.0000000002
+      ],
+      "center_lonlat": [
+        126.8689240937359,
+        37.47464187910205
+      ],
+      "buildings": 125,
+      "known_heights": 99,
+      "imputed_heights": 26,
+      "high_buildings_ge50": 8,
+      "no_fly_area_fraction": 0.06379258942759189,
+      "split": "train",
+      "spatial_group": 4,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 1
+    },
+    {
+      "key": "dongtan_metapolis",
+      "name": "경기 화성시 동탄구 반송동·동탄파라곤II·스타프라자 일대",
+      "path": "maps/additional/dongtan_metapolis/scene.local.json",
+      "sha256": "d8bc887bcd9f967875cd36ea113d5169b78ea8d994011671d71375b3aa3a2e70",
+      "geometry_sha256": "85a7824ba6927ac893140acf29900e2a9d7bc72956e62b23197e5a7f3e1c8a34",
+      "bounds_epsg5179_m": [
+        961764.7165176534,
+        1911475.6646909309,
+        962164.7165176534,
+        1911875.6646909309
+      ],
+      "center_lonlat": [
+        127.07138061094602,
+        37.20311227997759
+      ],
+      "buildings": 38,
+      "known_heights": 31,
+      "imputed_heights": 7,
+      "high_buildings_ge50": 21,
+      "no_fly_area_fraction": 0.26267617223247636,
+      "split": "train",
+      "spatial_group": 5,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 2
+    },
+    {
+      "key": "gwangju_ssangryeong",
+      "name": "경기 광주시 쌍령동·동성1차아파트·광주역 대광로제비앙 일대",
+      "path": "maps/additional/gwangju_ssangryeong/scene.local.json",
+      "sha256": "f64f6fa9b1f72e341b6b8058ff3e85de3fc62058d047583a9174ecf9ba180646",
+      "geometry_sha256": "7b1a5af2b4b77c6d775b738e22ed971868bcb92c9c6745c5adb7effa2977074f",
+      "bounds_epsg5179_m": [
+        980099.9999999993,
+        1933100.0000000005,
+        980499.9999999993,
+        1933500.0000000005
+      ],
+      "center_lonlat": [
+        127.27742507350203,
+        37.39859932729508
+      ],
+      "buildings": 104,
+      "known_heights": 84,
+      "imputed_heights": 20,
+      "high_buildings_ge50": 10,
+      "no_fly_area_fraction": 0.07790936798897807,
+      "split": "train",
+      "spatial_group": 7,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 3
+    },
+    {
+      "key": "gwangju_taejeon",
+      "name": "경기 광주시 태전동·광주 태전동 우림필유·태전5차성원상떼빌 일대",
+      "path": "maps/additional/gwangju_taejeon/scene.local.json",
+      "sha256": "16737f76b0a18b4a883461847ad164cac6d2acd8089ec280e3e0b431dbe37669",
+      "geometry_sha256": "55996f8acda130cc75dd66b8b2fa1be96d78655cac6fc5c62cf392f9233117d9",
+      "bounds_epsg5179_m": [
+        975800.0000000003,
+        1931899.9999999977,
+        976200.0000000003,
+        1932299.9999999977
+      ],
+      "center_lonlat": [
+        127.2288821415895,
+        37.38768142456105
+      ],
+      "buildings": 43,
+      "known_heights": 42,
+      "imputed_heights": 1,
+      "high_buildings_ge50": 23,
+      "no_fly_area_fraction": 0.18705156461352265,
+      "split": "val",
+      "spatial_group": 8,
+      "previous_role": "val",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 4
+    },
+    {
+      "key": "gwangmyeong_dong",
+      "name": "경기 광명시 광명동·광명한진타운 일대",
+      "path": "maps/additional/gwangmyeong_dong/scene.local.json",
+      "sha256": "711cd11226cd6697e279873086413a4beaf8b1836379039d0f40e7b68f8c9b1e",
+      "geometry_sha256": "55a083a7cf65f892b102cb76569771c409bc3dc4de50649efc48f3f476be4220",
+      "bounds_epsg5179_m": [
+        942500.0000000009,
+        1942000.0000000014,
+        942900.0000000009,
+        1942400.0000000014
+      ],
+      "center_lonlat": [
+        126.85193731895411,
+        37.47725399642963
+      ],
+      "buildings": 494,
+      "known_heights": 456,
+      "imputed_heights": 38,
+      "high_buildings_ge50": 9,
+      "no_fly_area_fraction": 0.110805418826907,
+      "split": "train",
+      "spatial_group": 9,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 5
+    },
+    {
+      "key": "hwajeong",
+      "name": "경기 고양시 덕양구 행신동·햇빛마을·일신건영아파트(햇빛마을) 일대",
+      "path": "maps/additional/hwajeong/scene.local.json",
+      "sha256": "0047ae389c2c4d646ae611e36817bb61e7013450044347b38d717ffe90732bd0",
+      "geometry_sha256": "746b8593714cc4cf67a436ec09ece3fb7358af1c996cc7902572406f667fcc70",
+      "bounds_epsg5179_m": [
+        941699.9999999988,
+        1958300.0,
+        942099.9999999988,
+        1958700.0
+      ],
+      "center_lonlat": [
+        126.84159877093929,
+        37.624115821933565
+      ],
+      "buildings": 163,
+      "known_heights": 121,
+      "imputed_heights": 42,
+      "high_buildings_ge50": 18,
+      "no_fly_area_fraction": 0.08367655085271972,
+      "split": "train",
+      "spatial_group": 11,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 6
+    },
+    {
+      "key": "ilsan_madu",
+      "name": "경기 고양시 일산동구 백석동·호수마을·흰돌마을 일대",
+      "path": "maps/additional/ilsan_madu/scene.local.json",
+      "sha256": "e12fe2e84be3fbef12b9535a13e57aa632f4553fd56867dd03f2bd9d402861bc",
+      "geometry_sha256": "37b2bd4f02b977cfc5a276cf394b2522144887ccf8dcf5c2ade9921f4a906201",
+      "bounds_epsg5179_m": [
+        936402.7850090557,
+        1960946.1174010695,
+        936802.7850090557,
+        1961346.1174010695
+      ],
+      "center_lonlat": [
+        126.78134411471179,
+        37.647614404900665
+      ],
+      "buildings": 155,
+      "known_heights": 117,
+      "imputed_heights": 38,
+      "high_buildings_ge50": 8,
+      "no_fly_area_fraction": 0.10423030280970692,
+      "split": "val",
+      "spatial_group": 12,
+      "previous_role": "val",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 7
+    },
+    {
+      "key": "jeongja_south",
+      "name": "경기 성남시 분당구 정자동·네이버 그린팩토리 일대",
+      "path": "maps/additional/jeongja_south/scene.local.json",
+      "sha256": "6c57f0dca8e1f772330c9183473e4f74304e32134e0a2f4f8716125cff95118e",
+      "geometry_sha256": "7333c74cc74597a81eea40556ef0dfa97111ba64a2bc1738efbc5e6e43f4c296",
+      "bounds_epsg5179_m": [
+        964986.6630452644,
+        1928922.0672373795,
+        965386.6630452644,
+        1929322.0672373795
+      ],
+      "center_lonlat": [
+        127.10687077528972,
+        37.360496252319805
+      ],
+      "buildings": 21,
+      "known_heights": 15,
+      "imputed_heights": 6,
+      "high_buildings_ge50": 14,
+      "no_fly_area_fraction": 0.22638214138913398,
+      "split": "train",
+      "spatial_group": 13,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 8
+    },
+    {
+      "key": "mangpo",
+      "name": "경기 수원시 영통구 영통동·망포역 아이파크·벽적골한신아파트 일대",
+      "path": "maps/additional/mangpo/scene.local.json",
+      "sha256": "0aea70b9ba3ea8f04e15c7e13c96c7ec526ac30bbc727acbf59eebd2b7c3a6f7",
+      "geometry_sha256": "ff051ca0bc0cd2a1db69f2d8d2e1280f2aef6778bf0183126742dc1f46c68f6e",
+      "bounds_epsg5179_m": [
+        960572.8210875466,
+        1916216.9491600022,
+        960972.8210875466,
+        1916616.9491600022
+      ],
+      "center_lonlat": [
+        127.0577,
+        37.245799999999996
+      ],
+      "buildings": 122,
+      "known_heights": 86,
+      "imputed_heights": 36,
+      "high_buildings_ge50": 14,
+      "no_fly_area_fraction": 0.09550287213537438,
+      "split": "val",
+      "spatial_group": 14,
+      "previous_role": "val",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 9
+    },
+    {
+      "key": "migeum",
+      "name": "경기 성남시 분당구 금곡동·청솔마을·까치마을 일대",
+      "path": "maps/additional/migeum/scene.local.json",
+      "sha256": "2eb578699e8701538ddc1db35a3bae48df79924abd73abda873e9435121638ba",
+      "geometry_sha256": "33787790793548fac2d40d420eaad9cc5978bf7f01bebd4cffb6641ed195d0e2",
+      "bounds_epsg5179_m": [
+        965461.9512137892,
+        1927856.7068140486,
+        965861.9512137892,
+        1928256.7068140486
+      ],
+      "center_lonlat": [
+        127.11228724433175,
+        37.35091115016254
+      ],
+      "buildings": 68,
+      "known_heights": 51,
+      "imputed_heights": 17,
+      "high_buildings_ge50": 18,
+      "no_fly_area_fraction": 0.11345323909740553,
+      "split": "val",
+      "spatial_group": 15,
+      "previous_role": "val",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 10
+    },
+    {
+      "key": "ori",
+      "name": "경기 용인시 수지구 죽전동·용인수지벽산타운2단지·벽산타운1단지 일대",
+      "path": "maps/additional/ori/scene.local.json",
+      "sha256": "c5b191e275387d39486e3eae7ee0bd083a41dfc893bac1ede19d55353984662f",
+      "geometry_sha256": "2125be892d7bb8fe95dc444dbcf760122cf7eebf83203dfcb79f7061ed71b3c5",
+      "bounds_epsg5179_m": [
+        965030.2783040408,
+        1926225.3781983007,
+        965430.2783040408,
+        1926625.3781983007
+      ],
+      "center_lonlat": [
+        127.10748984802883,
+        37.33619077890165
+      ],
+      "buildings": 70,
+      "known_heights": 54,
+      "imputed_heights": 16,
+      "high_buildings_ge50": 19,
+      "no_fly_area_fraction": 0.14876107011086803,
+      "split": "train",
+      "spatial_group": 16,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 11
+    },
+    {
+      "key": "paju_mokdong",
+      "name": "경기 파주시 목동동·해솔마을4단지 벽산우남연리지·가람마을 10단지 동양엔파트 월드메르디앙 일대",
+      "path": "maps/additional/paju_mokdong/scene.local.json",
+      "sha256": "31cc681305c9615daccc74161f1b9c4fa92ee6137544e23fb42f7800836371d1",
+      "geometry_sha256": "bf7b6f966f7bfd3c7b2468cd1753085cc54bf1101f60de4b61855fcb2b1e0792",
+      "bounds_epsg5179_m": [
+        933800.0000000003,
+        1969800.000000002,
+        934200.0000000003,
+        1970200.000000002
+      ],
+      "center_lonlat": [
+        126.75103976854238,
+        37.72722756658922
+      ],
+      "buildings": 41,
+      "known_heights": 40,
+      "imputed_heights": 1,
+      "high_buildings_ge50": 25,
+      "no_fly_area_fraction": 0.19833270544952086,
+      "split": "train",
+      "spatial_group": 17,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 12
+    },
+    {
+      "key": "sanbon_west",
+      "name": "경기 군포시 금정동·퇴계주공아파트·율곡아파트 일대",
+      "path": "maps/additional/sanbon_west/scene.local.json",
+      "sha256": "24636418f7455ca60cf720a48380e81d7456db347bed31a77b898defa41aef17",
+      "geometry_sha256": "4f8dfdf9edfffc4bd6444b65d5af1489a3b7daf080cf5a440ad8e03c55047ddc",
+      "bounds_epsg5179_m": [
+        949392.1865513298,
+        1928450.1242071954,
+        949792.1865513298,
+        1928850.1242071954
+      ],
+      "center_lonlat": [
+        126.93080916006073,
+        37.35552607950271
+      ],
+      "buildings": 56,
+      "known_heights": 40,
+      "imputed_heights": 16,
+      "high_buildings_ge50": 18,
+      "no_fly_area_fraction": 0.10398960860678141,
+      "split": "train",
+      "spatial_group": 18,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 13
+    },
+    {
+      "key": "seoul_20261023_02",
+      "name": "서울 관악구 신림동·관악산휴먼시아 일대",
+      "path": "maps/additional/seoul_20261023_02/scene.local.json",
+      "sha256": "9544034c1a5fa4634e29469ccdfa002ecbd54b0013d771870ce688d4a1aa431c",
+      "geometry_sha256": "b0ba29ac246af9641a7111ac8d39e6c2c378f937e8aa7be0fde72bf4661de23d",
+      "bounds_epsg5179_m": [
+        948399.9999999992,
+        1940000.000000001,
+        948799.9999999992,
+        1940400.000000001
+      ],
+      "center_lonlat": [
+        126.91880254330079,
+        37.45957464253231
+      ],
+      "buildings": 52,
+      "known_heights": 50,
+      "imputed_heights": 2,
+      "high_buildings_ge50": 25,
+      "no_fly_area_fraction": 0.17264573325293148,
+      "split": "train",
+      "spatial_group": 20,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 14
+    },
+    {
+      "key": "seoul_20261023_03",
+      "name": "서울 강북구 미아동·삼성래미안트리베라아파트·삼각산아이원아파트 일대",
+      "path": "maps/additional/seoul_20261023_03/scene.local.json",
+      "sha256": "e62f5666ff4ea9012a1321d0ac9ca263b6da8eb19cc492f8c610eeab9875f7fb",
+      "geometry_sha256": "03b7a630af0ad8f674105d789794972fcb1842c87087f9de17f2ff1d0c93accf",
+      "bounds_epsg5179_m": [
+        957400.0000000007,
+        1957299.9999999998,
+        957800.0000000007,
+        1957699.9999999998
+      ],
+      "center_lonlat": [
+        127.01956562786502,
+        37.61596125630395
+      ],
+      "buildings": 79,
+      "known_heights": 70,
+      "imputed_heights": 9,
+      "high_buildings_ge50": 32,
+      "no_fly_area_fraction": 0.20066753392157854,
+      "split": "test",
+      "spatial_group": 21,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 15
+    },
+    {
+      "key": "seoul_20261023_04",
+      "name": "서울 노원구 월계동·그랑빌아파트·우남아파트 일대",
+      "path": "maps/additional/seoul_20261023_04/scene.local.json",
+      "sha256": "79f950a271afb76281608be2621ba69d3bdb73e40c7c528d7cd2e4e1df797867",
+      "geometry_sha256": "ffe7dcb4bfeaa62a70087f20df49a0f068175775c26577f6c7851c17901e9930",
+      "bounds_epsg5179_m": [
+        961799.9999999994,
+        1957400.0000000002,
+        962199.9999999994,
+        1957800.0000000002
+      ],
+      "center_lonlat": [
+        127.0694154619926,
+        37.617055023692906
+      ],
+      "buildings": 51,
+      "known_heights": 44,
+      "imputed_heights": 7,
+      "high_buildings_ge50": 24,
+      "no_fly_area_fraction": 0.18144969925293833,
+      "split": "train",
+      "spatial_group": 22,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 16
+    },
+    {
+      "key": "seoul_20261023_05",
+      "name": "서울 서초구 반포동·반포자이 일대",
+      "path": "maps/additional/seoul_20261023_05/scene.local.json",
+      "sha256": "a13db48df61be3fed069159ae08b8f91f8d79d79d831c0c6a62c3d7ba6a17f8a",
+      "geometry_sha256": "6efc1121f8307913210f663d1966836de096d2b7927c2d82bbfae4e3477326ba",
+      "bounds_epsg5179_m": [
+        956999.9999999995,
+        1945199.9999999998,
+        957399.9999999995,
+        1945599.9999999998
+      ],
+      "center_lonlat": [
+        127.01573978956179,
+        37.506882398299815
+      ],
+      "buildings": 83,
+      "known_heights": 71,
+      "imputed_heights": 12,
+      "high_buildings_ge50": 22,
+      "no_fly_area_fraction": 0.18092714856171727,
+      "split": "train",
+      "spatial_group": 23,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 17
+    },
+    {
+      "key": "seoul_20261023_06",
+      "name": "서울 서초구 양재동·동원에프앤비 빌딩·동원산업빌딩 일대",
+      "path": "maps/additional/seoul_20261023_06/scene.local.json",
+      "sha256": "79452ecd8dc440f0a78da04dd368a4ff5977e6f32e9f5a14bb7e399997f2f04b",
+      "geometry_sha256": "47d16c1b28392f275fca971341f6f02f67476f232088a9b16e0b319897d3eea0",
+      "bounds_epsg5179_m": [
+        959499.999999999,
+        1941900.0,
+        959899.999999999,
+        1942300.0
+      ],
+      "center_lonlat": [
+        127.04420595596903,
+        37.47725077578186
+      ],
+      "buildings": 234,
+      "known_heights": 198,
+      "imputed_heights": 36,
+      "high_buildings_ge50": 5,
+      "no_fly_area_fraction": 0.051689557386207126,
+      "split": "train",
+      "spatial_group": 24,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 18
+    },
+    {
+      "key": "seoul_20261023_07",
+      "name": "서울 성북구 길음동·e편한세상 길음뉴타운4단지·래미안 트리베라 1차 일대",
+      "path": "maps/additional/seoul_20261023_07/scene.local.json",
+      "sha256": "8e697b673861b85a3640352ff680cf97a7476e4be0163f7238aa2aa96f639c01",
+      "geometry_sha256": "f0ea526ab789c43b9cd8038384d657e120594dc6fce428f8fe5915d357c4eeb7",
+      "bounds_epsg5179_m": [
+        957400.0000000005,
+        1956900.000000001,
+        957800.0000000005,
+        1957300.000000001
+      ],
+      "center_lonlat": [
+        127.0195888224943,
+        37.61235598658044
+      ],
+      "buildings": 94,
+      "known_heights": 75,
+      "imputed_heights": 19,
+      "high_buildings_ge50": 22,
+      "no_fly_area_fraction": 0.1587344543970561,
+      "split": "test",
+      "spatial_group": 21,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 15
+    },
+    {
+      "key": "seoul_20261023_08",
+      "name": "서울 강남구 신사동·제이타워·렉스타워 일대",
+      "path": "maps/additional/seoul_20261023_08/scene.local.json",
+      "sha256": "3dc2b12a32b8511fe2c8967745b5c28d629826e7ddb567d8f7a48a898221d504",
+      "geometry_sha256": "575a3a84016e8d891911333e8c26951069a936bd91415e50261fcae90c4a74a0",
+      "bounds_epsg5179_m": [
+        957599.9999999991,
+        1946399.999999999,
+        957999.9999999991,
+        1946799.999999999
+      ],
+      "center_lonlat": [
+        127.02245935879908,
+        37.51772603440164
+      ],
+      "buildings": 329,
+      "known_heights": 271,
+      "imputed_heights": 58,
+      "high_buildings_ge50": 7,
+      "no_fly_area_fraction": 0.029838892846745815,
+      "split": "test",
+      "spatial_group": 25,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 19
+    },
+    {
+      "key": "seoul_20261023_09",
+      "name": "서울 동대문구 장안동·래미안장안2차아파트·장안힐스테이트1002동 일대",
+      "path": "maps/additional/seoul_20261023_09/scene.local.json",
+      "sha256": "32d94fc9a9470bd91642a0d5a9a83f233a24170cb16f5c97e6e1760b1d10bda6",
+      "geometry_sha256": "f4babdb00bcb1f1d35d2980bb594658ad68f516f54433465f051da6704ec93f1",
+      "bounds_epsg5179_m": [
+        962399.9999999992,
+        1952700.0000000002,
+        962799.9999999992,
+        1953100.0000000002
+      ],
+      "center_lonlat": [
+        127.07645417539544,
+        37.57471725239724
+      ],
+      "buildings": 51,
+      "known_heights": 42,
+      "imputed_heights": 9,
+      "high_buildings_ge50": 44,
+      "no_fly_area_fraction": 0.2311455397369003,
+      "split": "val",
+      "spatial_group": 26,
+      "previous_role": "val",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 20
+    },
+    {
+      "key": "seoul_20261023_10",
+      "name": "서울 송파구 석촌동·석촌호수효성해링턴타워·석촌호수 나인파크 A 일대",
+      "path": "maps/additional/seoul_20261023_10/scene.local.json",
+      "sha256": "2d06ce87d2ac2fa4819f8f62be0ab41014733e8732d0e2a8fac87254cf4a5fa5",
+      "geometry_sha256": "7763e29c9272ca8f68c1ce80e9ca2e72ec286953ca969c9dae1e7343a099f0d4",
+      "bounds_epsg5179_m": [
+        964300.0000000003,
+        1945100.0,
+        964700.0000000003,
+        1945500.0
+      ],
+      "center_lonlat": [
+        127.09833835309531,
+        37.50629078353326
+      ],
+      "buildings": 254,
+      "known_heights": 208,
+      "imputed_heights": 46,
+      "high_buildings_ge50": 8,
+      "no_fly_area_fraction": 0.06273833843428411,
+      "split": "train",
+      "spatial_group": 27,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 21
+    },
+    {
+      "key": "seoul_20261023_11",
+      "name": "서울 도봉구 창동·창동대우아파트·창동 한신아파트 일대",
+      "path": "maps/additional/seoul_20261023_11/scene.local.json",
+      "sha256": "0c01d88515069b5a69590ba3b9a04587c113d2df7b1613b45822c015c2225194",
+      "geometry_sha256": "27a900d5ca6aacc6e5e8870c1ae9a627d2c773ef1916aae1751dbb6a5f359fee",
+      "bounds_epsg5179_m": [
+        959000.0000000001,
+        1960400.0000000002,
+        959400.0000000001,
+        1960800.0000000002
+      ],
+      "center_lonlat": [
+        127.03752156435188,
+        37.64397451052683
+      ],
+      "buildings": 511,
+      "known_heights": 415,
+      "imputed_heights": 96,
+      "high_buildings_ge50": 8,
+      "no_fly_area_fraction": 0.0631190479873056,
+      "split": "train",
+      "spatial_group": 28,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 22
+    },
+    {
+      "key": "seoul_20261023_b2_01",
+      "name": "서울 강남구 논현동·에이스침대 사옥·현대벨로스오피스텔 일대",
+      "path": "maps/additional/seoul_20261023_b2_01/scene.local.json",
+      "sha256": "d4faee08afc5331ef0fab22133319c8f22ea5f8434bcd3a5f6901082464c82d6",
+      "geometry_sha256": "47e02fc6d18fd1dc5a41c3115dce3a03cd4b21fa22680279fda49ac8b57a1286",
+      "bounds_epsg5179_m": [
+        958399.9999999995,
+        1946700.0000000002,
+        958799.9999999995,
+        1947100.0000000002
+      ],
+      "center_lonlat": [
+        127.03149507606075,
+        37.52046628928957
+      ],
+      "buildings": 295,
+      "known_heights": 237,
+      "imputed_heights": 58,
+      "high_buildings_ge50": 5,
+      "no_fly_area_fraction": 0.028508288746547237,
+      "split": "train",
+      "spatial_group": 29,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 23
+    },
+    {
+      "key": "seoul_20261023_b2_02",
+      "name": "서울 강북구 번동·한양아파트·신원아파트 일대",
+      "path": "maps/additional/seoul_20261023_b2_02/scene.local.json",
+      "sha256": "ac61e2787fb4aabeb363fa9a65ddef7a29562e4a9a68ae95c3237f3e500cff7f",
+      "geometry_sha256": "ae9eb4e4dbb94cbe80650063af78240652f01d99158db9bbe1f3b46d4e80df13",
+      "bounds_epsg5179_m": [
+        959300.0000000009,
+        1958399.999999999,
+        959700.0000000009,
+        1958799.999999999
+      ],
+      "center_lonlat": [
+        127.04103293104095,
+        37.625961451675686
+      ],
+      "buildings": 85,
+      "known_heights": 68,
+      "imputed_heights": 17,
+      "high_buildings_ge50": 8,
+      "no_fly_area_fraction": 0.04800944270733303,
+      "split": "test",
+      "spatial_group": 30,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 24
+    },
+    {
+      "key": "seoul_20261023_b2_05",
+      "name": "서울 관악구 신림동·삼성산주공아파트·관악산휴먼시아 일대",
+      "path": "maps/additional/seoul_20261023_b2_05/scene.local.json",
+      "sha256": "5d1acd25c3aaff5b247467d6eb2582f79c0dcc82ae77e9177fdf8c50fa7599ad",
+      "geometry_sha256": "1558a8a4afa96b214c399aab532086db20d10dbb0d5243df90c74e389eca9f12",
+      "bounds_epsg5179_m": [
+        948800.0000000009,
+        1940200.0,
+        949200.0000000009,
+        1940600.0
+      ],
+      "center_lonlat": [
+        126.92331142628117,
+        37.46139945349499
+      ],
+      "buildings": 27,
+      "known_heights": 22,
+      "imputed_heights": 5,
+      "high_buildings_ge50": 11,
+      "no_fly_area_fraction": 0.08319986904477747,
+      "split": "train",
+      "spatial_group": 20,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 14
+    },
+    {
+      "key": "seoul_20261023_b2_06",
+      "name": "서울 강남구 삼성동·삼성동 힐스테이트·삼성동중앙하이츠빌리지 일대",
+      "path": "maps/additional/seoul_20261023_b2_06/scene.local.json",
+      "sha256": "a9b544b7473dc8c10dc4b013cd8211d3a0c7917d96a544e6e23445f0d49e1c4c",
+      "geometry_sha256": "f210d0a3ecf7350461b53424c341738a13dc9ad5fc6d0b8076476c333b6f5dd1",
+      "bounds_epsg5179_m": [
+        959899.9999999999,
+        1946000.000000001,
+        960299.9999999999,
+        1946400.000000001
+      ],
+      "center_lonlat": [
+        127.04850741544406,
+        37.514223050818444
+      ],
+      "buildings": 294,
+      "known_heights": 231,
+      "imputed_heights": 63,
+      "high_buildings_ge50": 8,
+      "no_fly_area_fraction": 0.03402783404436278,
+      "split": "train",
+      "spatial_group": 31,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 25
+    },
+    {
+      "key": "seoul_20261023_b2_07",
+      "name": "서울 송파구 송파동·현대레이크빌·경남레이크파크 일대",
+      "path": "maps/additional/seoul_20261023_b2_07/scene.local.json",
+      "sha256": "3d7d3df4b25066d4ce4be4dedfcd27c2ca03d97e5518259f48e69db6aca6efd7",
+      "geometry_sha256": "6099772ada54dd450d95971fe31a8e3ad1959485845fa6a617f7f1b7cdf055a4",
+      "bounds_epsg5179_m": [
+        965099.9999999995,
+        1945500.0000000002,
+        965499.9999999995,
+        1945900.0000000002
+      ],
+      "center_lonlat": [
+        127.1073708030946,
+        37.509926591191395
+      ],
+      "buildings": 354,
+      "known_heights": 277,
+      "imputed_heights": 77,
+      "high_buildings_ge50": 5,
+      "no_fly_area_fraction": 0.04251135144231469,
+      "split": "train",
+      "spatial_group": 32,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 26
+    },
+    {
+      "key": "seoul_20261023_b2_08",
+      "name": "서울 성북구 석관동·두산아파트 일대",
+      "path": "maps/additional/seoul_20261023_b2_08/scene.local.json",
+      "sha256": "7b0af09a8ede3110264a2d63bf8e6396a54f10c6373077254a2ebd98a7023764",
+      "geometry_sha256": "44c6392264b0ea4ad00dc0ba9fea19d99b5446b158827dac3e99703f2010a715",
+      "bounds_epsg5179_m": [
+        961799.9999999997,
+        1956900.0000000002,
+        962199.9999999997,
+        1957300.0000000002
+      ],
+      "center_lonlat": [
+        127.06944144744288,
+        37.61254840577543
+      ],
+      "buildings": 36,
+      "known_heights": 28,
+      "imputed_heights": 8,
+      "high_buildings_ge50": 33,
+      "no_fly_area_fraction": 0.19646520803244777,
+      "split": "train",
+      "spatial_group": 33,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 27
+    },
+    {
+      "key": "seoul_20261023_b2_09",
+      "name": "서울 강북구 미아동·에스케이북한산시티아파트 일대",
+      "path": "maps/additional/seoul_20261023_b2_09/scene.local.json",
+      "sha256": "cb349aee05a0cecca16b0ead2fa903162c23c36819bab611e6de025390a3649d",
+      "geometry_sha256": "6485f54bb7e183fd8be95d6ba8679f5b7ba28b6069be25368a076e77d670f8fd",
+      "bounds_epsg5179_m": [
+        956799.9999999997,
+        1957500.000000001,
+        957199.9999999997,
+        1957900.000000001
+      ],
+      "center_lonlat": [
+        127.01275548907594,
+        37.61773601432323
+      ],
+      "buildings": 107,
+      "known_heights": 83,
+      "imputed_heights": 24,
+      "high_buildings_ge50": 47,
+      "no_fly_area_fraction": 0.2761521307138672,
+      "split": "test",
+      "spatial_group": 34,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 28
+    },
+    {
+      "key": "seoul_20261023_b2_10",
+      "name": "서울 강남구 신사동·롯데캐슬갤럭시 일대",
+      "path": "maps/additional/seoul_20261023_b2_10/scene.local.json",
+      "sha256": "b2520db3309118f1db4902158b5512cef0410bed5b646692e1a2852ea3dc5c9e",
+      "geometry_sha256": "cbc5bfd10eeff01b46fa78f8453f353dec30732d744862125a681db2a9fea22a",
+      "bounds_epsg5179_m": [
+        957200.0000000005,
+        1946700.0000000002,
+        957600.0000000005,
+        1947100.0000000002
+      ],
+      "center_lonlat": [
+        127.01791565717849,
+        37.52041164238964
+      ],
+      "buildings": 101,
+      "known_heights": 78,
+      "imputed_heights": 23,
+      "high_buildings_ge50": 11,
+      "no_fly_area_fraction": 0.05033214438119294,
+      "split": "test",
+      "spatial_group": 25,
+      "previous_role": "test",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 19
+    },
+    {
+      "key": "seoul_20261023_b2_11",
+      "name": "서울 광진구 자양동·자양현대3차아파트·경남아너스빌 일대",
+      "path": "maps/additional/seoul_20261023_b2_11/scene.local.json",
+      "sha256": "d5a90e0c1b05c5ed124b01c060292041aaedef6a18cd13257eda6c57f59e22b1",
+      "geometry_sha256": "db0d83e2a4fd51d22879c8514eff72dd62318508fdad153e2b2bf3806f0ac136",
+      "bounds_epsg5179_m": [
+        962900.0000000012,
+        1947599.9999999998,
+        963300.0000000012,
+        1947999.9999999998
+      ],
+      "center_lonlat": [
+        127.08237299220892,
+        37.528769360651815
+      ],
+      "buildings": 382,
+      "known_heights": 294,
+      "imputed_heights": 88,
+      "high_buildings_ge50": 7,
+      "no_fly_area_fraction": 0.07637550080296727,
+      "split": "train",
+      "spatial_group": 35,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 29
+    },
+    {
+      "key": "seoul_20261023_b2_12",
+      "name": "서울 영등포구 당산동·여의도 아리스타·강변래미안 일대",
+      "path": "maps/additional/seoul_20261023_b2_12/scene.local.json",
+      "sha256": "917e5d28a362c9c62c86a1477e3d8e32cc6b84d48efbd050ffb623780dd383cd",
+      "geometry_sha256": "48f461596cd6b1c59eac5b674284cdb05cdef565275e645b2504b7f14e816371",
+      "bounds_epsg5179_m": [
+        947600.0000000002,
+        1947699.999999999,
+        948000.0000000002,
+        1948099.999999999
+      ],
+      "center_lonlat": [
+        126.90921066055137,
+        37.52893141480825
+      ],
+      "buildings": 108,
+      "known_heights": 83,
+      "imputed_heights": 25,
+      "high_buildings_ge50": 7,
+      "no_fly_area_fraction": 0.05199560063863377,
+      "split": "val",
+      "spatial_group": 36,
+      "previous_role": "val",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 30
+    },
+    {
+      "key": "songnae",
+      "name": "경기 부천시 소사구 송내동·부천중동역푸르지오·부천 중동역 2차 푸르지오 A단지 일대",
+      "path": "maps/additional/songnae/scene.local.json",
+      "sha256": "4b5961b8143a20f0957c035691da804837592a2ffc69c52de3db8ac9a3909519",
+      "geometry_sha256": "780875fd18d49e7f7748e83ae591b7dfc24221dd501b5823bf2664c9978ce3d9",
+      "bounds_epsg5179_m": [
+        934899.9999999998,
+        1942900.0000000019,
+        935299.9999999998,
+        1943300.0000000019
+      ],
+      "center_lonlat": [
+        126.76590808338845,
+        37.48486295947971
+      ],
+      "buildings": 133,
+      "known_heights": 97,
+      "imputed_heights": 36,
+      "high_buildings_ge50": 19,
+      "no_fly_area_fraction": 0.1425527253875408,
+      "split": "train",
+      "spatial_group": 37,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 31
+    },
+    {
+      "key": "sosabon",
+      "name": "경기 부천시 소사구 범박동·부천 범박 힐스테이트 1단지·부천범박힐스테이트2단지 일대",
+      "path": "maps/additional/sosabon/scene.local.json",
+      "sha256": "a3a45ab8b537fb92adb7c64b21108426bfb41dedd04c21727aef76624692dab7",
+      "geometry_sha256": "9bd2d17f97518d8f323c6a7ccf37e548fdff79c211717c5a08f2fb37f5bab32b",
+      "bounds_epsg5179_m": [
+        938699.9999999995,
+        1941800.0000000002,
+        939099.9999999995,
+        1942200.0000000002
+      ],
+      "center_lonlat": [
+        126.80897871039399,
+        37.47520785374683
+      ],
+      "buildings": 97,
+      "known_heights": 72,
+      "imputed_heights": 25,
+      "high_buildings_ge50": 19,
+      "no_fly_area_fraction": 0.12935784350109808,
+      "split": "val",
+      "spatial_group": 38,
+      "previous_role": "val",
+      "previous_outcome_seen": true,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 32
+    },
+    {
+      "key": "suji_east",
+      "name": "경기 용인시 수지구 풍덕천동·진산마을삼성5차아파트 일대",
+      "path": "maps/additional/suji_east/scene.local.json",
+      "sha256": "9355b9cd615a7f3e13c4cc3b1efa33be86d473f67ac0fa482f745ebe4036f6aa",
+      "geometry_sha256": "0083862f53cb92c3410efc1ad14bdee0afe384baa013e35bea9fa2dd17cd8e27",
+      "bounds_epsg5179_m": [
+        964095.7566884264,
+        1924287.7835015985,
+        964495.7566884264,
+        1924687.7835015985
+      ],
+      "center_lonlat": [
+        127.09703369056926,
+        37.31869039917361
+      ],
+      "buildings": 50,
+      "known_heights": 41,
+      "imputed_heights": 9,
+      "high_buildings_ge50": 12,
+      "no_fly_area_fraction": 0.0824838627756914,
+      "split": "train",
+      "spatial_group": 39,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 33
+    },
+    {
+      "key": "sunae_next",
+      "name": "경기 성남시 분당구 수내동·양지마을·파크타운 일대",
+      "path": "maps/additional/sunae_next/scene.local.json",
+      "sha256": "3d73ab3e97af450e82ab86db998483787690e824b5ca301f69c62bf6bfee1463",
+      "geometry_sha256": "a818c525b5ab076cb04d1a628a035182f6b95d624dd59b62199d7be501f9422a",
+      "bounds_epsg5179_m": [
+        965900.0000000005,
+        1930300.0000000002,
+        966300.0000000005,
+        1930700.0000000002
+      ],
+      "center_lonlat": [
+        127.11712130195951,
+        37.37295031025783
+      ],
+      "buildings": 97,
+      "known_heights": 74,
+      "imputed_heights": 23,
+      "high_buildings_ge50": 14,
+      "no_fly_area_fraction": 0.11256630032245016,
+      "split": "train",
+      "spatial_group": 40,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 126
+    },
+    {
+      "key": "bundang",
+      "name": "분당",
+      "path": "maps/bundang.scene.local.json",
+      "sha256": "828adbd8edcb6538141a80ebdb448032b2b04355070db0f4c5bc38b65d0be27f",
+      "geometry_sha256": "71d226a6f665210a97b011f4fcecddb623a789eb2a249eb5f2e4ce96f6c51723",
+      "bounds_epsg5179_m": [
+        966293.1868240369,
+        1929460.7632496255,
+        966693.1868240369,
+        1929860.7632496255
+      ],
+      "center_lonlat": [
+        127.1216,
+        37.3654
+      ],
+      "buildings": 60,
+      "known_heights": 45,
+      "imputed_heights": 15,
+      "high_buildings_ge50": 13,
+      "no_fly_area_fraction": 0.08359623682375943,
+      "split": "train",
+      "spatial_group": 3,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 34
+    },
+    {
+      "key": "gangnam",
+      "name": "강남역",
+      "path": "maps/gangnam.scene.local.json",
+      "sha256": "ab552b6481a35cae00660f8bd758e953e4c97533f4b08f4edb02218aa567fea5",
+      "geometry_sha256": "606b24e250841296521c4920ec85c9521f665bcf11e3296ed2c63adc99735687",
+      "bounds_epsg5179_m": [
+        957989.5866868035,
+        1944076.3598445803,
+        958389.5866868035,
+        1944476.3598445803
+      ],
+      "center_lonlat": [
+        127.027,
+        37.4968
+      ],
+      "buildings": 100,
+      "known_heights": 63,
+      "imputed_heights": 37,
+      "high_buildings_ge50": 67,
+      "no_fly_area_fraction": 0.34360299923596604,
+      "split": "train",
+      "spatial_group": 6,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 35
+    },
+    {
+      "key": "hongdae",
+      "name": "홍대",
+      "path": "maps/hongdae.scene.local.json",
+      "sha256": "ebf70da2a86783f30b89ae853ccaef497af6f67c92f0023b680b7534f9a086a1",
+      "geometry_sha256": "0033d882e16f2f637b89f5d2f363eec7c572356f5f9ab92bff23e8e30339d7e0",
+      "bounds_epsg5179_m": [
+        948709.9522611491,
+        1950174.8756366214,
+        949109.9522611491,
+        1950574.8756366214
+      ],
+      "center_lonlat": [
+        126.9216,
+        37.5513
+      ],
+      "buildings": 513,
+      "known_heights": 341,
+      "imputed_heights": 172,
+      "high_buildings_ge50": 0,
+      "no_fly_area_fraction": 0.0,
+      "split": "train",
+      "spatial_group": 10,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 36
+    },
+    {
+      "key": "sangam_dmc",
+      "name": "상암 DMC",
+      "path": "maps/sangam_dmc.scene.local.json",
+      "sha256": "d70d79c05d4f0d1029e56ab4df92c4edb2f99c59c9aab8add2bc659acc84e1eb",
+      "geometry_sha256": "385d82d06f4ebf2fd5f2717ce0db0d831b4fa61ef236149fb0694bf79e0b399d",
+      "bounds_epsg5179_m": [
+        945975.5183636242,
+        1953308.6076227094,
+        946375.5183636242,
+        1953708.6076227094
+      ],
+      "center_lonlat": [
+        126.89041440714469,
+        37.57938880196154
+      ],
+      "buildings": 38,
+      "known_heights": 26,
+      "imputed_heights": 12,
+      "high_buildings_ge50": 32,
+      "no_fly_area_fraction": 0.42011635961035415,
+      "split": "train",
+      "spatial_group": 19,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 37
+    },
+    {
+      "key": "teheran",
+      "name": "테헤란로",
+      "path": "maps/teheran.scene.local.json",
+      "sha256": "00cec4a3f37815b3c6165533a2ac92397eea60a5a1f8b297bb7a40b3da0f6e4a",
+      "geometry_sha256": "f5a86fa11deafda8f680022f5531267fb3c07fe04e385fa6328d5eb523275a2d",
+      "bounds_epsg5179_m": [
+        960569.3253139801,
+        1945063.9680455457,
+        960969.3253139801,
+        1945463.9680455457
+      ],
+      "center_lonlat": [
+        127.05613098792654,
+        37.50581494620291
+      ],
+      "buildings": 148,
+      "known_heights": 124,
+      "imputed_heights": 24,
+      "high_buildings_ge50": 25,
+      "no_fly_area_fraction": 0.2536640283082615,
+      "split": "train",
+      "spatial_group": 41,
+      "previous_role": "train",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 38
+    },
+    {
+      "key": "gyeonggi_20261025_01",
+      "name": "경기 용인시 기흥구 보정동·행원마을동아솔레시티아파트·신촌마을 포스홈타운1단지 일대",
+      "path": "maps/additional/gyeonggi_20261025_01/scene.local.json",
+      "sha256": "95399f76d4833774fbcf0b4bea80029fbf15332efe55f4798d294fc3ff2bacac",
+      "bounds_epsg5179_m": [
+        965600.0000000007,
+        1923400.0,
+        966000.0000000007,
+        1923800.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 39
+    },
+    {
+      "key": "gyeonggi_20261025_02",
+      "name": "경기 수원시 영통구 매탄동·주공그린빌·매탄 위브 하늘채 일대",
+      "path": "maps/additional/gyeonggi_20261025_02/scene.local.json",
+      "sha256": "2e9a80c8e4ed4eb018365c49ea1348becf2cabe354f0c36afc78aefb59368e73",
+      "bounds_epsg5179_m": [
+        959499.9999999993,
+        1918000.0,
+        959899.9999999993,
+        1918400.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 40
+    },
+    {
+      "key": "gyeonggi_20261025_03",
+      "name": "경기 고양시 일산동구 풍동·숲속마을·숲속마을 벨라시온 일대",
+      "path": "maps/additional/gyeonggi_20261025_03/scene.local.json",
+      "sha256": "70de392cfd4b0d7a801a85fd376a66c01e6abeccfc016d6da9f0e5b69779d973",
+      "bounds_epsg5179_m": [
+        938000.0000000001,
+        1963700.0000000007,
+        938400.0000000001,
+        1964100.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 41
+    },
+    {
+      "key": "gyeonggi_20261025_04",
+      "name": "경기 성남시 분당구 구미동·무지개마을·새터마을죽전힐스테이트 일대",
+      "path": "maps/additional/gyeonggi_20261025_04/scene.local.json",
+      "sha256": "c1885341727fe2bc909f0690f21eba1a0dbdc1eb3752025d38d8b2cfa3cfba01",
+      "bounds_epsg5179_m": [
+        966099.9999999991,
+        1926100.0000000002,
+        966499.9999999991,
+        1926500.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 42
+    },
+    {
+      "key": "gyeonggi_20261025_05",
+      "name": "경기 남양주시 와부읍 덕소리·남양주덕소 동부센트레빌·덕소아이파크 일대",
+      "path": "maps/additional/gyeonggi_20261025_05/scene.local.json",
+      "sha256": "d82c501294e7d83adac405ad58879926a354e1b006687174ebc6d2ca3e97b049",
+      "bounds_epsg5179_m": [
+        975300.0000000008,
+        1954299.999999999,
+        975700.0000000008,
+        1954699.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 43
+    },
+    {
+      "key": "gyeonggi_20261025_06",
+      "name": "경기 화성시 동탄구 반송동·동탄시범다은마을 센트럴파크뷰·동탄시범다은마을 월드메르디앙 반도유보라 일대",
+      "path": "maps/additional/gyeonggi_20261025_06/scene.local.json",
+      "sha256": "6a0431ae79035d44e27eefd20a8fd19088fb1c5dc502a82f41c12473e5cbfbe9",
+      "bounds_epsg5179_m": [
+        961000.0000000002,
+        1911300.0000000007,
+        961400.0000000002,
+        1911700.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 44
+    },
+    {
+      "key": "gyeonggi_20261025_07",
+      "name": "경기 부천시 원미구 중동·그린타운·그린타운아파트 일대",
+      "path": "maps/additional/gyeonggi_20261025_07/scene.local.json",
+      "sha256": "4c6c4dc6a942882945e527731a149429b9407d0658e41dcf77b76bb5aeb243a1",
+      "bounds_epsg5179_m": [
+        935400.0000000003,
+        1944099.9999999995,
+        935800.0000000003,
+        1944499.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 45
+    },
+    {
+      "key": "gyeonggi_20261025_08",
+      "name": "경기 안양시 동안구 비산동·비산 삼성 래미안 일대",
+      "path": "maps/additional/gyeonggi_20261025_08/scene.local.json",
+      "sha256": "03fc66a6557171ae10a63846d8a2a961f57a9ce850da6995e9884a682f21ae07",
+      "bounds_epsg5179_m": [
+        950099.9999999999,
+        1933500.0,
+        950499.9999999999,
+        1933900.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 46
+    },
+    {
+      "key": "gyeonggi_20261025_09",
+      "name": "경기 광명시 소하동·광명역세권 루미엘·광명역세권 휴먼시아 일대",
+      "path": "maps/additional/gyeonggi_20261025_09/scene.local.json",
+      "sha256": "e8ad8ad75dc99bc47ab52ab45bf6f3a5d8977fbceb5b5071f5ee8fe8434042e7",
+      "bounds_epsg5179_m": [
+        945199.9999999992,
+        1937100.0,
+        945599.9999999992,
+        1937500.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 47
+    },
+    {
+      "key": "gyeonggi_20261025_10",
+      "name": "경기 용인시 수지구 죽전동·도담마을7단지 뜨리에체아파트·죽전역 월드메르디앙 일대",
+      "path": "maps/additional/gyeonggi_20261025_10/scene.local.json",
+      "sha256": "81eb9fbba21cd65a3ee4b60d021a9f4751ad782f92bc9c5a63b4e2e8a9f2995c",
+      "bounds_epsg5179_m": [
+        965405.6649684509,
+        1924961.3489323605,
+        965805.6649684509,
+        1925361.3489323605
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 120
+    },
+    {
+      "key": "gyeonggi_20261025_11",
+      "name": "경기 파주시 와동동·가람마을8단지 동문굿모닝힐·가람마을 10단지 동양엔파트 월드메르디앙 일대",
+      "path": "maps/additional/gyeonggi_20261025_11/scene.local.json",
+      "sha256": "595d7577927538891a10b6e6d98f9c6c5bf46a6b2545a4ad8544e1777d6edbb3",
+      "bounds_epsg5179_m": [
+        934200.0000000012,
+        1969800.0000000005,
+        934600.0000000012,
+        1970200.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 12
+    },
+    {
+      "key": "gyeonggi_20261025_12",
+      "name": "경기 파주시 동패동·아모리움 에듀파크·한울마을 3단지 운정 더 클래스 일대",
+      "path": "maps/additional/gyeonggi_20261025_12/scene.local.json",
+      "sha256": "4c5f62ed4877c723fbc64d17add5194afe6a23f624001fc3608147bb763bc625",
+      "bounds_epsg5179_m": [
+        932999.999999999,
+        1967899.9999999993,
+        933399.999999999,
+        1968299.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 48
+    },
+    {
+      "key": "gyeonggi_20261025_13",
+      "name": "경기 파주시 야당동·한빛마을6단지·한빛마을7단지 일대",
+      "path": "maps/additional/gyeonggi_20261025_13/scene.local.json",
+      "sha256": "06f8a99c6885f9d84caa97a3cb8169bfb67f1be1ad6a20df1b9577b831f354f9",
+      "bounds_epsg5179_m": [
+        933700.0000000006,
+        1967900.0000000014,
+        934100.0000000006,
+        1968300.0000000014
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 49
+    },
+    {
+      "key": "gyeonggi_20261025_14",
+      "name": "경기 성남시 분당구 분당동·샛별마을 일대",
+      "path": "maps/additional/gyeonggi_20261025_14/scene.local.json",
+      "sha256": "d5dde1de9226161a7d91c91c012d696a494f5d2ff6957a56bee69e8f63e0b339",
+      "bounds_epsg5179_m": [
+        967127.758955356,
+        1930123.266347025,
+        967527.758955356,
+        1930523.266347025
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 50
+    },
+    {
+      "key": "gyeonggi_20261025_15",
+      "name": "경기 용인시 기흥구 동백동·해든마을 동문굿모닝힐·쥬네브 일대",
+      "path": "maps/additional/gyeonggi_20261025_15/scene.local.json",
+      "sha256": "db824dffd03fff0550da1095b920211f98052cc680e166f53c7954ac701fc0fb",
+      "bounds_epsg5179_m": [
+        968993.3690486747,
+        1919965.3512883948,
+        969393.3690486747,
+        1920365.3512883948
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 51
+    },
+    {
+      "key": "gyeonggi_20261025_16",
+      "name": "경기 김포시 장기동·한강신도시중흥S-클래스파크애비뉴·청송마을 일대",
+      "path": "maps/additional/gyeonggi_20261025_16/scene.local.json",
+      "sha256": "48d4eb8cff836452aa542b81f84c1bee5fb97c6a78fc3dfd0125e3d34b511226",
+      "bounds_epsg5179_m": [
+        926399.9999999999,
+        1961200.0000000007,
+        926799.9999999999,
+        1961600.0000000007
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 52
+    },
+    {
+      "key": "gyeonggi_20261025_17",
+      "name": "경기 수원시 권선구 금곡동·호매실역 서희 스타힐스·금곡엘지아파트 일대",
+      "path": "maps/additional/gyeonggi_20261025_17/scene.local.json",
+      "sha256": "c837e751f3eaf83f582a693ff3b7b957b4ce7f2d7a5c9a68b5ad6be8bf19d44a",
+      "bounds_epsg5179_m": [
+        950100.0000000001,
+        1919300.0000000012,
+        950500.0000000001,
+        1919700.0000000012
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 53
+    },
+    {
+      "key": "gyeonggi_20261025_18",
+      "name": "경기 고양시 일산동구 중산동·하늘마을 일대",
+      "path": "maps/additional/gyeonggi_20261025_18/scene.local.json",
+      "sha256": "4b34139c92eb231b11547949473474e8bfff91336a3535d602d2aaba8f92fb29",
+      "bounds_epsg5179_m": [
+        936999.9999999993,
+        1964299.9999999993,
+        937399.9999999993,
+        1964699.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 54
+    },
+    {
+      "key": "gyeonggi_extra_20261025_01",
+      "name": "경기 의정부시 신곡동·상록아이파크·주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_01/scene.local.json",
+      "sha256": "6fb42011485f567be6cc02e131ec311b7c45613205468df36d34a3fa30ad7eb3",
+      "bounds_epsg5179_m": [
+        962600.0000000007,
+        1972200.0,
+        963000.0000000007,
+        1972600.0
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 55
+    },
+    {
+      "key": "gyeonggi_extra_20261025_02",
+      "name": "경기 군포시 산본동·개나리아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_02/scene.local.json",
+      "sha256": "ef09a7097babf172fb3834129ed6db668310edfcea229d60a94f546646e47948",
+      "bounds_epsg5179_m": [
+        949399.999999999,
+        1930600.0,
+        949799.999999999,
+        1931000.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 56
+    },
+    {
+      "key": "gyeonggi_extra_20261025_03",
+      "name": "경기 오산시 세교동·세마역 트루엘 더퍼스트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_03/scene.local.json",
+      "sha256": "33acc21d0914de5388910ece20982c4b4c63996fe13e1f3654457207fa9db5cf",
+      "bounds_epsg5179_m": [
+        958999.9999999992,
+        1909600.0000000005,
+        959399.9999999992,
+        1910000.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 57
+    },
+    {
+      "key": "gyeonggi_extra_20261025_04",
+      "name": "경기 시흥시 장곡동·숲속마을 아파트·매꼴마을 삼성아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_04/scene.local.json",
+      "sha256": "9ac229423e325172e470b61020e975878bfa846d17f720e7c587de115e8013ec",
+      "bounds_epsg5179_m": [
+        936200.0000000012,
+        1931000.0000000002,
+        936600.0000000012,
+        1931400.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 58
+    },
+    {
+      "key": "gyeonggi_extra_20261025_05",
+      "name": "경기 의왕시 내손동·인덕원 센트럴 자이·포일자이 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_05/scene.local.json",
+      "sha256": "6e27dad29951118ed5e0c75da2e285ae958856e0b1b9a2e2dd239a0093fc0a31",
+      "bounds_epsg5179_m": [
+        953299.999999999,
+        1931600.0000000002,
+        953699.999999999,
+        1932000.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 59
+    },
+    {
+      "key": "gyeonggi_extra_20261025_06",
+      "name": "경기 평택시 안중읍 현화리·주공아파트·동신 사랑마을 아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_06/scene.local.json",
+      "sha256": "6e5ed45dfa3256e506e261a29ff30fa31a43149a26f7b1d20c9145b8cb7e88b7",
+      "bounds_epsg5179_m": [
+        948600.0,
+        1887100.000000001,
+        949000.0,
+        1887500.000000001
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 60
+    },
+    {
+      "key": "gyeonggi_extra_20261025_07",
+      "name": "경기 안성시 공도읍 만정리·금호어울림·안성공도 금호어울림 일대",
+      "path": "maps/additional/gyeonggi_extra_20261025_07/scene.local.json",
+      "sha256": "734adf75c21ba41ee9d0bf360b1e00c48c2f6b9c3ccb6cc1fb9d3ee1797a9b36",
+      "bounds_epsg5179_m": [
+        970499.9999999995,
+        1889299.9999999995,
+        970899.9999999995,
+        1889699.9999999995
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 61
+    },
+    {
+      "key": "seoul_20261025_01",
+      "name": "서울 강남구 역삼동·역삼아르누보씨티·한국기술센터 일대",
+      "path": "maps/additional/seoul_20261025_01/scene.local.json",
+      "sha256": "cce32f6d413cd56892f14ccea64e017b9310ba578ea0f8dd880b0ef615d441c9",
+      "bounds_epsg5179_m": [
+        959300.0000000009,
+        1944799.9999999995,
+        959700.0000000009,
+        1945199.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 68
+    },
+    {
+      "key": "seoul_20261025_02",
+      "name": "서울 강동구 성내동·성내삼성아파트 104동·성내삼성아파트 103동 일대",
+      "path": "maps/additional/seoul_20261025_02/scene.local.json",
+      "sha256": "2519b6d2b00a13fb91a919b80410d7065731d34d2fa5ff6a45327a0e210c21db",
+      "bounds_epsg5179_m": [
+        966800.000000001,
+        1947900.0000000002,
+        967200.000000001,
+        1948300.0000000002
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 62
+    },
+    {
+      "key": "seoul_20261025_03",
+      "name": "서울 강북구 번동·삼성아파트·건영캐스빌아파트 일대",
+      "path": "maps/additional/seoul_20261025_03/scene.local.json",
+      "sha256": "17b61892519325206670d04690b5ba0b68be5b18c12ca7c4bcf8f8669d90704d",
+      "bounds_epsg5179_m": [
+        958600.000000001,
+        1960199.9999999998,
+        959000.000000001,
+        1960599.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 22
+    },
+    {
+      "key": "seoul_20261025_05",
+      "name": "서울 금천구 시흥동·벽산아파트 일대",
+      "path": "maps/additional/seoul_20261025_05/scene.local.json",
+      "sha256": "11cd028b4de1fa525af0bdb78bfc470b31f4a71bbf4761e7d9cad3783907228d",
+      "bounds_epsg5179_m": [
+        948500.0000000008,
+        1938700.000000001,
+        948900.0000000008,
+        1939100.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 63
+    },
+    {
+      "key": "seoul_20261025_06",
+      "name": "서울 노원구 공릉동·풍림아파트·공릉동 신도1차아파트 일대",
+      "path": "maps/additional/seoul_20261025_06/scene.local.json",
+      "sha256": "b8df2c18952df06c99aa05fc6c57efce5b52123f4cbf5f073b5ef667fca08f55",
+      "bounds_epsg5179_m": [
+        961700.0000000001,
+        1958700.0000000002,
+        962100.0000000001,
+        1959100.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 64
+    },
+    {
+      "key": "seoul_20261025_07",
+      "name": "서울 동대문구 이문동·현대아파트·이문동 대우아파트 일대",
+      "path": "maps/additional/seoul_20261025_07/scene.local.json",
+      "sha256": "1fc9392609d626fb2654f0e6c2ab910a074865577b513d3f68bcc6b6de875f3b",
+      "bounds_epsg5179_m": [
+        961900.0000000002,
+        1955700.0000000016,
+        962300.0000000002,
+        1956100.0000000016
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 65
+    },
+    {
+      "key": "seoul_20261025_08",
+      "name": "서울 마포구 서교동·메세나폴리스·명지한강빌드웰 일대",
+      "path": "maps/additional/seoul_20261025_08/scene.local.json",
+      "sha256": "ba1c96cdfa6a9e6948a597283ffabfdbd99357f327421620299847da2b3708b6",
+      "bounds_epsg5179_m": [
+        948200.0000000005,
+        1950099.9999999998,
+        948600.0000000005,
+        1950499.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 66
+    },
+    {
+      "key": "seoul_20261025_09",
+      "name": "서울 서초구 잠원동·HY빌딩·이투데이빌딩 일대",
+      "path": "maps/additional/seoul_20261025_09/scene.local.json",
+      "sha256": "937747e12cd74922e7890dd3404a159779087576832211f65861e0d2d14f4500",
+      "bounds_epsg5179_m": [
+        957400.0000000009,
+        1945899.9999999995,
+        957800.0000000009,
+        1946299.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 19
+    },
+    {
+      "key": "seoul_20261025_10",
+      "name": "서울 송파구 방이동·잠실리시온·신동아타워 일대",
+      "path": "maps/additional/seoul_20261025_10/scene.local.json",
+      "sha256": "97bd912592b5897d4e03497a15b740852842eebe967874ca2a95bc9a4119dbd0",
+      "bounds_epsg5179_m": [
+        965299.9999999994,
+        1945999.9999999995,
+        965699.9999999994,
+        1946399.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 26
+    },
+    {
+      "key": "seoul_20261025_11",
+      "name": "서울 중랑구 신내동·성원아파트·신아타운 일대",
+      "path": "maps/additional/seoul_20261025_11/scene.local.json",
+      "sha256": "23b12692e83faf434837a1fd684728b0e0ecec3a6f2dab4f50e102a99d28d5bd",
+      "bounds_epsg5179_m": [
+        964000.0000000005,
+        1956099.9999999998,
+        964400.0000000005,
+        1956499.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 67
+    },
+    {
+      "key": "seoul_20261025_12",
+      "name": "서울 강남구 대치동·개나리 푸르지오·역삼 e-편한세상 일대",
+      "path": "maps/additional/seoul_20261025_12/scene.local.json",
+      "sha256": "602ba7fc47eaa99bdd961003960ecea3ea2422ea4a4028e2c85ffa58c07ade8d",
+      "bounds_epsg5179_m": [
+        960099.9999999998,
+        1944400.0,
+        960499.9999999998,
+        1944800.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 68
+    },
+    {
+      "key": "seoul_20261025_13",
+      "name": "서울 강동구 암사동·선사현대아파트·대원아파트 일대",
+      "path": "maps/additional/seoul_20261025_13/scene.local.json",
+      "sha256": "f16cccd8b75ee2d31f726ee059858fb77d639a71c611a36f5322084ade81cca8",
+      "bounds_epsg5179_m": [
+        966999.9999999999,
+        1950300.0000000002,
+        967399.9999999999,
+        1950700.0000000002
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 69
+    },
+    {
+      "key": "seoul_20261025_14",
+      "name": "서울 강북구 번동·경남아너스빌·삼성화재수유사옥 일대",
+      "path": "maps/additional/seoul_20261025_14/scene.local.json",
+      "sha256": "28e3362f66c4b9f6a93b96040d63227c46e11db69584980510a4f4f6d91d9f80",
+      "bounds_epsg5179_m": [
+        957999.9999999992,
+        1959599.999999999,
+        958399.9999999992,
+        1959999.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 70
+    },
+    {
+      "key": "seoul_20261025_15",
+      "name": "서울 구로구 구로동·마리오 타워·제이앤케이디지털타워 일대",
+      "path": "maps/additional/seoul_20261025_15/scene.local.json",
+      "sha256": "8e6adb403b3fd80ba765d080ee301b0f40ccf76f11fd874e3f0f7b276a5ccf3c",
+      "bounds_epsg5179_m": [
+        946499.999999999,
+        1942400.0000000002,
+        946899.999999999,
+        1942800.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 71
+    },
+    {
+      "key": "seoul_20261025_16",
+      "name": "서울 서초구 반포동·신논현타워·HM타워 일대",
+      "path": "maps/additional/seoul_20261025_16/scene.local.json",
+      "sha256": "958b2a96af45fb7d3d00e6276120ab2a2094e52c107f554064426bb075305428",
+      "bounds_epsg5179_m": [
+        957599.9999999995,
+        1945100.0,
+        957999.9999999995,
+        1945500.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 72
+    },
+    {
+      "key": "seoul_20261025_17",
+      "name": "서울 송파구 잠실동·리센츠·잠실엘스 일대",
+      "path": "maps/additional/seoul_20261025_17/scene.local.json",
+      "sha256": "81858b15dc4b91702570725258591681be76a913a32612fb318c225ab41f565f",
+      "bounds_epsg5179_m": [
+        963300.000000001,
+        1945899.9999999995,
+        963700.000000001,
+        1946299.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 73
+    },
+    {
+      "key": "seoul_20261025_18",
+      "name": "서울 강남구 청담동·한섬빌딩·상지리츠빌 카일룸3차 일대",
+      "path": "maps/additional/seoul_20261025_18/scene.local.json",
+      "sha256": "dafb63d3e1f752a2afdcbcc4dbc299d2d13c6af3b7be91aae42af6ee22c42541",
+      "bounds_epsg5179_m": [
+        960199.9999999999,
+        1947200.0000000002,
+        960599.9999999999,
+        1947600.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 74
+    },
+    {
+      "key": "seoul_20261025_19",
+      "name": "서울 강동구 명일동·프라이어 팰리스·강동 롯데캐슬퍼스트아파트 일대",
+      "path": "maps/additional/seoul_20261025_19/scene.local.json",
+      "sha256": "dec85b452501ba089ac6410fd63328d258e39df56c22a0e4efe36902a74b917a",
+      "bounds_epsg5179_m": [
+        968100.0000000005,
+        1950299.9999999995,
+        968500.0000000005,
+        1950699.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 75
+    },
+    {
+      "key": "seoul_20261025_20",
+      "name": "서울 강남구 삼성동·브라운스톤 레전드·현대아파트 일대",
+      "path": "maps/additional/seoul_20261025_20/scene.local.json",
+      "sha256": "b1f6d56944dc98f679a0f3ecde7b3cc5a4b8a94e5591ab5bac025e57dd762ae2",
+      "bounds_epsg5179_m": [
+        959500.0000000005,
+        1946100.0000000002,
+        959900.0000000005,
+        1946500.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 25
+    },
+    {
+      "key": "seoul_20261025_21",
+      "name": "서울 강동구 천호동·강동역두산위브센티움·천호삼성아파트 104동 일대",
+      "path": "maps/additional/seoul_20261025_21/scene.local.json",
+      "sha256": "c84d95b2f36a56c5c655d8846a0447ba48a411456abf1127843c3c9cd39e9c6e",
+      "bounds_epsg5179_m": [
+        967500.0000000008,
+        1948700.0000000007,
+        967900.0000000008,
+        1949100.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 76
+    },
+    {
+      "key": "seoul_20261025_22",
+      "name": "서울 강남구 대치동·현대백화점·한국섬유산업연합회 일대",
+      "path": "maps/additional/seoul_20261025_22/scene.local.json",
+      "sha256": "2ef2f329c9fbef3b50af85d391cc21558898bb91d5f13377b7164754ada43f4c",
+      "bounds_epsg5179_m": [
+        961000.0000000009,
+        1945199.9999999998,
+        961400.0000000009,
+        1945599.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 38
+    },
+    {
+      "key": "seoul_20261025_23",
+      "name": "서울 강동구 암사동·강동 현대홈타운·한강 포스파크 아파트 일대",
+      "path": "maps/additional/seoul_20261025_23/scene.local.json",
+      "sha256": "aa252b6d1499b558b390b7c12fdeba30549bef735ce83746f10c9e9d6dae5dd0",
+      "bounds_epsg5179_m": [
+        967700.0000000005,
+        1950699.9999999998,
+        968100.0000000005,
+        1951099.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 75
+    },
+    {
+      "key": "seoul_20261025_24",
+      "name": "서울 강남구 청담동·청담동 삼성1차 아파트 101동·석탑아파트101동 일대",
+      "path": "maps/additional/seoul_20261025_24/scene.local.json",
+      "sha256": "b5eb1f0599fcc29acaed208c9aee6aba87e3dcfd5c2ae1238d2bebabada163c6",
+      "bounds_epsg5179_m": [
+        959700.0000000005,
+        1946500.0000000005,
+        960100.0000000005,
+        1946900.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 25
+    },
+    {
+      "key": "seoul_20261025_25",
+      "name": "서울 강남구 역삼동·스타플렉스·한국자산관리공사 일대",
+      "path": "maps/additional/seoul_20261025_25/scene.local.json",
+      "sha256": "41ff406704675a11f60a4617c1c8e51180f64f91c98759d7dc6949ce712ec399",
+      "bounds_epsg5179_m": [
+        958000.0000000005,
+        1944800.0000000002,
+        958400.0000000005,
+        1945200.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 72
+    },
+    {
+      "key": "seoul_20261025_27",
+      "name": "서울 강서구 화곡동·우장산 아이파크 이편한세상 일대",
+      "path": "maps/additional/seoul_20261025_27/scene.local.json",
+      "sha256": "818708a4330f36abfae8b68cdd1b7d42095784a6f53754f0cbf8946dff496def",
+      "bounds_epsg5179_m": [
+        941600.000000001,
+        1950050.0000000014,
+        942000.000000001,
+        1950450.0000000014
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 77
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_01",
+      "name": "경기 용인시 수지구 죽전동·도담마을죽전파크빌·도담마을 롯데캐슬 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_01/scene.local.json",
+      "sha256": "8702540beaddd4357d3f9f6851ebb7e9fa4c5c07c3a430cc3f2d87932b5c785f",
+      "bounds_epsg5179_m": [
+        965899.9999999988,
+        1925200.0000000007,
+        966299.9999999988,
+        1925600.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 120
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_02",
+      "name": "경기 용인시 수지구 죽전동·죽전 아이뷰 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_02/scene.local.json",
+      "sha256": "7ce81bf6bcd706ad8b5f5e50511721c614f5afa8d61ba66228949f1214657721",
+      "bounds_epsg5179_m": [
+        965249.9999999995,
+        1925799.9999999993,
+        965649.9999999995,
+        1926199.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 11
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_03",
+      "name": "경기 용인시 수지구 죽전동·도담마을 휴먼빌 아파트·새터마을죽전힐스테이트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_03/scene.local.json",
+      "sha256": "4be6d08cad2e8158268675d4e39ea6dc87ed479fc3510b2e240a79ea2d693b54",
+      "bounds_epsg5179_m": [
+        966000.0000000002,
+        1925700.0000000007,
+        966400.0000000002,
+        1926100.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 42
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_04",
+      "name": "경기 수원시 영통구 영통동·청명마을삼성아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_04/scene.local.json",
+      "sha256": "f9c55cdb0aacaf29bff872cc821ddfa6ea5698f457e5ee6c5829d8eeb8c6cee9",
+      "bounds_epsg5179_m": [
+        962549.9999999993,
+        1917100.000000001,
+        962949.9999999993,
+        1917500.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 78
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_05",
+      "name": "경기 수원시 영통구 영통동·벽산아파트·영통하우스토리 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_05/scene.local.json",
+      "sha256": "3a03cf4d1b5bbabd03a20c28c4cd57951a3c92bd9b417b700aee66fdec7e102e",
+      "bounds_epsg5179_m": [
+        961949.9999999997,
+        1917250.0000000005,
+        962349.9999999997,
+        1917650.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 79
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_06",
+      "name": "경기 수원시 팔달구 인계동·홈즈스테이수원·씨네파크 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_06/scene.local.json",
+      "sha256": "b13042d6e19731c041bad7ca56acff1daa10fd85b5fc6a8a74e6837b0d5570f1",
+      "bounds_epsg5179_m": [
+        958199.9999999997,
+        1918449.9999999998,
+        958599.9999999997,
+        1918849.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 80
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_07",
+      "name": "경기 고양시 덕양구 화정동·옥빛마을·우경싸이트빌 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_07/scene.local.json",
+      "sha256": "a8fec2857ab9efb410c54bde8bd1efc3c280badb8cb9b1d5768d967a597b094f",
+      "bounds_epsg5179_m": [
+        940900.0000000008,
+        1959150.0,
+        941300.0000000008,
+        1959550.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 81
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_08",
+      "name": "경기 고양시 일산동구 중산동·산들마을·일산쌍용아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_08/scene.local.json",
+      "sha256": "e0b68efc8a0cff1392e222bcf126d25d82453adbcc6995adec36bb47617131b2",
+      "bounds_epsg5179_m": [
+        936250.0000000008,
+        1965200.0000000002,
+        936650.0000000008,
+        1965600.0000000002
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 82
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_09",
+      "name": "경기 고양시 일산동구 중산동·센트럴 더 포레·하늘마을 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_09/scene.local.json",
+      "sha256": "199497c689e855dacf9e1a45857cc21dca0d18cb300daf9914ffebb42bbb338a",
+      "bounds_epsg5179_m": [
+        936850.0000000006,
+        1964800.0,
+        937250.0000000006,
+        1965200.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 83
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_10",
+      "name": "경기 파주시 목동동·해솔마을 5단지 삼부르네상스 아파트·해솔마을6단지 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_10/scene.local.json",
+      "sha256": "471c5d6c8d463d5bda56567dd0d95014f30caaf83eb1abc40f388e97689c9cd3",
+      "bounds_epsg5179_m": [
+        933350.0000000009,
+        1969199.9999999998,
+        933750.0000000009,
+        1969599.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 84
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_11",
+      "name": "경기 파주시 야당동·한빛마을 1단지 한라비발디 센트럴파크·한빛마을2단지 휴먼빌 레이크팰리스 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_11/scene.local.json",
+      "sha256": "bd3be25b4b95e9887ba8fb0e00f9f0a3830338713106e9cde6988c536024e479",
+      "bounds_epsg5179_m": [
+        933550.000000001,
+        1968450.0000000005,
+        933950.000000001,
+        1968850.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 85
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_12",
+      "name": "경기 성남시 분당구 야탑동·장미마을·시그마 3 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_12/scene.local.json",
+      "sha256": "b7c842eb4e477b36afdc8f3afffcfbd86986b2fb4ce24556330a3b89ecae0bd2",
+      "bounds_epsg5179_m": [
+        967250.0000000005,
+        1934800.0,
+        967650.0000000005,
+        1935200.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 86
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_13",
+      "name": "경기 성남시 분당구 판교동·판교원마을 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_13/scene.local.json",
+      "sha256": "89e30a6a919919c210e3972f2789da31f861a5d6c10065505673989bb858d174",
+      "bounds_epsg5179_m": [
+        963749.9999999992,
+        1932150.0,
+        964149.9999999992,
+        1932550.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 87
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_14",
+      "name": "경기 성남시 분당구 삼평동·판교역 KCC웰츠타워·주식회사안랩 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_14/scene.local.json",
+      "sha256": "091e0f41d5dd2e1fbd48024647b3ba59a837107fd17315b5fef5c05ade457f4a",
+      "bounds_epsg5179_m": [
+        965349.9999999998,
+        1933150.0000000002,
+        965749.9999999998,
+        1933550.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 88
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_15",
+      "name": "경기 부천시 소사구 소사본동·해송파크뷰·더원스테이트 2차 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_15/scene.local.json",
+      "sha256": "351eeb0297e758071174b2dd5687e8e9308e41dbae5530e405a27e73c05cc528",
+      "bounds_epsg5179_m": [
+        937299.999999999,
+        1942349.9999999993,
+        937699.999999999,
+        1942749.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 89
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_18",
+      "name": "경기 안산시 상록구 이동·보네르빌리지·푸르지오2차아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_18/scene.local.json",
+      "sha256": "1beaa4c41fb992159b90523d04721cb40c1b3670480314d5bc13e2899f8a4768",
+      "bounds_epsg5179_m": [
+        941549.9999999998,
+        1923200.0000000002,
+        941949.9999999998,
+        1923600.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 90
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_21",
+      "name": "경기 화성시 동탄구 능동·동탄 능동마을 상록 예가·동탄능동마을 주공아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_21/scene.local.json",
+      "sha256": "6891597ffed42f306441f126af5171329224b37ad27d43c7816c7b2be7d82eb4",
+      "bounds_epsg5179_m": [
+        960550.0000000001,
+        1912950.0000000005,
+        960950.0000000001,
+        1913350.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 91
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_24",
+      "name": "경기 광명시 철산동·두산위브아파트·광복현대아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_24/scene.local.json",
+      "sha256": "21bd084883672775b46943a22c1b6d45608745c7487d679b2d2728b655090c25",
+      "bounds_epsg5179_m": [
+        943699.9999999992,
+        1943200.0000000007,
+        944099.9999999992,
+        1943600.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 92
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_26",
+      "name": "경기 김포시 장기동·고창마을 제일풍경채아파트·고창마을 한양수자인 리버팰리스 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_26/scene.local.json",
+      "sha256": "dcd8273c8091c1f86bc6080107c9423fabbee9f7c79214407dfa81ca615069b2",
+      "bounds_epsg5179_m": [
+        925950.0000000003,
+        1960549.9999999998,
+        926350.0000000003,
+        1960949.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 93
+    },
+    {
+      "key": "gyeonggi_20261026_batch2_27",
+      "name": "경기 안양시 동안구 평촌동·귀인마을현대홈타운·꿈마을아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_batch2_27/scene.local.json",
+      "sha256": "17625b2dc68e5db73e51c48ab64dcb60a64ef407a53fa07699d280294f8d765d",
+      "bounds_epsg5179_m": [
+        952250.0000000001,
+        1931700.0,
+        952650.0000000001,
+        1932100.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 94
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_01",
+      "name": "경기 광주시 장지동·현대아파트 106동·현대아파트 103동 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_01/scene.local.json",
+      "sha256": "67b5afabba3c351cb8ede1d81e482fd90f06c0f606277b013bd393c15c720eed",
+      "bounds_epsg5179_m": [
+        976300.000000001,
+        1932500.0000000005,
+        976700.000000001,
+        1932900.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 95
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_02",
+      "name": "경기 포천시 소흘읍 송우리·태봉마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_02/scene.local.json",
+      "sha256": "3597d161577231ad59fc7779613b7f64e0c909ceae6370a820d6c9db2e072587",
+      "bounds_epsg5179_m": [
+        968299.9999999991,
+        1981300.0000000012,
+        968699.9999999991,
+        1981700.0000000012
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 96
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_03",
+      "name": "경기 평택시 장안동·평택장안마을코오롱하늘채 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_03/scene.local.json",
+      "sha256": "06ea357580936b46991938af4731bec905be81a147b8dd126f81d33532e767ae",
+      "bounds_epsg5179_m": [
+        962299.9999999992,
+        1895599.9999999993,
+        962699.9999999992,
+        1895999.9999999993
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 97
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_04",
+      "name": "경기 안성시 공도읍 만정리·안성공도 금호어울림·경기도시공사참아름 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_04/scene.local.json",
+      "sha256": "f0550758237c4eb983c9e42ec1cddeb0119d14a23c51de1f0b1046e1c8f0730e",
+      "bounds_epsg5179_m": [
+        970700.0000000006,
+        1889699.999999999,
+        971100.0000000006,
+        1890099.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 61
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_05",
+      "name": "경기 동두천시 지행동·대방노블랜드아파트·지행 현대아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_05/scene.local.json",
+      "sha256": "2ab3e20f43e180ee463f37d331cb711283e1ac30a32c448d6e72fc55df6d4985",
+      "bounds_epsg5179_m": [
+        960750.0000000005,
+        1988249.9999999998,
+        961150.0000000005,
+        1988649.9999999998
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 98
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_06",
+      "name": "경기 의정부시 민락동·민락1차 청구아파트·민락e-편한세상 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_06/scene.local.json",
+      "sha256": "2aa065cb4c2b1c83d3a5e732299a4349e108bef7fe762babe8fa984caeb52f01",
+      "bounds_epsg5179_m": [
+        963949.9999999995,
+        1970850.0000000005,
+        964349.9999999995,
+        1971250.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 99
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_07",
+      "name": "경기 의정부시 신곡동·현대아파트·동신아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_07/scene.local.json",
+      "sha256": "421e3c477d5a37eae2d8f14c83b56a421ff9d971b2f5b70fa45849ba7debfe6b",
+      "bounds_epsg5179_m": [
+        960750.0000000008,
+        1969950.0000000007,
+        961150.0000000008,
+        1970350.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 100
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_08",
+      "name": "경기 의정부시 신곡동·드림밸리아파트·풍림아이원아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_08/scene.local.json",
+      "sha256": "c02fdf52c4d0e98250cc483873e1562f4794ba244d14b879083b0ede48da0683",
+      "bounds_epsg5179_m": [
+        961550.0,
+        1972049.9999999998,
+        961950.0,
+        1972449.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 101
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_09",
+      "name": "경기 의정부시 의정부동·구성타워·신한헤스티아 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_09/scene.local.json",
+      "sha256": "939b8c1d5f177d57788ca63a3de5e606d02b70682a4270cd7645f2eafbe76246",
+      "bounds_epsg5179_m": [
+        959549.9999999993,
+        1970750.0000000012,
+        959949.9999999993,
+        1971150.0000000012
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 102
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_10",
+      "name": "경기 의정부시 민락동·산들마을 현대 아파트·산들마을 길훈아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_10/scene.local.json",
+      "sha256": "b9d0aca8d250af9b05990923fa4ff5020ef558053b93c9912f4990603bba8dfa",
+      "bounds_epsg5179_m": [
+        963850.0000000008,
+        1971500.0,
+        964250.0000000008,
+        1971900.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 103
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_11",
+      "name": "경기 의정부시 민락동·산들마을청구아파트·산들마을서광아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_11/scene.local.json",
+      "sha256": "3b808f7d8bfce7f34884dee56481077712b47aa865459ff1617f3b3019169194",
+      "bounds_epsg5179_m": [
+        964250.0,
+        1971500.0,
+        964650.0,
+        1971900.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 103
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_12",
+      "name": "경기 의정부시 금오동·주공그린빌·대송프라자 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_12/scene.local.json",
+      "sha256": "73e2b77c47005d7f66bb030842f69f8d1b5d0487eb6db1eea5176c9777751cd0",
+      "bounds_epsg5179_m": [
+        962000.000000001,
+        1972450.0,
+        962400.000000001,
+        1972850.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 101
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_13",
+      "name": "경기 오산시 양산동·세마이편한세상 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_13/scene.local.json",
+      "sha256": "a5b889ec9e2c41125270e62c8e904577c49eb22fc9110ca8f567ce67b927bfd4",
+      "bounds_epsg5179_m": [
+        958449.9999999995,
+        1910600.0,
+        958849.9999999995,
+        1911000.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 104
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_14",
+      "name": "경기 오산시 금암동·세교 서희스타힐스·죽미마을 휴튼9단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_14/scene.local.json",
+      "sha256": "5a82097c9141b3365f37f05d5ad9997f16dbc6f2756d685ee9fca43625ed7a81",
+      "bounds_epsg5179_m": [
+        959999.9999999992,
+        1908600.000000001,
+        960399.9999999992,
+        1909000.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 105
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_15",
+      "name": "경기 오산시 금암동·금암마을휴먼시아·세교 데시앙 포레 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_15/scene.local.json",
+      "sha256": "6e5102da17ae9192a62a41afd3bb79d1001bc9a4b14bb6490760e281335a849e",
+      "bounds_epsg5179_m": [
+        959149.9999999991,
+        1908350.0000000002,
+        959549.9999999991,
+        1908750.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 106
+    },
+    {
+      "key": "gyeonggi_extra_20261026_batch2_16",
+      "name": "경기 시흥시 하중동·참이슬아파트·샛말대우아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_batch2_16/scene.local.json",
+      "sha256": "a30101d4338d88446e41a4e2ebdafb02ed123c8d41a800812c548388891956f9",
+      "bounds_epsg5179_m": [
+        938350.0000000001,
+        1932800.000000001,
+        938750.0000000001,
+        1933200.000000001
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 107
+    },
+    {
+      "key": "seoul_20261026_batch2_01",
+      "name": "서울 강남구 역삼동·래미안 그레이튼·역삼푸르지오 일대",
+      "path": "maps/additional/seoul_20261026_batch2_01/scene.local.json",
+      "sha256": "a91d804deef830cf8bdaadeef839cbf0a5b49f420811354bc037a439dd9d17c2",
+      "bounds_epsg5179_m": [
+        959649.9999999997,
+        1943925.0,
+        960049.9999999997,
+        1944325.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 68
+    },
+    {
+      "key": "seoul_20261026_batch2_02",
+      "name": "서울 송파구 가락동·가락쌍용아파트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_02/scene.local.json",
+      "sha256": "da0fa954ebb3b740740fa34f4bddf52b95861d8d4fb82a534b447c95842d6d00",
+      "bounds_epsg5179_m": [
+        966949.9999999994,
+        1943850.0000000002,
+        967349.9999999994,
+        1944250.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 108
+    },
+    {
+      "key": "seoul_20261026_batch2_03",
+      "name": "서울 중랑구 상봉동·동부아파트·태영아파트상봉동데시앙 일대",
+      "path": "maps/additional/seoul_20261026_batch2_03/scene.local.json",
+      "sha256": "90a37dcd6077115dc217c029e38ee62bab9ab1577fe43e22997f0eb0d341d790",
+      "bounds_epsg5179_m": [
+        963749.9999999997,
+        1955700.000000001,
+        964149.9999999997,
+        1956100.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 67
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_01",
+      "name": "서울 강동구 상일동·강동타워·세스코 아카데미 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_01/scene.local.json",
+      "sha256": "e72475d18f9fcfd4ebebd6647fff3d647543ce474c7f1390f02bc6346a8611ac",
+      "bounds_epsg5179_m": [
+        971259.9999999995,
+        1950090.0,
+        971659.9999999995,
+        1950490.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 109
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_02",
+      "name": "서울 관악구 봉천동·고층 주거·업무 구역 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_02/scene.local.json",
+      "sha256": "f5d7c6d43a2e036eeef372231c88171a4dda97683b9b4383a13c866ade7057f6",
+      "bounds_epsg5179_m": [
+        950590.0000000003,
+        1942780.0000000002,
+        950990.0000000003,
+        1943180.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 110
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_04",
+      "name": "서울 도봉구 도봉동·도봉구종합청사·방학동삼성래미안 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_04/scene.local.json",
+      "sha256": "426c9600056fc08f538c2201ef0252761cba4da8aaf4c56a1b4327efeb50d871",
+      "bounds_epsg5179_m": [
+        959920.0000000003,
+        1963150.000000001,
+        960320.0000000003,
+        1963550.000000001
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 111
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_05",
+      "name": "서울 마포구 현석동·강변 힐스테이트·서강GS아파트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_05/scene.local.json",
+      "sha256": "618409c1e1efbacf801ba90e474bd49584dc981fcf3c63eea47f87b294882edc",
+      "bounds_epsg5179_m": [
+        949630.0000000008,
+        1949190.000000001,
+        950030.0000000008,
+        1949590.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 112
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_06",
+      "name": "서울 서초구 양재동·양재동스포타임·한솔로이젠트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_06/scene.local.json",
+      "sha256": "144afb6bc2502319cd0d9924445b3f1aff146dfd586d4d2f0098ca0b1a097db9",
+      "bounds_epsg5179_m": [
+        958829.9999999992,
+        1942549.9999999998,
+        959229.9999999992,
+        1942949.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 113
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_07",
+      "name": "서울 성북구 하월곡동·월곡두산위브아파트·래미안월곡아파트 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_07/scene.local.json",
+      "sha256": "d427742d39a4f9935736f72d3d9c64b366859dfcc49b1d80acd4862cd12f4bd1",
+      "bounds_epsg5179_m": [
+        959070.0000000005,
+        1956569.9999999998,
+        959470.0000000005,
+        1956969.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 114
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_08",
+      "name": "서울 영등포구 여의도동·서울 국제금융 센터·ONE CENTINEL 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_08/scene.local.json",
+      "sha256": "997a6071e83b8a107c400301941efd8c60af2d0db9cd565f6f22205d383dc744",
+      "bounds_epsg5179_m": [
+        948910.0,
+        1947260.000000001,
+        949310.0,
+        1947660.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 115
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_09",
+      "name": "서울 은평구 진관동·아이파크 포레스트 게이트·웅신 미켈란의 아침 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_09/scene.local.json",
+      "sha256": "bfb0b69cdc1c020f6a2d2e6f0cca72940d0415f5bda0f5c578323d6619039fe8",
+      "bounds_epsg5179_m": [
+        948400.0000000008,
+        1959340.0,
+        948800.0000000008,
+        1959740.0
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 116
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_10",
+      "name": "서울 구로구 개봉동·한마을아파트·벽산블루밍 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_10/scene.local.json",
+      "sha256": "0390ff379f6f673eea11ff69094d0d12d274ae98494cdf5be7d94503c3a5d4e3",
+      "bounds_epsg5179_m": [
+        943500.0000000009,
+        1943940.0000000005,
+        943900.0000000009,
+        1944340.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 117
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_11",
+      "name": "서울 서초구 서초동·현대이에스에이2아파트·오퓨런스 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_11/scene.local.json",
+      "sha256": "ed9c4e835c9e5237804fda33eca16da1e7a73f622939613abd3038fd3b5b22a1",
+      "bounds_epsg5179_m": [
+        956520.0000000007,
+        1943539.9999999995,
+        956920.0000000007,
+        1943939.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 118
+    },
+    {
+      "key": "seoul_20261026_batch2_extra_12",
+      "name": "서울 서초구 서초동·서울검찰청사 신관·아크로비스타 일대",
+      "path": "maps/additional/seoul_20261026_batch2_extra_12/scene.local.json",
+      "sha256": "0fe75dc1aca1ea26fc42f2fb384c83cf425efbc15436113220a478703e8f3c15",
+      "bounds_epsg5179_m": [
+        956590.0,
+        1944030.0000000012,
+        956990.0,
+        1944430.0000000012
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 118
+    },
+    {
+      "key": "gyeonggi_20261026_01",
+      "name": "경기 용인시 기흥구 보정동·죽현마을 동원로얄듀크·죽전누리에뜰 일대",
+      "path": "maps/additional/gyeonggi_20261026_01/scene.local.json",
+      "sha256": "a07b8f4e5b7a42a2629385d522c5412cbd7e97e3fba725280f5aac52facb9154",
+      "bounds_epsg5179_m": [
+        965200.0000000012,
+        1924400.0000000002,
+        965600.0000000012,
+        1924800.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 119
+    },
+    {
+      "key": "gyeonggi_20261026_02",
+      "name": "경기 용인시 기흥구 보정동·죽현마을 아이파크·죽현마을 엘지자이 일대",
+      "path": "maps/additional/gyeonggi_20261026_02/scene.local.json",
+      "sha256": "25095bfa5e234b0900980b01304d89bffe0521fce6d9adbcffe2a13a7968e3b9",
+      "bounds_epsg5179_m": [
+        965800.0,
+        1924200.0000000005,
+        966200.0,
+        1924600.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 120
+    },
+    {
+      "key": "gyeonggi_20261026_03",
+      "name": "경기 용인시 수지구 상현동·상현마을 현대성우아파트·상현마을 동일스위트 일대",
+      "path": "maps/additional/gyeonggi_20261026_03/scene.local.json",
+      "sha256": "aa19ed26ef8d760b30ddefe94b360ce93a99a82d66465de537cae6dc46586266",
+      "bounds_epsg5179_m": [
+        962999.9999999991,
+        1922600.0000000002,
+        963399.9999999991,
+        1923000.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 121
+    },
+    {
+      "key": "gyeonggi_20261026_04",
+      "name": "경기 수원시 권선구 권선동·권선3지구 주공3단지·권선3단지 상록아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_04/scene.local.json",
+      "sha256": "19779fc2987eee89af1d375f219fb51905262c492ed0e6f487ed87a3e0dda856",
+      "bounds_epsg5179_m": [
+        958900.0,
+        1916800.0000000007,
+        959300.0,
+        1917200.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 122
+    },
+    {
+      "key": "gyeonggi_20261026_05",
+      "name": "경기 고양시 덕양구 화정동·은빛마을 일대 (1구역)",
+      "path": "maps/additional/gyeonggi_20261026_05/scene.local.json",
+      "sha256": "81b9fc869425bc47efea05c82d93f7d06188b78f537ac3afb05c5b3371e693f7",
+      "bounds_epsg5179_m": [
+        941299.9999999995,
+        1959800.0000000002,
+        941699.9999999995,
+        1960200.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 123
+    },
+    {
+      "key": "gyeonggi_20261026_06",
+      "name": "경기 고양시 덕양구 화정동·은빛마을 일대 (2구역)",
+      "path": "maps/additional/gyeonggi_20261026_06/scene.local.json",
+      "sha256": "d62d18641dc19e68da5fdf89fabd6105f43cbe74e3a9e0c08665c4f8a909c020",
+      "bounds_epsg5179_m": [
+        940700.000000001,
+        1959800.0000000016,
+        941100.000000001,
+        1960200.0000000016
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 124
+    },
+    {
+      "key": "gyeonggi_20261026_07",
+      "name": "경기 고양시 덕양구 행신동·샘터마을·행신1차에스케이뷰아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_07/scene.local.json",
+      "sha256": "88c6294b1326e0a7a1dd748c0c5ff2f5ccaf9b26309076c50049f2dcfa3e2dbd",
+      "bounds_epsg5179_m": [
+        941099.9999999995,
+        1957799.9999999998,
+        941499.9999999995,
+        1958199.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 125
+    },
+    {
+      "key": "gyeonggi_20261026_08",
+      "name": "경기 성남시 분당구 수내동·푸른마을·파크타운 일대",
+      "path": "maps/additional/gyeonggi_20261026_08/scene.local.json",
+      "sha256": "6ac08c2060dd2fc5c851c385be9c3f9a998936713462889e0d51320fae149695",
+      "bounds_epsg5179_m": [
+        966500.0000000002,
+        1930000.0000000007,
+        966900.0000000002,
+        1930400.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 126
+    },
+    {
+      "key": "gyeonggi_20261026_09",
+      "name": "경기 성남시 분당구 이매동·아름마을 일대",
+      "path": "maps/additional/gyeonggi_20261026_09/scene.local.json",
+      "sha256": "f8890bef456ed29a870c4faf2c34b16ace8f44fa9ff336f58e9c834ddfc82aac",
+      "bounds_epsg5179_m": [
+        966400.0000000003,
+        1933099.9999999998,
+        966800.0000000003,
+        1933499.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 127
+    },
+    {
+      "key": "gyeonggi_20261026_10",
+      "name": "경기 성남시 분당구 분당동·71건영아파트·66건영아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_10/scene.local.json",
+      "sha256": "676dac0f2159064261982b3d4bbc13ce018cb6df61ca0e1ad20cc0d995840612",
+      "bounds_epsg5179_m": [
+        968099.9999999995,
+        1930000.0000000014,
+        968499.9999999995,
+        1930400.0000000014
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 128
+    },
+    {
+      "key": "gyeonggi_20261026_11",
+      "name": "경기 남양주시 와부읍 도곡리·덕소두산위브아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_11/scene.local.json",
+      "sha256": "ebac26e328cb1af45fc8df42e3f1a4d304a564d71582eaa7e51b59782a2a8c69",
+      "bounds_epsg5179_m": [
+        974599.9999999994,
+        1952999.9999999998,
+        974999.9999999994,
+        1953399.9999999998
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 129
+    },
+    {
+      "key": "gyeonggi_20261026_12",
+      "name": "경기 부천시 소사구 송내동·현대아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_12/scene.local.json",
+      "sha256": "50b0072deaf5dd5450c9a125f5aa4e0dba97355e23f4f9fd06e0ae33c2fbfc24",
+      "bounds_epsg5179_m": [
+        934900.0000000012,
+        1942200.0000000005,
+        935300.0000000012,
+        1942600.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 130
+    },
+    {
+      "key": "gyeonggi_20261026_13",
+      "name": "경기 부천시 원미구 중동·매트로펠리스Ⅱ-B·매트로팰리스 Ⅱ-A 일대",
+      "path": "maps/additional/gyeonggi_20261026_13/scene.local.json",
+      "sha256": "4bfd83747f8b1da374c42401cc73e9717d24cd58791151974d630dcce971d419",
+      "bounds_epsg5179_m": [
+        935199.9999999998,
+        1944900.0000000002,
+        935599.9999999998,
+        1945300.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 131
+    },
+    {
+      "key": "gyeonggi_20261026_14",
+      "name": "경기 부천시 소사구 심곡본동·코모도타워·부천라비앙로제 일대",
+      "path": "maps/additional/gyeonggi_20261026_14/scene.local.json",
+      "sha256": "6c0abbe48a36566dc1af507a75362861a5bc1cab493b6389fc19eb52d619acd2",
+      "bounds_epsg5179_m": [
+        935899.9999999991,
+        1942699.9999999998,
+        936299.9999999991,
+        1943099.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 132
+    },
+    {
+      "key": "gyeonggi_20261026_15",
+      "name": "경기 화성시 병점구 진안동·안화동마을주공아파트·병점역 센트럴 뷰 일대",
+      "path": "maps/additional/gyeonggi_20261026_15/scene.local.json",
+      "sha256": "1abd42f319bcb14daca8a61f1d4a9f81673600de062a0cab67aa1c2d0374ea14",
+      "bounds_epsg5179_m": [
+        959299.9999999993,
+        1912500.0000000007,
+        959699.9999999993,
+        1912900.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 133
+    },
+    {
+      "key": "gyeonggi_20261026_17",
+      "name": "경기 광명시 광명동·현진에버빌아파트·광명월드메르디앙 일대",
+      "path": "maps/additional/gyeonggi_20261026_17/scene.local.json",
+      "sha256": "5e0c1d9c59ab167c16df773ee465c9ca10adf39940656a6750058b0bf2fa33e5",
+      "bounds_epsg5179_m": [
+        942100.0000000006,
+        1941900.000000001,
+        942500.0000000006,
+        1942300.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 5
+    },
+    {
+      "key": "gyeonggi_20261026_19",
+      "name": "경기 파주시 금촌동·후곡마을뜨란채·후곡마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_20261026_19/scene.local.json",
+      "sha256": "66a02f5506105b34f31d829895f0d564e3539b7db4337d855dced878fd7eaecd",
+      "bounds_epsg5179_m": [
+        935499.9999999992,
+        1972499.9999999995,
+        935899.9999999992,
+        1972899.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 134
+    },
+    {
+      "key": "gyeonggi_20261026_22",
+      "name": "경기 김포시 장기동·수정마을 쌍용예가아파트·김포한강 수정마을2단지 일대",
+      "path": "maps/additional/gyeonggi_20261026_22/scene.local.json",
+      "sha256": "9049ddfff3073b072f545ab81b6cdc482e4fa7fa7ed5f97ce7a0f6ae39e1e07e",
+      "bounds_epsg5179_m": [
+        927500.0000000005,
+        1960500.0000000002,
+        927900.0000000005,
+        1960900.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 135
+    },
+    {
+      "key": "gyeonggi_20261026_23",
+      "name": "경기 안양시 만안구 안양동·삼성래미안아파트·주공뜨란채 일대",
+      "path": "maps/additional/gyeonggi_20261026_23/scene.local.json",
+      "sha256": "1a3848403fbd1911fc42e39f0bdfab6fc797a4caf878e2c0f5acc7220cfa9cfb",
+      "bounds_epsg5179_m": [
+        948999.9999999992,
+        1933600.0000000007,
+        949399.9999999992,
+        1934000.0000000007
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 136
+    },
+    {
+      "key": "gyeonggi_extra_20261026_01",
+      "name": "경기 의정부시 호원동·성호아파트·신도아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_01/scene.local.json",
+      "sha256": "9fa89fc532cc61e67a40f2e0e68efb7deabbe0227dae15ed676cec4355de6ced",
+      "bounds_epsg5179_m": [
+        959999.9999999997,
+        1968400.0,
+        960399.9999999997,
+        1968800.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 137
+    },
+    {
+      "key": "gyeonggi_extra_20261026_02",
+      "name": "경기 군포시 산본동·한양목련아파트·한국공영목련아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_02/scene.local.json",
+      "sha256": "4766b2d71ef64f38642d1ead399021c89a83e879f99e20b52c525fdacfa65c51",
+      "bounds_epsg5179_m": [
+        949100.0,
+        1929900.0,
+        949500.0,
+        1930300.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 138
+    },
+    {
+      "key": "gyeonggi_extra_20261026_03",
+      "name": "경기 오산시 궐동·제일하이빌아파트·세교우남퍼스트빌 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_03/scene.local.json",
+      "sha256": "756e37acbc8132c3b137222f7021c71d9aa757131aeeaab669708b984166870a",
+      "bounds_epsg5179_m": [
+        960299.9999999999,
+        1906700.0000000005,
+        960699.9999999999,
+        1907100.0000000005
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 139
+    },
+    {
+      "key": "gyeonggi_extra_20261026_04",
+      "name": "경기 시흥시 대야동·청구아파트·시흥 은행4차 푸르지오 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_04/scene.local.json",
+      "sha256": "8b352c7cadc07e32233dbaec2c41e0b2207803772252059275ee9197933189bf",
+      "bounds_epsg5179_m": [
+        937200.0,
+        1937999.999999999,
+        937600.0,
+        1938399.999999999
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 140
+    },
+    {
+      "key": "gyeonggi_extra_20261026_05",
+      "name": "경기 양주시 고암동·청담마을·봉우마을 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_05/scene.local.json",
+      "sha256": "1b6c5194b4cc134996839c396cdb14919ef23fb77f128d456502c624b8c98065",
+      "bounds_epsg5179_m": [
+        961700.0000000009,
+        1981300.0000000005,
+        962100.0000000009,
+        1981700.0000000005
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 141
+    },
+    {
+      "key": "gyeonggi_extra_20261026_06",
+      "name": "경기 광주시 탄벌동·벽산블루밍1단지·벽산블루밍2단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_06/scene.local.json",
+      "sha256": "e826a99869a3f4c91a02e3c9857f7ac785902e4d63c90a46c9c908ce5c7ffa54",
+      "bounds_epsg5179_m": [
+        976400.0000000001,
+        1934200.0000000014,
+        976800.0000000001,
+        1934600.0000000014
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 142
+    },
+    {
+      "key": "gyeonggi_extra_20261026_07",
+      "name": "경기 이천시 부발읍 아미리·현대성우오스타3단지·현대성우오스타2단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_07/scene.local.json",
+      "sha256": "50467b4d7fddb9aae041cce7d93b1c56242a314aa0c01fb375636c7ee906182d",
+      "bounds_epsg5179_m": [
+        999099.9999999993,
+        1916800.0000000007,
+        999499.9999999993,
+        1917200.0000000007
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 143
+    },
+    {
+      "key": "gyeonggi_extra_20261026_08",
+      "name": "경기 포천시 소흘읍 송우리·우정아파트·고운마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_08/scene.local.json",
+      "sha256": "84ce8e5496e3ed565078397e8d5adc6779342387b0d35a0e6c348e431c42948d",
+      "bounds_epsg5179_m": [
+        968000.0000000006,
+        1980799.9999999998,
+        968400.0000000006,
+        1981199.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 144
+    },
+    {
+      "key": "gyeonggi_extra_20261026_09",
+      "name": "경기 의왕시 내손동·샘마을아파트·샘마을 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_09/scene.local.json",
+      "sha256": "82b7de610f4910adc92f53592299523aa533025b4f5580c8d9e1c7b02a35e602",
+      "bounds_epsg5179_m": [
+        952600.0,
+        1930699.9999999998,
+        953000.0,
+        1931099.9999999998
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 145
+    },
+    {
+      "key": "gyeonggi_extra_20261026_10",
+      "name": "경기 평택시 이충동·정암마을뜨란채·반지마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_10/scene.local.json",
+      "sha256": "c4bfbf793800178229e103d6ea8814adc32bae57fe2c97579b1059d3a214c69f",
+      "bounds_epsg5179_m": [
+        961300.0000000002,
+        1895400.0000000002,
+        961700.0000000002,
+        1895800.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 146
+    },
+    {
+      "key": "gyeonggi_extra_20261026_11",
+      "name": "경기 안성시 공도읍 진사리·안성공도우림루미아트·쌍용스윗닷홈 일대",
+      "path": "maps/additional/gyeonggi_extra_20261026_11/scene.local.json",
+      "sha256": "bf920de64a264c78196e8432de4a64e87de5b033127b370a8a7b8519f6bcf68d",
+      "bounds_epsg5179_m": [
+        967899.999999999,
+        1888200.0000000002,
+        968299.999999999,
+        1888600.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 147
+    },
+    {
+      "key": "seoul_20261026_01",
+      "name": "서울 강남구 역삼동·클래시스·디오빌역삼 일대",
+      "path": "maps/additional/seoul_20261026_01/scene.local.json",
+      "sha256": "86a7682f66647280e76213d556e1ac4cb597947f55fbc4750ab41ec24468cb19",
+      "bounds_epsg5179_m": [
+        959250.0000000008,
+        1944374.9999999998,
+        959650.0000000008,
+        1944774.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 68
+    },
+    {
+      "key": "seoul_20261026_02",
+      "name": "서울 강동구 둔촌동·둔촌 푸르지오 아파트·동아아파트 일대",
+      "path": "maps/additional/seoul_20261026_02/scene.local.json",
+      "sha256": "e568c8be86bc553fbff63ef4b16eb4cc0fcd397d81d6f6eab23afa0ce1c67269",
+      "bounds_epsg5179_m": [
+        968525.0000000006,
+        1948225.0,
+        968925.0000000006,
+        1948625.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 148
+    },
+    {
+      "key": "seoul_20261026_03",
+      "name": "서울 강서구 염창동·염창힐스테이트·강변힐스테이트아파트 일대",
+      "path": "maps/additional/seoul_20261026_03/scene.local.json",
+      "sha256": "893de10ce43f02024949087d35a49cd0a581a359590a5637dec40e2b346be8b9",
+      "bounds_epsg5179_m": [
+        944625.0,
+        1950275.0,
+        945025.0,
+        1950675.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 149
+    },
+    {
+      "key": "seoul_20261026_04",
+      "name": "서울 관악구 봉천동·봉천 우성아파트·관악 우성아파트 일대",
+      "path": "maps/additional/seoul_20261026_04/scene.local.json",
+      "sha256": "2fbfa21cadfe72e2bed53c6d4237ef62fe762ef1b197131df5676c5cef14606a",
+      "bounds_epsg5179_m": [
+        952149.9999999993,
+        1942574.999999999,
+        952549.9999999993,
+        1942974.999999999
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 150
+    },
+    {
+      "key": "seoul_20261026_05",
+      "name": "서울 광진구 구의동·구의동삼성쉐르빌101동·현대13차폴라트리움 일대",
+      "path": "maps/additional/seoul_20261026_05/scene.local.json",
+      "sha256": "dd9c20c9f7ab6317e6941eba02b7be7fb9f0aae9d7475bcd90c45bc974533473",
+      "bounds_epsg5179_m": [
+        963849.9999999991,
+        1948975.000000001,
+        964249.9999999991,
+        1949375.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 151
+    },
+    {
+      "key": "seoul_20261026_06",
+      "name": "서울 금천구 독산동·대륭테크노타운 20차·우림라이온스밸리 2차 일대",
+      "path": "maps/additional/seoul_20261026_06/scene.local.json",
+      "sha256": "63ad3b476261b902dad7a878f745ccb39fe90ca56125d4e77a9f94ef058de8c7",
+      "bounds_epsg5179_m": [
+        945575.0000000006,
+        1940675.0000000007,
+        945975.0000000006,
+        1941075.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 152
+    },
+    {
+      "key": "seoul_20261026_07",
+      "name": "서울 동대문구 전농동·전농 SK아파트·답십리청솔우성아파트 일대",
+      "path": "maps/additional/seoul_20261026_07/scene.local.json",
+      "sha256": "7808cf1821fbd976ec38cd39b7652e4ab693e430b140b95b4134b7e7092fae41",
+      "bounds_epsg5179_m": [
+        961075.000000001,
+        1952799.9999999993,
+        961475.000000001,
+        1953199.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 153
+    },
+    {
+      "key": "seoul_20261026_08",
+      "name": "서울 마포구 상수동·신구강변연가 아파트·한강밤섬자이 일대",
+      "path": "maps/additional/seoul_20261026_08/scene.local.json",
+      "sha256": "ca5d82750303790f724c1618556fbba5dbe7fd630f6b0006166faf82cc5408a4",
+      "bounds_epsg5179_m": [
+        949124.9999999998,
+        1949475.0000000016,
+        949524.9999999998,
+        1949875.0000000016
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 154
+    },
+    {
+      "key": "seoul_20261026_09",
+      "name": "서울 서대문구 북가좌동·DMC요진아파트·DMC 래미안 e편한세상 일대",
+      "path": "maps/additional/seoul_20261026_09/scene.local.json",
+      "sha256": "e74f6720549d1ac4fc48de63192d83545160a97842cccdf44e95f7e098e1c694",
+      "bounds_epsg5179_m": [
+        947649.9999999994,
+        1952674.9999999993,
+        948049.9999999994,
+        1953074.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 155
+    },
+    {
+      "key": "seoul_20261026_10",
+      "name": "서울 서초구 방배동·국제방송교류재단·래미안방배아트힐 일대",
+      "path": "maps/additional/seoul_20261026_10/scene.local.json",
+      "sha256": "f1135ac1808fdd44eba44b1172ea66f50527afc5437f81cf68993929a332412b",
+      "bounds_epsg5179_m": [
+        956149.999999999,
+        1941900.0,
+        956549.999999999,
+        1942300.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 156
+    },
+    {
+      "key": "seoul_20261026_11",
+      "name": "서울 성북구 길음동·길음뉴타운·래미안길음1차 일대",
+      "path": "maps/additional/seoul_20261026_11/scene.local.json",
+      "sha256": "8e7cac110072fd9d7c77b6ac3868b9afe9fa1f788a77d87f8f8d295b372ed137",
+      "bounds_epsg5179_m": [
+        957425.0000000003,
+        1956200.0000000002,
+        957825.0000000003,
+        1956600.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 157
+    },
+    {
+      "key": "seoul_20261026_12",
+      "name": "서울 송파구 가락동·에스케이허브파크·래미안파크팰리스 일대",
+      "path": "maps/additional/seoul_20261026_12/scene.local.json",
+      "sha256": "222db8b8fab81c2dba5510018b96d57d03b4024e7b7b2b2435d3266cc7e26789",
+      "bounds_epsg5179_m": [
+        967449.999999999,
+        1944225.0000000012,
+        967849.999999999,
+        1944625.0000000012
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 108
+    },
+    {
+      "key": "seoul_20261026_13",
+      "name": "서울 영등포구 당산동5가·당산 삼성 래미안·당산동1차 효성아파트 일대",
+      "path": "maps/additional/seoul_20261026_13/scene.local.json",
+      "sha256": "ecf2daab7da2311ead6db032cd0c4cfab388e2d5678376c03a0561b01f2ce9db",
+      "bounds_epsg5179_m": [
+        946999.9999999999,
+        1947950.0000000005,
+        947399.9999999999,
+        1948350.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 158
+    },
+    {
+      "key": "seoul_20261026_14",
+      "name": "서울 중랑구 신내동·동성타워프라자·동성아파트 일대",
+      "path": "maps/additional/seoul_20261026_14/scene.local.json",
+      "sha256": "6529f327f9da1d21e2a235fdbf74044c43f6c9f2bd59744ac011a002e73f04ba",
+      "bounds_epsg5179_m": [
+        964225.0000000009,
+        1956549.9999999995,
+        964625.0000000009,
+        1956949.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 67
+    },
+    {
+      "key": "seoul_20261026_15",
+      "name": "서울 강남구 대치동·삼환 SO GOOD·대치삼성아파트 일대",
+      "path": "maps/additional/seoul_20261026_15/scene.local.json",
+      "sha256": "9314c794d4f192a968fc0535fd9abbf0886e66fa8d3ec3432670561e84a6f8fc",
+      "bounds_epsg5179_m": [
+        960524.9999999997,
+        1944124.9999999998,
+        960924.9999999997,
+        1944524.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 68
+    },
+    {
+      "key": "seoul_20261026_16",
+      "name": "서울 강동구 둔촌동·둔촌하이츠아파트·둔촌 신동아아파트 일대",
+      "path": "maps/additional/seoul_20261026_16/scene.local.json",
+      "sha256": "8b60a02a8398f7750ab81a7e0f4dcb77c158535e2aaa6db66910ba6b12b41596",
+      "bounds_epsg5179_m": [
+        968149.9999999997,
+        1947675.0000000002,
+        968549.9999999997,
+        1948075.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 159
+    },
+    {
+      "key": "seoul_20261026_17",
+      "name": "서울 광진구 화양동·성수1차대우아파트·화양동현대아파트 일대",
+      "path": "maps/additional/seoul_20261026_17/scene.local.json",
+      "sha256": "26904f86321e8d0037eb888aa05028675271ae9fa293fbf99b7b97674ef0106c",
+      "bounds_epsg5179_m": [
+        961575.0000000006,
+        1949475.0000000002,
+        961975.0000000006,
+        1949875.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 160
+    },
+    {
+      "key": "seoul_20261026_18",
+      "name": "서울 마포구 상암동·DMC 이안상암2단지·상암월드컵파크2단지 일대",
+      "path": "maps/additional/seoul_20261026_18/scene.local.json",
+      "sha256": "ceb3bcbac69e4735de92e1316c5fd2f1391b67548984048dc2d0a775c7f5a30f",
+      "bounds_epsg5179_m": [
+        946225.0000000001,
+        1952849.9999999995,
+        946625.0000000001,
+        1953249.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 37
+    },
+    {
+      "key": "seoul_20261026_19",
+      "name": "서울 서초구 양재동·종합무역정보연구센타·한국도로교통공단 서울특별시지부 일대",
+      "path": "maps/additional/seoul_20261026_19/scene.local.json",
+      "sha256": "056fb49d2779f89609046774b5927ef302a15c3e0a8f2b24d6c48bfcc1f24d7e",
+      "bounds_epsg5179_m": [
+        959350.000000001,
+        1940675.0000000007,
+        959750.000000001,
+        1941075.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 161
+    },
+    {
+      "key": "seoul_20261026_20",
+      "name": "서울 송파구 문정동·문정래미안아파트 일대",
+      "path": "maps/additional/seoul_20261026_20/scene.local.json",
+      "sha256": "17355a47c02643f1a7ff287645c96c7ea6642ab22b6965424b32ca44eb2be52d",
+      "bounds_epsg5179_m": [
+        967200.0000000005,
+        1943425.0,
+        967600.0000000005,
+        1943825.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 108
+    },
+    {
+      "key": "gyeonggi_20261027_01",
+      "name": "경기 용인시 수지구 풍덕천동·신정마을·이스턴팰리스 Eastern Palace 일대",
+      "path": "maps/additional/gyeonggi_20261027_01/scene.local.json",
+      "sha256": "292bb94adad3c584943ac540d3b6f8202b3223c9f3347db813c805399e35c170",
+      "bounds_epsg5179_m": [
+        963424.9999999995,
+        1924049.9999999995,
+        963824.9999999995,
+        1924449.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 162
+    },
+    {
+      "key": "gyeonggi_20261027_02",
+      "name": "경기 용인시 수지구 죽전동·내대지마을건영캐스빌·내대지마을푸르지오 일대",
+      "path": "maps/additional/gyeonggi_20261027_02/scene.local.json",
+      "sha256": "cc18e30bea240236f3eb45d18e06cd54c33d7fa99c6c89f3952a3f62f7222a18",
+      "bounds_epsg5179_m": [
+        966600.0000000009,
+        1925725.0000000002,
+        967000.0000000009,
+        1926125.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 163
+    },
+    {
+      "key": "gyeonggi_20261027_03",
+      "name": "경기 용인시 수지구 죽전동·성현마을반도유보라·꽃메마을아이파크 일대",
+      "path": "maps/additional/gyeonggi_20261027_03/scene.local.json",
+      "sha256": "de1df5a85615e5846c943901b44cac4213d40dffca794a7fc394c3b892e47461",
+      "bounds_epsg5179_m": [
+        966375.0000000005,
+        1924949.999999999,
+        966775.0000000005,
+        1925349.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 120
+    },
+    {
+      "key": "gyeonggi_20261027_04",
+      "name": "경기 수원시 영통구 영통동·영통3차 풍림아이원아파트·벽적골9단지 주공아파트 일대",
+      "path": "maps/additional/gyeonggi_20261027_04/scene.local.json",
+      "sha256": "93b4d212c61fccd44c2d65b1506a84a9abc6d8f1817ff9df82dc1d63623790a8",
+      "bounds_epsg5179_m": [
+        961424.9999999993,
+        1916224.9999999993,
+        961824.9999999993,
+        1916624.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 164
+    },
+    {
+      "key": "gyeonggi_20261027_05",
+      "name": "경기 수원시 영통구 망포동·늘푸른 벽산아파트·센트럴하이츠아파트 일대",
+      "path": "maps/additional/gyeonggi_20261027_05/scene.local.json",
+      "sha256": "3db5c204e90948d37dd010285a8f15edf475a6d91d767b6029ffbf25f46773b1",
+      "bounds_epsg5179_m": [
+        960875.0,
+        1915725.0000000007,
+        961275.0,
+        1916125.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 9
+    },
+    {
+      "key": "gyeonggi_20261027_06",
+      "name": "경기 수원시 권선구 금곡동·수원호매실휴먼시아7단지아파트·금곡엘지아파트 일대",
+      "path": "maps/additional/gyeonggi_20261027_06/scene.local.json",
+      "sha256": "1e27991a40c9bd81bb2db8de7218fc33ee4eb71f3c59c1a8bd9df924e8f2589f",
+      "bounds_epsg5179_m": [
+        950149.9999999999,
+        1918900.0000000002,
+        950549.9999999999,
+        1919300.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 53
+    },
+    {
+      "key": "gyeonggi_20261027_07",
+      "name": "경기 고양시 일산서구 대화동·후곡마을 일대",
+      "path": "maps/additional/gyeonggi_20261027_07/scene.local.json",
+      "sha256": "4ada818d36b6152f34c3d7cdaebc96626870d4c8dc02887e3368823670837cc3",
+      "bounds_epsg5179_m": [
+        934599.9999999995,
+        1964974.9999999998,
+        934999.9999999995,
+        1965374.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 165
+    },
+    {
+      "key": "gyeonggi_extra_20261027_01",
+      "name": "경기 시흥시 월곶동·월곶2차풍림아이원아파트·진주마을 풍림1차 아이원 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_01/scene.local.json",
+      "sha256": "fe7796e088f0dec7ed13ea63e9491eca84d66abcf30e6d3a3d2f1ea6106d99b2",
+      "bounds_epsg5179_m": [
+        932500.0000000006,
+        1932624.999999999,
+        932900.0000000006,
+        1933024.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 166
+    },
+    {
+      "key": "gyeonggi_extra_20261027_02",
+      "name": "경기 시흥시 장현동·새재마을 청구아파트·새재마을 대동아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_02/scene.local.json",
+      "sha256": "c68de9c986fb32ed72145bcca2d38d44675d7276ef21f756e5141a024f3c23a1",
+      "bounds_epsg5179_m": [
+        937724.9999999993,
+        1931274.9999999998,
+        938124.9999999993,
+        1931674.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 167
+    },
+    {
+      "key": "gyeonggi_extra_20261027_03",
+      "name": "경기 시흥시 월곶동·월곶4차풍림아이원아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_03/scene.local.json",
+      "sha256": "f48e612963bbe7cb16f4487beb99c307df180021aca81137726b11c248e9bdea",
+      "bounds_epsg5179_m": [
+        932825.0000000009,
+        1932225.000000001,
+        933225.0000000009,
+        1932625.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 166
+    },
+    {
+      "key": "gyeonggi_extra_20261027_04",
+      "name": "경기 시흥시 하상동·연꽃마을 대우.삼호아파트·연꽃마을 금호타운 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_04/scene.local.json",
+      "sha256": "f52e1ce0a3caa32606396d9a98536e04a65fe0ab6aee5a2adf1a33c03f4d47fa",
+      "bounds_epsg5179_m": [
+        938975.0000000006,
+        1932899.9999999993,
+        939375.0000000006,
+        1933299.9999999993
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 168
+    },
+    {
+      "key": "gyeonggi_extra_20261027_05",
+      "name": "경기 시흥시 하중동·관곡마을동아아파트·관곡마을 성원아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_05/scene.local.json",
+      "sha256": "5ac1cb997e480ba72ebe7268f63644a495352c625c1b6346d9492f43407665d1",
+      "bounds_epsg5179_m": [
+        937950.0000000002,
+        1933449.9999999984,
+        938350.0000000002,
+        1933849.9999999984
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 169
+    },
+    {
+      "key": "gyeonggi_extra_20261027_06",
+      "name": "경기 시흥시 하상동·연꽃마을 태평아파트 2단지·연꽃마을 태평아파트 1단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_06/scene.local.json",
+      "sha256": "d2243da3de86229f988c9d3334b83d64f7e4fff87656a0f12ea150c2506e4b1b",
+      "bounds_epsg5179_m": [
+        938974.999999999,
+        1932374.9999999998,
+        939374.999999999,
+        1932774.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 170
+    },
+    {
+      "key": "gyeonggi_extra_20261027_07",
+      "name": "경기 시흥시 장곡동·진말 삼환.한진아파트·진말 대우 아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_07/scene.local.json",
+      "sha256": "ba7e1dd029a05499f35debd2463d24677f35f937f96a940d5210af608b5461fe",
+      "bounds_epsg5179_m": [
+        936625.0000000006,
+        1931299.9999999998,
+        937025.0000000006,
+        1931699.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 58
+    },
+    {
+      "key": "gyeonggi_extra_20261027_08",
+      "name": "경기 시흥시 월곶동·진주마을 풍림1차 아이원·월곶Ⅱ 유호N플러스빌 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_08/scene.local.json",
+      "sha256": "92cc3e66f3ce761a321a5eeb46226c05074e611b49a9608e30b75014a08c2825",
+      "bounds_epsg5179_m": [
+        932225.0000000006,
+        1932225.000000001,
+        932625.0000000006,
+        1932625.000000001
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 166
+    },
+    {
+      "key": "gyeonggi_extra_20261027_09",
+      "name": "경기 이천시 부발읍 아미리·아미리7차현대아파트·현대성우오스타1단지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_09/scene.local.json",
+      "sha256": "73cbd9afa72266d697d7c348f5bb8289af2c25cf0db9a9a5a91c23d3a3224297",
+      "bounds_epsg5179_m": [
+        998875.0000000006,
+        1917350.0000000002,
+        999275.0000000006,
+        1917750.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 171
+    },
+    {
+      "key": "gyeonggi_extra_20261027_10",
+      "name": "경기 광주시 곤지암읍 삼리·곤지암현진에버빌·곤지암킴스빌리지 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_10/scene.local.json",
+      "sha256": "104f7ff70407cd7a6aa8b25a7bcc1de60834931a7a9f6d3fcdc3d0d72728ee45",
+      "bounds_epsg5179_m": [
+        984399.9999999992,
+        1928500.0000000002,
+        984799.9999999992,
+        1928900.0000000002
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 172
+    },
+    {
+      "key": "gyeonggi_extra_20261027_11",
+      "name": "경기 광주시 탄벌동·동보아파트·탄벌리 현대아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_11/scene.local.json",
+      "sha256": "ae475e52d58fad6550276133f310f9ba29481ee7acaee643bfd2eab76cc17564",
+      "bounds_epsg5179_m": [
+        977475.0000000007,
+        1935075.0000000016,
+        977875.0000000007,
+        1935475.0000000016
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 173
+    },
+    {
+      "key": "gyeonggi_extra_20261027_12",
+      "name": "경기 광주시 태전동·성원아파트·미진아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_12/scene.local.json",
+      "sha256": "1c20250d90914e7e49a1596c232fc64990bcac1ae46c2ec4c9766cb5d005ca76",
+      "bounds_epsg5179_m": [
+        975775.0000000003,
+        1932300.0,
+        976175.0000000003,
+        1932700.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 4
+    },
+    {
+      "key": "gyeonggi_extra_20261027_13",
+      "name": "경기 포천시 소흘읍 송우리·송천마을뜨란채·석향마을대방노블랜드아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_20261027_13/scene.local.json",
+      "sha256": "77fdba9e30002f7ebeee879223f2f583099d9fbd29cc0763b10084c582ecdf16",
+      "bounds_epsg5179_m": [
+        968850.0000000006,
+        1981450.0000000014,
+        969250.0000000006,
+        1981850.0000000014
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 174
+    },
+    {
+      "key": "gyeonggi_extra_fine_20261027_01",
+      "name": "경기 의정부시 호원동·신일 유토빌 플러스 아파트·월드한아름아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_fine_20261027_01/scene.local.json",
+      "sha256": "3d68f188dc7cddaae84c919bb46775bca84f2801e76d3dc5fb1f316d8f41fbcd",
+      "bounds_epsg5179_m": [
+        960129.9999999995,
+        1967800.0,
+        960529.9999999995,
+        1968200.0
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 175
+    },
+    {
+      "key": "gyeonggi_extra_fine_20261027_02",
+      "name": "경기 군포시 산본동·솔거(대림)아파트·주공7단지우륵아파트 일대",
+      "path": "maps/additional/gyeonggi_extra_fine_20261027_02/scene.local.json",
+      "sha256": "ebb93cb7563dedda83870800f5854cd2c7d571c181b6d13cc643f5a6730672e7",
+      "bounds_epsg5179_m": [
+        949039.9999999997,
+        1929089.9999999998,
+        949439.9999999997,
+        1929489.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 176
+    },
+    {
+      "key": "gyeonggi_fast_20261027_01",
+      "name": "경기 용인시 기흥구 보정동·연원마을 성원아파트·더샵 보정애비뉴 2단지 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_01/scene.local.json",
+      "sha256": "7a3a74dc8e5193d7732e31c7c8d3db2cfb2b89148e0fe7cd5e7af3f025e1cb6e",
+      "bounds_epsg5179_m": [
+        965275.0,
+        1922875.0000000012,
+        965675.0,
+        1923275.0000000012
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 177
+    },
+    {
+      "key": "gyeonggi_fast_20261027_02",
+      "name": "경기 용인시 기흥구 마북동·블루밍 구성 더센트럴·삼거마을삼성래미안1차아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_02/scene.local.json",
+      "sha256": "35f6d0a2c42c8848947ab749879aa67756e03b5fe5c43fd95d6d952a778a1eee",
+      "bounds_epsg5179_m": [
+        965250.000000001,
+        1922375.000000001,
+        965650.000000001,
+        1922775.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 178
+    },
+    {
+      "key": "gyeonggi_fast_20261027_03",
+      "name": "경기 용인시 수지구 상현동·만현마을1단지 롯데캐슬아파트·진산마을성원상떼빌아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_03/scene.local.json",
+      "sha256": "c0729932241ac0a0150f753e96d5d47a91bab1c50e7c7e37eca0c004be3a9d33",
+      "bounds_epsg5179_m": [
+        963474.9999999992,
+        1923575.0000000002,
+        963874.9999999992,
+        1923975.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 162
+    },
+    {
+      "key": "gyeonggi_fast_20261027_04",
+      "name": "경기 용인시 수지구 죽전동·꽃메마을현대홈타운·꽃메마을한라신영프로방스 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_04/scene.local.json",
+      "sha256": "e9948ad1e7ab1d0768867a4efdc019a5c7e34d1f74f3f3964ab6e0ee0e0cebea",
+      "bounds_epsg5179_m": [
+        965824.9999999998,
+        1924600.0000000007,
+        966224.9999999998,
+        1925000.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "test",
+      "joint_spatial_group": 120
+    },
+    {
+      "key": "gyeonggi_fast_20261027_05",
+      "name": "경기 용인시 기흥구 마북동·교동마을 현대홈타운·교동마을 현대필그린아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_05/scene.local.json",
+      "sha256": "f7c117ce7ef1d8b32f2442c58f89410ae0e207d2de01284e3065eb726c50c787",
+      "bounds_epsg5179_m": [
+        966424.9999999988,
+        1922424.999999999,
+        966824.9999999988,
+        1922824.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 179
+    },
+    {
+      "key": "gyeonggi_fast_20261027_06",
+      "name": "경기 용인시 기흥구 영덕동·흥덕마을 13단지 경남아너스빌 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_06/scene.local.json",
+      "sha256": "1569742f075d8f4eb9bdec5497e10d3c5d7fbed2dde7076bae0c9946195d37fd",
+      "bounds_epsg5179_m": [
+        963599.9999999994,
+        1919399.999999999,
+        963999.9999999994,
+        1919799.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 180
+    },
+    {
+      "key": "gyeonggi_fast_20261027_07",
+      "name": "경기 용인시 기흥구 공세동·한보라마을휴먼시아·한보라마을 경남아너스빌 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_07/scene.local.json",
+      "sha256": "e9f0784aaddf9ff71fb607972ab450462226d3a2ce1581d435b8493444e1ae89",
+      "bounds_epsg5179_m": [
+        964999.9999999993,
+        1916100.0000000007,
+        965399.9999999993,
+        1916500.0000000007
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 181
+    },
+    {
+      "key": "gyeonggi_fast_20261027_08",
+      "name": "경기 용인시 기흥구 영덕동·용인영덕신일아파트·청현마을 기흥데시앙 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_08/scene.local.json",
+      "sha256": "1c01bfd8c26c418ce42bfc95d7a847bab2dd886dfcb372fbaabe2fd9d5c4fb41",
+      "bounds_epsg5179_m": [
+        963849.9999999993,
+        1918550.000000001,
+        964249.9999999993,
+        1918950.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 182
+    },
+    {
+      "key": "gyeonggi_fast_20261027_09",
+      "name": "경기 용인시 기흥구 영덕동·흥덕우미린 레이크포레·흥덕마을 힐스테이트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_09/scene.local.json",
+      "sha256": "a3535d4993b3eecab040da781e888ca3afd725c7847c94872413142085a26fe4",
+      "bounds_epsg5179_m": [
+        962174.9999999991,
+        1919825.0000000007,
+        962574.9999999991,
+        1920225.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 183
+    },
+    {
+      "key": "gyeonggi_fast_20261027_10",
+      "name": "경기 용인시 기흥구 영덕동·흥덕마을14단지 호반베르디움·신동아파밀리에아파트 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_10/scene.local.json",
+      "sha256": "1eba2b58aa633717f76f0cfb62b0d92e90f0616044a5f3d183f584e40a8efeef",
+      "bounds_epsg5179_m": [
+        962699.9999999997,
+        1919275.0000000002,
+        963099.9999999997,
+        1919675.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 184
+    },
+    {
+      "key": "gyeonggi_fast_20261027_12",
+      "name": "경기 성남시 분당구 백현동·백현마을·하나님의교회 세계복음선교협회 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_12/scene.local.json",
+      "sha256": "ec2d7df846e772eaff281281fc0ccf3b960df0af5d7d64f719f5542fd549eec7",
+      "bounds_epsg5179_m": [
+        965300.0000000003,
+        1931724.9999999995,
+        965700.0000000003,
+        1932124.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 185
+    },
+    {
+      "key": "gyeonggi_fast_20261027_13",
+      "name": "경기 성남시 분당구 서현동·효자촌 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_13/scene.local.json",
+      "sha256": "a8e42586696d477d1bc547e678377dd046f278f99e1ccdd762570e7f620159b8",
+      "bounds_epsg5179_m": [
+        967675.0000000005,
+        1930725.0,
+        968075.0000000005,
+        1931125.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 186
+    },
+    {
+      "key": "gyeonggi_fast_20261027_14",
+      "name": "경기 성남시 분당구 수내동·파크타운·양지마을 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_14/scene.local.json",
+      "sha256": "9843d475c1414d09f5b110fd421f01f57048cb26c5d8836907e0949780c758d5",
+      "bounds_epsg5179_m": [
+        966324.9999999997,
+        1930400.0000000002,
+        966724.9999999997,
+        1930800.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 126
+    },
+    {
+      "key": "gyeonggi_fast_20261027_19",
+      "name": "경기 광명시 소하동·동양아파트·휴먼시아 일대",
+      "path": "maps/additional/gyeonggi_fast_20261027_19/scene.local.json",
+      "sha256": "dd6ab10be4fb33dbb33c2f8cf9284dc9aded5cb397331340d383a537bdf25f27",
+      "bounds_epsg5179_m": [
+        945475.0000000007,
+        1939325.0000000005,
+        945875.0000000007,
+        1939725.0000000005
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 187
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_01",
+      "name": "경기 부천시 소사구 심곡본동·이테크 에비뉴스타·HB엘림캐슬 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_01/scene.local.json",
+      "sha256": "112c0e6900463e44589124dad5936cd3201696eb985e13f43b8431247a2e9e30",
+      "bounds_epsg5179_m": [
+        936300.0000000002,
+        1942699.999999999,
+        936700.0000000002,
+        1943099.999999999
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 132
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_02",
+      "name": "경기 부천시 소사구 송내동·부천 중동역 2차 푸르지오 B단지·부천 우방 유쉘아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_02/scene.local.json",
+      "sha256": "3c4c8c39bc08d5f9946562b2b420f235ab993350640c5b910709c079f8b40c0f",
+      "bounds_epsg5179_m": [
+        935349.9999999997,
+        1942750.0000000002,
+        935749.9999999997,
+        1943150.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 31
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_03",
+      "name": "경기 안산시 상록구 사동·상록수현대2차아파트·선경아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_03/scene.local.json",
+      "sha256": "9ee7328586debd6a07dd1343565660436334dbe473b7faec4e6e45645802e604",
+      "bounds_epsg5179_m": [
+        942300.0000000007,
+        1921550.0000000002,
+        942700.0000000007,
+        1921950.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 188
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_04",
+      "name": "경기 안산시 상록구 사동·안산고잔9차푸르지오·안산고잔7차푸르지오 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_04/scene.local.json",
+      "sha256": "fcc81462c2cf73ab52332cdf3c25e8fe87ec751f2e242b9d6bd59452aa6df78a",
+      "bounds_epsg5179_m": [
+        939350.0000000003,
+        1921599.9999999993,
+        939750.0000000003,
+        1921999.9999999993
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 189
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_05",
+      "name": "경기 화성시 만세구 향남읍 행정리·향남시범 넓은들마을 우미린아파트·향남시범넓은들마을신명스카이뷰 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_05/scene.local.json",
+      "sha256": "060bb68aa9c5d5326135bebadbae11d71cf9952c3110f9f3c98a2177837b44ce",
+      "bounds_epsg5179_m": [
+        947949.9999999992,
+        1903349.9999999998,
+        948349.9999999992,
+        1903749.9999999998
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 190
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_06",
+      "name": "경기 화성시 만세구 향남읍 행정리·향남시범 살구꽃마을 신영지웰아파트·향남시범 살구꽃마을 한일베라체아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_06/scene.local.json",
+      "sha256": "989fb89fe9d06c566f39e884209de0dc3c53e928759c12f69531922c16c90681",
+      "bounds_epsg5179_m": [
+        948499.9999999997,
+        1903050.0,
+        948899.9999999997,
+        1903450.0
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 191
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_07",
+      "name": "경기 파주시 금촌동·대영장미아파트·장미아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_07/scene.local.json",
+      "sha256": "8eecb10c66c04b7fee961440ab00f2500dbc7e7f7a3258399dca392b38bed133",
+      "bounds_epsg5179_m": [
+        935550.0,
+        1973000.0000000005,
+        935950.0,
+        1973400.0000000005
+      ],
+      "previous_role": "readiness",
+      "previous_outcome_seen": true,
+      "joint_split": "train",
+      "joint_spatial_group": 192
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_08",
+      "name": "경기 안양시 동안구 비산동·관악아파트·한마음2차아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_08/scene.local.json",
+      "sha256": "64fab7e1ed9323c1ac42868e7f25706e77c8a074309642b7e60b63b4fa23663d",
+      "bounds_epsg5179_m": [
+        950500.0000000008,
+        1932599.9999999998,
+        950900.0000000008,
+        1932999.9999999998
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 193
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_09",
+      "name": "경기 안양시 동안구 호계동·목련아파트·향촌아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_09/scene.local.json",
+      "sha256": "c4d7cc43997293ebdc0bd04a0e8cab2ca01ece17320d80d4dab60ad5d2eb970b",
+      "bounds_epsg5179_m": [
+        951849.9999999999,
+        1931749.9999999995,
+        952249.9999999999,
+        1932149.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 94
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_11",
+      "name": "경기 성남시 분당구 정자동·아이파크분당1·동양정자파라곤 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_11/scene.local.json",
+      "sha256": "56237825e93651630c02725f2565db810ed4bbf13ea161baa9244c7b6f8ee162",
+      "bounds_epsg5179_m": [
+        964849.9999999998,
+        1930150.000000001,
+        965249.9999999998,
+        1930550.000000001
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 194
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_12",
+      "name": "경기 성남시 분당구 구미동·까치마을·하얀마을 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_12/scene.local.json",
+      "sha256": "8f92181b20bf917df4cd0edbb75d0c0a1c8c30534b3f76dafeddee540a108177",
+      "bounds_epsg5179_m": [
+        965499.9999999998,
+        1927400.0000000002,
+        965899.9999999998,
+        1927800.0000000002
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 10
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_13",
+      "name": "경기 성남시 분당구 구미동·새터마을죽전힐스테이트·무지개마을건영아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_13/scene.local.json",
+      "sha256": "fa4069fc5f2c76b487096a8c1af5a6da81f967e84ac2a7358e9c40698a946cb3",
+      "bounds_epsg5179_m": [
+        966499.9999999994,
+        1926350.0000000019,
+        966899.9999999994,
+        1926750.0000000019
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "validation",
+      "joint_spatial_group": 42
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_14",
+      "name": "경기 부천시 원미구 약대동·부천두산위브트레지움·덕유마을주공아파트 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_14/scene.local.json",
+      "sha256": "a1e1489aa20479e368037a6950df3ad542bae609a16104ceb1ff45b07e9d3876",
+      "bounds_epsg5179_m": [
+        935049.9999999999,
+        1945899.9999999995,
+        935449.9999999999,
+        1946299.9999999995
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "train",
+      "joint_spatial_group": 195
+    },
+    {
+      "key": "gyeonggi_reserve_20261027_15",
+      "name": "경기 부천시 원미구 중동·그린타운아파트·아이엔유 포비스타 오피스텔 일대",
+      "path": "maps/additional/gyeonggi_reserve_20261027_15/scene.local.json",
+      "sha256": "0c2f7d56fcb46320118c698f745c958408fe7b524e520361b20dcf6599b8e707",
+      "bounds_epsg5179_m": [
+        935850.0000000009,
+        1944050.0000000007,
+        936250.0000000009,
+        1944450.0000000007
+      ],
+      "previous_role": "fresh",
+      "previous_outcome_seen": false,
+      "joint_split": "historical_validation",
+      "joint_spatial_group": 45
+    }
+  ],
+  "spatial_group_rule": "Shared building IDs or AOI gap <100m; transitive components never cross splits",
+  "previous_readiness_maps_train_only": true,
+  "old_validation_test_excluded_from_training": true,
+  "test_geography_never_previously_evaluated": true,
+  "baseline_files": {
+    "model/advance/selected/alarm_policy.json": "ad18b7dd7f67e3a7dcf315d140668190ac5247b70b169eedb0644b2bf296945b",
+    "model/advance/selected/best.pt": "8d916c91ddded88c9286a24df4175b947e3b8886055eec18abe5eb69943dc588",
+    "model/advance/selected/calibration.json": "53c2d89d5b859d7d7bce202dc76ac117306a431567969aa723d4c704bafe29e2",
+    "model/advance/selected/selection.json": "ce860cf1c3df7d0368b13870315fc628596adae31d62f3b59f5071a9f3e773ec",
+    "model/continuity/ensemble.pt": "0636fbfef0a62eff12c912553a4584b005a301475902883eb04b16c991da1779",
+    "cooperative/train.py": "e6b6f6507218a62a74ca820244c38d3510bd6a0dfc04b9660c8b8c5024cb0a65",
+    "cooperative/policy.py": "cb3af281667da8a13d6764c1cf6645e59a597b017afe2d63025d7184e9a3497f",
+    "cooperative/run.py": "586f3a95f8c2963409e70639d4a2f92b76239058732da77040daef3bb9a7d301",
+    "cooperative/refine.py": "261ac0fc61c73c21374929e336719535459f58f4dd20a83aea9d0fa128b97202",
+    "cooperative/candidates.py": "610c25c1fdbb5c1949fdcb46c6b91e01e7e78fd4bcb5215a551f86d1b4cdea28",
+    "cooperative/world.py": "2000ae17b422739099cb45e54427a22c875819bda714f47d96761c6aaeabe0b8",
+    "cooperative/prediction.py": "be421bd18aaa79e5a5155e67c291c800ad33b082fdc0b9e30cdfcea32907b2d5",
+    "cooperative/motion.py": "4ca37af37ba3478b97019ff4afe409dc08ee0fa337d930a663c382d4adc52a3f",
+    "cooperative/packets.py": "0b2f3f10afb63eb59f2f608c286c2b31a8f09bc7d6205540e296b12e10df9332",
+    "swarm_sim/radio.py": "023bacb177f6edf4716c6ed1d5173c44ea06283d08f1fb167a7cebab4494dcc4",
+    "cooperative/continuity_world.py": "b5883ac9c8379d8902338ee0e45acd84bc28ce63e3b5a503fd478d0e1b16328d",
+    "cooperative/continuity_control.py": "5b1ccc508b91b5e8d71efe664244b88875db92ec7b2fcb7a54bc86128b3c0f3c",
+    "cooperative/continuity_run.py": "8ca2fbecc2bbd2b7b12ddd5ab82191cc8511e06b03cc7850513560e488371b27",
+    "cooperative/continuity.py": "34aea0ba87d6ecd89c257e5e397c2d11c1de1e3884812d078f26c373196b9f38",
+    "cooperative/deployment_run.py": "91f20b5275e1a012ed079a23eb5c4440547d60f77f9cc0da0c4eda41d4078e88",
+    "cooperative/deployment_policy.py": "45896c14c2ef78c69536493670eb7c880da5e6e5c1ae9bbf948c553dbb042933",
+    "cooperative/deployment.py": "8d69d2b0ddd6afe3337e503f65398f69593401d4fd82b3365498fb4ab8e0c407"
+  },
+  "baseline_checkpoint": "model/continuity/ensemble.pt",
+  "teacher_profile": "probability",
+  "counts": {
+    "train": 166,
+    "historical_validation": 23,
+    "validation": 24,
+    "test": 32
+  },
+  "spatial_groups": 196,
+  "validation": [
+    {
+      "region": "gyeonggi_20261025_04",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1919980494
+    },
+    {
+      "region": "gyeonggi_20261025_04",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 527341345
+    },
+    {
+      "region": "gyeonggi_20261025_04",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 902774048
+    },
+    {
+      "region": "gyeonggi_20261025_04",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1317528750
+    },
+    {
+      "region": "gyeonggi_20261025_06",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 136008085
+    },
+    {
+      "region": "gyeonggi_20261025_06",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2066765927
+    },
+    {
+      "region": "gyeonggi_20261025_06",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 114315486
+    },
+    {
+      "region": "gyeonggi_20261025_06",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 599175340
+    },
+    {
+      "region": "gyeonggi_extra_20261025_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1193897325
+    },
+    {
+      "region": "gyeonggi_extra_20261025_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 429014522
+    },
+    {
+      "region": "gyeonggi_extra_20261025_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1877268446
+    },
+    {
+      "region": "gyeonggi_extra_20261025_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 783774900
+    },
+    {
+      "region": "gyeonggi_extra_20261025_03",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 2128552395
+    },
+    {
+      "region": "gyeonggi_extra_20261025_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 966235
+    },
+    {
+      "region": "gyeonggi_extra_20261025_03",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 594076603
+    },
+    {
+      "region": "gyeonggi_extra_20261025_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1038190828
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_03",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 943766364
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1014827049
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_03",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 2030576712
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 873673055
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_10",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1178471901
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1006445975
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_10",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 126485914
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_10",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 389903832
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_15",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1109525900
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_15",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1821514554
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_15",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1795988380
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_15",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1480377027
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_15",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1930875982
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_15",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 666698388
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_15",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1208616814
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_15",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 728408659
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1911043614
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 978798402
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 449669120
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 186110099
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_05",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 841155646
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_05",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 894769589
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_05",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1652313694
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_05",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1468103509
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_07",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 677086573
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_07",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1328628590
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_07",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 559300655
+    },
+    {
+      "region": "seoul_20261026_batch2_extra_07",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1095997363
+    },
+    {
+      "region": "gyeonggi_extra_20261026_08",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 992891590
+    },
+    {
+      "region": "gyeonggi_extra_20261026_08",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1590983172
+    },
+    {
+      "region": "gyeonggi_extra_20261026_08",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1364403084
+    },
+    {
+      "region": "gyeonggi_extra_20261026_08",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 365062252
+    },
+    {
+      "region": "gyeonggi_extra_20261026_10",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 963127174
+    },
+    {
+      "region": "gyeonggi_extra_20261026_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2012193568
+    },
+    {
+      "region": "gyeonggi_extra_20261026_10",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 2032921476
+    },
+    {
+      "region": "gyeonggi_extra_20261026_10",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 945457675
+    },
+    {
+      "region": "gyeonggi_extra_20261026_11",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 173613481
+    },
+    {
+      "region": "gyeonggi_extra_20261026_11",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 833340151
+    },
+    {
+      "region": "gyeonggi_extra_20261026_11",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 905811302
+    },
+    {
+      "region": "gyeonggi_extra_20261026_11",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 48169883
+    },
+    {
+      "region": "seoul_20261026_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1843407148
+    },
+    {
+      "region": "seoul_20261026_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1842695431
+    },
+    {
+      "region": "seoul_20261026_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 2086174732
+    },
+    {
+      "region": "seoul_20261026_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 989670882
+    },
+    {
+      "region": "seoul_20261026_03",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1751451272
+    },
+    {
+      "region": "seoul_20261026_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1582759386
+    },
+    {
+      "region": "seoul_20261026_03",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 998832255
+    },
+    {
+      "region": "seoul_20261026_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1499606878
+    },
+    {
+      "region": "seoul_20261026_10",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 309396228
+    },
+    {
+      "region": "seoul_20261026_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 835212680
+    },
+    {
+      "region": "seoul_20261026_10",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 754996162
+    },
+    {
+      "region": "seoul_20261026_10",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1220723359
+    },
+    {
+      "region": "gyeonggi_extra_20261027_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1835742448
+    },
+    {
+      "region": "gyeonggi_extra_20261027_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1756332139
+    },
+    {
+      "region": "gyeonggi_extra_20261027_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1065743834
+    },
+    {
+      "region": "gyeonggi_extra_20261027_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 488863104
+    },
+    {
+      "region": "gyeonggi_extra_20261027_05",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1738638157
+    },
+    {
+      "region": "gyeonggi_extra_20261027_05",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1686023813
+    },
+    {
+      "region": "gyeonggi_extra_20261027_05",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1984455010
+    },
+    {
+      "region": "gyeonggi_extra_20261027_05",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1494273120
+    },
+    {
+      "region": "gyeonggi_fast_20261027_05",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 2021497380
+    },
+    {
+      "region": "gyeonggi_fast_20261027_05",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 503885611
+    },
+    {
+      "region": "gyeonggi_fast_20261027_05",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1179904046
+    },
+    {
+      "region": "gyeonggi_fast_20261027_05",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1700656005
+    },
+    {
+      "region": "gyeonggi_fast_20261027_09",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1214167206
+    },
+    {
+      "region": "gyeonggi_fast_20261027_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 309851278
+    },
+    {
+      "region": "gyeonggi_fast_20261027_09",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1206597906
+    },
+    {
+      "region": "gyeonggi_fast_20261027_09",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 228119847
+    },
+    {
+      "region": "gyeonggi_fast_20261027_19",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 738337769
+    },
+    {
+      "region": "gyeonggi_fast_20261027_19",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 771654615
+    },
+    {
+      "region": "gyeonggi_fast_20261027_19",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 281210440
+    },
+    {
+      "region": "gyeonggi_fast_20261027_19",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1117276304
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_11",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1446596560
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_11",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 588397649
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_11",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1222989139
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_11",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 517035401
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_13",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 2003714686
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_13",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2086888064
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_13",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1915419064
+    },
+    {
+      "region": "gyeonggi_reserve_20261027_13",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1781806141
+    }
+  ],
+  "test": [
+    {
+      "region": "gyeonggi_20261025_10",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 432031216
+    },
+    {
+      "region": "gyeonggi_20261025_10",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1919774770
+    },
+    {
+      "region": "gyeonggi_20261025_10",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1305243366
+    },
+    {
+      "region": "gyeonggi_20261025_10",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1606029550
+    },
+    {
+      "region": "gyeonggi_20261025_18",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 513130963
+    },
+    {
+      "region": "gyeonggi_20261025_18",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1502130067
+    },
+    {
+      "region": "gyeonggi_20261025_18",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 372935705
+    },
+    {
+      "region": "gyeonggi_20261025_18",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1508889585
+    },
+    {
+      "region": "gyeonggi_extra_20261025_04",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1251801595
+    },
+    {
+      "region": "gyeonggi_extra_20261025_04",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 178472068
+    },
+    {
+      "region": "gyeonggi_extra_20261025_04",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 437334602
+    },
+    {
+      "region": "gyeonggi_extra_20261025_04",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1237053441
+    },
+    {
+      "region": "seoul_20261025_05",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 856069896
+    },
+    {
+      "region": "seoul_20261025_05",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 795691314
+    },
+    {
+      "region": "seoul_20261025_05",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 688815714
+    },
+    {
+      "region": "seoul_20261025_05",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 586811923
+    },
+    {
+      "region": "seoul_20261025_07",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 994430449
+    },
+    {
+      "region": "seoul_20261025_07",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1413803188
+    },
+    {
+      "region": "seoul_20261025_07",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1259036278
+    },
+    {
+      "region": "seoul_20261025_07",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 414849508
+    },
+    {
+      "region": "seoul_20261025_14",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1934657762
+    },
+    {
+      "region": "seoul_20261025_14",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2134673792
+    },
+    {
+      "region": "seoul_20261025_14",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1276334242
+    },
+    {
+      "region": "seoul_20261025_14",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1733983797
+    },
+    {
+      "region": "seoul_20261025_17",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 58404358
+    },
+    {
+      "region": "seoul_20261025_17",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1935251622
+    },
+    {
+      "region": "seoul_20261025_17",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1828956096
+    },
+    {
+      "region": "seoul_20261025_17",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 340909182
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_01",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 213613853
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_01",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1448466125
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_01",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 146786075
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_01",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1441052377
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_09",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 278424463
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 341971877
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_09",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 501713841
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_09",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1990624700
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_11",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1624072302
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_11",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 131088170
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_11",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1352770076
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_11",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 2017358693
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_12",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1472599531
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_12",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 419051974
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_12",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1909981005
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_12",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1761702376
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_14",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1582536710
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_14",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1935373647
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_14",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1546391472
+    },
+    {
+      "region": "gyeonggi_20261026_batch2_14",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 544672778
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_08",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1782626956
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_08",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1758635429
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_08",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1120568947
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_08",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 2081951584
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_12",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1958350914
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_12",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 608444736
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_12",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 165008528
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_12",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 796140871
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_14",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 887335023
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_14",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 161532552
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_14",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 303504386
+    },
+    {
+      "region": "gyeonggi_extra_20261026_batch2_14",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1603219320
+    },
+    {
+      "region": "gyeonggi_20261026_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1648748987
+    },
+    {
+      "region": "gyeonggi_20261026_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 227089988
+    },
+    {
+      "region": "gyeonggi_20261026_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1700675741
+    },
+    {
+      "region": "gyeonggi_20261026_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 294954791
+    },
+    {
+      "region": "gyeonggi_20261026_12",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 434758923
+    },
+    {
+      "region": "gyeonggi_20261026_12",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 43617829
+    },
+    {
+      "region": "gyeonggi_20261026_12",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 186913197
+    },
+    {
+      "region": "gyeonggi_20261026_12",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1054112086
+    },
+    {
+      "region": "gyeonggi_20261026_22",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1808244008
+    },
+    {
+      "region": "gyeonggi_20261026_22",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1092800806
+    },
+    {
+      "region": "gyeonggi_20261026_22",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1830907510
+    },
+    {
+      "region": "gyeonggi_20261026_22",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1294914764
+    },
+    {
+      "region": "gyeonggi_extra_20261026_01",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 789069358
+    },
+    {
+      "region": "gyeonggi_extra_20261026_01",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1978180980
+    },
+    {
+      "region": "gyeonggi_extra_20261026_01",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 260292022
+    },
+    {
+      "region": "gyeonggi_extra_20261026_01",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 190274643
+    },
+    {
+      "region": "gyeonggi_extra_20261026_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1112321714
+    },
+    {
+      "region": "gyeonggi_extra_20261026_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 2125200
+    },
+    {
+      "region": "gyeonggi_extra_20261026_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1436214326
+    },
+    {
+      "region": "gyeonggi_extra_20261026_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1390953248
+    },
+    {
+      "region": "seoul_20261026_05",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1844228749
+    },
+    {
+      "region": "seoul_20261026_05",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1591460261
+    },
+    {
+      "region": "seoul_20261026_05",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 22040695
+    },
+    {
+      "region": "seoul_20261026_05",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 620161197
+    },
+    {
+      "region": "seoul_20261026_09",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 69793041
+    },
+    {
+      "region": "seoul_20261026_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1213717504
+    },
+    {
+      "region": "seoul_20261026_09",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 167472662
+    },
+    {
+      "region": "seoul_20261026_09",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1949611074
+    },
+    {
+      "region": "seoul_20261026_13",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 898430774
+    },
+    {
+      "region": "seoul_20261026_13",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1419475805
+    },
+    {
+      "region": "seoul_20261026_13",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1571405090
+    },
+    {
+      "region": "seoul_20261026_13",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1879078063
+    },
+    {
+      "region": "seoul_20261026_19",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 508843820
+    },
+    {
+      "region": "seoul_20261026_19",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1739033175
+    },
+    {
+      "region": "seoul_20261026_19",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1862820586
+    },
+    {
+      "region": "seoul_20261026_19",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1852052438
+    },
+    {
+      "region": "gyeonggi_20261027_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 936725162
+    },
+    {
+      "region": "gyeonggi_20261027_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 815164597
+    },
+    {
+      "region": "gyeonggi_20261027_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1285877881
+    },
+    {
+      "region": "gyeonggi_20261027_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 485241664
+    },
+    {
+      "region": "gyeonggi_20261027_03",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1274393338
+    },
+    {
+      "region": "gyeonggi_20261027_03",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 793374618
+    },
+    {
+      "region": "gyeonggi_20261027_03",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1986016046
+    },
+    {
+      "region": "gyeonggi_20261027_03",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 63552435
+    },
+    {
+      "region": "gyeonggi_20261027_04",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1982752887
+    },
+    {
+      "region": "gyeonggi_20261027_04",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1421429187
+    },
+    {
+      "region": "gyeonggi_20261027_04",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1224650099
+    },
+    {
+      "region": "gyeonggi_20261027_04",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1319843276
+    },
+    {
+      "region": "gyeonggi_extra_20261027_07",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1600741926
+    },
+    {
+      "region": "gyeonggi_extra_20261027_07",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1394206457
+    },
+    {
+      "region": "gyeonggi_extra_20261027_07",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1441950147
+    },
+    {
+      "region": "gyeonggi_extra_20261027_07",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1979649094
+    },
+    {
+      "region": "gyeonggi_extra_20261027_09",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1853884982
+    },
+    {
+      "region": "gyeonggi_extra_20261027_09",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1526606015
+    },
+    {
+      "region": "gyeonggi_extra_20261027_09",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 586994112
+    },
+    {
+      "region": "gyeonggi_extra_20261027_09",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 1166794298
+    },
+    {
+      "region": "gyeonggi_extra_20261027_13",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 1168532601
+    },
+    {
+      "region": "gyeonggi_extra_20261027_13",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1339074948
+    },
+    {
+      "region": "gyeonggi_extra_20261027_13",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1275639550
+    },
+    {
+      "region": "gyeonggi_extra_20261027_13",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 273230919
+    },
+    {
+      "region": "gyeonggi_fast_20261027_02",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 475445663
+    },
+    {
+      "region": "gyeonggi_fast_20261027_02",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 1084026675
+    },
+    {
+      "region": "gyeonggi_fast_20261027_02",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1120852302
+    },
+    {
+      "region": "gyeonggi_fast_20261027_02",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 395932811
+    },
+    {
+      "region": "gyeonggi_fast_20261027_04",
+      "direction": "east_west",
+      "kind": "continuous",
+      "seed": 948999779
+    },
+    {
+      "region": "gyeonggi_fast_20261027_04",
+      "direction": "east_west",
+      "kind": "intermittent",
+      "seed": 445730497
+    },
+    {
+      "region": "gyeonggi_fast_20261027_04",
+      "direction": "north_south",
+      "kind": "continuous",
+      "seed": 1474699613
+    },
+    {
+      "region": "gyeonggi_fast_20261027_04",
+      "direction": "north_south",
+      "kind": "intermittent",
+      "seed": 632907164
+    }
+  ],
+  "training_schedule": "Seeded permutation of all training maps, balanced rotating 2 directions x3 jammer kinds; fresh deterministic episode seed each update and slot",
+  "history": {
+    "decisions": 8,
+    "seconds_between_decisions": 3,
+    "raw_features": 48,
+    "mask": true,
+    "known_intents": 9
+  },
+  "predictor": "Fixed LGBM reference plus learnable GRU risk predictor; GRU and risk-head gradients enter PPO in joint arm",
+  "arms": [
+    "baseline",
+    "neural_fixed",
+    "joint"
+  ],
+  "reward": "Frozen v3 communications-priority reward; no reward coefficient changes mid-run",
+  "selection": "Validation only: all complete/safe, max duration ratio<=1.15, PDR>=frozen baseline-.0005; maximize connectivity then timely delivery, then shorter longest outages",
+  "alarm_selection": "Validation only; maximize first-alert event recall with >=3s lead subject to precision>=.8 and false/drone-hour<=5; explicitly report infeasible rules",
+  "operational_limits": "Simulation only; no claim of real-flight, Wi-Fi, battery or autopilot certification"
+}
