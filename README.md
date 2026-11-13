@@ -1,6 +1,12 @@
 # 캡스톤 디자인 II · Final V1
 
-2026-11-08 기준 최신 소스와 연구 결과를 모은 저장소다. 드론 편대 통신 단절을 예측하고 중계기를 선제 재배치하는 시뮬레이션 연구를 담았다.
+2026-11-13 기준 소스와 완료된 연구 결과를 모은 저장소다. 드론 편대 통신 단절을 예측하고 중계기를 선제 재배치하는 시뮬레이션 연구를 담았다.
+
+## 최신 평가와 다운로드
+
+- [3초·0.5초 공동학습 결과와 부산 교차 검증](reports/joint-training-results-20261110.md)에서 11월 10일까지의 완료 결과를 확인한다.
+- [11월 8일 주간보고서 HTML](reports/Final_V1_Weekly_Report_20261108.html)은 파일을 내려받아 브라우저에서 연다.
+- [전체 프로젝트 ZIP](https://github.com/MinchanKim1215/capstone-final-v1/releases/tag/final-v1-20261113)에는 등록 지도 645곳, 가중치, 평가 비행 기록과 실행 안내가 들어 있다. 기본 실행 제어는 `v21_transformer`다. 0.5초 공동학습 모델의 평가와 가중치는 실험 결과로 제공한다.
 
 ## 보고서
 
@@ -12,6 +18,7 @@
 ## 최신 버전
 
 - [Final V1 실행 구조](final_v1/README.md)와 [Transformer 업데이트 수치](reports/transformer-upgrade-summary.json)를 참조한다. 동일한 36개 시뮬레이션 조건에서 새 단절 115→61건, 단절 시간 764.5→452.0초, 기한 내 전달률 98.24→98.89%였다.
+- [0.5초 공동학습 소스](final_v1/halfsec_joint/)와 [부산 재현 코드](tmp/analyze_halfsec_joint_20261110.py)를 제공한다.
 - [장기 공동학습 소스](final_v1/long_training/)와 [학습 계획](reports/long-training-plan.json)에 Transformer·PPO·대형 선택과 후속 전체망 학습을 담았다.
 - [0.5초 제어 연구](fast_halfsec/RESULTS.md)와 [후보 선택 코드](halfsec_choice/)는 별도 실험이다.
 - 기본 시뮬레이션·통신 엔진은 [원본 프로젝트](drone_forecast_joint_training/)에 있다.

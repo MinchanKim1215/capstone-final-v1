@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>캡스톤 디자인 II · Final V1 주간 연구 보고 · 2026.11.08</title>
+  <style>
+    :root {
+      --ink:#142238; --muted:#4e5f76; --edge:#dce3ea; --canvas:#f1f4f8;
+      --green:#116657; --navy:#142942; --white:#fff;
+      font-family:system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+      line-height:1.66; color:var(--ink); background:var(--canvas);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; overflow-wrap:break-word; word-break:keep-all; }
+    a { color:#155693; text-underline-offset:.18em; }
+    a:hover { text-decoration-thickness:2px; }
+    :focus-visible { outline:3px solid #2478bd; outline-offset:4px; }
+    h1,h2,h3,p,figure,dl,dd { margin:0; }
+    h1,h2,h3 { line-height:1.25; letter-spacing:-.032em; }
+    strong,b,dd,.pill,.scale,.bar-label { font-variant-numeric:tabular-nums; }
+    .wrap { width:min(calc(100% - 44px),1072px); margin-inline:auto; }
+    .cover { color:white; background:var(--navy); padding:49px 0 34px; border-top:6px solid #419b8b; }
+    .tag { font-size:.75rem; color:#aee0d5; font-weight:750; letter-spacing:.15em; margin-bottom:12px; }
+    h1 { font-size:clamp(1.95rem,4.8vw,3.05rem); line-height:1.22; }
+    .date { margin-top:12px; color:#c4d5e6; font-size:.96rem; }
+    .intro { max-width:730px; margin-top:13px; color:#eef3f8; }
+    .kpis,.trio { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .kpis { margin-top:25px; }
+    .kpi { background:#203950; border:1px solid #3e576e; padding:15px 17px; border-radius:12px; }
+    .kpi span,.kpi small { display:block; }
+    .kpi small { color:#ccdce8; margin-top:3px; font-size:.8rem; }
+    .kpi strong { display:block; color:#afe9d9; font-size:clamp(1.52rem,3.2vw,2.12rem); line-height:1.2; margin-top:4px; }
+    nav { background:var(--white); border-bottom:1px solid var(--edge); }
+    nav .wrap { display:flex; flex-wrap:wrap; gap:6px 22px; padding-block:12px; }
+    nav a { text-decoration:none; font-size:.88rem; font-weight:720; }
+    main { display:grid; gap:22px; padding-block:25px 34px; }
+    section { background:var(--white); border:1px solid var(--edge); border-radius:16px; padding:clamp(16px,3vw,29px); }
+    .index { color:var(--green); font-size:.78rem; font-weight:800; margin-bottom:5px; letter-spacing:.09em; }
+    h2 { font-size:clamp(1.35rem,3vw,1.85rem); }
+    h3 { font-size:1.03rem; }
+    .lead { margin-top:9px; color:var(--muted); }
+    .duo,.trace-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
+    .panel,.trace { border:1px solid var(--edge); border-radius:11px; min-width:0; padding:16px; }
+    .panel h3 { margin-bottom:4px; }
+    .sub,.small,.trace p,.scale,.trace figcaption span,footer { color:var(--muted); font-size:.84rem; }
+    .sub,.small { margin-top:7px; }
+    .bars { display:grid; gap:10px; margin-top:13px; }
+    .bar-label { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:0 10px; font-size:.85rem; }
+    .bar-label strong { white-space:nowrap; }
+    .track { background:#e8edf3; border-radius:4px; height:10px; margin-top:4px; overflow:hidden; }
+    .track span { display:block; height:100%; border-radius:4px; }
+    .scale { display:flex; justify-content:space-between; margin-top:-4px; font-size:.73rem; }
+    .trio { margin-top:13px; }
+    .stat { background:#f0f4f8; border-radius:9px; padding:11px 13px; }
+    .stat span { display:block; font-size:.81rem; color:var(--muted); }
+    .stat strong { font-size:1.03rem; }
+    .stat .arrow,.metric-head .arrow,.metric-list .arrow { display:inline; color:var(--muted); padding-inline:.12em; }
+    .note { margin-top:14px; padding:11px 13px; border-radius:6px; border-left:3px solid #479387; background:#edf6f3; font-size:.9rem; }
+    .note.warn { border-color:#b17c2e; background:#fbf4e9; }
+    .metric-head { display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; margin-top:9px; }
+    .metric-head strong { font-size:clamp(1.18rem,2.5vw,1.48rem); letter-spacing:-.04em; }
+    .pill { background:#e1f1ea; color:var(--green); border-radius:6px; padding:2px 7px; font-size:.79rem; font-weight:800; white-space:nowrap; }
+    .metric-list { margin:12px 0 0; }
+    .metric-list > div { display:flex; flex-wrap:wrap; justify-content:space-between; gap:0 10px; padding:6px 0; border-top:1px solid var(--edge); font-size:.85rem; }
+    .metric-list dt small { margin-left:.4em; color:var(--muted); }
+    .metric-list dd { font-weight:740; }
+    .type-summary { display:grid; grid-template-columns:1.12fr 1fr; gap:12px; margin-top:16px; align-items:start; }
+    .type-focus { background:#fbf1e9; border:1px solid #e9d8c9; }
+    .type-focus strong { display:block; font-size:2rem; color:#8f432c; line-height:1.2; margin-bottom:5px; }
+    .type-focus p+p { margin-top:10px; }
+    .trace-title { margin-top:19px; }
+    .trace { padding:11px; }
+    .trace figcaption { padding:1px 3px 4px; }
+    .trace figcaption span { margin-left:.3em; }
+    .trace svg { width:100%; height:auto; display:block; }
+    .trace svg text { font-family:inherit; font-size:12px; fill:#46576b; }
+    .trace svg .grid { stroke:#dbe2eb; stroke-width:1; }
+    .trace svg .zero { stroke:#708398; stroke-width:1; stroke-dasharray:4 3; }
+    .trace svg .onset { stroke:#a0574c; stroke-width:1; stroke-dasharray:3 3; }
+    .trace p { margin:2px 3px 4px; }
+    details { margin-top:14px; border:1px solid var(--edge); border-radius:9px; padding:9px 12px; }
+    summary { cursor:pointer; font-weight:750; }
+    .terms { display:grid; gap:7px; margin-top:9px; font-size:.88rem; }
+    .terms dt { display:inline; font-weight:740; }
+    .terms dd { display:inline; color:var(--muted); margin-left:.36em; }
+    .timeline { margin:14px 0 0; padding:0; list-style:none; }
+    .timeline li { display:grid; grid-template-columns:110px minmax(0,1fr); gap:5px 13px; border-top:1px solid var(--edge); padding:10px 0; }
+    .timeline time { color:var(--green); font-weight:800; }
+    .timeline p { font-size:.91rem; margin-top:3px; }
+    .evidence { margin:10px 0 0; padding-left:1.3rem; font-size:.88rem; }
+    .evidence code { overflow-wrap:anywhere; }
+    .evidence li + li { margin-top:5px; }
+    footer { padding-bottom:28px; }
+    .skip { position:absolute; left:-1000px; }
+    .skip:focus { left:12px; top:8px; background:white; padding:4px 8px; z-index:2; }
+    @media (max-width:730px) {
+      .wrap { width:calc(100% - 24px); }
+      .cover { padding:29px 0 22px; }
+      .duo,.trace-grid,.type-summary { grid-template-columns:minmax(0,1fr); }
+      .kpis,.trio { grid-template-columns:minmax(0,1fr); gap:8px; }
+      .kpi { padding:9px 12px; }
+      .kpi span { font-size:.87rem; }
+      nav .wrap { gap:5px 14px; }
+      main { padding-top:14px; gap:14px; }
+      .timeline li { grid-template-columns:minmax(0,1fr); }
+    }
+    @media print {
+      :root { background:white; }
+      body { print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+      .wrap { width:100%; }
+      .cover { padding:16px; }
+      nav,.skip { display:none; }
+      main { gap:10px; padding:10px 0; }
+      section { padding:12px; }
+      h2,h3 { break-after:avoid; }
+      .panel,.trace,.timeline li,.stat { break-inside:avoid; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">본문으로 이동</a>
+  <header class="cover">
+    <div class="wrap">
+      <p class="tag">주간 연구 보고 · FINAL V1</p>
+      <h1>캡스톤 디자인 II<br>통신 단절 예측과 선제 재배치</h1>
+      <p class="date"><time datetime="2026-11-02">2026.11.02</time> ~ <time datetime="2026-11-08">11.08</time> · 시뮬레이션 검증</p>
+      <p class="intro">예정 비행 경로에서 건물 차폐와 우회 연결 상실을 예측하고, 수색망이 끊기기 전에 중계기를 이동시키는 방식으로 개선했다.</p>
+      <div class="kpis">
+        <div class="kpi"><span>새 단절 횟수</span><strong>−46.96%</strong><small>Transformer 개선 · 115 → 61건</small></div>
+        <div class="kpi"><span>누적 단절 시간</span><strong>−40.88%</strong><small>Transformer 개선 · 764.5 → 452.0초</small></div>
+        <div class="kpi"><span>3초 이상 선행탐지율</span><strong>+21.91%p</strong><small>차폐 기반 V18 → V20 · 32.27% → 54.18%</small></div>
+      </div>
+    </div>
+  </header>
+  <nav aria-label="보고서 목차">
+    <div class="wrap"><a href="#mission">임무 성과</a><a href="#forecast">선행탐지</a><a href="#types">단절 유형</a><a href="#week">주간 작업</a><a href="#sources">근거 자료</a></div>
+  </nav>
+  <main id="content" class="wrap">
+    <section id="mission" aria-labelledby="mission-title">
+      <p class="index">01 · 전체 임무</p>
+      <h2 id="mission-title">Transformer 개선 후 단절 시간 40.88% 감소</h2>
+      <p class="lead">지도 12곳에서 무간섭·간헐 간섭·지속 간섭을 적용했다. 같은 36조건에서 세 제어 방식이 각각 전체 임무를 수행했다. 재배치 판단 주기는 3초였다.</p>
+      <div class="duo">
+        <figure class="panel">
+          <h3>새 지속 단절 횟수</h3>
+          <div class="bars">
+    <div class="bar-row">
+      <div class="bar-label"><span>기존 V21</span><strong>115건</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:95.833%;background:#7f8da4"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>링크 시간 출력층 갱신</span><strong>67건</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:55.833%;background:#5473af"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>Final V1 개선 Transformer</span><strong>61건</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:50.833%;background:#167565"></span></div>
+    </div>
+    <div class="scale" aria-hidden="true"><span>0</span><span>60건</span><span>120건</span></div>
+  </div>
+        </figure>
+        <figure class="panel">
+          <h3>누적 단절 시간</h3>
+          <div class="bars">
+    <div class="bar-row">
+      <div class="bar-label"><span>기존 V21</span><strong>764.5초</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:95.563%;background:#7f8da4"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>링크 시간 출력층 갱신</span><strong>466.5초</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:58.313%;background:#5473af"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>Final V1 개선 Transformer</span><strong>452.0초</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:56.500%;background:#167565"></span></div>
+    </div>
+    <div class="scale" aria-hidden="true"><span>0</span><span>400초</span><span>800초</span></div>
+  </div>
+        </figure>
+      </div>
+      <div class="trio">
+        <div class="stat"><span>시간당 새 단절</span><strong>6.21 <span class="arrow" aria-hidden="true">→</span> 3.29회</strong></div>
+        <div class="stat"><span>기한 내 패킷 전달률 · +0.65%p</span><strong>98.24% <span class="arrow" aria-hidden="true">→</span> 98.89%</strong></div>
+        <div class="stat"><span>임무 완주 · 안전 위반</span><strong>각 36/36 · 0건</strong></div>
+      </div>
+      <p class="note">링크 단절 시점 출력층을 다시 학습해 115건에서 67건으로 줄었다. 전체 수색망 위험 점수까지 결합했을 때 61건이었다. 최종 구성에서 연결 상태 중 선제 명령 46회가 적용됐다.</p>
+      <p class="small">기존 V21 대비 최종 구성의 시간당 단절 차이는 −2.92회이며, 지도 단위 95% 구간은 −6.05 ~ −0.43회다. 최종 구성은 Final V1 기본 제어에 편입됐다. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/transformer-upgrade-summary.json" target="_blank" rel="noopener">Transformer 원본 평가</a></p>
+    </section>
+
+    <section id="forecast" aria-labelledby="forecast-title">
+      <p class="index">02 · 예측기 평가</p>
+      <h2 id="forecast-title">단절을 얼마나 먼저 잡았나</h2>
+      <p class="lead">실제 단절보다 <b>3초 이상 7초 미만</b> 앞서 시작한 경보를 한 사건에 한 번씩 맞췄다. 각 카드 안에서는 두 모델이 동일한 비행 관측을 사용했다. 두 카드의 평가 비행과 사건 수는 서로 다르다.</p>
+      <div class="duo">
+        <article class="panel forecast-panel">
+    <h3>차폐 기반 개선 · V18 → V20</h3>
+    <p class="sub">42개 동일 비행 관측 · 새 단절 251건</p>
+    <div class="metric-head"><strong>32.27% <span class="arrow" aria-hidden="true">→</span> 54.18%</strong><span class="pill">+21.91%p</span></div>
+    <div class="bars">
+    <div class="bar-row">
+      <div class="bar-label"><span>V18 기준</span><strong>81/251건</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:32.271%;background:#7f8da4"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>V20 차폐 점수</span><strong>136/251건</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:54.183%;background:#167565"></span></div>
+    </div>
+    <div class="scale" aria-hidden="true"><span>0</span><span>50%</span><span>100%</span></div>
+  </div>
+    <dl class="metric-list">
+      <div><dt>경보 정밀도</dt><dd>52.94% <span class="arrow" aria-hidden="true">→</span> 62.39%</dd></div>
+      <div><dt>오경보·늦은 경보<small>회/편대·시간</small></dt><dd>3.39 <span class="arrow" aria-hidden="true">→</span> 3.86</dd></div>
+      
+    </dl>
+    <p class="small">탐지율 차이의 95% 구간 +7.29 ~ +28.16%p. 경보 비용이 시간당 약 4회인 탐지 우선 설정에서 55건을 더 잡았다. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/forecast_shield/RESULTS.md" target="_blank" rel="noopener">차폐 기반 원본 평가</a></p>
+  </article>
+        <article class="panel forecast-panel">
+    <h3>최신 Final V1 · V21 → 개선 Transformer</h3>
+    <p class="sub">36개 동일 비행 관측 · 새 단절 134건</p>
+    <div class="metric-head"><strong>52.24% <span class="arrow" aria-hidden="true">→</span> 55.22%</strong><span class="pill">+2.99%p</span></div>
+    <div class="bars">
+    <div class="bar-row">
+      <div class="bar-label"><span>기존 V21</span><strong>70/134건</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:52.239%;background:#7f8da4"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>Final V1 결합 점수</span><strong>74/134건</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:55.224%;background:#167565"></span></div>
+    </div>
+    <div class="scale" aria-hidden="true"><span>0</span><span>50%</span><span>100%</span></div>
+  </div>
+    <dl class="metric-list">
+      <div><dt>경보 정밀도</dt><dd>70.71% <span class="arrow" aria-hidden="true">→</span> 76.29%</dd></div>
+      <div><dt>오경보·늦은 경보<small>회/편대·시간</small></dt><dd>1.56 <span class="arrow" aria-hidden="true">→</span> 1.24</dd></div>
+      <div><dt>위험 순위 성능(AP)</dt><dd>76.54% <span class="arrow" aria-hidden="true">→</span> 81.06%</dd></div>
+    </dl>
+    <p class="small">탐지율 차이의 95% 구간 −4.80 ~ +9.14%p. 제때 잡은 사건은 4건 늘었다. 탐지율 차이의 구간에 0이 포함된다. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/transformer-upgrade-summary.json" target="_blank" rel="noopener">Transformer 원본 평가</a></p>
+  </article>
+      </div>
+      <p class="note">중간 단계인 V20 → V21의 별도 42비행에서는 선행탐지율이 두 방식 모두 51.63%(127/246건)였고, 위험 점수 순위를 나타내는 AP는 48.14% → 72.51%(+24.37%p)로 올랐다. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/final_v1/RESULTS.md" target="_blank" rel="noopener">Final V1 비교 원본</a></p>
+      <p class="note warn">최신 비교에서도 134건 중 60건은 3~7초 선행 구간에 맞추지 못했다. 이 단계에서 가장 큰 개선은 전체 임무의 단절 감소였다.</p>
+    </section>
+
+    <section id="types" aria-labelledby="types-title">
+      <p class="index">03 · 단절 원인과 유형</p>
+      <h2 id="types-title">새 단절 2,572건의 84.95%에 마지막 급락이 있었다</h2>
+      <p class="lead">당시 등록된 345개 지도에서 기존 V7 PPO 비행을 조사했다. 수색망이 1초 이상 끊긴 사건을 0초에 맞추고 직전 6초를 0.5초 간격으로 비교했다. 시작부터 단절된 14구간은 새 단절 집계에서 제외했다.</p>
+      <div class="type-summary">
+        <figure class="panel">
+          <h3>유형별 새 단절 건수</h3>
+          <div class="bars">
+    <div class="bar-row">
+      <div class="bar-label"><span>급락형</span><strong>1,676건 · 65.16%</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:93.111%;background:#ad4938"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>혼합형</span><strong>509건 · 19.79%</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:28.278%;background:#92621b"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>점진형</span><strong>101건 · 3.93%</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:5.611%;background:#11796a"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>기타형</span><strong>282건 · 10.96%</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:15.667%;background:#536c8d"></span></div>
+    </div>
+<div class="bar-row">
+      <div class="bar-label"><span>이력 부족</span><strong>4건 · 0.16%</strong></div>
+      <div class="track" aria-hidden="true"><span style="width:0.222%;background:#7c8491"></span></div>
+    </div>
+    <div class="scale" aria-hidden="true"><span>0</span><span>900건</span><span>1800건</span></div>
+  </div>
+        </figure>
+        <aside class="panel type-focus" aria-label="차폐 기반 접근의 근거">
+          <strong>84.95%</strong>
+          <p>급락형과 혼합형 합계 2,185/2,572건. 마지막 0.5초 동안 통신 여유가 6dB 이상 떨어졌다.</p>
+          <p>같은 위치에서 건물 추가손실만 제거하자 급락형 1,670/1,676건과 혼합형 509/509건의 첫 1초가 복구됐다.</p>
+          <p class="small">차폐 구간 진입을 예정 경로로 미리 계산한 근거다. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/%EB%8B%A8%EC%A0%88%EC%9C%A0%ED%98%95/%EA%B8%89%EB%9D%BD%ED%98%95_%EC%A0%90%EC%A7%84%ED%98%95_%ED%98%BC%ED%95%A9%ED%98%95_%EC%83%81%EC%84%B8%EB%B6%84%EC%84%9D.md" target="_blank" rel="noopener">유형 분류와 원인 대조</a></p>
+        </aside>
+      </div>
+      <h3 class="trace-title">단절 전 6초 · 유형별 실제 기록</h3>
+      <p class="small">선은 유형별 대표 시뮬레이션 사건 한 건이다. 0초는 지속 단절의 시작, 색칠한 구간은 마지막 0.5초다. 네 그래프의 dB 축은 동일하다.</p>
+      <div class="trace-grid"><figure class="trace">
+    <figcaption><strong style="color:#ad4938">급락형</strong> <span>대표 사건 1건</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-abrupt-6-title line-abrupt-6-desc">
+      <title id="line-abrupt-6-title">급락형 대표 사건의 단절 전 6초 통신 여유</title>
+      <desc id="line-abrupt-6-desc">반초 단위 시뮬레이션 기록. 처음 29.35dB에서 단절 시작 −12.40dB까지 변화했다.</desc>
+      <rect x="370.33" y="19" width="29.67" height="119" fill="#f4e8df"/>
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−20</text><line x1="44" x2="400" y1="98.33" y2="98.33" class="zero"/><text x="37" y="102.33" text-anchor="end">0</text><line x1="44" x2="400" y1="58.67" y2="58.67" class="grid"/><text x="37" y="62.67" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">40</text>
+      <text x="44.00" y="157" text-anchor="middle">−6초</text><text x="162.67" y="157" text-anchor="middle">−4초</text><text x="281.33" y="157" text-anchor="middle">−2초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,40.12 73.67,37.68 103.33,40.16 133.00,38.63 162.67,36.25 192.33,38.30 222.00,37.40 251.67,37.07 281.33,38.61 311.00,36.41 340.67,36.35 370.33,36.87 400.00,122.93" fill="none" stroke="#ad4938" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="40.12" r="2.7" fill="#ad4938"/><circle cx="73.67" cy="37.68" r="2.7" fill="#ad4938"/><circle cx="103.33" cy="40.16" r="2.7" fill="#ad4938"/><circle cx="133.00" cy="38.63" r="2.7" fill="#ad4938"/><circle cx="162.67" cy="36.25" r="2.7" fill="#ad4938"/><circle cx="192.33" cy="38.30" r="2.7" fill="#ad4938"/><circle cx="222.00" cy="37.40" r="2.7" fill="#ad4938"/><circle cx="251.67" cy="37.07" r="2.7" fill="#ad4938"/><circle cx="281.33" cy="38.61" r="2.7" fill="#ad4938"/><circle cx="311.00" cy="36.41" r="2.7" fill="#ad4938"/><circle cx="340.67" cy="36.35" r="2.7" fill="#ad4938"/><circle cx="370.33" cy="36.87" r="2.7" fill="#ad4938"/><circle cx="400.00" cy="122.93" r="2.7" fill="#ad4938"/>
+    </svg>
+    <p>비슷한 여유를 유지하다 마지막 0.5초에 급락했다. <b>29.35 → −12.40dB</b></p>
+  </figure>
+<figure class="trace">
+    <figcaption><strong style="color:#92621b">혼합형</strong> <span>대표 사건 1건</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-mixed-6-title line-mixed-6-desc">
+      <title id="line-mixed-6-title">혼합형 대표 사건의 단절 전 6초 통신 여유</title>
+      <desc id="line-mixed-6-desc">반초 단위 시뮬레이션 기록. 처음 33.71dB에서 단절 시작 −14.69dB까지 변화했다.</desc>
+      <rect x="370.33" y="19" width="29.67" height="119" fill="#f4e8df"/>
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−20</text><line x1="44" x2="400" y1="98.33" y2="98.33" class="zero"/><text x="37" y="102.33" text-anchor="end">0</text><line x1="44" x2="400" y1="58.67" y2="58.67" class="grid"/><text x="37" y="62.67" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">40</text>
+      <text x="44.00" y="157" text-anchor="middle">−6초</text><text x="162.67" y="157" text-anchor="middle">−4초</text><text x="281.33" y="157" text-anchor="middle">−2초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,31.47 73.67,31.68 103.33,34.01 133.00,33.41 162.67,34.86 192.33,37.30 222.00,38.06 251.67,37.01 281.33,37.59 311.00,39.32 340.67,43.38 370.33,42.73 400.00,127.46" fill="none" stroke="#92621b" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="31.47" r="2.7" fill="#92621b"/><circle cx="73.67" cy="31.68" r="2.7" fill="#92621b"/><circle cx="103.33" cy="34.01" r="2.7" fill="#92621b"/><circle cx="133.00" cy="33.41" r="2.7" fill="#92621b"/><circle cx="162.67" cy="34.86" r="2.7" fill="#92621b"/><circle cx="192.33" cy="37.30" r="2.7" fill="#92621b"/><circle cx="222.00" cy="38.06" r="2.7" fill="#92621b"/><circle cx="251.67" cy="37.01" r="2.7" fill="#92621b"/><circle cx="281.33" cy="37.59" r="2.7" fill="#92621b"/><circle cx="311.00" cy="39.32" r="2.7" fill="#92621b"/><circle cx="340.67" cy="43.38" r="2.7" fill="#92621b"/><circle cx="370.33" cy="42.73" r="2.7" fill="#92621b"/><circle cx="400.00" cy="127.46" r="2.7" fill="#92621b"/>
+    </svg>
+    <p>여유가 먼저 줄었고 마지막 0.5초에 다시 크게 하락했다. <b>33.71 → −14.69dB</b></p>
+  </figure>
+<figure class="trace">
+    <figcaption><strong style="color:#11796a">점진형</strong> <span>대표 사건 1건</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-gradual-6-title line-gradual-6-desc">
+      <title id="line-gradual-6-title">점진형 대표 사건의 단절 전 6초 통신 여유</title>
+      <desc id="line-gradual-6-desc">반초 단위 시뮬레이션 기록. 처음 9.28dB에서 단절 시작 −1.01dB까지 변화했다.</desc>
+      <rect x="370.33" y="19" width="29.67" height="119" fill="#f4e8df"/>
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−20</text><line x1="44" x2="400" y1="98.33" y2="98.33" class="zero"/><text x="37" y="102.33" text-anchor="end">0</text><line x1="44" x2="400" y1="58.67" y2="58.67" class="grid"/><text x="37" y="62.67" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">40</text>
+      <text x="44.00" y="157" text-anchor="middle">−6초</text><text x="162.67" y="157" text-anchor="middle">−4초</text><text x="281.33" y="157" text-anchor="middle">−2초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,79.92 73.67,81.06 103.33,80.52 133.00,84.60 162.67,86.28 192.33,86.67 222.00,91.49 251.67,94.00 281.33,93.50 311.00,95.28 340.67,96.28 370.33,97.78 400.00,100.33" fill="none" stroke="#11796a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="79.92" r="2.7" fill="#11796a"/><circle cx="73.67" cy="81.06" r="2.7" fill="#11796a"/><circle cx="103.33" cy="80.52" r="2.7" fill="#11796a"/><circle cx="133.00" cy="84.60" r="2.7" fill="#11796a"/><circle cx="162.67" cy="86.28" r="2.7" fill="#11796a"/><circle cx="192.33" cy="86.67" r="2.7" fill="#11796a"/><circle cx="222.00" cy="91.49" r="2.7" fill="#11796a"/><circle cx="251.67" cy="94.00" r="2.7" fill="#11796a"/><circle cx="281.33" cy="93.50" r="2.7" fill="#11796a"/><circle cx="311.00" cy="95.28" r="2.7" fill="#11796a"/><circle cx="340.67" cy="96.28" r="2.7" fill="#11796a"/><circle cx="370.33" cy="97.78" r="2.7" fill="#11796a"/><circle cx="400.00" cy="100.33" r="2.7" fill="#11796a"/>
+    </svg>
+    <p>여유가 수 초에 걸쳐 낮아져 단절 경계에 접근했다. <b>9.28 → −1.01dB</b></p>
+  </figure>
+<figure class="trace">
+    <figcaption><strong style="color:#536c8d">기타형</strong> <span>대표 사건 1건</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-other-6-title line-other-6-desc">
+      <title id="line-other-6-title">기타형 대표 사건의 단절 전 6초 통신 여유</title>
+      <desc id="line-other-6-desc">반초 단위 시뮬레이션 기록. 처음 1.05dB에서 단절 시작 −0.94dB까지 변화했다.</desc>
+      <rect x="370.33" y="19" width="29.67" height="119" fill="#f4e8df"/>
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−20</text><line x1="44" x2="400" y1="98.33" y2="98.33" class="zero"/><text x="37" y="102.33" text-anchor="end">0</text><line x1="44" x2="400" y1="58.67" y2="58.67" class="grid"/><text x="37" y="62.67" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">40</text>
+      <text x="44.00" y="157" text-anchor="middle">−6초</text><text x="162.67" y="157" text-anchor="middle">−4초</text><text x="281.33" y="157" text-anchor="middle">−2초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,96.26 73.67,96.21 103.33,97.01 133.00,96.29 162.67,94.75 192.33,95.13 222.00,94.77 251.67,96.31 281.33,95.66 311.00,96.58 340.67,96.73 370.33,97.48 400.00,100.20" fill="none" stroke="#536c8d" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="96.26" r="2.7" fill="#536c8d"/><circle cx="73.67" cy="96.21" r="2.7" fill="#536c8d"/><circle cx="103.33" cy="97.01" r="2.7" fill="#536c8d"/><circle cx="133.00" cy="96.29" r="2.7" fill="#536c8d"/><circle cx="162.67" cy="94.75" r="2.7" fill="#536c8d"/><circle cx="192.33" cy="95.13" r="2.7" fill="#536c8d"/><circle cx="222.00" cy="94.77" r="2.7" fill="#536c8d"/><circle cx="251.67" cy="96.31" r="2.7" fill="#536c8d"/><circle cx="281.33" cy="95.66" r="2.7" fill="#536c8d"/><circle cx="311.00" cy="96.58" r="2.7" fill="#536c8d"/><circle cx="340.67" cy="96.73" r="2.7" fill="#536c8d"/><circle cx="370.33" cy="97.48" r="2.7" fill="#536c8d"/><circle cx="400.00" cy="100.20" r="2.7" fill="#536c8d"/>
+    </svg>
+    <p>낮은 여유가 이어지다가 작은 변화로 단절됐다. <b>1.05 → −0.94dB</b></p>
+  </figure></div>
+      <details id="history">
+        <summary>같은 사건의 30초 이력 보기</summary>
+        <p class="small">회색 구간은 해당 사건보다 앞서 발생한 별도 지속 단절이다. 같은 축에서 일찍 나타난 변화와 마지막 급락을 볼 수 있다.</p>
+        <div class="trace-grid"><figure class="trace">
+    <figcaption><strong style="color:#ad4938">급락형</strong> <span>같은 사건의 30초 이력</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-abrupt-30-title line-abrupt-30-desc">
+      <title id="line-abrupt-30-title">급락형 대표 사건의 단절 전 30초 통신 여유</title>
+      <desc id="line-abrupt-30-desc">반초 단위 시뮬레이션 기록. 처음 33.09dB에서 단절 시작 −12.40dB까지 변화했다.</desc>
+      <rect x="287.27" y="19" width="17.80" height="119" fill="#e6eaf0"/>
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−30</text><line x1="44" x2="400" y1="108.25" y2="108.25" class="grid"/><text x="37" y="112.25" text-anchor="end">−10</text><line x1="44" x2="400" y1="93.38" y2="93.38" class="zero"/><text x="37" y="97.38" text-anchor="end">0</text><line x1="44" x2="400" y1="63.63" y2="63.63" class="grid"/><text x="37" y="67.63" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">50</text>
+      <text x="44.00" y="157" text-anchor="middle">−30초</text><text x="162.67" y="157" text-anchor="middle">−20초</text><text x="281.33" y="157" text-anchor="middle">−10초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,44.16 49.93,43.44 55.87,42.51 61.80,43.95 67.73,43.93 73.67,42.51 79.60,42.46 85.53,42.79 91.47,40.67 97.40,40.58 103.33,40.90 109.27,40.38 115.20,39.90 121.13,39.38 127.07,38.61 133.00,37.79 138.93,36.62 144.87,37.70 150.80,38.66 156.73,37.27 162.67,37.33 168.60,37.00 174.53,37.81 180.47,38.04 186.40,37.04 192.33,38.39 198.27,41.85 204.20,42.18 210.13,43.80 216.07,44.47 222.00,44.48 227.93,44.04 233.87,45.00 239.80,43.12 245.73,43.91 251.67,45.14 257.60,45.22 263.53,44.31 269.47,42.37 275.40,43.67 281.33,42.83 287.27,110.89 293.20,112.41 299.13,115.87 305.07,51.63 311.00,51.59 316.93,51.81 322.87,51.75 328.80,49.71 334.73,47.89 340.67,49.74 346.60,48.60 352.53,46.82 358.47,48.35 364.40,47.68 370.33,47.43 376.27,48.58 382.20,46.93 388.13,46.89 394.07,47.27 400.00,111.82" fill="none" stroke="#ad4938" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="44.16" r="1.45" fill="#ad4938"/><circle cx="49.93" cy="43.44" r="1.45" fill="#ad4938"/><circle cx="55.87" cy="42.51" r="1.45" fill="#ad4938"/><circle cx="61.80" cy="43.95" r="1.45" fill="#ad4938"/><circle cx="67.73" cy="43.93" r="1.45" fill="#ad4938"/><circle cx="73.67" cy="42.51" r="1.45" fill="#ad4938"/><circle cx="79.60" cy="42.46" r="1.45" fill="#ad4938"/><circle cx="85.53" cy="42.79" r="1.45" fill="#ad4938"/><circle cx="91.47" cy="40.67" r="1.45" fill="#ad4938"/><circle cx="97.40" cy="40.58" r="1.45" fill="#ad4938"/><circle cx="103.33" cy="40.90" r="1.45" fill="#ad4938"/><circle cx="109.27" cy="40.38" r="1.45" fill="#ad4938"/><circle cx="115.20" cy="39.90" r="1.45" fill="#ad4938"/><circle cx="121.13" cy="39.38" r="1.45" fill="#ad4938"/><circle cx="127.07" cy="38.61" r="1.45" fill="#ad4938"/><circle cx="133.00" cy="37.79" r="1.45" fill="#ad4938"/><circle cx="138.93" cy="36.62" r="1.45" fill="#ad4938"/><circle cx="144.87" cy="37.70" r="1.45" fill="#ad4938"/><circle cx="150.80" cy="38.66" r="1.45" fill="#ad4938"/><circle cx="156.73" cy="37.27" r="1.45" fill="#ad4938"/><circle cx="162.67" cy="37.33" r="1.45" fill="#ad4938"/><circle cx="168.60" cy="37.00" r="1.45" fill="#ad4938"/><circle cx="174.53" cy="37.81" r="1.45" fill="#ad4938"/><circle cx="180.47" cy="38.04" r="1.45" fill="#ad4938"/><circle cx="186.40" cy="37.04" r="1.45" fill="#ad4938"/><circle cx="192.33" cy="38.39" r="1.45" fill="#ad4938"/><circle cx="198.27" cy="41.85" r="1.45" fill="#ad4938"/><circle cx="204.20" cy="42.18" r="1.45" fill="#ad4938"/><circle cx="210.13" cy="43.80" r="1.45" fill="#ad4938"/><circle cx="216.07" cy="44.47" r="1.45" fill="#ad4938"/><circle cx="222.00" cy="44.48" r="1.45" fill="#ad4938"/><circle cx="227.93" cy="44.04" r="1.45" fill="#ad4938"/><circle cx="233.87" cy="45.00" r="1.45" fill="#ad4938"/><circle cx="239.80" cy="43.12" r="1.45" fill="#ad4938"/><circle cx="245.73" cy="43.91" r="1.45" fill="#ad4938"/><circle cx="251.67" cy="45.14" r="1.45" fill="#ad4938"/><circle cx="257.60" cy="45.22" r="1.45" fill="#ad4938"/><circle cx="263.53" cy="44.31" r="1.45" fill="#ad4938"/><circle cx="269.47" cy="42.37" r="1.45" fill="#ad4938"/><circle cx="275.40" cy="43.67" r="1.45" fill="#ad4938"/><circle cx="281.33" cy="42.83" r="1.45" fill="#ad4938"/><circle cx="287.27" cy="110.89" r="1.45" fill="#ad4938"/><circle cx="293.20" cy="112.41" r="1.45" fill="#ad4938"/><circle cx="299.13" cy="115.87" r="1.45" fill="#ad4938"/><circle cx="305.07" cy="51.63" r="1.45" fill="#ad4938"/><circle cx="311.00" cy="51.59" r="1.45" fill="#ad4938"/><circle cx="316.93" cy="51.81" r="1.45" fill="#ad4938"/><circle cx="322.87" cy="51.75" r="1.45" fill="#ad4938"/><circle cx="328.80" cy="49.71" r="1.45" fill="#ad4938"/><circle cx="334.73" cy="47.89" r="1.45" fill="#ad4938"/><circle cx="340.67" cy="49.74" r="1.45" fill="#ad4938"/><circle cx="346.60" cy="48.60" r="1.45" fill="#ad4938"/><circle cx="352.53" cy="46.82" r="1.45" fill="#ad4938"/><circle cx="358.47" cy="48.35" r="1.45" fill="#ad4938"/><circle cx="364.40" cy="47.68" r="1.45" fill="#ad4938"/><circle cx="370.33" cy="47.43" r="1.45" fill="#ad4938"/><circle cx="376.27" cy="48.58" r="1.45" fill="#ad4938"/><circle cx="382.20" cy="46.93" r="1.45" fill="#ad4938"/><circle cx="388.13" cy="46.89" r="1.45" fill="#ad4938"/><circle cx="394.07" cy="47.27" r="1.45" fill="#ad4938"/><circle cx="400.00" cy="111.82" r="1.45" fill="#ad4938"/>
+    </svg>
+    <p>30초 전 33.09dB · 단절 시작 −12.40dB</p>
+  </figure>
+<figure class="trace">
+    <figcaption><strong style="color:#92621b">혼합형</strong> <span>같은 사건의 30초 이력</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-mixed-30-title line-mixed-30-desc">
+      <title id="line-mixed-30-title">혼합형 대표 사건의 단절 전 30초 통신 여유</title>
+      <desc id="line-mixed-30-desc">반초 단위 시뮬레이션 기록. 처음 34.72dB에서 단절 시작 −14.69dB까지 변화했다.</desc>
+      
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−30</text><line x1="44" x2="400" y1="108.25" y2="108.25" class="grid"/><text x="37" y="112.25" text-anchor="end">−10</text><line x1="44" x2="400" y1="93.38" y2="93.38" class="zero"/><text x="37" y="97.38" text-anchor="end">0</text><line x1="44" x2="400" y1="63.63" y2="63.63" class="grid"/><text x="37" y="67.63" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">50</text>
+      <text x="44.00" y="157" text-anchor="middle">−30초</text><text x="162.67" y="157" text-anchor="middle">−20초</text><text x="281.33" y="157" text-anchor="middle">−10초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,41.73 49.93,41.28 55.87,40.67 61.80,41.65 67.73,40.88 73.67,40.29 79.60,38.27 85.53,38.70 91.47,37.88 97.40,37.47 103.33,38.15 109.27,37.60 115.20,36.83 121.13,36.27 127.07,36.35 133.00,37.15 138.93,36.30 144.87,71.65 150.80,71.50 156.73,68.82 162.67,41.89 168.60,40.16 174.53,38.76 180.47,37.19 186.40,37.15 192.33,37.32 198.27,37.78 204.20,37.29 210.13,39.22 216.07,38.32 222.00,81.47 227.93,81.71 233.87,82.68 239.80,83.47 245.73,85.17 251.67,85.17 257.60,86.13 263.53,85.65 269.47,84.59 275.40,40.29 281.33,41.76 287.27,42.88 293.20,41.31 299.13,41.64 305.07,42.39 311.00,44.48 316.93,43.89 322.87,44.06 328.80,43.23 334.73,43.39 340.67,45.13 346.60,44.68 352.53,45.77 358.47,47.60 364.40,48.17 370.33,47.39 376.27,47.82 382.20,49.11 388.13,52.16 394.07,51.67 400.00,115.22" fill="none" stroke="#92621b" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="41.73" r="1.45" fill="#92621b"/><circle cx="49.93" cy="41.28" r="1.45" fill="#92621b"/><circle cx="55.87" cy="40.67" r="1.45" fill="#92621b"/><circle cx="61.80" cy="41.65" r="1.45" fill="#92621b"/><circle cx="67.73" cy="40.88" r="1.45" fill="#92621b"/><circle cx="73.67" cy="40.29" r="1.45" fill="#92621b"/><circle cx="79.60" cy="38.27" r="1.45" fill="#92621b"/><circle cx="85.53" cy="38.70" r="1.45" fill="#92621b"/><circle cx="91.47" cy="37.88" r="1.45" fill="#92621b"/><circle cx="97.40" cy="37.47" r="1.45" fill="#92621b"/><circle cx="103.33" cy="38.15" r="1.45" fill="#92621b"/><circle cx="109.27" cy="37.60" r="1.45" fill="#92621b"/><circle cx="115.20" cy="36.83" r="1.45" fill="#92621b"/><circle cx="121.13" cy="36.27" r="1.45" fill="#92621b"/><circle cx="127.07" cy="36.35" r="1.45" fill="#92621b"/><circle cx="133.00" cy="37.15" r="1.45" fill="#92621b"/><circle cx="138.93" cy="36.30" r="1.45" fill="#92621b"/><circle cx="144.87" cy="71.65" r="1.45" fill="#92621b"/><circle cx="150.80" cy="71.50" r="1.45" fill="#92621b"/><circle cx="156.73" cy="68.82" r="1.45" fill="#92621b"/><circle cx="162.67" cy="41.89" r="1.45" fill="#92621b"/><circle cx="168.60" cy="40.16" r="1.45" fill="#92621b"/><circle cx="174.53" cy="38.76" r="1.45" fill="#92621b"/><circle cx="180.47" cy="37.19" r="1.45" fill="#92621b"/><circle cx="186.40" cy="37.15" r="1.45" fill="#92621b"/><circle cx="192.33" cy="37.32" r="1.45" fill="#92621b"/><circle cx="198.27" cy="37.78" r="1.45" fill="#92621b"/><circle cx="204.20" cy="37.29" r="1.45" fill="#92621b"/><circle cx="210.13" cy="39.22" r="1.45" fill="#92621b"/><circle cx="216.07" cy="38.32" r="1.45" fill="#92621b"/><circle cx="222.00" cy="81.47" r="1.45" fill="#92621b"/><circle cx="227.93" cy="81.71" r="1.45" fill="#92621b"/><circle cx="233.87" cy="82.68" r="1.45" fill="#92621b"/><circle cx="239.80" cy="83.47" r="1.45" fill="#92621b"/><circle cx="245.73" cy="85.17" r="1.45" fill="#92621b"/><circle cx="251.67" cy="85.17" r="1.45" fill="#92621b"/><circle cx="257.60" cy="86.13" r="1.45" fill="#92621b"/><circle cx="263.53" cy="85.65" r="1.45" fill="#92621b"/><circle cx="269.47" cy="84.59" r="1.45" fill="#92621b"/><circle cx="275.40" cy="40.29" r="1.45" fill="#92621b"/><circle cx="281.33" cy="41.76" r="1.45" fill="#92621b"/><circle cx="287.27" cy="42.88" r="1.45" fill="#92621b"/><circle cx="293.20" cy="41.31" r="1.45" fill="#92621b"/><circle cx="299.13" cy="41.64" r="1.45" fill="#92621b"/><circle cx="305.07" cy="42.39" r="1.45" fill="#92621b"/><circle cx="311.00" cy="44.48" r="1.45" fill="#92621b"/><circle cx="316.93" cy="43.89" r="1.45" fill="#92621b"/><circle cx="322.87" cy="44.06" r="1.45" fill="#92621b"/><circle cx="328.80" cy="43.23" r="1.45" fill="#92621b"/><circle cx="334.73" cy="43.39" r="1.45" fill="#92621b"/><circle cx="340.67" cy="45.13" r="1.45" fill="#92621b"/><circle cx="346.60" cy="44.68" r="1.45" fill="#92621b"/><circle cx="352.53" cy="45.77" r="1.45" fill="#92621b"/><circle cx="358.47" cy="47.60" r="1.45" fill="#92621b"/><circle cx="364.40" cy="48.17" r="1.45" fill="#92621b"/><circle cx="370.33" cy="47.39" r="1.45" fill="#92621b"/><circle cx="376.27" cy="47.82" r="1.45" fill="#92621b"/><circle cx="382.20" cy="49.11" r="1.45" fill="#92621b"/><circle cx="388.13" cy="52.16" r="1.45" fill="#92621b"/><circle cx="394.07" cy="51.67" r="1.45" fill="#92621b"/><circle cx="400.00" cy="115.22" r="1.45" fill="#92621b"/>
+    </svg>
+    <p>30초 전 34.72dB · 단절 시작 −14.69dB</p>
+  </figure>
+<figure class="trace">
+    <figcaption><strong style="color:#11796a">점진형</strong> <span>같은 사건의 30초 이력</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-gradual-30-title line-gradual-30-desc">
+      <title id="line-gradual-30-title">점진형 대표 사건의 단절 전 30초 통신 여유</title>
+      <desc id="line-gradual-30-desc">반초 단위 시뮬레이션 기록. 처음 34.22dB에서 단절 시작 −1.01dB까지 변화했다.</desc>
+      
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−30</text><line x1="44" x2="400" y1="108.25" y2="108.25" class="grid"/><text x="37" y="112.25" text-anchor="end">−10</text><line x1="44" x2="400" y1="93.38" y2="93.38" class="zero"/><text x="37" y="97.38" text-anchor="end">0</text><line x1="44" x2="400" y1="63.63" y2="63.63" class="grid"/><text x="37" y="67.63" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">50</text>
+      <text x="44.00" y="157" text-anchor="middle">−30초</text><text x="162.67" y="157" text-anchor="middle">−20초</text><text x="281.33" y="157" text-anchor="middle">−10초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,42.48 49.93,42.77 55.87,40.91 61.80,42.11 67.73,41.12 73.67,40.05 79.60,40.14 85.53,40.52 91.47,41.17 97.40,40.81 103.33,40.05 109.27,81.34 115.20,81.63 121.13,80.83 127.07,77.69 133.00,78.55 138.93,77.88 144.87,78.36 150.80,74.45 156.73,74.25 162.67,66.59 168.60,66.52 174.53,66.64 180.47,65.93 186.40,67.02 192.33,66.26 198.27,73.13 204.20,70.40 210.13,68.80 216.07,64.15 222.00,61.53 227.93,60.20 233.87,62.75 239.80,65.01 245.73,65.99 251.67,66.03 257.60,67.58 263.53,68.10 269.47,67.95 275.40,67.67 281.33,67.43 287.27,67.47 293.20,66.74 299.13,66.74 305.07,66.28 311.00,66.47 316.93,73.55 322.87,76.67 328.80,79.57 334.73,80.42 340.67,80.01 346.60,83.08 352.53,84.33 358.47,84.63 364.40,88.24 370.33,90.12 376.27,89.75 382.20,91.09 388.13,91.84 394.07,92.96 400.00,94.87" fill="none" stroke="#11796a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="42.48" r="1.45" fill="#11796a"/><circle cx="49.93" cy="42.77" r="1.45" fill="#11796a"/><circle cx="55.87" cy="40.91" r="1.45" fill="#11796a"/><circle cx="61.80" cy="42.11" r="1.45" fill="#11796a"/><circle cx="67.73" cy="41.12" r="1.45" fill="#11796a"/><circle cx="73.67" cy="40.05" r="1.45" fill="#11796a"/><circle cx="79.60" cy="40.14" r="1.45" fill="#11796a"/><circle cx="85.53" cy="40.52" r="1.45" fill="#11796a"/><circle cx="91.47" cy="41.17" r="1.45" fill="#11796a"/><circle cx="97.40" cy="40.81" r="1.45" fill="#11796a"/><circle cx="103.33" cy="40.05" r="1.45" fill="#11796a"/><circle cx="109.27" cy="81.34" r="1.45" fill="#11796a"/><circle cx="115.20" cy="81.63" r="1.45" fill="#11796a"/><circle cx="121.13" cy="80.83" r="1.45" fill="#11796a"/><circle cx="127.07" cy="77.69" r="1.45" fill="#11796a"/><circle cx="133.00" cy="78.55" r="1.45" fill="#11796a"/><circle cx="138.93" cy="77.88" r="1.45" fill="#11796a"/><circle cx="144.87" cy="78.36" r="1.45" fill="#11796a"/><circle cx="150.80" cy="74.45" r="1.45" fill="#11796a"/><circle cx="156.73" cy="74.25" r="1.45" fill="#11796a"/><circle cx="162.67" cy="66.59" r="1.45" fill="#11796a"/><circle cx="168.60" cy="66.52" r="1.45" fill="#11796a"/><circle cx="174.53" cy="66.64" r="1.45" fill="#11796a"/><circle cx="180.47" cy="65.93" r="1.45" fill="#11796a"/><circle cx="186.40" cy="67.02" r="1.45" fill="#11796a"/><circle cx="192.33" cy="66.26" r="1.45" fill="#11796a"/><circle cx="198.27" cy="73.13" r="1.45" fill="#11796a"/><circle cx="204.20" cy="70.40" r="1.45" fill="#11796a"/><circle cx="210.13" cy="68.80" r="1.45" fill="#11796a"/><circle cx="216.07" cy="64.15" r="1.45" fill="#11796a"/><circle cx="222.00" cy="61.53" r="1.45" fill="#11796a"/><circle cx="227.93" cy="60.20" r="1.45" fill="#11796a"/><circle cx="233.87" cy="62.75" r="1.45" fill="#11796a"/><circle cx="239.80" cy="65.01" r="1.45" fill="#11796a"/><circle cx="245.73" cy="65.99" r="1.45" fill="#11796a"/><circle cx="251.67" cy="66.03" r="1.45" fill="#11796a"/><circle cx="257.60" cy="67.58" r="1.45" fill="#11796a"/><circle cx="263.53" cy="68.10" r="1.45" fill="#11796a"/><circle cx="269.47" cy="67.95" r="1.45" fill="#11796a"/><circle cx="275.40" cy="67.67" r="1.45" fill="#11796a"/><circle cx="281.33" cy="67.43" r="1.45" fill="#11796a"/><circle cx="287.27" cy="67.47" r="1.45" fill="#11796a"/><circle cx="293.20" cy="66.74" r="1.45" fill="#11796a"/><circle cx="299.13" cy="66.74" r="1.45" fill="#11796a"/><circle cx="305.07" cy="66.28" r="1.45" fill="#11796a"/><circle cx="311.00" cy="66.47" r="1.45" fill="#11796a"/><circle cx="316.93" cy="73.55" r="1.45" fill="#11796a"/><circle cx="322.87" cy="76.67" r="1.45" fill="#11796a"/><circle cx="328.80" cy="79.57" r="1.45" fill="#11796a"/><circle cx="334.73" cy="80.42" r="1.45" fill="#11796a"/><circle cx="340.67" cy="80.01" r="1.45" fill="#11796a"/><circle cx="346.60" cy="83.08" r="1.45" fill="#11796a"/><circle cx="352.53" cy="84.33" r="1.45" fill="#11796a"/><circle cx="358.47" cy="84.63" r="1.45" fill="#11796a"/><circle cx="364.40" cy="88.24" r="1.45" fill="#11796a"/><circle cx="370.33" cy="90.12" r="1.45" fill="#11796a"/><circle cx="376.27" cy="89.75" r="1.45" fill="#11796a"/><circle cx="382.20" cy="91.09" r="1.45" fill="#11796a"/><circle cx="388.13" cy="91.84" r="1.45" fill="#11796a"/><circle cx="394.07" cy="92.96" r="1.45" fill="#11796a"/><circle cx="400.00" cy="94.87" r="1.45" fill="#11796a"/>
+    </svg>
+    <p>30초 전 34.22dB · 단절 시작 −1.01dB</p>
+  </figure>
+<figure class="trace">
+    <figcaption><strong style="color:#536c8d">기타형</strong> <span>같은 사건의 30초 이력</span></figcaption>
+    <svg viewBox="0 0 430 178" role="img" aria-labelledby="line-other-30-title line-other-30-desc">
+      <title id="line-other-30-title">기타형 대표 사건의 단절 전 30초 통신 여유</title>
+      <desc id="line-other-30-desc">반초 단위 시뮬레이션 기록. 처음 2.54dB에서 단절 시작 −0.94dB까지 변화했다.</desc>
+      <rect x="91.47" y="19" width="23.73" height="119" fill="#e6eaf0"/><rect x="133.00" y="19" width="17.80" height="119" fill="#e6eaf0"/><rect x="216.07" y="19" width="29.67" height="119" fill="#e6eaf0"/>
+      <line x1="44" x2="400" y1="138.00" y2="138.00" class="grid"/><text x="37" y="142.00" text-anchor="end">−30</text><line x1="44" x2="400" y1="108.25" y2="108.25" class="grid"/><text x="37" y="112.25" text-anchor="end">−10</text><line x1="44" x2="400" y1="93.38" y2="93.38" class="zero"/><text x="37" y="97.38" text-anchor="end">0</text><line x1="44" x2="400" y1="63.63" y2="63.63" class="grid"/><text x="37" y="67.63" text-anchor="end">20</text><line x1="44" x2="400" y1="19.00" y2="19.00" class="grid"/><text x="37" y="23.00" text-anchor="end">50</text>
+      <text x="44.00" y="157" text-anchor="middle">−30초</text><text x="162.67" y="157" text-anchor="middle">−20초</text><text x="281.33" y="157" text-anchor="middle">−10초</text><text x="400.00" y="157" text-anchor="middle">0초</text>
+      <line x1="400" x2="400" y1="19" y2="138" class="onset"/>
+      <text x="37" y="11" text-anchor="end">dB</text>
+      <polyline points="44.00,89.60 49.93,89.18 55.87,89.83 61.80,90.66 67.73,92.49 73.67,92.69 79.60,92.96 85.53,92.63 91.47,93.66 97.40,95.63 103.33,94.47 109.27,93.97 115.20,92.68 121.13,92.07 127.07,93.27 133.00,93.99 138.93,93.69 144.87,93.81 150.80,92.92 156.73,91.42 162.67,91.33 168.60,90.79 174.53,92.76 180.47,92.12 186.40,91.23 192.33,90.74 198.27,91.40 204.20,92.23 210.13,92.59 216.07,93.91 222.00,94.03 227.93,93.78 233.87,94.37 239.80,94.47 245.73,93.07 251.67,93.23 257.60,92.54 263.53,92.24 269.47,93.29 275.40,94.56 281.33,92.90 287.27,93.06 293.20,92.74 299.13,93.36 305.07,92.58 311.00,93.23 316.93,91.52 322.87,92.19 328.80,91.82 334.73,91.78 340.67,92.38 346.60,91.84 352.53,90.69 358.47,90.97 364.40,90.71 370.33,91.86 376.27,91.37 382.20,92.06 388.13,92.17 394.07,92.73 400.00,94.78" fill="none" stroke="#536c8d" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="44.00" cy="89.60" r="1.45" fill="#536c8d"/><circle cx="49.93" cy="89.18" r="1.45" fill="#536c8d"/><circle cx="55.87" cy="89.83" r="1.45" fill="#536c8d"/><circle cx="61.80" cy="90.66" r="1.45" fill="#536c8d"/><circle cx="67.73" cy="92.49" r="1.45" fill="#536c8d"/><circle cx="73.67" cy="92.69" r="1.45" fill="#536c8d"/><circle cx="79.60" cy="92.96" r="1.45" fill="#536c8d"/><circle cx="85.53" cy="92.63" r="1.45" fill="#536c8d"/><circle cx="91.47" cy="93.66" r="1.45" fill="#536c8d"/><circle cx="97.40" cy="95.63" r="1.45" fill="#536c8d"/><circle cx="103.33" cy="94.47" r="1.45" fill="#536c8d"/><circle cx="109.27" cy="93.97" r="1.45" fill="#536c8d"/><circle cx="115.20" cy="92.68" r="1.45" fill="#536c8d"/><circle cx="121.13" cy="92.07" r="1.45" fill="#536c8d"/><circle cx="127.07" cy="93.27" r="1.45" fill="#536c8d"/><circle cx="133.00" cy="93.99" r="1.45" fill="#536c8d"/><circle cx="138.93" cy="93.69" r="1.45" fill="#536c8d"/><circle cx="144.87" cy="93.81" r="1.45" fill="#536c8d"/><circle cx="150.80" cy="92.92" r="1.45" fill="#536c8d"/><circle cx="156.73" cy="91.42" r="1.45" fill="#536c8d"/><circle cx="162.67" cy="91.33" r="1.45" fill="#536c8d"/><circle cx="168.60" cy="90.79" r="1.45" fill="#536c8d"/><circle cx="174.53" cy="92.76" r="1.45" fill="#536c8d"/><circle cx="180.47" cy="92.12" r="1.45" fill="#536c8d"/><circle cx="186.40" cy="91.23" r="1.45" fill="#536c8d"/><circle cx="192.33" cy="90.74" r="1.45" fill="#536c8d"/><circle cx="198.27" cy="91.40" r="1.45" fill="#536c8d"/><circle cx="204.20" cy="92.23" r="1.45" fill="#536c8d"/><circle cx="210.13" cy="92.59" r="1.45" fill="#536c8d"/><circle cx="216.07" cy="93.91" r="1.45" fill="#536c8d"/><circle cx="222.00" cy="94.03" r="1.45" fill="#536c8d"/><circle cx="227.93" cy="93.78" r="1.45" fill="#536c8d"/><circle cx="233.87" cy="94.37" r="1.45" fill="#536c8d"/><circle cx="239.80" cy="94.47" r="1.45" fill="#536c8d"/><circle cx="245.73" cy="93.07" r="1.45" fill="#536c8d"/><circle cx="251.67" cy="93.23" r="1.45" fill="#536c8d"/><circle cx="257.60" cy="92.54" r="1.45" fill="#536c8d"/><circle cx="263.53" cy="92.24" r="1.45" fill="#536c8d"/><circle cx="269.47" cy="93.29" r="1.45" fill="#536c8d"/><circle cx="275.40" cy="94.56" r="1.45" fill="#536c8d"/><circle cx="281.33" cy="92.90" r="1.45" fill="#536c8d"/><circle cx="287.27" cy="93.06" r="1.45" fill="#536c8d"/><circle cx="293.20" cy="92.74" r="1.45" fill="#536c8d"/><circle cx="299.13" cy="93.36" r="1.45" fill="#536c8d"/><circle cx="305.07" cy="92.58" r="1.45" fill="#536c8d"/><circle cx="311.00" cy="93.23" r="1.45" fill="#536c8d"/><circle cx="316.93" cy="91.52" r="1.45" fill="#536c8d"/><circle cx="322.87" cy="92.19" r="1.45" fill="#536c8d"/><circle cx="328.80" cy="91.82" r="1.45" fill="#536c8d"/><circle cx="334.73" cy="91.78" r="1.45" fill="#536c8d"/><circle cx="340.67" cy="92.38" r="1.45" fill="#536c8d"/><circle cx="346.60" cy="91.84" r="1.45" fill="#536c8d"/><circle cx="352.53" cy="90.69" r="1.45" fill="#536c8d"/><circle cx="358.47" cy="90.97" r="1.45" fill="#536c8d"/><circle cx="364.40" cy="90.71" r="1.45" fill="#536c8d"/><circle cx="370.33" cy="91.86" r="1.45" fill="#536c8d"/><circle cx="376.27" cy="91.37" r="1.45" fill="#536c8d"/><circle cx="382.20" cy="92.06" r="1.45" fill="#536c8d"/><circle cx="388.13" cy="92.17" r="1.45" fill="#536c8d"/><circle cx="394.07" cy="92.73" r="1.45" fill="#536c8d"/><circle cx="400.00" cy="94.78" r="1.45" fill="#536c8d"/>
+    </svg>
+    <p>30초 전 2.54dB · 단절 시작 −0.94dB</p>
+  </figure></div>
+        <p class="small"><a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/30%EC%B4%88_%EC%9D%B4%EB%A0%A5%ED%99%95%EC%9E%A5_%EB%B6%84%EC%84%9D.md" target="_blank" rel="noopener">30초 이력 분석 원본</a></p>
+      </details>
+      <p class="note">연결을 유지한 상태의 급락을 별도로 모았더니, 3,830회 중 84.2%는 이후 30초 동안 새 지속 단절이 없었다. 급락과 함께 남은 통신 여유, 예정 경로의 차폐, 우회 경로 유무를 확인하는 근거다. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/%EA%B8%89%EB%9D%BD%EA%B3%BC_%EB%8B%A8%EC%A0%88_%EC%9C%84%ED%97%98.html" target="_blank" rel="noopener">연결 유지 급락 대조</a></p>
+    </section>
+
+    <section id="week" aria-labelledby="week-title">
+      <p class="index">04 · 주간 작업</p>
+      <h2 id="week-title">원인 조사에서 선제 제어 검증까지</h2>
+      <ol class="timeline">
+        <li><time datetime="2026-11-02">11.02–11.03</time><div><h3>예측 입력과 모델 대조</h3><p>수신한 비컨·패킷 기록, 시간 그래프, 물리 경로 예측을 비교했다. 놓친 사건에서 경로 부재와 패킷 적체가 함께 나타나는지 확인했다.</p></div></li>
+        <li><time datetime="2026-11-04">11.04</time><div><h3>전체 지도에서 단절 원인 조사</h3><p>345개 지도 비행과 동일 경로 1,035조건의 간섭 재생을 분석했다. 건물 차폐·간섭·섀도잉을 각각 제거해 시작 시점의 복구 여부를 대조했다.</p></div></li>
+        <li><time datetime="2026-11-05">11.05</time><div><h3>차폐 기반 선행경보와 V21 선제 재배치</h3><p>예정 경로의 차폐와 우회 연결을 계산해 위험 시점을 앞당겼다. 별도 42조건의 전체 임무에서 기존 V7 PPO 대비 V21의 새 단절이 246 → 166건으로 줄었다. 단절 전 이력은 30초로 확장했다.</p></div></li>
+        <li><time datetime="2026-11-07">11.07</time><div><h3>지도 300개 추가와 0.5초 판단 실험</h3><p>등록 지도는 총 645개가 됐다. 별도 실험 환경의 동일 36조건에서 물리 제어 판단을 3초에서 0.5초로 줄였을 때 새 단절이 341 → 242건으로 감소했다. 기존 Final V1 대비 임무 시간 조건을 충족하지 못해 실험 버전으로 보관했다.</p></div></li>
+        <li><time datetime="2026-11-08">11.08</time><div><h3>Final V1 기본 Transformer 업데이트</h3><p>링크 단절 시간 출력층을 갱신하고 전체망 위험 점수를 결합했다. 36조건의 전체 임무 검증을 통과해 기본 제어에 편입했다. 후속 공동학습은 학습 비행 448회와 GPU 갱신 56회를 마치고 17:17에 별도 최종 평가를 완료했다.</p></div></li>
+      </ol>
+      <p class="note warn"><b>장기 공동학습 후보 · 채택 기준 미달.</b> 별도 45조건에서 현재 Final V1 대비 선행탐지율은 56.03% → 55.17%(130 → 128/232건), 새 단절은 193 → 194건, 누적 단절 시간은 1,214.5초 → 1,255.0초였다. 56회 갱신 저장본으로 지도 캐시 오류 이후 최종 평가를 재개해 135개 비행 기록을 검증했다.</p>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-title">
+      <p class="index">05 · 근거</p>
+      <h2 id="sources-title">지표 정의와 원본 자료</h2>
+      <details>
+        <summary>지표와 단절 분류 기준 보기</summary>
+        <dl class="terms">
+          <div><dt>선행탐지율</dt><dd>3초 이상 7초 미만 앞서 경보를 맞힌 사건 수를 전체 새 단절 수로 나눈 값.</dd></div>
+          <div><dt>정밀도와 AP</dt><dd>정밀도는 전체 경보에서 제때 맞힌 경보의 비율. AP는 문턱을 바꿔가며 본 정밀도와 재현율의 관계를 요약한 위험 순위 지표.</dd></div>
+          <div><dt>오경보·늦은 경보</dt><dd>선행 구간 내 단절과 매칭되지 않은 경보 수를 편대 비행 시간으로 나눈 값.</dd></div>
+          <div><dt>통신 여유</dt><dd>직접·중계 경로를 고려한 수색망 전파 여유의 근사값(dB). 0dB는 근사 경계다. 지속 단절은 별도의 데이터·ACK 링크 판정으로 결정했다.</dd></div>
+          <div><dt>유형 문턱</dt><dd>마지막 0.5초 감소가 6dB 이상이면 급락 조건을 충족한다. −6~−4.5초와 −2~−0.5초의 중앙값 감소가 3dB 이상이면 점진 조건을 충족한다. 두 조건을 모두 충족하면 혼합형이다.</dd></div>
+          <div><dt>%와 %p</dt><dd>단절 감소율은 기존 값 대비 비율. 탐지율처럼 이미 퍼센트인 값의 차이는 퍼센트포인트. 증감은 반올림 전 수치로 계산했다.</dd></div>
+        </dl>
+      </details>
+      <ul class="evidence">
+        <li>선행탐지 개선과 고정 경보 비용 대조. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/forecast_shield/RESULTS.md" target="_blank" rel="noopener">V18·V20 평가</a></li>
+        <li>동일 관측 비교와 전체 임무 검증. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/final_v1/RESULTS.md" target="_blank" rel="noopener">Final V1 V21 검증</a> · <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/transformer-upgrade-summary.json" target="_blank" rel="noopener">Transformer 평가 JSON</a></li>
+        <li>345개 지도와 단절 형태, 원인 제거 대조. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/outage_atlas/RESULTS.md" target="_blank" rel="noopener">전체 지도 조사</a> · <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/%EB%8B%A8%EC%A0%88%EC%9C%A0%ED%98%95/%EA%B8%89%EB%9D%BD%ED%98%95_%EC%A0%90%EC%A7%84%ED%98%95_%ED%98%BC%ED%95%A9%ED%98%95_%EC%83%81%EC%84%B8%EB%B6%84%EC%84%9D.md" target="_blank" rel="noopener">유형 상세 분석</a></li>
+        <li>빠른 판단과 장기학습의 별도 평가 구성. <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/fast_halfsec/RESULTS.md" target="_blank" rel="noopener">0.5초 결과</a> · <a href="https://github.com/MinchanKim1215/capstone-final-v1/blob/589a34437c510487de5788449e7fc7ca7d763e9b/reports/long-training-plan.json" target="_blank" rel="noopener">장기학습 계획</a></li>
+        <li>장기 공동학습 최종 집계는 <code>final_v1/long_training/artifacts/results.json</code>에 기록했다. 11.08 17:17 KST 완료.</li>
+      </ul>
+      <p class="small">전체 수치는 시뮬레이션 기록에서 집계했다. 지도 단위 95% 구간은 해당 비교 표본의 불확실성을 나타낸다. 실기체에서의 통신 지연과 이동 성능은 별도 검증 단계다.</p>
+    </section>
+  </main>
+  <footer class="wrap">캡스톤 디자인 II · Final V1 · 2026.11.08</footer>
+</body>
+</html>

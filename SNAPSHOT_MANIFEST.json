@@ -3024,8 +3024,8 @@
       "sha256": "ad3bb974cc953727239d98218dcb564d8bed8aaf8a7bb115df2107b3d5f3e25d"
     },
     "README.md": {
-      "bytes": 1988,
-      "sha256": "17fe08224c25902d04243442852b092c501ed4944da5b2a0cc97c805e549cece"
+      "bytes": 2806,
+      "sha256": "86bc8f689dee66e4be029b27c4a5c95bafd5d8efad8ea49834a6899e374c4516"
     },
     "reports/30초_이력확장_분석.md": {
       "bytes": 5776,
@@ -3334,6 +3334,84 @@
     "training_ops/verify_training_review_pdf.py": {
       "bytes": 3256,
       "sha256": "d0e48e9a9159cf3f2cf4376d24ff305b7f5b09a9abd330d465941eee8ba5bdfd"
+    },
+    "final_v1/halfsec_joint/README.md": {
+      "bytes": 2426,
+      "sha256": "3f326af55d5c91365137e4d0a7325e2057cb38b5ce8347b3c6df271a31106c85"
+    },
+    "final_v1/halfsec_joint/__init__.py": {
+      "bytes": 182,
+      "sha256": "094519119b55abafd5d095ffd41cdab347dae8faf1078d9e1247b9ea17541137"
+    },
+    "final_v1/halfsec_joint/mission.py": {
+      "bytes": 8147,
+      "sha256": "be70e6267c256d5b6a2d45fc94f9e8cd2e20c601ba2ceb08fdfa4a94016ad595"
+    },
+    "final_v1/halfsec_joint/model.py": {
+      "bytes": 2687,
+      "sha256": "289076ca15edb023d0b9bfcb186dc883149f419ff2a0e33249521785a62b0379"
+    },
+    "final_v1/halfsec_joint/observations.py": {
+      "bytes": 6296,
+      "sha256": "2400ce6303cda742e4b6f39af97de5d203a375431998e6fb57355f47f859d926"
+    },
+    "final_v1/halfsec_joint/protocol.py": {
+      "bytes": 5420,
+      "sha256": "a5c9b6fd59b9fba276ebe6735fe29cbca0aa1685b172e11a4de295b3f4a74908"
+    },
+    "final_v1/halfsec_joint/run.py": {
+      "bytes": 20123,
+      "sha256": "0611168271def5429501545e700154997e9059dc81746af992deb39334485149"
+    },
+    "final_v1/halfsec_joint/training.py": {
+      "bytes": 10685,
+      "sha256": "15a6ac8d64b8b9381344c5db29628a5dca5258e71647c986189e2a534b6c2507"
+    },
+    "reports/Final_V1_Weekly_Report_20261108.html": {
+      "bytes": 60944,
+      "sha256": "4c40bc9ed4cc0038dbfd693558595ee766cdbc86c1c2c6b32a7901492bf91a31"
+    },
+    "reports/busan-diagnostic-20261110.json": {
+      "bytes": 17644,
+      "sha256": "67381d099540fb5864c7ece7ae936ca968635d55ae6637e1ebb7095e671daa26"
+    },
+    "reports/halfsec-joint-results.json": {
+      "bytes": 7408,
+      "sha256": "10dcfc670624f64949fda61447ac5fd09a4b0dfd8585528b22ddaa7ea80b3173"
+    },
+    "reports/joint-training-results-20261110.md": {
+      "bytes": 3565,
+      "sha256": "2693fc95594e4406467ea9141f06e2b0be62a91496b624ef0051c430aa3b2bdc"
+    },
+    "reports/long-training-results.json": {
+      "bytes": 20616,
+      "sha256": "ff3cdaf783e538e560bb4ae2cbc25df50fbcbf0c9dddf4c7ab2c034aafced958"
+    },
+    "tmp/analyze_halfsec_joint_20261110.py": {
+      "bytes": 6017,
+      "sha256": "af132bb1dd9aaf42eecf453665caaaee6d35eee798e26fa5641c176db749a944"
     }
+  },
+  "updated_at": "2026-11-13",
+  "update": {
+    "base_commit": "589a34437c510487de5788449e7fc7ca7d763e9b",
+    "updated_files": [
+      "README.md",
+      "final_v1/halfsec_joint/README.md",
+      "final_v1/halfsec_joint/__init__.py",
+      "final_v1/halfsec_joint/mission.py",
+      "final_v1/halfsec_joint/model.py",
+      "final_v1/halfsec_joint/observations.py",
+      "final_v1/halfsec_joint/protocol.py",
+      "final_v1/halfsec_joint/run.py",
+      "final_v1/halfsec_joint/training.py",
+      "reports/Final_V1_Weekly_Report_20261108.html",
+      "reports/busan-diagnostic-20261110.json",
+      "reports/halfsec-joint-results.json",
+      "reports/joint-training-results-20261110.md",
+      "reports/long-training-results.json",
+      "tmp/analyze_halfsec_joint_20261110.py"
+    ],
+    "tracked_files": 847
   }
 }

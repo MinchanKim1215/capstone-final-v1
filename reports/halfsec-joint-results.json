@@ -1,0 +1,269 @@
+{
+  "completed_at": "2026-11-10T04:26:21+09:00",
+  "frozen_sha256": "3fbdb1639127ffac43201b141725edab1185ba529f63d3aacf7fa2c14612d400",
+  "selected": {
+    "step": 60,
+    "path": "final_v1/halfsec_joint/artifacts/checkpoints/joint_0060.pt",
+    "sha256": "c0c995098ea73e9ab551cc7a9b09acc41e022825b8d43c9db6a746705ad91645"
+  },
+  "training": {
+    "updates": 80,
+    "flights": 480,
+    "maps": 447
+  },
+  "control": {
+    "native_3s": {
+      "flights": 45,
+      "hours": 23.64666666666667,
+      "starts": 277,
+      "starts_per_h": 11.714124612348463,
+      "cut_seconds": 2043.0,
+      "cut_seconds_per_h": 86.39695517338595,
+      "timely_pdr": 0.9661270870532218,
+      "network_fraction": 0.9756308147730477,
+      "mean_mission_s": 1891.7333333333333,
+      "relay_m": 32352.05008484481,
+      "completed": 45,
+      "violations": 0,
+      "prevention_requests": 215,
+      "median_planner_p95_ms": 75.44994000345464,
+      "planner_over_200ms": 0,
+      "planner_evaluations": 0
+    },
+    "warm_3s": {
+      "flights": 45,
+      "hours": 44.52305555555556,
+      "starts": 186,
+      "starts_per_h": 4.177610850807634,
+      "cut_seconds": 1518.0,
+      "cut_seconds_per_h": 34.09469500820423,
+      "timely_pdr": 0.9851668611144039,
+      "network_fraction": 0.9902453784868015,
+      "mean_mission_s": 3561.8444444444444,
+      "relay_m": 28250.970968343612,
+      "completed": 36,
+      "violations": 0,
+      "prevention_requests": 504,
+      "median_planner_p95_ms": 47.889050235971794,
+      "planner_over_200ms": 461,
+      "planner_evaluations": 53440
+    },
+    "warm_05s": {
+      "flights": 45,
+      "hours": 41.877361111111114,
+      "starts": 149,
+      "starts_per_h": 3.5580083378383307,
+      "cut_seconds": 1227.0,
+      "cut_seconds_per_h": 29.29984047333981,
+      "timely_pdr": 0.9874227102728315,
+      "network_fraction": 0.9916820610446508,
+      "mean_mission_s": 3350.188888888889,
+      "relay_m": 30046.47988463468,
+      "completed": 37,
+      "violations": 0,
+      "prevention_requests": 721,
+      "median_planner_p95_ms": 43.40114030055698,
+      "planner_over_200ms": 977,
+      "planner_evaluations": 301517
+    },
+    "joint_05s": {
+      "flights": 45,
+      "hours": 41.10638888888889,
+      "starts": 188,
+      "starts_per_h": 4.573498307237994,
+      "cut_seconds": 1491.5,
+      "cut_seconds_per_h": 36.28389747470993,
+      "timely_pdr": 0.9838564790099764,
+      "network_fraction": 0.9895629903434854,
+      "mean_mission_s": 3288.511111111111,
+      "relay_m": 28779.46201663051,
+      "completed": 38,
+      "violations": 0,
+      "prevention_requests": 831,
+      "median_planner_p95_ms": 36.4107999484986,
+      "planner_over_200ms": 691,
+      "planner_evaluations": 295966
+    }
+  },
+  "paired": {
+    "cadence": {
+      "groups": 15,
+      "starts_delta": -37,
+      "starts_per_h_delta": -0.619602512969303,
+      "ci95": [
+        -2.1651407028214438,
+        0.5402827527318345
+      ],
+      "duration_fraction": -0.05942302053243331,
+      "timely_pdr_pp": 0.22558491584275808,
+      "completion_regressions": 2,
+      "fewer_starts": 16,
+      "more_starts": 4
+    },
+    "joint_learning": {
+      "groups": 15,
+      "starts_delta": 39,
+      "starts_per_h_delta": 1.0154899693996633,
+      "ci95": [
+        -0.4361155806875553,
+        3.2770923835953774
+      ],
+      "duration_fraction": -0.018410238892002884,
+      "timely_pdr_pp": -0.35662312628550463,
+      "completion_regressions": 0,
+      "fewer_starts": 7,
+      "more_starts": 12
+    },
+    "whole_system": {
+      "groups": 15,
+      "starts_delta": -89,
+      "starts_per_h_delta": -7.1406263051104695,
+      "ci95": [
+        -11.413536469122164,
+        -2.8269172767983104
+      ],
+      "duration_fraction": 0.7383587068884501,
+      "timely_pdr_pp": 1.7729391956754603,
+      "completion_regressions": 7,
+      "fewer_starts": 27,
+      "more_starts": 8
+    }
+  },
+  "forecast_operating": {
+    "warm": {
+      "events": 149,
+      "hits": 83,
+      "alerts": 146,
+      "false_or_late": 63,
+      "hours": 41.877361111111114,
+      "recall": 0.5570469798657718,
+      "precision": 0.5684931506849316,
+      "false_per_h": 1.504392787139697,
+      "median_lead_s": 6.5,
+      "average_precision": 0.8272644768745999,
+      "ranking_rows": 297701,
+      "ranking_positives": 815
+    },
+    "joint": {
+      "events": 149,
+      "hits": 90,
+      "alerts": 148,
+      "false_or_late": 58,
+      "hours": 41.877361111111114,
+      "recall": 0.6040268456375839,
+      "precision": 0.6081081081081081,
+      "false_per_h": 1.3849965341921018,
+      "median_lead_s": 6.5,
+      "average_precision": 0.8546602229699686,
+      "ranking_rows": 297701,
+      "ranking_positives": 815
+    }
+  },
+  "forecast_matched": {
+    "warm": {
+      "events": 149,
+      "hits": 89,
+      "alerts": 139,
+      "false_or_late": 50,
+      "hours": 41.877361111111114,
+      "recall": 0.5973154362416108,
+      "precision": 0.6402877697841727,
+      "false_per_h": 1.19396252947595,
+      "median_lead_s": 6.5,
+      "average_precision": 0.8272644768745999,
+      "ranking_rows": 297701,
+      "ranking_positives": 815
+    },
+    "joint": {
+      "events": 149,
+      "hits": 89,
+      "alerts": 127,
+      "false_or_late": 38,
+      "hours": 41.877361111111114,
+      "recall": 0.5973154362416108,
+      "precision": 0.7007874015748031,
+      "false_per_h": 0.9074115224017218,
+      "median_lead_s": 6.5,
+      "average_precision": 0.8546602229699686,
+      "ranking_rows": 297701,
+      "ranking_positives": 815
+    }
+  },
+  "confirmation_maps": {
+    "new": [],
+    "prior": [
+      "gyeonggi_20261031_b2_02",
+      "busan_20261031_04",
+      "daejeon_20261101_14",
+      "daejeon_20261101_b2_23",
+      "ulsan_20261104_7d609fea08",
+      "daegu_20261104_b2_1d6fd09e4d",
+      "busan_20261031_b2_01",
+      "busan_20261031_06",
+      "daejeon_20261101_15",
+      "daegu_20261101_b2_20",
+      "sejong_20261104_a2e9a3d4b0",
+      "gyeonggi_20261104_b2_9d4e520d54",
+      "gyeonggi_20261031_b2_05",
+      "incheon_20261031_cached_09",
+      "ulsan_20261101_10"
+    ]
+  },
+  "stress": {
+    "joint_05s": {
+      "mission_completed": true,
+      "coverage": 1.0,
+      "duration_s": 2878.0,
+      "onsets": 29,
+      "cut_seconds": 273.5
+    },
+    "native_3s": {
+      "mission_completed": true,
+      "coverage": 1.0,
+      "duration_s": 1866.0,
+      "onsets": 20,
+      "cut_seconds": 197.5
+    },
+    "warm_05s": {
+      "mission_completed": true,
+      "coverage": 1.0,
+      "duration_s": 2804.5,
+      "onsets": 27,
+      "cut_seconds": 220.0
+    },
+    "warm_3s": {
+      "mission_completed": true,
+      "coverage": 1.0,
+      "duration_s": 2874.5,
+      "onsets": 26,
+      "cut_seconds": 293.5
+    }
+  },
+  "audit": {
+    "flights": 184,
+    "rf_frames": 1109151,
+    "exact_network_recomputed": true,
+    "safety_and_packet_conservation": true,
+    "offset_applications": 2763,
+    "shortest_request_gap_s": {
+      "ppo_05s": 0.5,
+      "physics_3s": 3.0
+    },
+    "command_clocks_checked": true
+  },
+  "acceptance": {
+    "passed": false,
+    "checks": {
+      "safe": true,
+      "every_mission_completed": false,
+      "prior_stall_completed": true,
+      "cut_rate_improves": true,
+      "cut_time_improves": true,
+      "gains_from_joint_learning": false,
+      "pdr": true,
+      "mission_time": false,
+      "lead_recall": true,
+      "alert_budget": true
+    }
+  }
+}

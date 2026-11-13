@@ -1,0 +1,781 @@
+{
+  "completed_at": "2026-11-08T17:17:00+09:00",
+  "freeze_sha256": "287a90bf4a0128a2d3b00394a43c3861e2c7435bad2c5847f61912d9010f537a",
+  "checkpoint": {
+    "step": 56,
+    "path": "final_v1/long_training/artifacts/checkpoints/joint_0056.pt",
+    "sha256": "42093ebefd28a9e4e48fcbca4ab58a848a5ad82ae15fba51b7a9c21244f81c17"
+  },
+  "forecasts": {
+    "incumbent": {
+      "events": 232,
+      "hits": 130,
+      "alerts": 148,
+      "false_or_late": 18,
+      "hours": 24.378333333333334,
+      "recall": 0.5603448275862069,
+      "precision": 0.8783783783783784,
+      "false_per_h": 0.738360566076434,
+      "median_lead_s": 5.0,
+      "average_precision": 0.8372954869284193,
+      "ranking_rows": 28396,
+      "ranking_positives": 226
+    },
+    "candidate": {
+      "events": 232,
+      "hits": 128,
+      "alerts": 150,
+      "false_or_late": 22,
+      "hours": 24.378333333333334,
+      "recall": 0.5517241379310345,
+      "precision": 0.8533333333333334,
+      "false_per_h": 0.9024406918711971,
+      "median_lead_s": 5.0,
+      "average_precision": 0.8185410862446009,
+      "ranking_rows": 28396,
+      "ranking_positives": 226
+    }
+  },
+  "missions": {
+    "incumbent": {
+      "flights": 45,
+      "hours": 24.390833333333333,
+      "starts": 193,
+      "starts_per_h": 7.912808773787967,
+      "cut_s_per_h": 49.79329666199734,
+      "timely_pdr": 0.9793759798953007,
+      "completed": 45,
+      "safety": 0,
+      "mean_relay_m": 33090.324719722514,
+      "step_p95_median_ms": 96.77969990298152,
+      "cut_seconds": 1214.5
+    },
+    "candidate": {
+      "flights": 45,
+      "hours": 24.361666666666668,
+      "starts": 194,
+      "starts_per_h": 7.963330368748717,
+      "cut_s_per_h": 51.51535882876103,
+      "timely_pdr": 0.9789810950719482,
+      "completed": 45,
+      "safety": 0,
+      "mean_relay_m": 32249.77493834449,
+      "step_p95_median_ms": 98.46657504094752,
+      "cut_seconds": 1255.0
+    }
+  },
+  "paired": {
+    "groups": 15,
+    "ci95": [
+      -1.0106117861867039,
+      1.0723512153976316
+    ],
+    "starts_delta": 1,
+    "starts_per_h_delta": 0.050521594960749816,
+    "cut_s_per_h_delta": 1.722062166763692,
+    "pdr_pp": -0.039488482335248154,
+    "duration_fraction": -0.001195804434726111,
+    "completion_regressions": 0,
+    "fleet_requests": 39,
+    "cases": [
+      {
+        "spec": {
+          "region": "busan_20261031_b2_01",
+          "direction": "east_west",
+          "seed": 1478386028,
+          "kind": "clear"
+        },
+        "starts_before": 4,
+        "starts_after": 4,
+        "cut_s_before": 18.0,
+        "cut_s_after": 17.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "busan_20261031_b2_01",
+          "direction": "east_west",
+          "seed": 1478386028,
+          "kind": "continuous"
+        },
+        "starts_before": 7,
+        "starts_after": 9,
+        "cut_s_before": 26.0,
+        "cut_s_after": 31.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 2
+      },
+      {
+        "spec": {
+          "region": "busan_20261031_b2_01",
+          "direction": "east_west",
+          "seed": 1478386028,
+          "kind": "intermittent"
+        },
+        "starts_before": 3,
+        "starts_after": 2,
+        "cut_s_before": 6.0,
+        "cut_s_after": 12.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "daegu_20261101_b2_08",
+          "direction": "north_south",
+          "seed": 447082668,
+          "kind": "clear"
+        },
+        "starts_before": 1,
+        "starts_after": 0,
+        "cut_s_before": 3.0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daegu_20261101_b2_08",
+          "direction": "north_south",
+          "seed": 447082668,
+          "kind": "continuous"
+        },
+        "starts_before": 3,
+        "starts_after": 2,
+        "cut_s_before": 5.5,
+        "cut_s_after": 3.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "daegu_20261101_b2_08",
+          "direction": "north_south",
+          "seed": 447082668,
+          "kind": "intermittent"
+        },
+        "starts_before": 2,
+        "starts_after": 3,
+        "cut_s_before": 4.5,
+        "cut_s_after": 7.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "daegu_20261104_41b8313afe",
+          "direction": "north_south",
+          "seed": 1788881215,
+          "kind": "clear"
+        },
+        "starts_before": 3,
+        "starts_after": 6,
+        "cut_s_before": 29.0,
+        "cut_s_after": 38.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daegu_20261104_41b8313afe",
+          "direction": "north_south",
+          "seed": 1788881215,
+          "kind": "continuous"
+        },
+        "starts_before": 7,
+        "starts_after": 5,
+        "cut_s_before": 50.5,
+        "cut_s_after": 37.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 10
+      },
+      {
+        "spec": {
+          "region": "daegu_20261104_41b8313afe",
+          "direction": "north_south",
+          "seed": 1788881215,
+          "kind": "intermittent"
+        },
+        "starts_before": 3,
+        "starts_after": 9,
+        "cut_s_before": 8.5,
+        "cut_s_after": 68.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 4
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_14",
+          "direction": "east_west",
+          "seed": 2075759665,
+          "kind": "clear"
+        },
+        "starts_before": 3,
+        "starts_after": 2,
+        "cut_s_before": 15.5,
+        "cut_s_after": 15.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_14",
+          "direction": "east_west",
+          "seed": 2075759665,
+          "kind": "continuous"
+        },
+        "starts_before": 4,
+        "starts_after": 6,
+        "cut_s_before": 47.0,
+        "cut_s_after": 45.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 2
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_14",
+          "direction": "east_west",
+          "seed": 2075759665,
+          "kind": "intermittent"
+        },
+        "starts_before": 4,
+        "starts_after": 4,
+        "cut_s_before": 55.5,
+        "cut_s_after": 40.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 3
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_b2_06",
+          "direction": "north_south",
+          "seed": 555859520,
+          "kind": "clear"
+        },
+        "starts_before": 0,
+        "starts_after": 0,
+        "cut_s_before": 0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_b2_06",
+          "direction": "north_south",
+          "seed": 555859520,
+          "kind": "continuous"
+        },
+        "starts_before": 1,
+        "starts_after": 0,
+        "cut_s_before": 7.0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_b2_06",
+          "direction": "north_south",
+          "seed": 555859520,
+          "kind": "intermittent"
+        },
+        "starts_before": 1,
+        "starts_after": 3,
+        "cut_s_before": 6.5,
+        "cut_s_after": 6.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_b2_14",
+          "direction": "north_south",
+          "seed": 938628275,
+          "kind": "clear"
+        },
+        "starts_before": 0,
+        "starts_after": 0,
+        "cut_s_before": 0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_b2_14",
+          "direction": "north_south",
+          "seed": 938628275,
+          "kind": "continuous"
+        },
+        "starts_before": 8,
+        "starts_after": 11,
+        "cut_s_before": 106.5,
+        "cut_s_after": 107.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261101_b2_14",
+          "direction": "north_south",
+          "seed": 938628275,
+          "kind": "intermittent"
+        },
+        "starts_before": 2,
+        "starts_after": 2,
+        "cut_s_before": 14.0,
+        "cut_s_after": 18.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261104_d14c2fc4ec",
+          "direction": "north_south",
+          "seed": 998452313,
+          "kind": "clear"
+        },
+        "starts_before": 0,
+        "starts_after": 0,
+        "cut_s_before": 0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261104_d14c2fc4ec",
+          "direction": "north_south",
+          "seed": 998452313,
+          "kind": "continuous"
+        },
+        "starts_before": 9,
+        "starts_after": 9,
+        "cut_s_before": 77.0,
+        "cut_s_after": 60.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "daejeon_20261104_d14c2fc4ec",
+          "direction": "north_south",
+          "seed": 998452313,
+          "kind": "intermittent"
+        },
+        "starts_before": 7,
+        "starts_after": 2,
+        "cut_s_before": 23.0,
+        "cut_s_after": 4.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "gwangju_20261104_8d5ce7aa71",
+          "direction": "north_south",
+          "seed": 558964421,
+          "kind": "clear"
+        },
+        "starts_before": 2,
+        "starts_after": 0,
+        "cut_s_before": 5.0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "gwangju_20261104_8d5ce7aa71",
+          "direction": "north_south",
+          "seed": 558964421,
+          "kind": "continuous"
+        },
+        "starts_before": 0,
+        "starts_after": 0,
+        "cut_s_before": 0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "gwangju_20261104_8d5ce7aa71",
+          "direction": "north_south",
+          "seed": 558964421,
+          "kind": "intermittent"
+        },
+        "starts_before": 1,
+        "starts_after": 1,
+        "cut_s_before": 3.0,
+        "cut_s_after": 1.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "gwangju_20261104_b2_1ebb081984",
+          "direction": "north_south",
+          "seed": 619887795,
+          "kind": "clear"
+        },
+        "starts_before": 8,
+        "starts_after": 10,
+        "cut_s_before": 30.5,
+        "cut_s_after": 75.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 2
+      },
+      {
+        "spec": {
+          "region": "gwangju_20261104_b2_1ebb081984",
+          "direction": "north_south",
+          "seed": 619887795,
+          "kind": "continuous"
+        },
+        "starts_before": 12,
+        "starts_after": 12,
+        "cut_s_before": 102.5,
+        "cut_s_after": 68.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "gwangju_20261104_b2_1ebb081984",
+          "direction": "north_south",
+          "seed": 619887795,
+          "kind": "intermittent"
+        },
+        "starts_before": 8,
+        "starts_after": 7,
+        "cut_s_before": 40.0,
+        "cut_s_after": 45.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "gyeonggi_20261031_b2_05",
+          "direction": "north_south",
+          "seed": 1333104985,
+          "kind": "clear"
+        },
+        "starts_before": 15,
+        "starts_after": 12,
+        "cut_s_before": 93.0,
+        "cut_s_after": 96.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "gyeonggi_20261031_b2_05",
+          "direction": "north_south",
+          "seed": 1333104985,
+          "kind": "continuous"
+        },
+        "starts_before": 10,
+        "starts_after": 8,
+        "cut_s_before": 74.0,
+        "cut_s_after": 72.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "gyeonggi_20261031_b2_05",
+          "direction": "north_south",
+          "seed": 1333104985,
+          "kind": "intermittent"
+        },
+        "starts_before": 13,
+        "starts_after": 9,
+        "cut_s_before": 76.5,
+        "cut_s_after": 72.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "gyeonggi_20261104_b2_9d4e520d54",
+          "direction": "north_south",
+          "seed": 1719132491,
+          "kind": "clear"
+        },
+        "starts_before": 10,
+        "starts_after": 11,
+        "cut_s_before": 65.5,
+        "cut_s_after": 50.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 2
+      },
+      {
+        "spec": {
+          "region": "gyeonggi_20261104_b2_9d4e520d54",
+          "direction": "north_south",
+          "seed": 1719132491,
+          "kind": "continuous"
+        },
+        "starts_before": 10,
+        "starts_after": 10,
+        "cut_s_before": 65.0,
+        "cut_s_after": 64.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "gyeonggi_20261104_b2_9d4e520d54",
+          "direction": "north_south",
+          "seed": 1719132491,
+          "kind": "intermittent"
+        },
+        "starts_before": 9,
+        "starts_after": 8,
+        "cut_s_before": 47.0,
+        "cut_s_after": 53.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "incheon_20261031_cached_09",
+          "direction": "north_south",
+          "seed": 1634812361,
+          "kind": "clear"
+        },
+        "starts_before": 4,
+        "starts_after": 4,
+        "cut_s_before": 8.0,
+        "cut_s_after": 22.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "incheon_20261031_cached_09",
+          "direction": "north_south",
+          "seed": 1634812361,
+          "kind": "continuous"
+        },
+        "starts_before": 4,
+        "starts_after": 6,
+        "cut_s_before": 12.0,
+        "cut_s_after": 21.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "incheon_20261031_cached_09",
+          "direction": "north_south",
+          "seed": 1634812361,
+          "kind": "intermittent"
+        },
+        "starts_before": 3,
+        "starts_after": 6,
+        "cut_s_before": 10.5,
+        "cut_s_after": 21.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "incheon_20261101_cached_03",
+          "direction": "north_south",
+          "seed": 1299598947,
+          "kind": "clear"
+        },
+        "starts_before": 1,
+        "starts_after": 1,
+        "cut_s_before": 2.0,
+        "cut_s_after": 5.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "incheon_20261101_cached_03",
+          "direction": "north_south",
+          "seed": 1299598947,
+          "kind": "continuous"
+        },
+        "starts_before": 1,
+        "starts_after": 1,
+        "cut_s_before": 2.0,
+        "cut_s_after": 5.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "incheon_20261101_cached_03",
+          "direction": "north_south",
+          "seed": 1299598947,
+          "kind": "intermittent"
+        },
+        "starts_before": 1,
+        "starts_after": 1,
+        "cut_s_before": 2.0,
+        "cut_s_after": 5.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 1
+      },
+      {
+        "spec": {
+          "region": "seoul_20261031_04",
+          "direction": "east_west",
+          "seed": 2122502928,
+          "kind": "clear"
+        },
+        "starts_before": 0,
+        "starts_after": 0,
+        "cut_s_before": 0,
+        "cut_s_after": 0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "seoul_20261031_04",
+          "direction": "east_west",
+          "seed": 2122502928,
+          "kind": "continuous"
+        },
+        "starts_before": 2,
+        "starts_after": 2,
+        "cut_s_before": 3.5,
+        "cut_s_after": 3.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "seoul_20261031_04",
+          "direction": "east_west",
+          "seed": 2122502928,
+          "kind": "intermittent"
+        },
+        "starts_before": 2,
+        "starts_after": 2,
+        "cut_s_before": 3.5,
+        "cut_s_after": 3.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "ulsan_20261104_7d609fea08",
+          "direction": "east_west",
+          "seed": 626606713,
+          "kind": "clear"
+        },
+        "starts_before": 1,
+        "starts_after": 1,
+        "cut_s_before": 19.0,
+        "cut_s_after": 19.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "ulsan_20261104_7d609fea08",
+          "direction": "east_west",
+          "seed": 626606713,
+          "kind": "continuous"
+        },
+        "starts_before": 1,
+        "starts_after": 1,
+        "cut_s_before": 19.0,
+        "cut_s_after": 19.0,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      },
+      {
+        "spec": {
+          "region": "ulsan_20261104_7d609fea08",
+          "direction": "east_west",
+          "seed": 626606713,
+          "kind": "intermittent"
+        },
+        "starts_before": 3,
+        "starts_after": 2,
+        "cut_s_before": 28.0,
+        "cut_s_after": 20.5,
+        "complete_before": true,
+        "complete_after": true,
+        "fleet_requests": 0
+      }
+    ]
+  },
+  "acceptance": {
+    "passed": false,
+    "checks": {
+      "complete": true,
+      "safety": true,
+      "fewer_starts": false,
+      "cut_seconds": false,
+      "pdr": true,
+      "duration": true,
+      "higher_recall": false,
+      "alert_budget": true
+    }
+  },
+  "audit": {
+    "flights": 135,
+    "verified": true,
+    "rf_frames": 526542
+  },
+  "training": {
+    "updates": 56,
+    "flights": 448,
+    "maps": 447
+  }
+}
