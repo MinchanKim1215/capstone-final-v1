@@ -1,0 +1,1221 @@
+{
+  "version": "Final V1 relocation upgrade (cut recovery, reconnect fallback, trigger, bypass)",
+  "controller": "v21",
+  "steps": null,
+  "limit": null,
+  "sources": {
+    "__init__.py": "fff49334b664eb0f8ac60a6ff49ada1a40f8cc621ef2a1ca656a282cde82b739",
+    "options.py": "cf35cafd229c0b19ab02c33951197f8727f820fa003598e753b3bba789fe71d3",
+    "graph.py": "c9afc3904f3775c53dda46f8797dd7a3bd1f8cf5e52fc7b2be9343a3d7260674",
+    "recovery.py": "268aad8394cad0d7a33cc637c04bd6666f442c34a7cbe5e90a7e4b345b12bf8a",
+    "bypass.py": "62e720b4cc1254ef5cccce1c61523f34af3f3b8802967749ff5caa33ac057735",
+    "control.py": "b110b1dd0bd9781a7fc96b47f3b805e26386185d8a30765aed08d282feea4430",
+    "transport.py": "08eebb31c48eee0fb6b0fd883b8d32501ed8bce4dfa9157d2023e52d7d0cbb9f",
+    "runner.py": "5aa028c261759291cec7196e4b194108faec09f174d453befbbea71682d2b7d3"
+  },
+  "final_v1_protocol_sha256": "80681c9e8a927100411a0b723ea8bc3dedbbdcbf49703c7eb709e8ab2ed4f865",
+  "started_at": "2026-11-11T19:14:43+09:00",
+  "confirmation": {
+    "stats": {
+      "v21": {
+        "flights": 42,
+        "hours": 21.275,
+        "starts": 166,
+        "starts_per_h": 7.802585193889542,
+        "cut_s_per_h": 46.88601645123384,
+        "timely_pdr": 0.9789193541367455,
+        "mean_mission_min": 30.392857142857146,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 31.970024509785517,
+        "new_outages": 166,
+        "long_outages": 37,
+        "long_outages_per_h": 1.7391304347826089,
+        "cut_seconds": 997.5,
+        "long_cut_seconds": 519.0,
+        "long_share_of_cut_time": 0.5203007518796993,
+        "outage_median_s": 4.5,
+        "outage_p90_s": 13.5,
+        "outage_max_s": 31.0,
+        "recovery_commands": 5,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 4,
+        "prevention_commands": 251,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 251,
+          "executed_as_requested": 256,
+          "not_received": 0,
+          "recovery_commands": 5,
+          "recovery_while_actually_down": 4
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24391,
+          "retained_v18": 143,
+          "added_prevention": 113,
+          "missing_rf_or_no_alternative": 459,
+          "no_robust_safe_gain": 126,
+          "no_physical_prevention_evidence": 4
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22155,
+          "prevention": 138,
+          "insufficient_observation": 2788,
+          "queue_watch": 26,
+          "no_predicted_improvement": 44,
+          "no_distinct_feasible_move": 80,
+          "recovery": 5
+        },
+        "relocation_counts": {},
+        "v18_insufficient_observation_share": 0.11047709621176098,
+        "delay_mean_s": 0.041802028574840264,
+        "delay_p95_mean_s": 0.08849206349214102
+      },
+      "r1_cut_recovery": {
+        "flights": 42,
+        "hours": 21.285833333333333,
+        "starts": 173,
+        "starts_per_h": 8.127471322867322,
+        "cut_s_per_h": 44.935990290882046,
+        "timely_pdr": 0.9797918107591991,
+        "mean_mission_min": 30.408333333333335,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 32.00060052507034,
+        "new_outages": 173,
+        "long_outages": 20,
+        "long_outages_per_h": 0.9395920604470892,
+        "cut_seconds": 956.5,
+        "long_cut_seconds": 355.5,
+        "long_share_of_cut_time": 0.3716675378985886,
+        "outage_median_s": 4.0,
+        "outage_p90_s": 10.400000000000006,
+        "outage_max_s": 51.0,
+        "recovery_commands": 264,
+        "cut_recovery_commands": 254,
+        "recovery_while_actually_down": 43,
+        "prevention_commands": 184,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 184,
+          "executed_as_requested": 448,
+          "not_received": 0,
+          "recovery_commands": 264,
+          "recovery_while_actually_down": 43,
+          "cut_recovery_commands": 254
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24196,
+          "retained_v18": 146,
+          "added_cut_recovery": 254,
+          "added_prevention": 48,
+          "missing_rf_or_no_alternative": 461,
+          "no_robust_safe_gain": 137,
+          "no_physical_prevention_evidence": 7
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22249,
+          "prevention": 136,
+          "insufficient_observation": 2670,
+          "no_predicted_improvement": 58,
+          "queue_watch": 25,
+          "no_distinct_feasible_move": 101,
+          "recovery": 10
+        },
+        "relocation_counts": {
+          "cut_recovery:no_faster_reconnection": 1614,
+          "cut_recovery:selected": 254,
+          "cut_recovery:no_distinct_feasible_move": 802
+        },
+        "v18_insufficient_observation_share": 0.10574676224800983,
+        "delay_mean_s": 0.04105008767222506,
+        "delay_p95_mean_s": 0.07724801587310584
+      },
+      "r3_t090": {
+        "flights": 42,
+        "hours": 21.275,
+        "starts": 166,
+        "starts_per_h": 7.802585193889542,
+        "cut_s_per_h": 46.88601645123384,
+        "timely_pdr": 0.978921530225878,
+        "mean_mission_min": 30.392857142857146,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 31.967691416958562,
+        "new_outages": 166,
+        "long_outages": 37,
+        "long_outages_per_h": 1.7391304347826089,
+        "cut_seconds": 997.5,
+        "long_cut_seconds": 519.0,
+        "long_share_of_cut_time": 0.5203007518796993,
+        "outage_median_s": 4.5,
+        "outage_p90_s": 13.5,
+        "outage_max_s": 31.0,
+        "recovery_commands": 5,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 4,
+        "prevention_commands": 254,
+        "ambiguous_band_prevention": 1,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 254,
+          "executed_as_requested": 259,
+          "not_received": 0,
+          "recovery_commands": 5,
+          "recovery_while_actually_down": 4,
+          "ambiguous_band_prevention": 1
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24386,
+          "retained_v18": 145,
+          "added_prevention": 114,
+          "missing_rf_or_no_alternative": 461,
+          "no_robust_safe_gain": 126,
+          "no_physical_prevention_evidence": 4
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22179,
+          "prevention": 140,
+          "insufficient_observation": 2762,
+          "queue_watch": 26,
+          "no_predicted_improvement": 44,
+          "no_distinct_feasible_move": 80,
+          "recovery": 5
+        },
+        "relocation_counts": {
+          "ambiguous_band_evaluated": 2,
+          "ambiguous_band_prevention": 1
+        },
+        "v18_insufficient_observation_share": 0.10944682200031701,
+        "delay_mean_s": 0.04180609391508633,
+        "delay_p95_mean_s": 0.08849206349214372
+      },
+      "r3_t080": {
+        "flights": 42,
+        "hours": 21.279166666666665,
+        "starts": 163,
+        "starts_per_h": 7.66007440767574,
+        "cut_s_per_h": 46.10142941061289,
+        "timely_pdr": 0.9792359071427017,
+        "mean_mission_min": 30.398809523809522,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 31.98346928060255,
+        "new_outages": 163,
+        "long_outages": 37,
+        "long_outages_per_h": 1.7387898962208734,
+        "cut_seconds": 981.0,
+        "long_cut_seconds": 519.0,
+        "long_share_of_cut_time": 0.5290519877675841,
+        "outage_median_s": 4.0,
+        "outage_p90_s": 13.5,
+        "outage_max_s": 31.0,
+        "recovery_commands": 5,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 4,
+        "prevention_commands": 265,
+        "ambiguous_band_prevention": 4,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 265,
+          "executed_as_requested": 270,
+          "not_received": 0,
+          "recovery_commands": 5,
+          "recovery_while_actually_down": 4,
+          "ambiguous_band_prevention": 4
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24375,
+          "retained_v18": 147,
+          "added_prevention": 123,
+          "missing_rf_or_no_alternative": 461,
+          "no_robust_safe_gain": 130,
+          "no_physical_prevention_evidence": 5
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22196,
+          "prevention": 142,
+          "insufficient_observation": 2746,
+          "queue_watch": 30,
+          "no_predicted_improvement": 43,
+          "no_distinct_feasible_move": 79,
+          "recovery": 5
+        },
+        "relocation_counts": {
+          "ambiguous_band_evaluated": 10,
+          "ambiguous_band_prevention": 4
+        },
+        "v18_insufficient_observation_share": 0.1087912523275623,
+        "delay_mean_s": 0.04152018932889173,
+        "delay_p95_mean_s": 0.08825396825404735
+      },
+      "r3_t070": {
+        "flights": 42,
+        "hours": 21.301666666666666,
+        "starts": 162,
+        "starts_per_h": 7.6050387293638995,
+        "cut_s_per_h": 46.05273452781473,
+        "timely_pdr": 0.9791622112684627,
+        "mean_mission_min": 30.43095238095238,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 32.023239894870756,
+        "new_outages": 162,
+        "long_outages": 37,
+        "long_outages_per_h": 1.736953290039903,
+        "cut_seconds": 981.0,
+        "long_cut_seconds": 519.0,
+        "long_share_of_cut_time": 0.5290519877675841,
+        "outage_median_s": 4.5,
+        "outage_p90_s": 13.5,
+        "outage_max_s": 31.0,
+        "recovery_commands": 5,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 4,
+        "prevention_commands": 268,
+        "ambiguous_band_prevention": 6,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 268,
+          "executed_as_requested": 273,
+          "not_received": 0,
+          "ambiguous_band_prevention": 6,
+          "recovery_commands": 5,
+          "recovery_while_actually_down": 4
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24389,
+          "retained_v18": 146,
+          "added_prevention": 127,
+          "missing_rf_or_no_alternative": 461,
+          "no_robust_safe_gain": 138,
+          "no_physical_prevention_evidence": 7
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22214,
+          "prevention": 141,
+          "insufficient_observation": 2755,
+          "queue_watch": 29,
+          "no_predicted_improvement": 43,
+          "no_distinct_feasible_move": 81,
+          "recovery": 5
+        },
+        "relocation_counts": {
+          "ambiguous_band_evaluated": 20,
+          "ambiguous_band_prevention": 6
+        },
+        "v18_insufficient_observation_share": 0.10903118568940953,
+        "delay_mean_s": 0.041585359768049564,
+        "delay_p95_mean_s": 0.08924007936515291
+      },
+      "r3_t060": {
+        "flights": 42,
+        "hours": 21.303333333333335,
+        "starts": 160,
+        "starts_per_h": 7.510561727429197,
+        "cut_s_per_h": 45.69707401032702,
+        "timely_pdr": 0.9793181383542829,
+        "mean_mission_min": 30.433333333333334,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 32.0300518408363,
+        "new_outages": 160,
+        "long_outages": 37,
+        "long_outages_per_h": 1.7368173994680018,
+        "cut_seconds": 973.5,
+        "long_cut_seconds": 519.0,
+        "long_share_of_cut_time": 0.5331278890600925,
+        "outage_median_s": 4.5,
+        "outage_p90_s": 13.5,
+        "outage_max_s": 31.0,
+        "recovery_commands": 5,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 4,
+        "prevention_commands": 274,
+        "ambiguous_band_prevention": 10,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 274,
+          "executed_as_requested": 279,
+          "not_received": 0,
+          "ambiguous_band_prevention": 10,
+          "recovery_commands": 5,
+          "recovery_while_actually_down": 4
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24370,
+          "retained_v18": 149,
+          "added_prevention": 130,
+          "missing_rf_or_no_alternative": 460,
+          "no_robust_safe_gain": 144,
+          "no_physical_prevention_evidence": 17
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22209,
+          "prevention": 144,
+          "insufficient_observation": 2759,
+          "queue_watch": 29,
+          "no_predicted_improvement": 43,
+          "no_distinct_feasible_move": 81,
+          "recovery": 5
+        },
+        "relocation_counts": {
+          "ambiguous_band_evaluated": 41,
+          "ambiguous_band_prevention": 10
+        },
+        "v18_insufficient_observation_share": 0.10918084685397705,
+        "delay_mean_s": 0.04139624913586018,
+        "delay_p95_mean_s": 0.08924007936515291
+      },
+      "r3_t070_small": {
+        "flights": 42,
+        "hours": 21.275,
+        "starts": 166,
+        "starts_per_h": 7.802585193889542,
+        "cut_s_per_h": 46.88601645123384,
+        "timely_pdr": 0.9789193541367455,
+        "mean_mission_min": 30.392857142857146,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 31.970024509785517,
+        "new_outages": 166,
+        "long_outages": 37,
+        "long_outages_per_h": 1.7391304347826089,
+        "cut_seconds": 997.5,
+        "long_cut_seconds": 519.0,
+        "long_share_of_cut_time": 0.5203007518796993,
+        "outage_median_s": 4.5,
+        "outage_p90_s": 13.5,
+        "outage_max_s": 31.0,
+        "recovery_commands": 5,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 4,
+        "prevention_commands": 251,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 251,
+          "executed_as_requested": 256,
+          "not_received": 0,
+          "recovery_commands": 5,
+          "recovery_while_actually_down": 4
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24372,
+          "retained_v18": 143,
+          "added_prevention": 113,
+          "missing_rf_or_no_alternative": 459,
+          "no_robust_safe_gain": 142,
+          "no_physical_prevention_evidence": 7
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22155,
+          "prevention": 138,
+          "insufficient_observation": 2788,
+          "queue_watch": 26,
+          "no_predicted_improvement": 44,
+          "no_distinct_feasible_move": 80,
+          "recovery": 5
+        },
+        "relocation_counts": {
+          "ambiguous_band_evaluated": 19
+        },
+        "v18_insufficient_observation_share": 0.11047709621176098,
+        "delay_mean_s": 0.041802028574840264,
+        "delay_p95_mean_s": 0.08849206349214102
+      },
+      "r4_bypass": {
+        "flights": 42,
+        "hours": 21.275,
+        "starts": 166,
+        "starts_per_h": 7.802585193889542,
+        "cut_s_per_h": 46.88601645123384,
+        "timely_pdr": 0.9789193541367455,
+        "mean_mission_min": 30.392857142857146,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 31.970024509785517,
+        "new_outages": 166,
+        "long_outages": 37,
+        "long_outages_per_h": 1.7391304347826089,
+        "cut_seconds": 997.5,
+        "long_cut_seconds": 519.0,
+        "long_share_of_cut_time": 0.5203007518796993,
+        "outage_median_s": 4.5,
+        "outage_p90_s": 13.5,
+        "outage_max_s": 31.0,
+        "recovery_commands": 5,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 4,
+        "prevention_commands": 251,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 251,
+          "executed_as_requested": 256,
+          "not_received": 0,
+          "recovery_commands": 5,
+          "recovery_while_actually_down": 4
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24391,
+          "retained_v18": 143,
+          "added_prevention": 113,
+          "missing_rf_or_no_alternative": 459,
+          "no_robust_safe_gain": 126,
+          "no_physical_prevention_evidence": 4
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22155,
+          "prevention": 138,
+          "insufficient_observation": 2788,
+          "queue_watch": 26,
+          "no_predicted_improvement": 44,
+          "no_distinct_feasible_move": 80,
+          "recovery": 5
+        },
+        "relocation_counts": {
+          "bypass:already_redundant": 21378,
+          "bypass:stale_search_beacon": 2116,
+          "bypass:cut_now_or_predicted": 712,
+          "bypass:low_building_shielding": 315
+        },
+        "v18_insufficient_observation_share": 0.11047709621176098,
+        "delay_mean_s": 0.041802028574840264,
+        "delay_p95_mean_s": 0.08849206349214102
+      },
+      "r13_combined": {
+        "flights": 42,
+        "hours": 21.285833333333333,
+        "starts": 173,
+        "starts_per_h": 8.127471322867322,
+        "cut_s_per_h": 45.17088830599381,
+        "timely_pdr": 0.9797139464171528,
+        "mean_mission_min": 30.408333333333335,
+        "completed": 42,
+        "safety": 0,
+        "mean_relay_km": 32.00452559206421,
+        "new_outages": 173,
+        "long_outages": 21,
+        "long_outages_per_h": 0.9865716634694437,
+        "cut_seconds": 961.5,
+        "long_cut_seconds": 366.0,
+        "long_share_of_cut_time": 0.38065522620904835,
+        "outage_median_s": 4.0,
+        "outage_p90_s": 10.400000000000006,
+        "outage_max_s": 51.0,
+        "recovery_commands": 264,
+        "cut_recovery_commands": 254,
+        "recovery_while_actually_down": 41,
+        "prevention_commands": 185,
+        "ambiguous_band_prevention": 3,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 185,
+          "executed_as_requested": 449,
+          "not_received": 0,
+          "recovery_commands": 264,
+          "recovery_while_actually_down": 41,
+          "cut_recovery_commands": 254,
+          "ambiguous_band_prevention": 3
+        },
+        "decision_counts": {
+          "below_advance_threshold": 24180,
+          "retained_v18": 147,
+          "added_cut_recovery": 254,
+          "added_prevention": 48,
+          "missing_rf_or_no_alternative": 461,
+          "no_robust_safe_gain": 148,
+          "no_physical_prevention_evidence": 11
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 22247,
+          "prevention": 137,
+          "insufficient_observation": 2675,
+          "no_predicted_improvement": 55,
+          "queue_watch": 25,
+          "no_distinct_feasible_move": 100,
+          "recovery": 10
+        },
+        "relocation_counts": {
+          "cut_recovery:no_faster_reconnection": 1618,
+          "cut_recovery:selected": 254,
+          "cut_recovery:no_distinct_feasible_move": 803,
+          "ambiguous_band_evaluated": 16,
+          "ambiguous_band_prevention": 3
+        },
+        "v18_insufficient_observation_share": 0.10594478989266902,
+        "delay_mean_s": 0.04112119418448587,
+        "delay_p95_mean_s": 0.0772876984127897
+      }
+    },
+    "vs_v21": {
+      "r1_cut_recovery": {
+        "groups": 12,
+        "starts_per_h_delta": 0.3248861289777816,
+        "starts_per_h_ci95": [
+          -0.40881861139225445,
+          1.1061458571043115
+        ],
+        "long_per_h_delta": -0.7995383743355192,
+        "long_per_h_ci95": [
+          -1.412677919591052,
+          -0.11468205791013761
+        ],
+        "cut_s_per_h_delta": -1.9500261603517899,
+        "cut_s_per_h_ci95": [
+          -5.438316640922298,
+          1.5987426445268595
+        ],
+        "timely_pdr_pp": 0.08724566224536101,
+        "duration_fraction": 0.0005092048570309871,
+        "relay_km_delta": 0.030576015284822233,
+        "long_outages_delta": -17
+      },
+      "r3_t090": {
+        "groups": 12,
+        "starts_per_h_delta": 0.0,
+        "starts_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "long_per_h_delta": 0.0,
+        "long_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "cut_s_per_h_delta": 0.0,
+        "cut_s_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "timely_pdr_pp": 0.00021760891325550702,
+        "duration_fraction": 0.0,
+        "relay_km_delta": -0.002333092826955152,
+        "long_outages_delta": 0
+      },
+      "r3_t080": {
+        "groups": 12,
+        "starts_per_h_delta": -0.1425107862138022,
+        "starts_per_h_ci95": [
+          -0.2897862565213609,
+          0.0
+        ],
+        "long_per_h_delta": -0.00034053856173521524,
+        "long_per_h_ci95": [
+          -0.0012590807293193951,
+          0.0
+        ],
+        "cut_s_per_h_delta": -0.7845870406209556,
+        "cut_s_per_h_ci95": [
+          -1.6839376115872162,
+          0.0
+        ],
+        "timely_pdr_pp": 0.03165530059562327,
+        "duration_fraction": 0.00019584802193506334,
+        "relay_km_delta": 0.013444770817031326,
+        "long_outages_delta": 0
+      },
+      "r3_t070": {
+        "groups": 12,
+        "starts_per_h_delta": -0.19754646452564195,
+        "starts_per_h_ci95": [
+          -0.4240286278490098,
+          0.0
+        ],
+        "long_per_h_delta": -0.0021771447427056945,
+        "long_per_h_ci95": [
+          -0.00803837435932594,
+          0.0
+        ],
+        "cut_s_per_h_delta": -0.8332819234191149,
+        "cut_s_per_h_ci95": [
+          -1.8015686931062822,
+          0.0
+        ],
+        "timely_pdr_pp": 0.024285713171723344,
+        "duration_fraction": 0.001253427340383917,
+        "relay_km_delta": 0.053215385085238154,
+        "long_outages_delta": 0
+      },
+      "r3_t060": {
+        "groups": 12,
+        "starts_per_h_delta": -0.2920234664603436,
+        "starts_per_h_ci95": [
+          -0.6333753392318605,
+          0.0
+        ],
+        "long_per_h_delta": -0.002313035314606582,
+        "long_per_h_ci95": [
+          -0.008136949178605657,
+          0.0
+        ],
+        "cut_s_per_h_delta": -1.1889424409068141,
+        "cut_s_per_h_ci95": [
+          -2.7402185536047643,
+          0.0
+        ],
+        "timely_pdr_pp": 0.03987842175374734,
+        "duration_fraction": 0.0013317665491578978,
+        "relay_km_delta": 0.06002733105078306,
+        "long_outages_delta": 0
+      },
+      "r3_t070_small": {
+        "groups": 12,
+        "starts_per_h_delta": 0.0,
+        "starts_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "long_per_h_delta": 0.0,
+        "long_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "cut_s_per_h_delta": 0.0,
+        "cut_s_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "timely_pdr_pp": 0.0,
+        "duration_fraction": 0.0,
+        "relay_km_delta": 0.0,
+        "long_outages_delta": 0
+      },
+      "r4_bypass": {
+        "groups": 12,
+        "starts_per_h_delta": 0.0,
+        "starts_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "long_per_h_delta": 0.0,
+        "long_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "cut_s_per_h_delta": 0.0,
+        "cut_s_per_h_ci95": [
+          0.0,
+          0.0
+        ],
+        "timely_pdr_pp": 0.0,
+        "duration_fraction": 0.0,
+        "relay_km_delta": 0.0,
+        "long_outages_delta": 0
+      },
+      "r13_combined": {
+        "groups": 12,
+        "starts_per_h_delta": 0.3248861289777816,
+        "starts_per_h_ci95": [
+          -0.40691649454482204,
+          1.0877846544244492
+        ],
+        "long_per_h_delta": -0.7525587713131647,
+        "long_per_h_ci95": [
+          -1.3936467846714575,
+          -0.00013406140327131688
+        ],
+        "cut_s_per_h_delta": -1.7151281452400227,
+        "cut_s_per_h_ci95": [
+          -4.680187607556519,
+          1.6573130588420806
+        ],
+        "timely_pdr_pp": 0.07945922804073469,
+        "duration_fraction": 0.0005092048570309871,
+        "relay_km_delta": 0.03450108227869464,
+        "long_outages_delta": -16
+      }
+    },
+    "adoptable": {
+      "r1_cut_recovery": true,
+      "r3_t090": false,
+      "r3_t080": false,
+      "r3_t070": false,
+      "r3_t060": false,
+      "r3_t070_small": false,
+      "r4_bypass": false,
+      "r13_combined": false
+    },
+    "primary": {
+      "r1_cut_recovery": "long_per_h",
+      "r3_t090": "starts_per_h",
+      "r3_t080": "starts_per_h",
+      "r3_t070": "starts_per_h",
+      "r3_t060": "starts_per_h",
+      "r3_t070_small": "starts_per_h",
+      "r4_bypass": "starts_per_h",
+      "r13_combined": "starts_per_h"
+    }
+  },
+  "pattern_counts": {
+    "v21": {
+      "abrupt": 115,
+      "mixed": 41,
+      "other": 9,
+      "gradual": 1
+    },
+    "r4_bypass": {
+      "abrupt": 115,
+      "mixed": 41,
+      "other": 9,
+      "gradual": 1
+    },
+    "r13_combined": {
+      "mixed": 40,
+      "abrupt": 117,
+      "other": 13,
+      "gradual": 3
+    }
+  },
+  "v21_matches_final_v1": {
+    "checked": 42,
+    "identical": 42
+  },
+  "command_loss": {
+    "stats": {
+      "v21__neutral": {
+        "flights": 14,
+        "hours": 7.154166666666667,
+        "starts": 68,
+        "starts_per_h": 9.504950495049505,
+        "cut_s_per_h": 45.70762958648806,
+        "timely_pdr": 0.9789684850838025,
+        "mean_mission_min": 30.660714285714285,
+        "completed": 14,
+        "safety": 0,
+        "mean_relay_km": 32.589596143464085,
+        "new_outages": 68,
+        "long_outages": 8,
+        "long_outages_per_h": 1.1182294700058242,
+        "cut_seconds": 327.0,
+        "long_cut_seconds": 112.5,
+        "long_share_of_cut_time": 0.3440366972477064,
+        "outage_median_s": 3.5,
+        "outage_p90_s": 10.150000000000002,
+        "outage_max_s": 21.0,
+        "recovery_commands": 3,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 2,
+        "prevention_commands": 73,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 73,
+          "executed_as_requested": 70,
+          "not_received": 0,
+          "recovery_commands": 3,
+          "recovery_while_actually_down": 2
+        },
+        "decision_counts": {
+          "below_advance_threshold": 8219,
+          "retained_v18": 52,
+          "added_prevention": 24,
+          "no_robust_safe_gain": 35,
+          "missing_rf_or_no_alternative": 152,
+          "no_physical_prevention_evidence": 5
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 7318,
+          "prevention": 49,
+          "insufficient_observation": 1048,
+          "no_predicted_improvement": 19,
+          "no_distinct_feasible_move": 41,
+          "recovery": 3,
+          "queue_watch": 9
+        },
+        "relocation_counts": {},
+        "v18_insufficient_observation_share": 0.12348297396017438,
+        "delay_mean_s": 0.04278088322801888,
+        "delay_p95_mean_s": 0.06808333333341567,
+        "outages": 68,
+        "recovered_within_10s": 58,
+        "no_stable_recovery_before_end": 1,
+        "recovered_within_10s_rate": 0.8529411764705882,
+        "median_stable_recovery_s": 3.5,
+        "fallback": {
+          "nominal": 1399,
+          "received": 32941,
+          "remote_commands": 34340,
+          "remote_received": 32941
+        }
+      },
+      "v21__hold": {
+        "flights": 14,
+        "hours": 7.154166666666667,
+        "starts": 69,
+        "starts_per_h": 9.644729178800233,
+        "cut_s_per_h": 58.846825859056494,
+        "timely_pdr": 0.9757030997217369,
+        "mean_mission_min": 30.660714285714285,
+        "completed": 14,
+        "safety": 0,
+        "mean_relay_km": 32.05931955254309,
+        "new_outages": 69,
+        "long_outages": 13,
+        "long_outages_per_h": 1.8171228887594641,
+        "cut_seconds": 421.0,
+        "long_cut_seconds": 204.5,
+        "long_share_of_cut_time": 0.4857482185273159,
+        "outage_median_s": 4.5,
+        "outage_p90_s": 12.0,
+        "outage_max_s": 36.0,
+        "recovery_commands": 2,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 1,
+        "prevention_commands": 67,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 67,
+          "executed_as_requested": 62,
+          "not_received": 2,
+          "recovery_commands": 2,
+          "recovery_while_actually_down": 1
+        },
+        "decision_counts": {
+          "below_advance_threshold": 8215,
+          "retained_v18": 41,
+          "no_robust_safe_gain": 46,
+          "missing_rf_or_no_alternative": 154,
+          "added_prevention": 28,
+          "no_physical_prevention_evidence": 3
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 7278,
+          "prevention": 39,
+          "insufficient_observation": 1109,
+          "no_distinct_feasible_move": 43,
+          "no_predicted_improvement": 11,
+          "recovery": 2,
+          "queue_watch": 5
+        },
+        "relocation_counts": {},
+        "v18_insufficient_observation_share": 0.130670437139154,
+        "delay_mean_s": 0.04508318934272337,
+        "delay_p95_mean_s": 0.09205952380958081,
+        "outages": 69,
+        "recovered_within_10s": 55,
+        "no_stable_recovery_before_end": 0,
+        "recovered_within_10s_rate": 0.7971014492753623,
+        "median_stable_recovery_s": 4.5,
+        "fallback": {
+          "nominal_timeout": 204,
+          "received": 32920,
+          "hold_last": 1126,
+          "nominal": 90,
+          "remote_commands": 34340,
+          "remote_received": 32920
+        }
+      },
+      "v21__reconnect": {
+        "flights": 14,
+        "hours": 7.149166666666667,
+        "starts": 62,
+        "starts_per_h": 8.672339433500408,
+        "cut_s_per_h": 45.949411353304576,
+        "timely_pdr": 0.9788281462485915,
+        "mean_mission_min": 30.639285714285716,
+        "completed": 14,
+        "safety": 0,
+        "mean_relay_km": 32.15786273931502,
+        "new_outages": 62,
+        "long_outages": 11,
+        "long_outages_per_h": 1.5386408672339433,
+        "cut_seconds": 328.5,
+        "long_cut_seconds": 173.0,
+        "long_share_of_cut_time": 0.5266362252663622,
+        "outage_median_s": 2.75,
+        "outage_p90_s": 13.45,
+        "outage_max_s": 27.0,
+        "recovery_commands": 4,
+        "cut_recovery_commands": 0,
+        "recovery_while_actually_down": 2,
+        "prevention_commands": 80,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 80,
+          "executed_as_requested": 80,
+          "not_received": 2,
+          "recovery_commands": 4,
+          "recovery_while_actually_down": 2
+        },
+        "decision_counts": {
+          "below_advance_threshold": 8201,
+          "retained_v18": 57,
+          "added_prevention": 27,
+          "missing_rf_or_no_alternative": 146,
+          "no_robust_safe_gain": 48,
+          "no_physical_prevention_evidence": 2
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 7328,
+          "prevention": 53,
+          "insufficient_observation": 1041,
+          "no_predicted_improvement": 13,
+          "no_distinct_feasible_move": 40,
+          "recovery": 4,
+          "queue_watch": 2
+        },
+        "relocation_counts": {},
+        "v18_insufficient_observation_share": 0.1227449593208348,
+        "delay_mean_s": 0.04250535609305709,
+        "delay_p95_mean_s": 0.08023809523814915,
+        "outages": 62,
+        "recovered_within_10s": 48,
+        "no_stable_recovery_before_end": 0,
+        "recovered_within_10s_rate": 0.7741935483870968,
+        "median_stable_recovery_s": 3.5,
+        "fallback": {
+          "nominal_timeout": 169,
+          "received": 32975,
+          "return_anchor": 1172,
+          "remote_commands": 34316,
+          "remote_received": 32975
+        }
+      },
+      "r1_cut_recovery__neutral": {
+        "flights": 14,
+        "hours": 7.1275,
+        "starts": 66,
+        "starts_per_h": 9.259908803928445,
+        "cut_s_per_h": 43.91441599438793,
+        "timely_pdr": 0.9798160489496863,
+        "mean_mission_min": 30.54642857142857,
+        "completed": 14,
+        "safety": 0,
+        "mean_relay_km": 32.63194864772369,
+        "new_outages": 66,
+        "long_outages": 9,
+        "long_outages_per_h": 1.2627148368993335,
+        "cut_seconds": 313.0,
+        "long_cut_seconds": 131.5,
+        "long_share_of_cut_time": 0.42012779552715657,
+        "outage_median_s": 3.25,
+        "outage_p90_s": 11.0,
+        "outage_max_s": 21.5,
+        "recovery_commands": 184,
+        "cut_recovery_commands": 183,
+        "recovery_while_actually_down": 11,
+        "prevention_commands": 55,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 55,
+          "executed_as_requested": 212,
+          "not_received": 5,
+          "recovery_commands": 184,
+          "recovery_while_actually_down": 11,
+          "cut_recovery_commands": 183
+        },
+        "decision_counts": {
+          "below_advance_threshold": 8020,
+          "retained_v18": 47,
+          "added_cut_recovery": 183,
+          "missing_rf_or_no_alternative": 152,
+          "no_robust_safe_gain": 42,
+          "added_prevention": 9,
+          "no_physical_prevention_evidence": 2
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 7243,
+          "prevention": 46,
+          "insufficient_observation": 1101,
+          "no_distinct_feasible_move": 42,
+          "no_predicted_improvement": 16,
+          "recovery": 1,
+          "queue_watch": 6
+        },
+        "relocation_counts": {
+          "cut_recovery:selected": 183,
+          "cut_recovery:no_faster_reconnection": 618,
+          "cut_recovery:no_distinct_feasible_move": 281,
+          "cut_recovery:final_phase": 19
+        },
+        "v18_insufficient_observation_share": 0.13021880544056771,
+        "delay_mean_s": 0.04250025875869806,
+        "delay_p95_mean_s": 0.06920833333338436,
+        "outages": 66,
+        "recovered_within_10s": 56,
+        "no_stable_recovery_before_end": 1,
+        "recovered_within_10s_rate": 0.8484848484848485,
+        "median_stable_recovery_s": 3.5,
+        "fallback": {
+          "nominal": 1397,
+          "received": 32815,
+          "remote_commands": 34212,
+          "remote_received": 32815
+        }
+      },
+      "r1_cut_recovery__reconnect": {
+        "flights": 14,
+        "hours": 7.175833333333333,
+        "starts": 60,
+        "starts_per_h": 8.361398211589828,
+        "cut_s_per_h": 42.50377424224829,
+        "timely_pdr": 0.9816604085214002,
+        "mean_mission_min": 30.75357142857143,
+        "completed": 14,
+        "safety": 0,
+        "mean_relay_km": 32.34114850487752,
+        "new_outages": 60,
+        "long_outages": 8,
+        "long_outages_per_h": 1.1148530948786437,
+        "cut_seconds": 305.0,
+        "long_cut_seconds": 127.0,
+        "long_share_of_cut_time": 0.4163934426229508,
+        "outage_median_s": 4.0,
+        "outage_p90_s": 11.100000000000001,
+        "outage_max_s": 27.0,
+        "recovery_commands": 176,
+        "cut_recovery_commands": 173,
+        "recovery_while_actually_down": 18,
+        "prevention_commands": 60,
+        "ambiguous_band_prevention": 0,
+        "bypass_commands": 0,
+        "all_commands": {
+          "prevention_commands": 60,
+          "executed_as_requested": 211,
+          "not_received": 6,
+          "recovery_commands": 176,
+          "recovery_while_actually_down": 18,
+          "cut_recovery_commands": 173
+        },
+        "decision_counts": {
+          "below_advance_threshold": 8083,
+          "retained_v18": 47,
+          "added_cut_recovery": 173,
+          "no_robust_safe_gain": 39,
+          "missing_rf_or_no_alternative": 153,
+          "added_prevention": 16,
+          "no_physical_prevention_evidence": 2
+        },
+        "v18_reasons": {
+          "no_predicted_cut": 7346,
+          "prevention": 44,
+          "insufficient_observation": 1068,
+          "no_predicted_improvement": 13,
+          "no_distinct_feasible_move": 37,
+          "recovery": 3,
+          "queue_watch": 2
+        },
+        "relocation_counts": {
+          "cut_recovery:selected": 173,
+          "cut_recovery:no_faster_reconnection": 616,
+          "cut_recovery:no_distinct_feasible_move": 271,
+          "cut_recovery:final_phase": 8
+        },
+        "v18_insufficient_observation_share": 0.12545518618583343,
+        "delay_mean_s": 0.03996776852338709,
+        "delay_p95_mean_s": 0.08952380952394634,
+        "outages": 60,
+        "recovered_within_10s": 49,
+        "no_stable_recovery_before_end": 0,
+        "recovered_within_10s_rate": 0.8166666666666667,
+        "median_stable_recovery_s": 4.0,
+        "fallback": {
+          "nominal_timeout": 180,
+          "received": 33052,
+          "return_anchor": 1212,
+          "remote_commands": 34444,
+          "remote_received": 33052
+        }
+      }
+    },
+    "vs_neutral": {
+      "v21__hold": {
+        "groups": 12,
+        "starts_per_h_delta": 0.13977868375072866,
+        "starts_per_h_ci95": [
+          -1.9653486717104665,
+          1.8222977949861143
+        ],
+        "long_per_h_delta": 0.69889341875364,
+        "long_per_h_ci95": [
+          0.17204044453277334,
+          1.1243203713553764
+        ],
+        "cut_s_per_h_delta": 13.139196272568434,
+        "cut_s_per_h_ci95": [
+          0.4917921935166372,
+          25.66787607829588
+        ],
+        "timely_pdr_pp": -0.3265385362065665,
+        "duration_fraction": 0.0,
+        "relay_km_delta": -0.5302765909209981,
+        "long_outages_delta": 5
+      },
+      "v21__reconnect": {
+        "groups": 12,
+        "starts_per_h_delta": -0.8326110615490983,
+        "starts_per_h_ci95": [
+          -2.219811093701671,
+          1.131345391417397
+        ],
+        "long_per_h_delta": 0.42041139722811893,
+        "long_per_h_ci95": [
+          0.0031677427176328367,
+          1.0227257514984063
+        ],
+        "cut_s_per_h_delta": 0.24178176681651564,
+        "cut_s_per_h_ci95": [
+          -8.736060916913111,
+          13.14177599080887
+        ],
+        "timely_pdr_pp": -0.014033883521102908,
+        "duration_fraction": -0.0006988934187536211,
+        "relay_km_delta": -0.4317334041490639,
+        "long_outages_delta": 3
+      },
+      "r1_cut_recovery__neutral": {
+        "groups": 12,
+        "starts_per_h_delta": -0.24504169112105956,
+        "starts_per_h_ci95": [
+          -3.2817065873435363,
+          2.0379463611621804
+        ],
+        "long_per_h_delta": 0.14448536689350933,
+        "long_per_h_ci95": [
+          -0.3457812610960998,
+          0.7008128536285174
+        ],
+        "cut_s_per_h_delta": -1.7932135921001304,
+        "cut_s_per_h_ci95": [
+          -17.920079382887035,
+          7.968779978331698
+        ],
+        "timely_pdr_pp": 0.08475638658838047,
+        "duration_fraction": -0.00372743156668609,
+        "relay_km_delta": 0.04235250425960402,
+        "long_outages_delta": 1
+      },
+      "r1_cut_recovery__reconnect": {
+        "groups": 12,
+        "starts_per_h_delta": -1.1435522834596785,
+        "starts_per_h_ci95": [
+          -5.110787154558205,
+          1.7327919276803008
+        ],
+        "long_per_h_delta": -0.0033763751271806974,
+        "long_per_h_ci95": [
+          -0.9356027414792706,
+          1.4284931022107337
+        ],
+        "cut_s_per_h_delta": -3.203855344239777,
+        "cut_s_per_h_ci95": [
+          -15.873976255498498,
+          14.467817225856667
+        ],
+        "timely_pdr_pp": 0.2691923437597721,
+        "duration_fraction": 0.003028538147932469,
+        "relay_km_delta": -0.24844763858656194,
+        "long_outages_delta": 0
+      }
+    },
+    "flights": 14
+  },
+  "finished_at": "2026-11-11T20:34:07+09:00"
+}
