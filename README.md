@@ -1,12 +1,17 @@
 # 캡스톤 디자인 II · Final V1
 
-2026-11-13 기준 소스와 완료된 연구 결과를 모은 저장소다. 드론 편대 통신 단절을 예측하고 중계기를 선제 재배치하는 시뮬레이션 연구를 담았다.
+2026-11-22 기준 소스와 완료된 연구 결과를 모은 저장소다. 드론 편대 통신 단절을 예측하고 중계기를 선제 재배치하는 시뮬레이션 연구를 담았다.
 
-## 최신 평가와 다운로드
+## 기본 0.5초 제어
 
-- [3초·0.5초 공동학습 결과와 부산 교차 검증](reports/joint-training-results-20261110.md)에서 11월 10일까지의 완료 결과를 확인한다.
-- [11월 8일 주간보고서 HTML](reports/Final_V1_Weekly_Report_20261108.html)은 파일을 내려받아 브라우저에서 연다.
-- [전체 프로젝트 ZIP](https://github.com/MinchanKim1215/capstone-final-v1/releases/tag/final-v1-20261113)에는 등록 지도 645곳, 가중치, 평가 비행 기록과 실행 안내가 들어 있다. 기본 실행 제어는 `v21_transformer`다. 0.5초 공동학습 모델의 평가와 가중치는 실험 결과로 제공한다.
+- 기본 실행은 [0.5초 Transformer–PPO](final_v1/halfsec_main/README.md)다. 비콘 관측 공백과 예측 통신 여유를 확인해 복구 후보를 걸러내고, 정체가 생기면 수색 통로를 비운다.
+- 별도 지도 8곳에서 기존 3초 대비 새 단절은 26→20건, 시간당 6.25→3.35회, 평균 임무 시간은 31.2→44.8분이었다. 양쪽 모두 8/8을 완주했다. [검증 수치](final_v1/halfsec_main/validation_summary.json)
+
+## 팀 실행과 이전 결과
+
+- [기존 팀 ZIP](https://github.com/MinchanKim1215/capstone-final-v1/releases/tag/final-v1-20261113)을 푼다. 이 저장소에서 `final_v1/halfsec_main/`, `final_v1/fly.py`, `final_v1/relocation.py`를 같은 위치의 `code/`에 복사한다.
+- 기존 Python 환경으로 `code/`에서 `python -B run_latest_final_v1.py --steps 48`을 실행하면 **0.5초 판단 24초**를 확인한다. `--steps`를 생략하면 전체 임무를 실행한다.
+- [이전 3초·0.5초 공동학습 결과와 부산 교차 검증](reports/joint-training-results-20261110.md) · [11월 8일 주간보고서 HTML](reports/Final_V1_Weekly_Report_20261108.html)
 
 ## 보고서
 
@@ -23,4 +28,4 @@
 - [0.5초 제어 연구](fast_halfsec/RESULTS.md)와 [후보 선택 코드](halfsec_choice/)는 별도 실험이다.
 - 기본 시뮬레이션·통신 엔진은 [원본 프로젝트](drone_forecast_joint_training/)에 있다.
 
-이 저장소의 전달 범위는 소스, 설정, HTML과 요약 지표다. 시뮬레이션과 학습을 재현하려면 팀이 보유한 지도 데이터, 가중치, 해당 연구의 저장본과 기존 Python 환경이 필요하다.
+이 저장소는 소스, 기본 0.5초 추론 가중치, 설정과 요약 결과를 제공한다. 팀 ZIP의 지도·기초 모델과 기존 Python 환경이 있어야 비행을 실행할 수 있다. 학습 재현에는 별도의 학습 원자료와 저장본이 필요하다.

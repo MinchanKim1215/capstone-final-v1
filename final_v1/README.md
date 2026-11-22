@@ -21,17 +21,21 @@
 & .\drone_forecast_joint_training\.venv\Scripts\python.exe -m final_v1.campaign
 ```
 
-대표 설정의 새 비행을 실행한다. 앞의 실험과 같은 검증 지도에서 기본값으로 실행한다. 기본 설정은 명령이 전달되는 연구 조건이다. `--command-loss`를 추가하면 최종 보고서에 기록된 미수신 대응을 적용한다. `--steps 24`를 추가하면 짧은 실행 검사를 수행한다.
+현재 기본값은 0.5초 Transformer–PPO 제어다. 팀 ZIP에 포함된 광주 지도를 대표 설정으로 사용한다. `--command-loss`는 명령 전달 손실 시험을 추가한다. `--steps 48`을 추가하면 기본 제어의 24초 실행을 확인한다. [0.5초 제어와 사용법](halfsec_main/README.md)
 
 ```powershell
 & .\drone_forecast_joint_training\.venv\Scripts\python.exe -m final_v1.fly
 ```
 
-## 기본 Transformer 업데이트
+## 기존 3초 Transformer 평가
 
-11월 8일 검증된 기본 실행은 `v21_transformer`다. 링크 단절 시점 출력층을 갱신하고, 전체망 위험과 V21 점수를 결합한다. 판단 주기는 3초다. 새 지도 12곳의 36개 조건에서 기존 V21 대비 새 단절 115→61건, 단절 시간 764.5→452.0초, 기한 내 패킷 전달 98.24→98.89%였다. 양쪽 모두 36개 조건을 완주했다.
+11월 8일 검증된 3초 비교 방식은 `v21_transformer`다. 링크 단절 시점 출력층을 갱신하고, 전체망 위험과 V21 점수를 결합한다. 새 지도 12곳의 36개 조건에서 당시 V21 대비 새 단절 115→61건, 단절 시간 764.5→452.0초, 기한 내 패킷 전달 98.24→98.89%였다. 양쪽 모두 36개 조건을 완주했다.
 
 같은 지역과 난수에서 기준 설정을 비교하려면 `--controller v21`을 사용한다. `--controller v21_transformer`는 업데이트 모델을 명시적으로 선택한다. 보정과 채택 근거는 [업데이트 평가 수치](transformer_upgrade/artifacts/results.json), 두 모델과 실행 설정은 `transformer_upgrade/artifacts/`에 있다.
+
+## 3초 재배치 비교
+
+`--controller v21_transformer_recovery`로 3초 비콘 누락 복구를 비교한다. 초기 재배치 실험의 방법과 수치는 [첨부 연구 요약](../final_v1_relocation/SUMMARY.md)에 있다.
 
 ## 단계와 평가 단위
 

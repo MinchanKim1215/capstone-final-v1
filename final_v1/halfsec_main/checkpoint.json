@@ -1,0 +1,9 @@
+{
+  "controller": "v21_transformer_halfsec",
+  "step": 30,
+  "decision_interval_s": 0.5,
+  "threshold": 0.6549045937518411,
+  "sha256": "a5fb69b3b067ff5d2d4c0beb3e6a27dda888e65fd520436cbcdb72cad1cc2bfe",
+  "source_sha256": "73b431b97c98d631d93c5d99fba11b5b9725aa79fa77ce4a809c452c65fed3ff",
+  "source_protocol_sha256": "a84c190bc7d3c6492116c0200d66f287618af0499bea86aafe14d9b2e10bec75"
+}
