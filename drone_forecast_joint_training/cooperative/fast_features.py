@@ -5,7 +5,7 @@ from swarm_sim.config import Scenario
 from advance.features import H, _path_positions, windows, physics, statistics
 
 
-def geometry_profile(city, x, mask, intent=None):
+def geometry_profile(city, x, mask, intent=None, *, peer_altitude_m=None):
     """13개 중간 시점의 손실 변화·LoS·측정 여유. 측정값은 기하 캐시에서 제외."""
     out = np.zeros((len(x), 46), np.float32)
     good = mask[:, [0, 1, 2, 12, 13, 30, 34, 35, 36, 37, 41]].all(1) & (x[:, 30] <= 2)
@@ -16,6 +16,8 @@ def geometry_profile(city, x, mask, intent=None):
     v = x[good]
     a = np.c_[v[:, 12:14], v[:, 2]]
     b = a + np.c_[v[:, 34:36], np.zeros(len(v))]
+    if peer_altitude_m is not None:
+        b[:, 2] = peer_altitude_m[good]
     va = np.c_[v[:, :2], np.zeros(len(v))]
     vb = va + np.c_[v[:, 36:38], np.zeros(len(v))]
     packed = np.c_[a, b, va, vb]

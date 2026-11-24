@@ -77,7 +77,9 @@ def audit(rows):
             reach = links.copy()
             for node in range(reach.shape[-1]):
                 reach |= reach[:,:,node,None] & reach[:,None,node,:]
-            ns = DEPLOYMENT_BY_KEY[row['deployment']].ns
+            ns = row.get('search_drones')
+            if ns is None:
+                ns = DEPLOYMENT_BY_KEY[row['deployment']].ns
             net = reach[:,0,1:ns].all(axis=-1)
             np.testing.assert_array_equal(net,z['network'])
             cuts = intervals(net,.5)

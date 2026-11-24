@@ -5,10 +5,13 @@ import unittest
 
 import numpy as np
 
+from fast_halfsec.navigation import Survey
 from final_v1_fast.controller import TIMES
 
 from .mission import StressCommands, recovers_safely, steady_reconnect
 from .navigation import clearance_move
+from .planned_eight_motion import HeightWindow
+from .submission import SubmissionNavigator
 
 
 class ClearanceTests(unittest.TestCase):
@@ -56,6 +59,33 @@ class CommandTests(unittest.TestCase):
         channel.deliver(36.1)
         np.testing.assert_array_equal(channel.applied, [1, 0, 3])
         np.testing.assert_array_equal(probability, np.ones((4, 4)))
+
+
+class AltitudeTransitionTests(unittest.TestCase):
+    def navigator(self, confirm):
+        initial = np.arange(5, dtype=np.int32)
+        survey = Survey(initial, np.tile(initial, (2, 1)), np.zeros((2, 2, 1, 1), np.int32), 12., 1)
+        city = SimpleNamespace(visible=np.ones((5, 1), bool))
+        nav = SubmissionNavigator(city, 3, survey, [HeightWindow(0, 1, 2, 4, 75.)], confirm,
+                                  lambda *args: True)
+        nav.heights[4], nav.previous_safe = 55., 60.
+        nav.prove = 10.
+        return nav
+
+    def test_next_window_resolves_descent_proof_before_climbing(self):
+        nav = self.navigator(lambda now, since, relay: now >= 11. and since == 10. and relay == 4)
+        nav.advance_program(10.5)
+        self.assertEqual(nav.prove, 10.)
+        self.assertIsNone(nav.pending)
+        nav.advance_program(11.)
+        self.assertIsNone(nav.prove)
+        self.assertEqual(nav.pending, (75., 'climb'))
+
+    def test_missing_descent_proof_restores_safe_height_first(self):
+        nav = self.navigator(lambda *args: False)
+        nav.advance_program(16.)
+        self.assertIsNone(nav.prove)
+        self.assertEqual(nav.pending, (60., 'recovery'))
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ from adaptive_joint_expanded.observation import Observer
 from final_v1.transformer_upgrade.capture import route_features
 from forecast_avoidance.controller import TIMES
 from forecast_learning.features import COLUMNS, describe
-from forecast_shield.forecaster import evaluate_terms, geometry
+from forecast_shield.forecaster import evaluate_terms, geometry, radio_positions
 
 ROUTE_TIMES = np.r_[TIMES, 9.]
 
@@ -40,7 +40,8 @@ class History(Observer):
 
         feature(0, velocity[receiver, 0], distinct)
         feature(1, velocity[receiver, 1], distinct)
-        feature(2, nav.city._cooperative_scenario.altitude_m, distinct)
+        altitude = radio_positions(nav.city, nav.city._cooperative_scenario, xy)[:, 2]
+        feature(2, altitude[receiver], distinct)
         feature(3, 1., distinct)
         feature(4, peer >= ns, distinct)
         feature(11, queue, distinct & (receiver == ns))

@@ -10,7 +10,7 @@ from cooperative.packets import PacketSim, hop_probabilities
 from final_v1_fast.motion import poses
 from final_v1_fast.runner import intervals
 from final_v1_fast.sensing import Commands, Sensors
-from forecast_shield.forecaster import geometry
+from forecast_shield.forecaster import geometry, radio_positions
 from swarm_sim.mission import MAX_MISSION, SHARE_SECONDS
 
 from . import actor
@@ -28,6 +28,19 @@ def load_actor(path):
     model = actor.ActorCritic()
     model.load_state_dict(torch.load(path, map_location='cpu', weights_only=True)['state'])
     return model.eval()
+
+
+def paired_radio_uniforms(seed, shape, common_agents):
+    draws = np.random.default_rng(seed)
+    if common_agents == shape[-1]:
+        return draws.random(shape, dtype=np.float32)
+    if not 0 < common_agents < shape[-1]:
+        raise ValueError('Invalid common radio identities')
+    added = np.random.default_rng(np.random.SeedSequence([seed, 1721]))
+    values = added.random(shape, dtype=np.float32)
+    values[..., :common_agents, :common_agents] = draws.random((*shape[:-2], common_agents, common_agents),
+                                                               dtype=np.float32)
+    return values
 
 
 def full_mission(spec, mode, models=None, policy=None, explore=False, collect=False,
@@ -50,10 +63,11 @@ def full_mission(spec, mode, models=None, policy=None, explore=False, collect=Fa
     shadow = paired_shadow(seed, steps//5 + 1, n, .5, scenario.shadow_sigma_db,
                            scenario.shadow_correlation_s)
     jammer, jam_start, jam_stop, jam_power = interference(spec, city, anchor_s)
+    common_agents = getattr(city, 'radio_common_agents', n)
     sensor = Sensors(n, ns, seed+113, 1.)
-    sensor.random = np.random.default_rng(seed+113).random((steps, n, n), dtype=np.float32)
+    sensor.random = paired_radio_uniforms(seed+113, (steps, n, n), common_agents)
     commands = Commands(n, ns, np.zeros(n-ns, np.int32), seed+227, command_latency)
-    commands.random = np.random.default_rng(seed+227).random((steps, 3, n, n), dtype=np.float32)
+    commands.random = paired_radio_uniforms(seed+227, (steps, 3, n, n), common_agents)
     delivery_ticks = int(np.ceil(command_latency / DT - 1e-8))
     packet = PacketSim(n, ns, city.visible, DT, seed+331,
                        max_duration_s=max_seconds+3., reserved_slots=n)
@@ -107,7 +121,7 @@ def full_mission(spec, mode, models=None, policy=None, explore=False, collect=Fa
             path_loss, _ = geometry(city, scenario, current[None])
             noise = np.zeros(n)
             if jam_start <= now < jam_stop:
-                receivers = np.c_[current, np.full(n, scenario.altitude_m)]
+                receivers = radio_positions(city, scenario, current)
                 loss = city.radio.propagation(jammer[None], receivers, scenario)[0]
                 noise = 10**((jam_power-loss)/10.)
             p = hop_probabilities(path_loss[0], noise, shadow[frame//5], received, sinr)

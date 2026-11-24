@@ -53,11 +53,17 @@ def two_healthy(margin):
     return up[...,1:-1] & up[...,2:]
 
 
+def radio_positions(city, scenario, xy):
+    """Attach the planned elevation of each radio to its horizontal track."""
+    altitude = getattr(city, 'radio_altitudes_m', scenario.altitude_m)
+    z = np.broadcast_to(altitude, xy.shape[:-1])
+    return np.concatenate((xy, z[..., None]), axis=-1)
+
+
 def geometry(city, scenario, xy):
-    tx, rx = np.broadcast_arrays(xy[:, :, None], xy[:, None, :])
-    tx = np.c_[tx.reshape(-1,2), np.full(tx.size//2, scenario.altitude_m)]
-    rx = np.c_[rx.reshape(-1,2), np.full(rx.size//2, scenario.altitude_m)]
-    loss, _, extra = city.radio.propagation(tx, rx, scenario)
+    stations = radio_positions(city, scenario, xy)
+    tx, rx = np.broadcast_arrays(stations[:, :, None], stations[:, None, :])
+    loss, _, extra = city.radio.propagation(tx.reshape(-1, 3), rx.reshape(-1, 3), scenario)
     shape = (len(xy), xy.shape[1], xy.shape[1])
     return loss.reshape(shape), extra.reshape(shape)
 

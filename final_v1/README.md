@@ -11,6 +11,16 @@
 
 재생 HTML을 브라우저에서 연다. 위 조건 목록에서 지도와 간섭을 선택한다. 왼쪽과 오른쪽에서 각 제어 방식을 바꿀 수 있다. **다음 사건** 버튼으로 단절, 재배치, 명령 손실 시점에 이동한다. 두 지도는 같은 비행 시각을 표시한다. S는 수색기, R은 중계기다.
 
+## 제출용 시뮬레이션 실행
+
+기본 실행은 수색기 3대와 중계기 5대로 구성한 `halfsec_planned_eight`다. 비행 전에 건물과 전체 수색 경로의 전파 연결을 점검하고, 기존 중계기 중 고정 위치를 맡을 기체와 구간별로 고도를 바꿀 기체를 배정한다. 임무 중 수색 구간 진입 전에 통신을 확인한다. Transformer와 PPO는 0.5초마다 수평 재배치를 판단한다.
+
+```powershell
+& .\drone_forecast_joint_training\.venv\Scripts\python.exe -B -m final_v1.fly
+```
+
+`--steps 48`로 기본 광주 지도의 24초 비행을 확인할 수 있다. `--controller v21_transformer_halfsec`로 이전 0.5초 제어를 실행한다. [실행 인자와 배치 방식](halfsec_main/README.md)
+
 ## 재현
 
 프로젝트 루트에서 기존 학습 가상환경을 사용한다. 345개 지도 원인 조사, 기존 예측 특징 파일과 고정 V7 체크포인트가 필요하다.
@@ -21,21 +31,21 @@
 & .\drone_forecast_joint_training\.venv\Scripts\python.exe -m final_v1.campaign
 ```
 
-현재 기본값은 0.5초 Transformer–PPO 제어다. 팀 ZIP에 포함된 광주 지도를 대표 설정으로 사용한다. `--command-loss`는 명령 전달 손실 시험을 추가한다. `--steps 48`을 추가하면 기본 제어의 24초 실행을 확인한다. [0.5초 제어와 사용법](halfsec_main/README.md)
-
-```powershell
-& .\drone_forecast_joint_training\.venv\Scripts\python.exe -m final_v1.fly
-```
-
 ## 기존 3초 Transformer 평가
 
 11월 8일 검증된 3초 비교 방식은 `v21_transformer`다. 링크 단절 시점 출력층을 갱신하고, 전체망 위험과 V21 점수를 결합한다. 새 지도 12곳의 36개 조건에서 당시 V21 대비 새 단절 115→61건, 단절 시간 764.5→452.0초, 기한 내 패킷 전달 98.24→98.89%였다. 양쪽 모두 36개 조건을 완주했다.
 
 같은 지역과 난수에서 기준 설정을 비교하려면 `--controller v21`을 사용한다. `--controller v21_transformer`는 업데이트 모델을 명시적으로 선택한다. 보정과 채택 근거는 [업데이트 평가 수치](transformer_upgrade/artifacts/results.json), 두 모델과 실행 설정은 `transformer_upgrade/artifacts/`에 있다.
 
-## 3초 재배치 비교
+## 지속 비콘 누락 시 재배치
 
-`--controller v21_transformer_recovery`로 3초 비콘 누락 복구를 비교한다. 초기 재배치 실험의 방법과 수치는 [첨부 연구 요약](../final_v1_relocation/SUMMARY.md)에 있다.
+`--controller v21_transformer_recovery`는 같은 수색기의 비콘 누락이 두 판단 주기 연속 확인될 때 복구 후보를 평가한다. 기존 제어가 개입한 경우 그 결정을 사용한다. 수색기의 다음 위치를 바꾸거나 정상 연결을 끊을 것으로 예측되는 후보를 제외한다. 재연결이 빨라지거나 통신 여유 부족분이 줄어드는 중계 보정을 선택한다.
+
+`python -m final_v1.relocation_evaluation`은 새 지도 15곳의 45조건을 기존 3초 모델과 짝지어 비교한다. 새 단절 감소, 단절 시간, 임무 완주·시간, 기한 내 패킷 전달과 안전을 검증한다.
+
+`python -m final_v1.relocation_replication`은 첫 비교에 쓰이지 않은 지도 8곳의 24조건에서 같은 코드를 재검증한다. [첫 비교](artifacts/relocation/results.json) · [별도 지도 재검증](artifacts/relocation/replication/results.json)
+
+11월 20일 결과에서 첫 45조건의 새 단절은 257→230건, 별도 24조건은 81→98건이었다. 총 69조건을 양쪽 모두 완주했다. 이 규칙은 3초 비교 옵션으로 제공한다.
 
 ## 단계와 평가 단위
 

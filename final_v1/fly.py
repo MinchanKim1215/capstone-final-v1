@@ -5,6 +5,7 @@ import json
 from . import ARTIFACTS
 from . import relocation
 from .halfsec_main import MODE as HALFSEC_MODE
+from .halfsec_main.submission import MODE as SUBMISSION_MODE
 from .protocol import KINDS, read, sha
 from .runner import initialize, run
 
@@ -17,17 +18,20 @@ def main():
     parser.add_argument("--direction", choices=("east_west","north_south"))
     parser.add_argument("--steps", type=int)
     parser.add_argument("--command-loss", action="store_true")
-    parser.add_argument("--controller", default=HALFSEC_MODE,
-                        choices=(HALFSEC_MODE, "v21", "v21_transformer", relocation.MODE))
+    parser.add_argument("--controller", default=SUBMISSION_MODE,
+                        choices=(SUBMISSION_MODE, HALFSEC_MODE, "v21", "v21_transformer", relocation.MODE))
     args = parser.parse_args()
     if args.steps is not None and args.steps < 1:
         parser.error("--steps must be positive")
-    if args.controller == HALFSEC_MODE:
-        from .halfsec_main.release import DEFAULT_SPEC, cli_result
+    if args.controller in (SUBMISSION_MODE, HALFSEC_MODE):
+        if args.controller == SUBMISSION_MODE:
+            from .halfsec_main import submission as halfsec
+        else:
+            from .halfsec_main import release as halfsec
 
         spec = {key: value if getattr(args, key) is None else getattr(args, key)
-                for key, value in DEFAULT_SPEC.items()}
-        print(json.dumps(cli_result(spec, args.steps, args.command_loss), ensure_ascii=False, indent=2))
+                for key, value in halfsec.DEFAULT_SPEC.items()}
+        print(json.dumps(halfsec.cli_result(spec, args.steps, args.command_loss), ensure_ascii=False, indent=2))
         return
     release_path = ARTIFACTS/"release.json"
     verified = read(ARTIFACTS/"completed.json")

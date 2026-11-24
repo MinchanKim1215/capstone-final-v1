@@ -35,7 +35,10 @@ class Observer:
             intent=np.asarray(self.intents[-1],np.float32)
             support=m[...,41]&m[...,46]&(x[...,46]>.5)&(frames>=40)
             support[np.arange(d.nr),np.arange(d.ns,d.n)]=False
-            geo=geometry_profile(self.city,x.reshape(-1,48),m.reshape(-1,48),intent.reshape(-1,9)).reshape(d.nr,d.n,46)
+            altitude = getattr(self.city, 'radio_altitudes_m', None)
+            peers = None if altitude is None else np.broadcast_to(altitude, (d.nr, d.n)).ravel()
+            geo=geometry_profile(self.city,x.reshape(-1,48),m.reshape(-1,48),intent.reshape(-1,9),
+                                 peer_altitude_m=peers).reshape(d.nr,d.n,46)
         return dict(values=outputs[0],masks=outputs[1],intents=outputs[2],geometry=geo,support=support)
 
     def observe(self, now, values, masks, intents):
