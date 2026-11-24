@@ -1,12 +1,16 @@
-"""Clear blocked survey waypoints with checked, single-aircraft edge reservations."""
+"""Clear blocked survey waypoints with checked, single-aircraft edge reservations.
+
+기본 제어는 통과 비행(navigation_pass.PassNavigator, motion_pass)을 쓴다. 막혔을 때 처리는 그대로다.
+"""
 
 from math import ceil
 
 import numpy as np
 from numba import njit
 
-from fast_halfsec.navigation import DT, Navigator
-from final_v1_fast.motion import advance, poses, reserve_ok
+from fast_halfsec.navigation import DT
+from .motion_pass import advance, poses, reserve_ok
+from .navigation_pass import PassNavigator
 
 
 STALL_FRAMES = ceil(20. / DT)
@@ -82,7 +86,7 @@ def clearance_move(city, nodes, targets):
     return None
 
 
-class ClearanceNavigator(Navigator):
+class ClearanceNavigator(PassNavigator):
     """Give a stalled survey cursor a safe route without skipping a waypoint."""
 
     def __init__(self, city, ns, survey):

@@ -15,6 +15,7 @@ from final_v1_fast.sensing import Commands
 
 from . import DECISION_S
 from .navigation import ClearanceNavigator
+from .navigation_pass import PassCity
 
 
 HALF_SEC = np.isclose((TIMES / DECISION_S) % 1., 0.)
@@ -74,7 +75,9 @@ class MainFlight(JointFlight):
         self.recovery_filtered = 0
 
     def survey(self, *args):
-        value = super().survey(*args)
+        city, *rest = super().survey(*args)
+        # 통과 비행은 여러 칸을 한 구간으로 난다. 비행 후 안전 검사가 이 구간을 안전 간선의 일직선 연결로 확인하게 한다.
+        value = (PassCity(city), *rest)
         self.anchor_s = value[-1]
         return value
 

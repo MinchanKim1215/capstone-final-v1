@@ -14,7 +14,8 @@ from forecast_rebuild.contracts import now, sha, write
 from forecast_shield.forecaster import geometry
 from swarm_sim.mission import MAX_MISSION
 
-from .navigation import ClearanceNavigator
+# 비행 전 계획의 기준 모의 비행은 제출본 원래 이동(지점마다 정지)으로 한다. 실제 비행만 통과 비행이다.
+from .navigation_plan import ClearanceNavigator
 from .release import map_scope
 from .reserve_trial import references
 from .staged_passage import Passage, reserve_survey

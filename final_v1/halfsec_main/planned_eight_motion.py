@@ -1,14 +1,19 @@
-"""Execute a preplanned climb with eight aircraft, then verify each descent step."""
+"""Execute a preplanned climb with eight aircraft, then verify each descent step.
+
+수평 이동은 통과 비행(navigation_pass, motion_pass)을 쓴다. 고도 구간 진입 확인 전에는 수색기가 진입 지점을
+넘어서는 직선 구간을 예약하지 않고, 대기·상승 중인 기체는 제자리에 세운 채 나머지만 통과 비행 규칙으로 움직인다.
+"""
 
 from dataclasses import asdict, dataclass
 from math import ceil, sqrt
 
 import numpy as np
-from numba import njit
 
-from fast_halfsec.navigation import DT, planned_goals, settled
+from fast_halfsec.navigation import DT, settled
 from final_v1_fast.controller import TIMES
-from final_v1_fast.motion import advance, poses
+
+from .motion_pass import advance, poses
+from .navigation_pass import PassNavigator
 
 from .navigation import ClearanceNavigator
 
@@ -58,21 +63,6 @@ class VerticalMove:
         distance = self.target_m - self.start_m
         return (self.start_m + distance * phase**2 * (3. - 2. * phase),
                 distance * 6. * phase * (1. - phase) / duration)
-
-
-@njit(cache=True)
-def preview_holds(points, predecessor, start, end, elapsed, age, first, second, hold, commit, ns, times):
-    start, end, elapsed, age = start.copy(), end.copy(), elapsed.copy(), age.copy()
-    frames = np.empty((len(times), len(start), 2))
-    index = 0
-    for frame in range(round(times[-1] / DT) + 1):
-        if index < len(times) and abs(frame * DT - times[index]) < 1e-7:
-            frames[index] = poses(points, start, end, elapsed)[0]
-            index += 1
-        goals = (first if frame < commit else second).copy()
-        goals[hold] = end[hold]
-        advance(points, predecessor, start, end, elapsed, goals, age, ns, DT)
-    return frames
 
 
 class HeightNavigator(ClearanceNavigator):
@@ -212,8 +202,20 @@ class HeightNavigator(ClearanceNavigator):
             mask[self.relay] = True
         return mask
 
+    def run_stop(self):
+        """확인이 끝나지 않은 고도 구간(진행 중이거나 다음 구간)의 진입 지점 바로 앞까지만 한 번에 날아간다."""
+        stop = super().run_stop()
+        pending = []
+        if self.window is not None and self.record is not None and self.record['verified_s'] is None:
+            pending.append(self.window)
+        if self.next_window < len(self.windows):
+            pending.append(self.windows[self.next_window])
+        for window in pending:
+            stop = min(stop, window.entry_stage - 1)
+        return stop
+
     def goals(self, offsets):
-        return planned_goals(self.survey.waypoints, self.survey.options, self.stage, offsets, self.ns)
+        return self.run_targets(offsets)
 
     def step(self, offsets):
         self.last_offsets[:] = offsets
@@ -228,9 +230,7 @@ class HeightNavigator(ClearanceNavigator):
         return motion.positions()
 
     def predict_holds(self, requested, applied, commit_frames, times, mask):
-        motion = self.motion
-        return preview_holds(self.city.points, self.city.predecessor, motion.start, motion.end, motion.elapsed,
-                             motion.age, self.goals(applied), self.goals(requested), mask, commit_frames, self.ns, times)
+        return PassNavigator.forecast(self, requested, applied, commit_frames, times, hold=mask)
 
     def forecast(self, offsets, applied, commit_frames=3, times=None):
         mask = self.held()

@@ -26,8 +26,10 @@ from .layout_planner import (HEIGHT_STEPS_M, STATION_GAP_M, closed_paths, elevat
                              margins, risk_score, screening_frames, station_edges, station_xyz,
                              track_with_altitude)
 from .mission import MainFlight
+from .navigation_pass import PassCity
 from .planned_eight_motion import (BASE_HEIGHT_M, COMMAND_DELAY_S, SAMPLE_S, VERTICAL_ACCEL_MPS2,
                                     VERTICAL_SPEED_MPS, HeightNavigator, HeightWindow, duration_s)
+from .planning_motion import HeightNavigator as PlanningHeightNavigator
 from .radio_layout import install_fixed
 from .release import EXPANDED_REGISTRY, load_model
 from .staged_passage import TrafficEvidence, route_confirmed
@@ -217,7 +219,8 @@ def can_descend(nav, scenario, relay, target, estimate=None):
 
 
 def preplanned_trace(city, scenario, survey, windows):
-    nav = HeightNavigator(city, FLEET.ns, survey, windows,
+    # 배치안 확인용 모의 비행도 제출본 원래 이동(지점마다 정지)으로 한다 (planning_motion).
+    nav = PlanningHeightNavigator(city, FLEET.ns, survey, windows,
                           lambda now, since, _: now-since >= SAMPLE_S-1e-8,
                           lambda now, relay, goal: can_descend(nav, scenario, relay, goal))
     positions, heights = [], []
@@ -300,12 +303,14 @@ class PlannedFlight(MainFlight):
 
     def survey(self, *args):
         city, self.scenario, fleet, survey, anchor = super().survey(*args)
-        city = copy(city)
+        # 통과 비행 안전 검사용 감싸개(PassCity)를 벗겨 고정 중계 위치를 넣은 뒤 다시 감싼다.
+        wrapped = isinstance(city, PassCity)
+        city = copy(city._city if wrapped else city)
         if self.plan.get('map_sha256', city.sha256) != city.sha256:
             raise ValueError('The placement belongs to another map')
         changed = station_survey(city, fleet, survey, self.plan['station'])
         self.history.bind(city, fleet)
-        return city, self.scenario, fleet, changed, anchor
+        return (PassCity(city) if wrapped else city), self.scenario, fleet, changed, anchor
 
     def navigator(self, city, ns, survey):
         windows = [HeightWindow(**data) for data in self.plan['windows']]
